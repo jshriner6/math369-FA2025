@@ -7,7 +7,7 @@ var ptx_lunr_docs = [
   "type": "Front Matter",
   "number": "",
   "title": "Front Matter",
-  "body": "   Last Updated:       "
+  "body": "  Dr. Jeff Shriner Mathematical Sciences Colorado State University --> Last Updated:       "
 },
 {
   "id": "wkst-relns-digraphs",
