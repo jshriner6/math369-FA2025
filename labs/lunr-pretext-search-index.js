@@ -1,15 +1,6 @@
 var ptx_lunr_search_style = "textbook";
 var ptx_lunr_docs = [
 {
-  "id": "frontmatter",
-  "level": "1",
-  "url": "frontmatter.html",
-  "type": "Front Matter",
-  "number": "",
-  "title": "Front Matter",
-  "body": "  Dr. Jeff Shriner Mathematical Sciences Colorado State University --> Last Updated:       "
-},
-{
   "id": "wkst-relns-digraphs",
   "level": "1",
   "url": "wkst-relns-digraphs.html",
@@ -91,90 +82,90 @@ var ptx_lunr_docs = [
   "body": "  Answer the following questions about the digraph in .     Is the sequence a walk in the graph? If so, is it an open walk?    Yes, this sequence is a walk, and it is an open walk because the first and last vertices ( and , respectively) are different.      Is the sequence a walk in the graph? If so, is it an open or closed walk? Is it a trail, path, circuit, or cycle?    This sequence is not a walk because is not an edge in the given graph. Since this is not a walk, it automatically cannot be an open or closed walk, or a trail, path, circuit, or cycle.      Is the sequence a walk in the graph? If so, is it an open or closed walked? Is it a trail, path, circuit, or cycle?    "
 },
 {
-  "id": "sec-section-name-5",
+  "id": "labs-4",
   "level": "1",
-  "url": "sec-section-name-5.html",
+  "url": "labs-4.html",
   "type": "Worksheet",
   "number": "",
   "title": "Equivalence Relations and Counting",
   "body": " Equivalence Relations and Counting     Let . Suppose is an equivalence relation on . Suppose has two equivalence classes. Also , , and . Write out as a set.      Prove the relations below are equivalence relations, and describe the relation's equivalence classes.     The relation on , where if and only if is even.      The relation on as if and only if is even.       Describe the partition of resulting from the equivalence relation .      Consider the following definitions for characters: the digits are the integers between 0 and 9 (inclusive), the letters are the lowercase letters ( through ), and the special characters are . Compute the number of passwords that satisfy the given constraints.     Strings of length , where characters can be special characters, digits, or letters.      Strings of length or . Characters can be special characters, digits, or letters.      Strings of length , or . Characters can be special characters, digits, or letters. The first character cannot be a letter.      The password must be a string of length . Characters can be special characters, digits, or letters, with no repeated characters.      The password must be a string of length . Characters can be special characters, digits, or letters, with no repeated characters. The first character cannot be a special character.         Find a function from the set to that is a -to- correspondence. (The division, ceiling, or floor operations may be useful here.)      How many strings are there over the set that have length in which no two consecutive characters are the same? For example, the string abcbcbabcb counts, and the strings abbbcbabcb and aacbcbabcb do not count.      A girl scout troop with ten girl scouts and two leaders goes on a hike. When the path narrows, the troop must walk in single file with a leader at the front and a leader at the back. How many ways are there for the entire troop (including the girl scouts and the leaders) to line up?      Suppose a network has 40 computers of which five fail.     How many possibilities are there for the five that fail?      Suppose that three of the computers in the network have a copy of a particular file. How many sets of failures wipe out all the copies of the file? That is, how many -subsets contain the three computers that have the file?       A search committee is formed to find a new software engineer to hire.     If applicants apply for the job, how many hays are there to select a subset of applicants for a short list?      If of the are selected for an interview, how many ways are there to pick the set of applicants who are interviewed? (Assume that the short list is already decided.)      Based on the interview, the committee will rank the top applicants and submit the list to the boss who will make the final decision. (Assume that the interviewees are already decided.) How many ways are there to select the list from the applicants?      "
 },
 {
-  "id": "sec-section-name-5-2-1",
+  "id": "labs-4-2-1",
   "level": "2",
-  "url": "sec-section-name-5.html#sec-section-name-5-2-1",
+  "url": "labs-4.html#labs-4-2-1",
   "type": "Worksheet Exercise",
   "number": "1",
   "title": "",
   "body": "  Let . Suppose is an equivalence relation on . Suppose has two equivalence classes. Also , , and . Write out as a set.   "
 },
 {
-  "id": "sec-section-name-5-2-2",
+  "id": "labs-4-2-2",
   "level": "2",
-  "url": "sec-section-name-5.html#sec-section-name-5-2-2",
+  "url": "labs-4.html#labs-4-2-2",
   "type": "Worksheet Exercise",
   "number": "2",
   "title": "",
   "body": "  Prove the relations below are equivalence relations, and describe the relation's equivalence classes.     The relation on , where if and only if is even.      The relation on as if and only if is even.    "
 },
 {
-  "id": "sec-section-name-5-2-3",
+  "id": "labs-4-2-3",
   "level": "2",
-  "url": "sec-section-name-5.html#sec-section-name-5-2-3",
+  "url": "labs-4.html#labs-4-2-3",
   "type": "Worksheet Exercise",
   "number": "3",
   "title": "",
   "body": "  Describe the partition of resulting from the equivalence relation .   "
 },
 {
-  "id": "sec-section-name-5-2-4",
+  "id": "labs-4-2-4",
   "level": "2",
-  "url": "sec-section-name-5.html#sec-section-name-5-2-4",
+  "url": "labs-4.html#labs-4-2-4",
   "type": "Worksheet Exercise",
   "number": "4",
   "title": "",
   "body": "  Consider the following definitions for characters: the digits are the integers between 0 and 9 (inclusive), the letters are the lowercase letters ( through ), and the special characters are . Compute the number of passwords that satisfy the given constraints.     Strings of length , where characters can be special characters, digits, or letters.      Strings of length or . Characters can be special characters, digits, or letters.      Strings of length , or . Characters can be special characters, digits, or letters. The first character cannot be a letter.      The password must be a string of length . Characters can be special characters, digits, or letters, with no repeated characters.      The password must be a string of length . Characters can be special characters, digits, or letters, with no repeated characters. The first character cannot be a special character.    "
 },
 {
-  "id": "sec-section-name-5-3-1",
+  "id": "labs-4-3-1",
   "level": "2",
-  "url": "sec-section-name-5.html#sec-section-name-5-3-1",
+  "url": "labs-4.html#labs-4-3-1",
   "type": "Worksheet Exercise",
   "number": "5",
   "title": "",
   "body": "  Find a function from the set to that is a -to- correspondence. (The division, ceiling, or floor operations may be useful here.)   "
 },
 {
-  "id": "sec-section-name-5-3-2",
+  "id": "labs-4-3-2",
   "level": "2",
-  "url": "sec-section-name-5.html#sec-section-name-5-3-2",
+  "url": "labs-4.html#labs-4-3-2",
   "type": "Worksheet Exercise",
   "number": "6",
   "title": "",
   "body": "  How many strings are there over the set that have length in which no two consecutive characters are the same? For example, the string abcbcbabcb counts, and the strings abbbcbabcb and aacbcbabcb do not count.   "
 },
 {
-  "id": "sec-section-name-5-3-3",
+  "id": "labs-4-3-3",
   "level": "2",
-  "url": "sec-section-name-5.html#sec-section-name-5-3-3",
+  "url": "labs-4.html#labs-4-3-3",
   "type": "Worksheet Exercise",
   "number": "7",
   "title": "",
   "body": "  A girl scout troop with ten girl scouts and two leaders goes on a hike. When the path narrows, the troop must walk in single file with a leader at the front and a leader at the back. How many ways are there for the entire troop (including the girl scouts and the leaders) to line up?   "
 },
 {
-  "id": "sec-section-name-5-3-4",
+  "id": "labs-4-3-4",
   "level": "2",
-  "url": "sec-section-name-5.html#sec-section-name-5-3-4",
+  "url": "labs-4.html#labs-4-3-4",
   "type": "Worksheet Exercise",
   "number": "8",
   "title": "",
   "body": "  Suppose a network has 40 computers of which five fail.     How many possibilities are there for the five that fail?      Suppose that three of the computers in the network have a copy of a particular file. How many sets of failures wipe out all the copies of the file? That is, how many -subsets contain the three computers that have the file?    "
 },
 {
-  "id": "sec-section-name-5-3-5",
+  "id": "labs-4-3-5",
   "level": "2",
-  "url": "sec-section-name-5.html#sec-section-name-5-3-5",
+  "url": "labs-4.html#labs-4-3-5",
   "type": "Worksheet Exercise",
   "number": "9",
   "title": "",
