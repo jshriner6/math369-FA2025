@@ -11,7 +11,7 @@
             output-filename="syllabus.pdf" publication="publication-syllabus.ptx" />
 
     <target name="labs-web" format="html" source="labs.ptx"
-            publication="publication.ptx" deploy-dir="worksheets" />
+            publication="publication.ptx" deploy-dir="labs" />
     <target name="labs-print" format="pdf" source="labs.ptx"
             output-filename="activities.pdf" publication="publication.ptx" />
 
