@@ -6,12 +6,17 @@
 
     <introduction>
       <p>
-        The following notes are intended to remind you what we covered each week.  They are not a substitute for attending class and not a substitute for reading the textbook.
+        The following are guided notes used during class meetings.  
+        You are encouraged to print or download them to a device to be used during class.
       </p>
     </introduction>
 
+    <xi:include href="./notes/sec-1-1.ptx" xpointer="sec-1-1" />
+
+    <!-- SAMPLES
     <xi:include href="./notes/week01.ptx" xpointer="notes/1" />
     <xi:include href="./notes/week02.ptx" xpointer="notes/1" />
+    -->
 
     <!-- Add more xi:include files here to include them in the main course -->
   </article>

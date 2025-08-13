@@ -2,19 +2,28 @@
 <pretext xmlns:xi="http://www.w3.org/2001/XInclude">
   <xi:include href="./docinfo.ptx" />
   <article xml:id="labs" >
-    <title>In-Class Activities</title>
+    <title>Labs</title>
     
     <introduction>
       <p>
-        These activities are designed to be used in class to help students understand the material. They are not graded, but students are encouraged to work on them in groups and ask the instructor for help when needed.
+        Labs are more involved activities that help explore certain topics more deeply. 
+        Normally these will be done in groups of 2 or 3 and assigned a single group grade.
+        You'll start>labs in class and complete a formal write up outside of 
+        class.
       </p>
     </introduction>
-    <xi:include href="./labs/wkst-relns-digramphs.ptx"/>
-    <xi:include href="./labs/wkst-eqrel-counting.ptx"/>
+
+    <xi:include href="./labs/lab1.ptx" xpointer="lab-1" />
+
+    <!-- SAMPLES -->
+   <!-- <xi:include href="./labs/wkst-relns-digramphs.ptx"/> -->
+   <!-- <xi:include href="./labs/wkst-eqrel-counting.ptx"/>. -->
     
     <!-- The xpointer="activity-magic-beans" says to only include the element with id "activity-magic-beans".  This is how we can have a standalone file and also include it here -->
-    <xi:include href="./labs/magic-beans.ptx" xpointer="activity-magic-beans" />
+    <!-- <xi:include href="./labs/magic-beans.ptx" xpointer="activity-magic-beans" /> -->
+   
 
     <!-- Add more xi:include files here to include them in the main course -->
+      
   </article>
 </pretext>
