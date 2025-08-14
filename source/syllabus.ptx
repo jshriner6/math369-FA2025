@@ -236,7 +236,7 @@
             </li>
             <li>
               <p>
-                I can use the characteristic polynomial of a matrix A to identify its eigenvalues, and then find a basis of eigenvectors for each associated eigenspace and, if there is a basis of eigenvectors for <m>\mathbb{R}^n</m>, use such a basis to describe the matrix product <m>A\mathbf{x}</m>. (Section 4.2)
+                I can use the characteristic polynomial of a matrix <m>A</m> to identify its eigenvalues, and then find a basis of eigenvectors for each associated eigenspace and, if there is a basis of eigenvectors for <m>\mathbb{R}^n</m>, use such a basis to describe the matrix product <m>A\mathbf{x}</m>. (Section 4.2)
               </p>
             </li>
           </ol>
