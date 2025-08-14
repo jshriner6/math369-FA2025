@@ -160,7 +160,7 @@
         <title>Learning Objectives</title>
         <p>
           Our assignments and assessments will emphasize the following learning objectives:
-          <ol>
+          <ol marker="LO 1.">
             <li>
               <p>
                 I visited an <xref ref="item-office-hour" text="custom">office hour</xref> in the first 4 weeks of class. 
@@ -285,11 +285,11 @@
         <p>
           Most Fridays, we will have an in-class quiz that assesses a subset of these skills, which will be announced in advance.
           Each skill will be graded as either <q>P</q> for  <q>Proficient</q> or <q>NY</q> for <q>not yet</q>.  To earn a <q>P</q>, your solution needs to show all work and explanations, use correct notation, and arrive at a correct answer. In short, your work should be close to perfect.
-          Once you have demonstrated proficiency on a learning target, you do not need to do so again.
-          If you don't demonstrate proficiency on a particular target on a particular quiz, you can try again the next week.  I won't provide a lot of detailed feedback because it's very helpful for you to learn to assess your work independently of me. I am happy to talk with you about any of your work on the quizzes.
-          Each target will appear on at least three quizzes. Since you have multiple attempts on each target, there in general will be no makeup quizzes.
+          Once you have demonstrated proficiency on a learning objective, you do not need to do so again.
+          If you don't demonstrate proficiency on a particular objective on a particular quiz, you can try again the next week.  I won't provide a lot of detailed feedback because it's very helpful for you to learn to assess your work independently of me. I am happy to talk with you about any of your work on the quizzes.
+          Each objective will appear on three quizzes. Since you have multiple attempts on each objective, there in general will be no makeup quizzes.
           If you still haven't demonstrated proficiency after your third attempt, you are welcome to talk with me about it.
-          Your grade for this component will be the percentage of the learning targets for which you have demonstrated proficiency.
+          Your grade for this component will be the percentage of the learning objectives for which you have demonstrated proficiency.
         </p>
         <p>
           This is a very important component of our course for the following reasons:
