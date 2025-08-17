@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<pretext>
+    <article xml:id="notes">
+        <worksheet margin="1in" bottom="1.25cm" xml:id="intro-sols">
+        <title>Introduction and Setting the Stage</title>
+            <page>
+            
+                <exercise workspace="0.75in" xml:id="xr-why-sols">
+                <title>Why?</title>
+                    <statement>
+                        <p>
+                             Linear algebra provides the language and tools for:
+                        </p>
+                    </statement>
+                    <solution>
+                        <p>
+                            <ol>
+                                <li>
+                                    <p>
+                                        Image processing
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        Computer graphics
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        Search engines
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        Cryptography
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        Artificial Intelligence and Machine Learning
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        Quantum mechanics (computing, chemistry, physics, biology, optics, etc.)
+                                    </p>
+                                </li>
+                            </ol>
+                        </p>
+                    </solution>
+                
+                </exercise>
+
+                <exercise workspace="0.75in" xml:id="xr-how-sols">
+                <title>How?</title>
+                    <p>
+                        Our approach to learning linear algebra will include the following aspects:
+                    </p>
+                </exercise>
+                <solution>
+                    <p>
+                        <ol>
+                            <li>
+                                <p>
+                                    Abstract. We can explore concepts using mathematical objects and definitions.
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                   Computational. We can use technology to combine and compute with mathematical objects in meaningful ways.
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Geometric. We can view concepts intuitively and describe how objects are positioned and move in space.
+                                </p>
+                            </li>
+                        </ol>
+                    </p>
+                </solution>
+            </page>
+            <page>
+
+                <exercise workspace="0.0in" xml:id="xr-set-stage-sols">
+                <title>Setting the Stage</title>
+                    <statement>
+                        <p>
+                        On the grid below, you may only move vertically/horizontally, and you must move exactly 2 spaces at a time.
+                        In groups, determine if it is possible to begin on the "start" square and end on the "finish" square.
+                        </p>
+                        <image source="grid-1.png" width="50%">
+                            <shortdescription>Grid with 5 rows and 4 columns. The upper left square is labeled with "Start" and
+                                and bottom right square is labeled with "Finish".
+                            </shortdescription>
+                        </image>
+                    </statement>
+                    <solution>
+                        <p>
+                            After some experimenting, you may convince yourself this is not possible. Explaining why 
+                            with clarity, however, may be more challenging. One approach would be to change your perspective
+                            of the problem. You could shade every other square:
+                            <image source="grid-1-shaded.png" width="50%">
+                                <shortdescription>Grid with 5 rows and 4 columns. The upper left square is labeled with "Start" and
+                                    and bottom right square is labeled with "Finish", and every other square is shaded blue.
+                                </shortdescription>
+                            </image>
+                            It is now more obvious why this is not possible: the rules of the game require us to start on a blue
+                            square and remain on blue squares. Since the "Finish" square is not blue, it's not possible to land here.
+                        </p>
+                    </solution>
+
+                    
+                </exercise>
+            </page>
+
+            <page>
+                <exercise workspace="5in" xml:id="xr-set-stage2-sols">
+                <title>Two more grids</title>
+                    <statement>
+                        <p>
+                        Repeate the previous task for the two grids below
+                        </p>
+                        <sidebyside>
+                            <image source="grid-2.png">
+                                <shortdescription>Grid with 5 rows and 4 columns. The upper left square is labeled with "Start" and
+                                    and the square in row 3 column 4 is labeled with "Finish".
+                                </shortdescription>
+                            </image>
+                            <image source="grid-3.png">
+                                <shortdescription>Grid with 5 rows and 5 columns. The upper left square is labeled with "Start" and
+                                    and bottom right square is labeled with "Finish".
+                                </shortdescription>
+                            </image>
+                        </sidebyside>
+                    </statement>
+                    <solution>
+                        <p>
+                            With a deeper understanding of the original question, we now have tools to approach related questions
+                            more effectively. Using similar reasoning, we can conclude it is not possible for the grid on the 
+                            left, but it is possible for the grid on the right.
+                        </p>
+                    </solution>
+
+                    
+                </exercise>
+            </page>
+
+        </worksheet>
+    </article>
+</pretext>
