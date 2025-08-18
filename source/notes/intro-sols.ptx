@@ -74,6 +74,8 @@
                             <li>
                                 <p>
                                     Geometric. We can view concepts intuitively and describe how objects are positioned and move in space.
+                                    A great reference for building this view throughout our course is <url href="https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab">Essence of linear algebra</url>
+                                    by 3Blue1Brown.
                                 </p>
                             </li>
                         </ol>
