@@ -1,0 +1,527 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<pretext>
+    <article xml:id="notes">
+        <worksheet xml:id="sec-1-1-sols">
+        <title><m>\S 1.1</m>: What Can We Expect</title>
+
+        <page>
+        <exercise workspace=".25in">
+            <title>Motivation: Linear Equations and Solutions</title>
+            <statement>
+                <p>
+                    
+                </p>
+            </statement>
+			<solution>
+				<p>
+					In essence, linear algebra is all about sets of linear equations. In practice, it helps us deal
+					with lots of linear equations (think trillions of equations with trillions of variables). What
+					types of solutions can we expect?
+				</p>
+			</solution>
+            
+        </exercise>
+
+        <exercise workspace="0in">
+            <title>Activity: Linear Equation in Two Variables</title>
+      <introduction>
+        <p>
+        In this activity, we consider sets of linear equations
+        having just two unknowns.  In this case, we can graph the
+        solutions sets for the equations, which allows us to
+        visualize different types of behavior.
+        </p>
+      </introduction>
+
+      <task >
+        <statement>
+	  <p>
+	    On the grid below, graph the lines
+	    <me>
+	      \begin{aligned}
+	      y \amp = x+1 \\
+	      y \amp = 2x-1\text{.} \\
+	      \end{aligned}
+	    </me>
+	  </p>
+	  <p>
+	    At what point or points <m>(x,y)</m>, do the lines
+	    intersect?  How many points <m>(x,y)</m> satisfy both
+	    equations?
+	  </p>
+	  <sidebyside width="50%">
+	    <image source="images/empty-4" width="60%">
+			<shortdescription>An empty coordinate system.</shortdescription>
+		</image>
+	  </sidebyside>
+        </statement>
+
+        <solution>
+	  <sidebyside widths="50% 40%" margins="0%">
+	    <p>
+              The graph of the two lines is as shown on the right.
+	      There is a single point, the point <m>(2,3)</m>, at
+	      which the lines intersect.  Therefore, there is a
+	      single point that satisfies both equations.
+	    </p>
+	    <image source = "images/intro-two">
+			<shortdescription>Two lines intersecting at one point.</shortdescription>
+		</image>
+	  </sidebyside>
+        </solution>
+      </task>
+
+      <task >
+        <statement>
+	  <p>
+	    On the grid below, graph the lines
+	    <me>
+	      \begin{aligned}
+	      y \amp = x+1 \\
+	      y \amp = x-1\text{.} \\
+	      \end{aligned}
+	    </me>
+	  </p>
+	  <p>
+	    At what point or points <m>(x,y)</m>, do the lines
+	    intersect?  How many points <m>(x,y)</m> satisfy both
+	    equations?
+	  </p>
+	  <sidebyside width="50%">
+	    <image source="images/empty-4" width="60%">
+			<shortdescription>An empty coordinate system.</shortdescription>
+		</image>
+	  </sidebyside>
+        </statement>
+
+        <solution>
+	  <sidebyside widths="50% 40%" margins="0%">
+	    <p>
+	      These two lines are parallel, which means there is no
+	      point at which the lines intersect.  Therefore, there
+	      is no point that satisfies both equations.
+	    </p>
+	    <image source = "images/intro-parallel">
+			<shortdescription>Two parallel lines.</shortdescription>
+		</image>
+	  </sidebyside>
+        </solution>
+        
+      </task>
+
+      <task >
+        <statement>
+	  <p>
+	    On the grid below, graph the line
+	    <me>
+	      y = x+1
+	      </me>.
+	  </p>
+	  <p>
+	    How many points <m>(x,y)</m> satisfy this
+	    equation?
+	  </p>
+	  <sidebyside width="50%">
+	    <image source="images/empty-4" width="60%">
+			<shortdescription>An empty coordinate system.</shortdescription>
+		</image>
+	  </sidebyside>
+        </statement>
+
+        <solution>
+	  <sidebyside widths="50% 40%" margins="0%">
+	    <p>
+	      There are infinitely many points that lie on this line
+	      and that, therefore, satisfy this single equation.
+	    </p>
+	    <image source = "images/intro-single">
+			<shortdescription>A single line.</shortdescription>
+		</image>
+	  </sidebyside>
+        </solution>
+        
+      </task>
+
+      <task>
+        <statement>
+	  <p>
+	    On the grid below, graph the lines
+	    <me>
+	      \begin{aligned}
+	      y \amp = x+1 \\
+	      y \amp = 2x-1 \\
+	      y \amp = -x. \\
+	      \end{aligned}
+	    </me>
+	  </p>
+	  <p>
+	    At what point or points <m>(x,y)</m>, do the lines
+	    intersect?  How many points <m>(x,y)</m> satisfy all
+	    three equations?
+	  </p>
+	  <sidebyside width="50%">
+	    <image source="images/empty-4" width="60%">
+			<shortdescription>An empty coordinate system.</shortdescription>
+		</image>
+	  </sidebyside>
+        </statement>
+
+        <solution>
+	  <sidebyside widths="50% 40%" margins="0%">
+	    <p>
+	      These three lines do not have a common intersection
+	      point.  Consequently, there is no point satisfying all
+	      three equations.
+	    </p>
+	    <image source = "images/intro-three">
+			<shortdescription>
+			Three lines which do not intersect at a single point.
+			</shortdescription>
+		</image>
+	  </sidebyside>
+        </solution>
+        
+      </task>
+        </exercise>
+
+    </page>
+    <page>
+
+        <exercise workspace=".5in">
+            <title>Observations</title>
+            <statement>
+                <p>
+                    Let's notice three important factors involved in the previous activity.
+                </p>
+            </statement>
+			<solution>
+				<p>
+					<ol>
+						<li>
+							<p>
+								The number of equations (number of lines).
+							</p>
+						</li>
+						<li>
+							<p>
+								The number of variables, also called unknowns (coordinate system).
+							</p>
+						</li>
+						<li>
+							<p>
+								The number of intersection points (number of solutions: variable values
+								that satisfy all equations).
+							</p>
+						</li>
+					</ol>
+				</p>
+			</solution>
+            
+            
+        </exercise>
+
+        <exercise workspace=".5in">
+            <title>Linear Equations: <m>3</m> Unknowns</title>
+            <statement>
+                <p>
+                    
+                </p>
+            </statement>
+			<solution>
+				<p>
+					If we increase the number of unknowns to <m>3</m>, our visuals are now in three-dimensional space,
+					and linear equations are planes.
+				</p>
+				<image source="images/plane-int-1.svg">
+					<shortdescription>Two planes intersecting at a line.</shortdescription>
+				</image>
+			</solution>
+            
+            
+        </exercise>
+        
+    </page>
+    <page>
+        <exercise workspace=".25in">
+            <title>Activity: Linear Equations in Three Unknowns</title>
+            
+            <statement>
+      <p> This activity considers sets of equations having three
+      unknowns.  In this case, we know that the solutions of a single
+      equation form a plane.  If it helps with visualization, consider
+      using <m>3\times5</m>-inch index cards to represent planes.
+      <ol marker="a.">
+	<li> <p>
+	  Is it possible that there are no solutions to two linear
+	  equations in three unknowns?  Either sketch
+	  an example or state a reason why it can't happen.
+	</p> </li>
+
+	<li> <p>
+	  Is it possible that there is exactly one solution to 
+	  two linear equations in three unknowns?  Either
+	  sketch an example or state a reason why it can't happen.
+	</p> </li>
+
+	<li> <p> Is it possible that the solutions to
+	  four equations in three unknowns form a line?  Either sketch 
+	  an example or state a reason why it can't happen.
+	</p> </li>
+
+	<li> <p>
+	  What would you usually expect for the set of solutions to
+	  four equations in three unknowns?
+	</p> </li>
+
+	<li> <p> Suppose we have a set of 500 linear equations in 10
+	unknowns. What would you expect regarding the number of solutions?
+	</p></li>
+
+	<li> <p> Suppose we have a set of 10 linear equations in 500
+	unknowns.  What would you expect regarding the number of solutions?
+	</p></li>
+
+      </ol></p>
+      </statement>
+      <solution>
+	<p><ol marker="a.">
+	  <li>
+	    <p> Yes, it is possible if the two planes are parallel to
+	    one another.
+	    </p>
+	  </li>
+
+	  <li>
+	    <p>
+	      No, this is not possible.  Two planes will either
+	      intersect in a line, if they are not parallel, or not
+	      intersect at all, if they are parallel.
+	    </p>
+	  </li>
+
+	  <li>
+	    <p>
+	      Yes, it is possible that four planes intersect in a
+	      line.  One may sketch four planes that intersect in,
+	      say, the <m>z</m>-axis.   
+	    </p>
+	  </li>
+
+	  <li>
+	    <p>
+	      In general, we would expect there to be no solutions to
+	      four equations in three unknowns because there are more
+	      equations than unknowns.
+	    </p>
+	  </li>
+
+	  <li>
+	    <p>
+	      Since there are more equations than unknowns, we would
+	      expect there to be no solutions.  We cannot guarantee
+	      this, however.
+	    </p>
+	  </li>
+
+	  <li>
+	    <p>
+	      Since there are fewer equations than unknowns, we would
+	      expect there to be infinitely many solutions.  We cannot
+	      guarantee this, however.
+	    </p>
+	  </li>
+	</ol></p>
+      </solution>
+            
+        </exercise>
+
+
+        <exercise workspace=".5in">
+            <title>Observations</title>
+            <statement>
+                <p>
+                    Let's make some observations from our work so far.
+                </p>
+            </statement>
+			<solution>
+				<p>
+					<ol>
+						<li>
+							<p>
+								The more equations we have, the fewer solution we have. The more unknowns we have,
+								the more solutions we have. WARNING: this is just vague (but helpful) intuition! We
+								already know of examples that are exceptions to this rule.
+							</p>
+						</li>
+						<li>
+							<p>
+								There are three possibilities to the number of solutions we have for a system of 
+								linear equations:
+								<ol>
+									<li>
+										<p>
+											Infinitely many
+										</p>
+									</li>
+									<li>
+										<p>
+											Exactly one
+										</p>
+									</li>
+									<li>
+										<p>
+											None
+										</p>
+									</li>
+								</ol>
+							</p>
+						</li>
+					</ol>
+				</p>
+			</solution>
+            
+            
+        </exercise>
+
+    </page>
+    <page>
+
+        <exercise workspace="1in">
+            <title>Definition: Linear System and Solutions</title>
+            <statement>
+                <p>
+                    
+                </p>
+            </statement>
+			<solution>
+				<p>
+					A linear equation with unknowns <m>x_1, x_2, \dots, x_n</m> can be written in the form
+					<me>
+						a_1x_1 + a_2x_2 + \cdots + a_nx_n = b,
+					</me>
+					where <m>a_1, \dots, a_n</m> are real numbers called <term> coefficients</term>, and <m>x_1,\dots,x_n</m>
+					are also referred to as <term>variables</term>.
+				</p>
+				<p>
+					A <term>linear system</term> or <term>system of linear equations</term> is a set of linear equations written
+					in a common set of variables.
+				</p>
+				<p>
+					A <term>solution</term> to a linear system is a set of numbers for each variable that satisfy all the 
+					equations in the system. A <term>solution space</term> is the set of all solutions to a linear system.
+				</p>
+			</solution>
+            
+            
+        </exercise>
+
+        <exercise workspace=".25in">
+            <title>Activity: Linear Equations and Their Solutions</title>
+            <statement>
+      <p>
+	<ol marker="a.">
+	  <li><p>
+	    Which of the following equations are linear?  Please provide
+	    a justification for your response.
+	    <ol marker="1.">
+	      <li> <p><me> 2x + xy -3y^2 = 2 </me>. </p></li>
+	      <li> <p><me> -2x_1 + 3x_2 +4x_3 - x_5 = 0 </me>. </p></li>
+	      <li> <p><me> x = 3z - 4y </me>. </p></li>
+	    </ol>
+	  </p></li>
+      
+	  <li><p> Consider the system of linear equations:
+	  <me>
+	    \begin{alignedat}{4}
+	    x \amp {}+{} \amp y \amp \amp \amp {}={}
+	    \amp 3 \\
+	    \amp \amp y  \amp {}-{} \amp z \amp {}={}
+	    \amp 2 \\
+	    2x \amp {}+{} \amp y \amp {}+{} \amp z \amp {}={} \amp
+	    4. \\
+	    \end{alignedat}
+	  </me>
+	  <ol marker="1.">
+	    <li> <p>Is <m>(x,y,z) = (1,2,0)</m> a solution? </p></li>
+	    <li> <p>Is <m>(x,y,z) = (-2,1,0)</m> a solution?</p> </li>
+	    <li> <p>Is <m>(x,y,z) = (0,-3,1)</m> a solution? </p></li>
+	    <li> <p>Can you find a solution in which <m> y = 0</m>? </p></li>
+	    <li> <p>Do you think there are other solutions? Please explain
+	    your response.</p> </li>
+	  </ol>
+	  </p></li>
+	</ol>
+      </p>
+      </statement>
+
+      <solution>
+	<p><ol marker="a.">
+	  <li><p> There are two linear equations in this list.
+	    <ol marker="1.">
+	      <li><p>
+		This is not a linear equation due to the presence of
+		<m>y^2</m> in the third term on the left.
+	      </p></li>
+
+	      <li><p>
+		This is a linear equation.
+	      </p></li>
+
+	      <li><p>
+		This is a linear equation since it can be rewritten in
+		the form <m>x + 4y - 3z = 0</m>.
+	      </p></li>
+	    </ol>
+	  </p>
+	  </li>
+
+	  <li><p> We will see that the system of linear equations has
+	  infinitely many solutions. 
+	    <ol marker="1.">
+	      <li><p> Yes, this is a solution since all three
+	      equations are satisfied if we set <m>x=1</m>,
+	      <m>y=2</m>, and <m>z=0</m>.
+	      </p></li>
+
+	      <li><p> No, this is not a solution since the first
+	      equation is not satisfied if <m>x=-2</m> and
+	      <m>y=1</m>.
+	      </p></li>
+
+	      <li><p> This is also not a solution.
+	      </p></li>
+
+	      <li><p> If <m>y=0</m>, then we arrive at the system of
+	      three linear equations:
+	      <me>
+		\begin{alignedat}{4}
+		x \amp \amp \amp {}={}
+		\amp 3 \\
+		\amp {}-{} \amp z \amp {}={}
+		\amp 2 \\
+		2x \amp {}+{} \amp z \amp {}={} \amp
+		4. \\
+		\end{alignedat}
+	      </me>
+	      We have a solution when <m>x=3</m> and <m>z=-2</m>.
+	      Therefore, <m>(x,y,z)=(3,0,-2)</m> is a solution to the
+	      original system of equations.
+	      </p></li>
+
+	      <li><p> Since we have found more than one solution to the system
+	      of equations, we should expect that there are infinitely
+	      many.  Therefore, there should be many other solutions.
+	      </p></li>
+	    </ol>
+	  </p></li>
+	</ol>
+	</p>
+      </solution>      
+            
+        </exercise>
+    </page>
+
+        </worksheet>
+    </article>
+</pretext>

@@ -75,6 +75,7 @@
       <projects level="0" />
       <equations level="0" />
       <footnotes level="0" />
+      <task level="0"/>
   </numbering>
 
   <!-- LaTeX specific options: set @print="yes" to get pdf set up   -->
