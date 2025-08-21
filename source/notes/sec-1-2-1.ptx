@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<pretext>
+    <article xml:id="notes">
+        <worksheet xml:id="sec-1-2-1">
+        <title><m>\S 1.2</m>: Gaussian Elimination</title>
+            <page>
+                <exercise workspace=".25in">
+                    <title>Motivation: Gaussian Elimination</title>
+                    <statement>
+                        <p>
+                            
+                        </p>
+                    </statement>
+                    
+                </exercise>
+                <exercise workspace=".25in">
+                    <title>Preview: Finding Solution Spaces</title>
+                    
+                    <introduction>
+                    <p> In this activity, we will consider some simple examples that
+                    will guide us in finding a more general approach. </p>
+                    </introduction>
+                    <task label="ula-preview-1-2-a">
+                        <statement>
+                    <p> Give a description of the solution space to the
+                    linear system:
+                    <me>
+                        \begin{alignedat}{3}
+                        x \amp = \amp 2 \\
+                        y \amp = \amp -1. \\
+                        \end{alignedat}
+                    </me>
+                        </p>
+                        </statement>
+                        
+                        
+                    </task>
+
+                    <task label="ula-preview-1-2-b">
+                        <statement>
+                    <p> Give a description of the solution space to the
+                    linear system:
+                    <me>
+                        \begin{alignedat}{4}
+                        -x \amp {} + {} \amp 2y \amp {}-{} \amp z \amp {}={}
+                        \amp -3 \\
+                        \amp \amp 3y \amp {}+{} \amp z \amp {}={} \amp -1 \\
+                        \amp \amp \amp \amp 2z \amp {}={} \amp 4. \\
+                        \end{alignedat}
+                    </me>
+                    </p>
+                        </statement>
+                        
+                    </task>
+
+                    <task label="ula-preview-1-2-c">
+                        <statement>
+                    <p> Give a description of the solution space to the
+                    linear system:
+                    <me>
+                        \begin{alignedat}{3}
+                        x \amp {} + {} \amp 3y \amp {}={} \amp -1 \\
+                        2x\amp {}+{} \amp y \amp {}={} \amp 3. \\
+                        \end{alignedat}
+                    </me>
+                    </p>
+                        </statement>
+                        
+                        
+                        
+                    </task>
+
+                    <task label="ula-preview-1-2-d">
+                        <statement>
+                    <p> Describe the solution space to the linear equation <m>0x =
+                    0</m>.</p>
+                        </statement>
+                        
+        
+                    </task>
+
+                    <task label="ula-preview-1-2-e">
+                        <statement>
+                        <p>Describe the solution space to the linear equation <m>0x =
+                    5</m>.</p>
+                        </statement>
+                       
+                        
+                        
+                    </task>
+                    
+                    
+                </exercise>
+
+                <exercise workspace=".25in">
+                    <title>Big Idea: Finding Solution Spaces</title>
+                    <statement>
+                        <p>
+                            
+                        </p>
+                    </statement>
+                    
+                    
+                </exercise>
+
+            </page>
+
+            <page>
+                <exercise workspace="2in">
+                    <title>Operations on Linear Systems</title>
+                    <statement>
+                        <p>
+                            We can perform the following operations on a linear system to get a new system, without 
+                            changing the solution space:
+                        </p>
+                    </statement>
+                    
+                    
+                </exercise>
+                <exercise workspace="2in">
+                    <title>Example: Using Gaussian Elimination</title>
+                    <statement>
+                        <p>
+                            Find the solution space of the following system of equations:
+                            <me>
+                                \begin{alignedat}{4}
+                                x \amp  {}+{}  \amp 2y \amp  \amp  \amp  {}={}  \amp 4 \\
+                                2x \amp  {}+{}  \amp y \amp  {}-{}  \amp 3z \amp  {}={}  \amp 11 \\
+                                -3x \amp  {}-{}  \amp 2y \amp  {}+{}  \amp z \amp  {}={}  \amp -10 \\
+                                \end{alignedat}
+                            </me>
+                        </p>
+                    </statement>
+                    
+                </exercise>
+                
+            </page>
+
+            <page>
+                <exercise workspace="4in">
+                    <title>Activity: Gaussian Elimination</title>
+                    <statement>
+	<p>
+	  For each of the following linear systems, 
+	  use Gaussian elimination to describe the solutions to the
+	  following systems of linear equations.  In particular,
+	  determine whether each linear system has exactly one
+	  solution, infinitely many solutions, or no solutions.
+      <ol marker="a.">
+	<li align="top"> <p>
+	  <m>
+	    \begin{alignedat}{4}
+	    x \amp  {}+{}  \amp y \amp  {}+{}  \amp 2z \amp  {}={}  \amp 1 \\
+	    2x \amp  {}-{}  \amp y \amp  {}-{}  \amp 2z \amp  {}={}  \amp 2 \\
+	    -x \amp  {}+{}  \amp y \amp  {}+{}  \amp z \amp  {}={}
+            \amp 0 \\ \\
+	    \end{alignedat}
+	  </m>
+	</p></li>
+	
+	<li> <p>
+	  <m>
+	    \begin{alignedat}{4}
+	    -x \amp  {}-{}  \amp 2y \amp  {}+{}  \amp 2z \amp  {}={}  \amp -1 \\
+	    2x \amp  {}+{}  \amp 4y \amp  {}-{}  \amp z \amp  {}={}  \amp 5 \\
+	    x \amp  {}+{}  \amp 2y \amp  \amp  \amp  {}={}  \amp 3 \\ \\
+	    \end{alignedat}
+	  </m>
+	</p></li>
+	
+	<li> <p>
+	  <m>
+	    \begin{alignedat}{4}
+	    -x \amp  {}-{}  \amp 2y \amp  {}+{}  \amp 2z \amp  {}={}  \amp -1 \\
+	    2x \amp  {}+{}  \amp 4y \amp  {}-{}  \amp z \amp  {}={}  \amp 5 \\
+	    x \amp  {}+{}  \amp 2y \amp  \amp  \amp  {}={}  \amp 2 \\ \\
+	    \end{alignedat}
+	  </m>
+	</p></li>
+      </ol></p>
+      </statement>
+
+      
+                    
+                </exercise>
+            </page>
+        
+        </worksheet>
+    
+    
+    </article>
+</pretext>

@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<pretext>
+    <article xml:id="notes">
+        <worksheet xml:id="sec-1-2-1-sols">
+        <title><m>\S 1.2</m>: Gaussian Elimination</title>
+            <page>
+                <exercise workspace=".25in">
+                    <title>Motivation: Gaussian Elimination</title>
+                    <statement>
+                        <p>
+                            
+                        </p>
+                    </statement>
+                    <solution>
+                        <p>
+                            We've visualized linear systems and solutions for some intuition, but visuals quickly
+                            break down when we're dealing with lots of unknowns. We need to find some tools
+                            for dealing with a generic linear system (i.e., a system with many unknowns).
+                        </p>
+                    </solution>
+                    
+                </exercise>
+                <exercise workspace=".25in">
+                    <title>Preview: Finding Solution Spaces</title>
+                    
+                    <introduction>
+                    <p> In this activity, we will consider some simple examples that
+                    will guide us in finding a more general approach. </p>
+                    </introduction>
+                    <task >
+                        <statement>
+                    <p> Give a description of the solution space to the
+                    linear system:
+                    <me>
+                        \begin{alignedat}{3}
+                        x \amp = \amp 2 \\
+                        y \amp = \amp -1. \\
+                        \end{alignedat}
+                    </me>
+                        </p>
+                        </statement>
+                        
+                        <solution>
+                    <p>
+                        The equations tell us the value of both variables so
+                        there is only one solution  <m>(x,y) = (2,-1)</m>.
+                    </p>
+                        </solution>
+                        
+                    </task>
+
+                    <task >
+                        <statement>
+                    <p> Give a description of the solution space to the
+                    linear system:
+                    <me>
+                        \begin{alignedat}{4}
+                        -x \amp {} + {} \amp 2y \amp {}-{} \amp z \amp {}={}
+                        \amp -3 \\
+                        \amp \amp 3y \amp {}+{} \amp z \amp {}={} \amp -1 \\
+                        \amp \amp \amp \amp 2z \amp {}={} \amp 4. \\
+                        \end{alignedat}
+                    </me>
+                    </p>
+                        </statement>
+                        <solution>
+                    <p>
+                        We first use the third equation to determine that
+                        <m>z=2</m>.  We next substitute this value into the first
+                        two equations to obtain
+                        <me>
+                        \begin{alignedat}{3}
+                        -x \amp {} + {} \amp 2y \amp {}={} \amp -1 \\
+                        \amp \amp 3y \amp {}={} \amp -3. \\
+                        \end{alignedat}
+                        </me>
+                        Now we can use the second equation to determine that
+                        <m>y=-1</m>, substitute that value into the first
+                        equation, and determine that <m>x=-1</m>.  This tells us
+                        that the linear system has one solution <m>(x,y,z) =
+                        (-1,-1,2)</m>.
+                    </p>
+                        </solution>
+                        
+                    </task>
+
+                    <task >
+                        <statement>
+                    <p> Give a description of the solution space to the
+                    linear system:
+                    <me>
+                        \begin{alignedat}{3}
+                        x \amp {} + {} \amp 3y \amp {}={} \amp -1 \\
+                        2x\amp {}+{} \amp y \amp {}={} \amp 3. \\
+                        \end{alignedat}
+                    </me>
+                    </p>
+                        </statement>
+                        
+                        <solution>
+                    <p>
+                        Notice that we can rewrite the first equation as
+                        <m>x=-1-3y</m> and substitute this into the second
+                        equation to obtain
+                        <me>
+                        2(-1-3y)+y = -2 -5y = 3.
+                        </me>
+                        This tells us that <m>y=-1</m> and <m>x=-1-3y
+                        = 2</m>.  The linear system therefore has one solution
+                        <m>(x,y) = (2,-1)</m>.
+                    </p>
+                        </solution>
+                        
+                    </task>
+
+                    <task>
+                        <statement>
+                    <p> Describe the solution space to the linear equation <m>0x =
+                    0</m>.</p>
+                        </statement>
+                        
+                        <solution>
+                    <p>
+                        No matter the value of <m>x</m>, we have <m>0x = 0</m>.
+                        Therefore, the solution space to the equation
+                        <m>0x=0</m> is all real numbers <m>x</m>.  In other
+                        words, this equation does not place a restriction on the
+                        value of <m>x</m>.
+                    </p>
+                        </solution>
+                    </task>
+
+                    <task >
+                        <statement>
+                        <p>Describe the solution space to the linear equation <m>0x =
+                    5</m>.</p>
+                        </statement>
+                       
+                        <solution>
+                    <p> By contrast, the equation <m>0x=5</m> has no solutions
+                    since no value of <m>x</m>, when multiplied by <m>0</m>,
+                    can produce <m>5</m>.
+                    </p>
+                        </solution>
+                        
+                    </task>
+                    
+                    
+                </exercise>
+
+                <exercise workspace=".25in">
+                    <title>Big Idea: Finding Solution Spaces</title>
+                    <statement>
+                        <p>
+                            
+                        </p>
+                    </statement>
+                    <solution>
+                        <p>
+                            Start with a linear system and manipulate it to a new system that is "easy", and has the same 
+                            solution space as the original system.
+                        </p>
+                    </solution>
+                    
+                    
+                </exercise>
+
+            </page>
+
+            <page>
+                <exercise workspace="2in">
+                    <title>Operations on Linear Systems</title>
+                    <statement>
+                        <p>
+                            We can perform the following operations on a linear system to get a new system, without 
+                            changing the solution space:
+                        </p>
+                    </statement>
+                    <solution>
+                        <p>
+                            <ol>
+                                <li>
+                                    <p>
+                                        Scaling. Multiply any linear equation in your system by a non-zero constant.
+                                        
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        Interchanging. Swap the order of any two equations in your system.
+                                        
+                                    </p>
+                                </li>
+
+                                <li>
+                                    <p>
+                                        Replacement. Multiply any linear equation in your system by a non-zero constant 
+                                        then add to a second equation. The resulting linear equation replaces one of the 
+                                        two original equations.
+                                        
+                                    </p>
+                                </li>
+                            </ol>
+                        </p>
+                    </solution>
+                    
+                    
+                </exercise>
+                <exercise workspace="2in">
+                    <title>Example: Using Gaussian Elimination</title>
+                    <statement>
+                        <p>
+                            Find the solution space of the following system of equations:
+                            <me>
+                                \begin{alignedat}{4}
+                                x \amp  {}+{}  \amp 2y \amp  \amp  \amp  {}={}  \amp 4 \\
+                                2x \amp  {}+{}  \amp y \amp  {}-{}  \amp 3z \amp  {}={}  \amp 11 \\
+                                -3x \amp  {}-{}  \amp 2y \amp  {}+{}  \amp z \amp  {}={}  \amp -10 \\
+                                \end{alignedat}
+                            </me>
+                        </p>
+                    </statement>
+                    <solution>
+                        <p>
+                            This is <url href="https://understandinglinearalgebra.org/sec-finding-solutions.html#sec-finding-solutions-3-9">Example 1.2.4</url> in the textbook.
+                        </p>
+                    </solution>
+                    
+                </exercise>
+                
+            </page>
+
+            <page>
+                <exercise workspace="4in">
+                    <title>Activity: Gaussian Elimination</title>
+                    <statement>
+	<p>
+	  For each of the following linear systems, 
+	  use Gaussian elimination to describe the solutions to the
+	  following systems of linear equations.  In particular,
+	  determine whether each linear system has exactly one
+	  solution, infinitely many solutions, or no solutions.
+      <ol marker="a.">
+	<li align="top"> <p>
+	  <m>
+	    \begin{alignedat}{4}
+	    x \amp  {}+{}  \amp y \amp  {}+{}  \amp 2z \amp  {}={}  \amp 1 \\
+	    2x \amp  {}-{}  \amp y \amp  {}-{}  \amp 2z \amp  {}={}  \amp 2 \\
+	    -x \amp  {}+{}  \amp y \amp  {}+{}  \amp z \amp  {}={}
+            \amp 0 \\ \\
+	    \end{alignedat}
+	  </m>
+	</p></li>
+	
+	<li> <p>
+	  <m>
+	    \begin{alignedat}{4}
+	    -x \amp  {}-{}  \amp 2y \amp  {}+{}  \amp 2z \amp  {}={}  \amp -1 \\
+	    2x \amp  {}+{}  \amp 4y \amp  {}-{}  \amp z \amp  {}={}  \amp 5 \\
+	    x \amp  {}+{}  \amp 2y \amp  \amp  \amp  {}={}  \amp 3 \\ \\
+	    \end{alignedat}
+	  </m>
+	</p></li>
+	
+	<li> <p>
+	  <m>
+	    \begin{alignedat}{4}
+	    -x \amp  {}-{}  \amp 2y \amp  {}+{}  \amp 2z \amp  {}={}  \amp -1 \\
+	    2x \amp  {}+{}  \amp 4y \amp  {}-{}  \amp z \amp  {}={}  \amp 5 \\
+	    x \amp  {}+{}  \amp 2y \amp  \amp  \amp  {}={}  \amp 2 \\ \\
+	    \end{alignedat}
+	  </m>
+	</p></li>
+      </ol></p>
+      </statement>
+
+      <solution>
+	<p><ol marker="a.">
+	  <li>
+	    <p>
+	      Our aim is to apply a sequence of scaling, interchange,
+	      and replacement operations to first put the system into
+	      a triangular form.  We begin by multiplying the first
+	      equation by <m>-2</m> and adding it to the second
+	      equation.  Next, we add the first equation to the third.
+	      This leads us to:
+	      <me>
+		\begin{alignedat}{4}
+		x \amp  {}+{}  \amp y \amp  {}+{}  \amp 2z \amp
+		{}={}  \amp 1 \\
+		\amp  \amp -3y \amp  {}-{}  \amp 6z \amp  {}={}  \amp 0 \\
+		\amp  \amp 2y \amp  {}+{}  \amp 3z \amp  {}={}  \amp 1 \\
+		\end{alignedat}
+	      </me>
+	      We will now apply a scaling operation to make the
+	      coefficient of <m>y</m> equal <m>1</m> in the second
+	      equation.
+	      <me>
+		\begin{alignedat}{4}
+		x \amp  {}+{}  \amp y \amp  {}+{}  \amp 2z \amp  {}={}  \amp 1 \\
+		\amp  \amp y \amp  {}+{}  \amp 2z \amp  {}={}  \amp 0 \\
+		\amp  \amp 2y \amp  {}+{}  \amp 3z \amp  {}={}  \amp 1 \\
+		\end{alignedat}
+	      </me>
+	      Another replacement operation brings the system into a
+	      triangular form.
+	      <me>
+		\begin{alignedat}{4}
+		x \amp  {}+{}  \amp y \amp  {}+{}  \amp 2z \amp  {}={}  \amp 1 \\
+		\amp  \amp y \amp  {}+{}  \amp 2z \amp  {}={}  \amp 0 \\
+		\amp  \amp \amp  \amp -z \amp  {}={}  \amp 1 \\
+		\end{alignedat}
+	      </me>
+	    </p>
+
+	    <p>
+	      From here, we begin the process of back substitution
+	      seeking a decoupled system.  
+	      <me>
+		\begin{alignedat}{4}
+		x \amp  {}+{}  \amp y \amp  \amp \amp  {}={}  \amp 3 \\
+		\amp  \amp y \amp \amp \amp  {}={}  \amp 2 \\
+		\amp  \amp \amp  \amp z \amp  {}={}  \amp -1 \\
+		\end{alignedat}
+	      </me>
+	      Finally, we have the decoupled system
+	      <me>
+		\begin{alignedat}{4}
+		x \amp  \amp \amp  \amp \amp  {}={}  \amp 1 \\
+		\amp  \amp y \amp \amp \amp  {}={}  \amp 2 \\
+		\amp  \amp \amp  \amp z \amp  {}={}  \amp -1, \\
+		\end{alignedat}
+	      </me>
+	      which tells us that the solution space consists of the
+	      single solution <m>(1,2,-1)</m>.
+	  </p></li>
+
+	  <li><p>
+	    Once again, we begin with a sequence of replacement and
+	    scaling operations that lead to the triangular system
+	    <me>
+	      \begin{alignedat}{4}
+	      -x \amp  {}-{}  \amp 2y \amp  {}+{}  \amp 2z \amp
+	      {}={}  \amp -1 \\
+	      \amp  \amp \amp  \amp z \amp  {}={}  \amp 1 \\
+	      \amp  \amp \amp  \amp 0 \amp  {}={}  \amp 0 \\
+	      \end{alignedat}
+	    </me>
+	    Back substitution gives us the system
+	    <me>
+	      \begin{alignedat}{4}
+	      x \amp  {}+{}  \amp 2y \amp  \amp \amp
+	      {}={}  \amp 3 \\
+	      \amp  \amp \amp  \amp z \amp  {}={}  \amp 1 \\
+	      \amp  \amp \amp  \amp 0 \amp  {}={}  \amp 0 \\
+	      \end{alignedat}
+	    </me>
+	    The third equation does not impose a restriction on the
+	    solutions since it is satisfied for any <m>(x,y,z)</m>.
+	    The second equation tells us that <m>z</m> must equal
+	    <m>1</m>;  however, there are infinitely many solutions to
+	    the first equation that have <m>z=1</m>.  Therefore, this
+	    system has infinitely many solutions.
+	  </p></li>
+
+	  <li><p>
+	    After applying two replacement and one scaling operation,
+	    we find
+	    <me>
+	      \begin{alignedat}{4}
+	      -x \amp  {}-{}  \amp 2y \amp  {}+{}  \amp 2z \amp
+	      {}={}  \amp -1 \\
+	      \amp  \amp \amp  \amp z \amp  {}={}  \amp 1 \\
+	      \amp  \amp \amp  \amp 2z \amp  {}={}  \amp 1 \\
+	      \end{alignedat}
+	    </me>
+	    Another replacement operation leads to the system
+	    <me>
+	      \begin{alignedat}{4}
+	      -x \amp  {}-{}  \amp 2y \amp  {}+{}  \amp 2z \amp
+	      {}={}  \amp -1 \\
+	      \amp  \amp \amp  \amp z \amp  {}={}  \amp 1 \\
+	      \amp  \amp \amp  \amp 0 \amp  {}={}  \amp -1 \\
+	      \end{alignedat}
+	    </me>
+	    Since the third equation has no solutions, the original
+	    system can have no solutions as well.
+	  </p></li>
+	</ol></p>
+      </solution>   
+                    
+                </exercise>
+            </page>
+        
+        </worksheet>
+    
+    
+    </article>
+</pretext>
