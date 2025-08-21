@@ -188,69 +188,6 @@ var ptx_lunr_docs = [
   "number": "6",
   "title": "Activity: Gaussian Elimination.",
   "body": " Activity: Gaussian Elimination   For each of the following linear systems, use Gaussian elimination to describe the solutions to the following systems of linear equations. In particular, determine whether each linear system has exactly one solution, infinitely many solutions, or no solutions.                "
-},
-{
-  "id": "sec-1-2-1-sols",
-  "level": "1",
-  "url": "sec-1-2-1-sols.html",
-  "type": "Worksheet",
-  "number": "",
-  "title": "<span class=\"process-math\">\\(\\S 1.2\\text{:}\\)<\/span> Gaussian Elimination",
-  "body": " : Gaussian Elimination    Motivation: Gaussian Elimination       We've visualized linear systems and solutions for some intuition, but visuals quickly break down when we're dealing with lots of unknowns. We need to find some tools for dealing with a generic linear system (i.e., a system with many unknowns).     Preview: Finding Solution Spaces   In this activity, we will consider some simple examples that will guide us in finding a more general approach.     Give a description of the solution space to the linear system:     The equations tell us the value of both variables so there is only one solution .      Give a description of the solution space to the linear system:     We first use the third equation to determine that . We next substitute this value into the first two equations to obtain Now we can use the second equation to determine that , substitute that value into the first equation, and determine that . This tells us that the linear system has one solution .      Give a description of the solution space to the linear system:     Notice that we can rewrite the first equation as and substitute this into the second equation to obtain This tells us that and . The linear system therefore has one solution .      Describe the solution space to the linear equation .    No matter the value of , we have . Therefore, the solution space to the equation is all real numbers . In other words, this equation does not place a restriction on the value of .      Describe the solution space to the linear equation .    By contrast, the equation has no solutions since no value of , when multiplied by , can produce .      Big Idea: Finding Solution Spaces       Start with a linear system and manipulate it to a new system that is \"easy\", and has the same solution space as the original system.       Operations on Linear Systems   We can perform the following operations on a linear system to get a new system, without changing the solution space:       Scaling. Multiply any linear equation in your system by a non-zero constant.    Interchanging. Swap the order of any two equations in your system.    Replacement. Multiply any linear equation in your system by a non-zero constant then add to a second equation. The resulting linear equation replaces one of the two original equations.        Example: Using Gaussian Elimination   Find the solution space of the following system of equations:     This is Example 1.2.4 in the textbook.       Activity: Gaussian Elimination   For each of the following linear systems, use Gaussian elimination to describe the solutions to the following systems of linear equations. In particular, determine whether each linear system has exactly one solution, infinitely many solutions, or no solutions.                   Our aim is to apply a sequence of scaling, interchange, and replacement operations to first put the system into a triangular form. We begin by multiplying the first equation by and adding it to the second equation. Next, we add the first equation to the third. This leads us to: We will now apply a scaling operation to make the coefficient of equal in the second equation. Another replacement operation brings the system into a triangular form.   From here, we begin the process of back substitution seeking a decoupled system. Finally, we have the decoupled system which tells us that the solution space consists of the single solution .  Once again, we begin with a sequence of replacement and scaling operations that lead to the triangular system Back substitution gives us the system The third equation does not impose a restriction on the solutions since it is satisfied for any . The second equation tells us that must equal ; however, there are infinitely many solutions to the first equation that have . Therefore, this system has infinitely many solutions.  After applying two replacement and one scaling operation, we find Another replacement operation leads to the system Since the third equation has no solutions, the original system can have no solutions as well.      "
-},
-{
-  "id": "sec-1-2-1-sols-2-1",
-  "level": "2",
-  "url": "sec-1-2-1-sols.html#sec-1-2-1-sols-2-1",
-  "type": "Worksheet Exercise",
-  "number": "1",
-  "title": "Motivation: Gaussian Elimination.",
-  "body": " Motivation: Gaussian Elimination       We've visualized linear systems and solutions for some intuition, but visuals quickly break down when we're dealing with lots of unknowns. We need to find some tools for dealing with a generic linear system (i.e., a system with many unknowns).   "
-},
-{
-  "id": "sec-1-2-1-sols-2-2",
-  "level": "2",
-  "url": "sec-1-2-1-sols.html#sec-1-2-1-sols-2-2",
-  "type": "Worksheet Exercise",
-  "number": "2",
-  "title": "Preview: Finding Solution Spaces.",
-  "body": " Preview: Finding Solution Spaces   In this activity, we will consider some simple examples that will guide us in finding a more general approach.     Give a description of the solution space to the linear system:     The equations tell us the value of both variables so there is only one solution .      Give a description of the solution space to the linear system:     We first use the third equation to determine that . We next substitute this value into the first two equations to obtain Now we can use the second equation to determine that , substitute that value into the first equation, and determine that . This tells us that the linear system has one solution .      Give a description of the solution space to the linear system:     Notice that we can rewrite the first equation as and substitute this into the second equation to obtain This tells us that and . The linear system therefore has one solution .      Describe the solution space to the linear equation .    No matter the value of , we have . Therefore, the solution space to the equation is all real numbers . In other words, this equation does not place a restriction on the value of .      Describe the solution space to the linear equation .    By contrast, the equation has no solutions since no value of , when multiplied by , can produce .    "
-},
-{
-  "id": "sec-1-2-1-sols-2-3",
-  "level": "2",
-  "url": "sec-1-2-1-sols.html#sec-1-2-1-sols-2-3",
-  "type": "Worksheet Exercise",
-  "number": "3",
-  "title": "Big Idea: Finding Solution Spaces.",
-  "body": " Big Idea: Finding Solution Spaces       Start with a linear system and manipulate it to a new system that is \"easy\", and has the same solution space as the original system.   "
-},
-{
-  "id": "sec-1-2-1-sols-3-1",
-  "level": "2",
-  "url": "sec-1-2-1-sols.html#sec-1-2-1-sols-3-1",
-  "type": "Worksheet Exercise",
-  "number": "4",
-  "title": "Operations on Linear Systems.",
-  "body": " Operations on Linear Systems   We can perform the following operations on a linear system to get a new system, without changing the solution space:       Scaling. Multiply any linear equation in your system by a non-zero constant.    Interchanging. Swap the order of any two equations in your system.    Replacement. Multiply any linear equation in your system by a non-zero constant then add to a second equation. The resulting linear equation replaces one of the two original equations.      "
-},
-{
-  "id": "sec-1-2-1-sols-3-2",
-  "level": "2",
-  "url": "sec-1-2-1-sols.html#sec-1-2-1-sols-3-2",
-  "type": "Worksheet Exercise",
-  "number": "5",
-  "title": "Example: Using Gaussian Elimination.",
-  "body": " Example: Using Gaussian Elimination   Find the solution space of the following system of equations:     This is Example 1.2.4 in the textbook.   "
-},
-{
-  "id": "sec-1-2-1-sols-4-1",
-  "level": "2",
-  "url": "sec-1-2-1-sols.html#sec-1-2-1-sols-4-1",
-  "type": "Worksheet Exercise",
-  "number": "6",
-  "title": "Activity: Gaussian Elimination.",
-  "body": " Activity: Gaussian Elimination   For each of the following linear systems, use Gaussian elimination to describe the solutions to the following systems of linear equations. In particular, determine whether each linear system has exactly one solution, infinitely many solutions, or no solutions.                   Our aim is to apply a sequence of scaling, interchange, and replacement operations to first put the system into a triangular form. We begin by multiplying the first equation by and adding it to the second equation. Next, we add the first equation to the third. This leads us to: We will now apply a scaling operation to make the coefficient of equal in the second equation. Another replacement operation brings the system into a triangular form.   From here, we begin the process of back substitution seeking a decoupled system. Finally, we have the decoupled system which tells us that the solution space consists of the single solution .  Once again, we begin with a sequence of replacement and scaling operations that lead to the triangular system Back substitution gives us the system The third equation does not impose a restriction on the solutions since it is satisfied for any . The second equation tells us that must equal ; however, there are infinitely many solutions to the first equation that have . Therefore, this system has infinitely many solutions.  After applying two replacement and one scaling operation, we find Another replacement operation leads to the system Since the third equation has no solutions, the original system can have no solutions as well.    "
 }
 ]
 
