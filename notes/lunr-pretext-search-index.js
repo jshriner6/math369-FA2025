@@ -1,49 +1,49 @@
 var ptx_lunr_search_style = "textbook";
 var ptx_lunr_docs = [
 {
-  "id": "intro",
+  "id": "intro-sols",
   "level": "1",
-  "url": "intro.html",
+  "url": "intro-sols.html",
   "type": "Worksheet",
   "number": "",
   "title": "Introduction and Setting the Stage",
-  "body": " Introduction and Setting the Stage    Why?   Linear algebra provides the language and tools for:     How?  Our approach to learning linear algebra will include the following aspects:    Setting the Stage   On the grid below, you may only move vertically\/horizontally, and you must move exactly 2 spaces at a time. In groups, determine if it is possible to begin on the \"start\" square and end on the \"finish\" square.   Grid with 5 rows and 4 columns. The upper left square is labeled with \"Start\" and and bottom right square is labeled with \"Finish\".        Two more grids   Repeate the previous task for the two grids below    Grid with 5 rows and 4 columns. The upper left square is labeled with \"Start\" and and the square in row 3 column 4 is labeled with \"Finish\".    Grid with 5 rows and 5 columns. The upper left square is labeled with \"Start\" and and bottom right square is labeled with \"Finish\".       "
+  "body": " Introduction and Setting the Stage    Why?   Linear algebra provides the language and tools for:       Image processing    Computer graphics    Search engines    Cryptography    Artificial Intelligence and Machine Learning    Quantum mechanics (computing, chemistry, physics, biology, optics, etc.)        How?  Our approach to learning linear algebra will include the following aspects:       Abstract. We can explore concepts using mathematical objects and definitions.    Computational. We can use technology to combine and compute with mathematical objects in meaningful ways.    Geometric. We can view concepts intuitively and describe how objects are positioned and move in space. A great reference for building this view throughout our course is Essence of linear algebra by 3Blue1Brown.         Setting the Stage   On the grid below, you may only move vertically\/horizontally, and you must move exactly 2 spaces at a time. In groups, determine if it is possible to begin on the \"start\" square and end on the \"finish\" square.   Grid with 5 rows and 4 columns. The upper left square is labeled with \"Start\" and and bottom right square is labeled with \"Finish\".     After some experimenting, you may convince yourself this is not possible. Explaining why with clarity, however, may be more challenging. One approach would be to change your perspective of the problem. You could shade every other square:  Grid with 5 rows and 4 columns. The upper left square is labeled with \"Start\" and and bottom right square is labeled with \"Finish\", and every other square is shaded blue.  It is now more obvious why this is not possible: the rules of the game require us to start on a blue square and remain on blue squares. Since the \"Finish\" square is not blue, it's not possible to land here.       Two more grids   Repeate the previous task for the two grids below    Grid with 5 rows and 4 columns. The upper left square is labeled with \"Start\" and and the square in row 3 column 4 is labeled with \"Finish\".    Grid with 5 rows and 5 columns. The upper left square is labeled with \"Start\" and and bottom right square is labeled with \"Finish\".      With a deeper understanding of the original question, we now have tools to approach related questions more effectively. Using similar reasoning, we can conclude it is not possible for the grid on the left, but it is possible for the grid on the right.     "
 },
 {
-  "id": "xr-why",
+  "id": "xr-why-sols",
   "level": "2",
-  "url": "intro.html#xr-why",
+  "url": "intro-sols.html#xr-why-sols",
   "type": "Worksheet Exercise",
   "number": "1",
   "title": "Why?",
-  "body": " Why?   Linear algebra provides the language and tools for:   "
+  "body": " Why?   Linear algebra provides the language and tools for:       Image processing    Computer graphics    Search engines    Cryptography    Artificial Intelligence and Machine Learning    Quantum mechanics (computing, chemistry, physics, biology, optics, etc.)      "
 },
 {
-  "id": "xr-how",
+  "id": "xr-how-sols",
   "level": "2",
-  "url": "intro.html#xr-how",
+  "url": "intro-sols.html#xr-how-sols",
   "type": "Worksheet Exercise",
   "number": "2",
   "title": "How?",
   "body": " How?  Our approach to learning linear algebra will include the following aspects:  "
 },
 {
-  "id": "xr-set-stage",
+  "id": "xr-set-stage-sols",
   "level": "2",
-  "url": "intro.html#xr-set-stage",
+  "url": "intro-sols.html#xr-set-stage-sols",
   "type": "Worksheet Exercise",
   "number": "3",
   "title": "Setting the Stage.",
-  "body": " Setting the Stage   On the grid below, you may only move vertically\/horizontally, and you must move exactly 2 spaces at a time. In groups, determine if it is possible to begin on the \"start\" square and end on the \"finish\" square.   Grid with 5 rows and 4 columns. The upper left square is labeled with \"Start\" and and bottom right square is labeled with \"Finish\".    "
+  "body": " Setting the Stage   On the grid below, you may only move vertically\/horizontally, and you must move exactly 2 spaces at a time. In groups, determine if it is possible to begin on the \"start\" square and end on the \"finish\" square.   Grid with 5 rows and 4 columns. The upper left square is labeled with \"Start\" and and bottom right square is labeled with \"Finish\".     After some experimenting, you may convince yourself this is not possible. Explaining why with clarity, however, may be more challenging. One approach would be to change your perspective of the problem. You could shade every other square:  Grid with 5 rows and 4 columns. The upper left square is labeled with \"Start\" and and bottom right square is labeled with \"Finish\", and every other square is shaded blue.  It is now more obvious why this is not possible: the rules of the game require us to start on a blue square and remain on blue squares. Since the \"Finish\" square is not blue, it's not possible to land here.   "
 },
 {
-  "id": "xr-set-stage2",
+  "id": "xr-set-stage2-sols",
   "level": "2",
-  "url": "intro.html#xr-set-stage2",
+  "url": "intro-sols.html#xr-set-stage2-sols",
   "type": "Worksheet Exercise",
   "number": "4",
   "title": "Two more grids.",
-  "body": " Two more grids   Repeate the previous task for the two grids below    Grid with 5 rows and 4 columns. The upper left square is labeled with \"Start\" and and the square in row 3 column 4 is labeled with \"Finish\".    Grid with 5 rows and 5 columns. The upper left square is labeled with \"Start\" and and bottom right square is labeled with \"Finish\".     "
+  "body": " Two more grids   Repeate the previous task for the two grids below    Grid with 5 rows and 4 columns. The upper left square is labeled with \"Start\" and and the square in row 3 column 4 is labeled with \"Finish\".    Grid with 5 rows and 5 columns. The upper left square is labeled with \"Start\" and and bottom right square is labeled with \"Finish\".      With a deeper understanding of the original question, we now have tools to approach related questions more effectively. Using similar reasoning, we can conclude it is not possible for the grid on the left, but it is possible for the grid on the right.   "
 },
 {
   "id": "sec-1-1",
