@@ -260,6 +260,33 @@ var ptx_lunr_docs = [
   "number": "7",
   "title": "Fact: RREF.",
   "body": " Fact: RREF      "
+},
+{
+  "id": "sec-1-3",
+  "level": "1",
+  "url": "sec-1-3.html",
+  "type": "Worksheet",
+  "number": "",
+  "title": "<span class=\"process-math\">\\(\\S 1.3\\text{:}\\)<\/span> Computation with Sage",
+  "body": " : Computation with Sage    Motivation: Sage   Real applications of linear algebra are on very large systems, and require technology to compute with and manipulate. There are many possible tools one could use for this task. We'll work with Sage. The goals of this activity are to   Introduce ways to access Sage and references when you need help.    Learn the basic syntax to use Sage.    Use Sage to answer questions we've addressed by hand so far in Chapter 1.         Access Section 1.3 of our textbook. Follow instructions provided in class.     "
+},
+{
+  "id": "sec-1-3-2-1",
+  "level": "2",
+  "url": "sec-1-3.html#sec-1-3-2-1",
+  "type": "Worksheet Exercise",
+  "number": "1",
+  "title": "Motivation: Sage.",
+  "body": " Motivation: Sage   Real applications of linear algebra are on very large systems, and require technology to compute with and manipulate. There are many possible tools one could use for this task. We'll work with Sage. The goals of this activity are to   Introduce ways to access Sage and references when you need help.    Learn the basic syntax to use Sage.    Use Sage to answer questions we've addressed by hand so far in Chapter 1.      "
+},
+{
+  "id": "sec-1-3-2-2",
+  "level": "2",
+  "url": "sec-1-3.html#sec-1-3-2-2",
+  "type": "Worksheet Exercise",
+  "number": "2",
+  "title": "",
+  "body": "  Access Section 1.3 of our textbook. Follow instructions provided in class.   "
 }
 ]
 
