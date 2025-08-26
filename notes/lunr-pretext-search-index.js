@@ -188,6 +188,78 @@ var ptx_lunr_docs = [
   "number": "6",
   "title": "Activity: Gaussian Elimination.",
   "body": " Activity: Gaussian Elimination   For each of the following linear systems, use Gaussian elimination to describe the solutions to the following systems of linear equations. In particular, determine whether each linear system has exactly one solution, infinitely many solutions, or no solutions.                "
+},
+{
+  "id": "sec-1-2-2",
+  "level": "1",
+  "url": "sec-1-2-2.html",
+  "type": "Worksheet",
+  "number": "",
+  "title": "<span class=\"process-math\">\\(\\S 1.2\\text{:}\\)<\/span> Reduced Row Echelon Form (RREF)",
+  "body": " : Reduced Row Echelon Form (RREF)    Motivation: RREF        Augmented Matrices   Consider the system Perform the row operation .       Activity: Augmented Matrices and Solution Spaces      Write the augmented matrix for the linear system and perform Gaussian elimination to describe the solution space in as much detail as you can.    Suppose that you have a linear system in the variables and whose augmented matrix is row equivalent to Write the linear system corresponding to this augmented matrix and describe its solution set in as much detail as you can.    Suppose that you have a linear system in the variables and whose augmented matrix is row equivalent to Write the linear system corresponding to this augmented matrix and describe its solution set in as much detail as you can.    Suppose that the augmented matrix of a linear system has the following shape where could be any real number.    How many equations are there in this system and how many variables?   Based on our earlier discussion in Section 1.1, do you think it's most likely that this system has exactly one solution, infinitely many solutions, or no solutions?   Suppose that this augmented matrix is row equivalent to Make a choice for the names of the variables and write the corresponding linear system. Does the system have exactly one solution, infinitely many solutions, or no solutions?           Definition: RREF   How do we know a matrix is reduced to the \"easiest\" form?  We say that a matrix is in reduced row echelon form if the following properties are satisfied.   If the entries in a row are all zero, then the same is true of any row below it.    If we move across a row from left to right, the first nonzero entry we encounter is 1. We call this entry the leading entry in the row.    The leading entry in any row is to the right of the leading entries in all the rows above it.    A leading entry is the only nonzero entry in its column.   We call a matrix in reduced row echelon form a reduced row echelon matrix .  The following is an example of a matrix in RREF:      Activity: Identifying RREF   Consider each of the following augmented matrices. Determine if the matrix is in reduced row echelon form. If it is not, explain why.                             Practice: Using RREF to Describe Solution Spaces   For each matrix in the previous activity, perform necessary row operations to obtain RREF if it is not already reduced. Then, use the matrix in RREF to describe the solution space of the original system.     Fact: RREF        "
+},
+{
+  "id": "sec-1-2-2-2-1",
+  "level": "2",
+  "url": "sec-1-2-2.html#sec-1-2-2-2-1",
+  "type": "Worksheet Exercise",
+  "number": "1",
+  "title": "Motivation: RREF.",
+  "body": " Motivation: RREF      "
+},
+{
+  "id": "sec-1-2-2-2-2",
+  "level": "2",
+  "url": "sec-1-2-2.html#sec-1-2-2-2-2",
+  "type": "Worksheet Exercise",
+  "number": "2",
+  "title": "Augmented Matrices.",
+  "body": " Augmented Matrices   Consider the system Perform the row operation .   "
+},
+{
+  "id": "sec-1-2-2-3-1",
+  "level": "2",
+  "url": "sec-1-2-2.html#sec-1-2-2-3-1",
+  "type": "Worksheet Exercise",
+  "number": "3",
+  "title": "Activity: Augmented Matrices and Solution Spaces.",
+  "body": " Activity: Augmented Matrices and Solution Spaces      Write the augmented matrix for the linear system and perform Gaussian elimination to describe the solution space in as much detail as you can.    Suppose that you have a linear system in the variables and whose augmented matrix is row equivalent to Write the linear system corresponding to this augmented matrix and describe its solution set in as much detail as you can.    Suppose that you have a linear system in the variables and whose augmented matrix is row equivalent to Write the linear system corresponding to this augmented matrix and describe its solution set in as much detail as you can.    Suppose that the augmented matrix of a linear system has the following shape where could be any real number.    How many equations are there in this system and how many variables?   Based on our earlier discussion in Section 1.1, do you think it's most likely that this system has exactly one solution, infinitely many solutions, or no solutions?   Suppose that this augmented matrix is row equivalent to Make a choice for the names of the variables and write the corresponding linear system. Does the system have exactly one solution, infinitely many solutions, or no solutions?       "
+},
+{
+  "id": "sec-1-2-2-4-1",
+  "level": "2",
+  "url": "sec-1-2-2.html#sec-1-2-2-4-1",
+  "type": "Worksheet Exercise",
+  "number": "4",
+  "title": "Definition: RREF.",
+  "body": " Definition: RREF   How do we know a matrix is reduced to the \"easiest\" form?  We say that a matrix is in reduced row echelon form if the following properties are satisfied.   If the entries in a row are all zero, then the same is true of any row below it.    If we move across a row from left to right, the first nonzero entry we encounter is 1. We call this entry the leading entry in the row.    The leading entry in any row is to the right of the leading entries in all the rows above it.    A leading entry is the only nonzero entry in its column.   We call a matrix in reduced row echelon form a reduced row echelon matrix .  The following is an example of a matrix in RREF:    "
+},
+{
+  "id": "sec-1-2-2-4-2",
+  "level": "2",
+  "url": "sec-1-2-2.html#sec-1-2-2-4-2",
+  "type": "Worksheet Exercise",
+  "number": "5",
+  "title": "Activity: Identifying RREF.",
+  "body": " Activity: Identifying RREF   Consider each of the following augmented matrices. Determine if the matrix is in reduced row echelon form. If it is not, explain why.                         "
+},
+{
+  "id": "sec-1-2-2-5-1",
+  "level": "2",
+  "url": "sec-1-2-2.html#sec-1-2-2-5-1",
+  "type": "Worksheet Exercise",
+  "number": "6",
+  "title": "Practice: Using RREF to Describe Solution Spaces.",
+  "body": " Practice: Using RREF to Describe Solution Spaces   For each matrix in the previous activity, perform necessary row operations to obtain RREF if it is not already reduced. Then, use the matrix in RREF to describe the solution space of the original system.   "
+},
+{
+  "id": "sec-1-2-2-5-2",
+  "level": "2",
+  "url": "sec-1-2-2.html#sec-1-2-2-5-2",
+  "type": "Worksheet Exercise",
+  "number": "7",
+  "title": "Fact: RREF.",
+  "body": " Fact: RREF      "
 }
 ]
 
