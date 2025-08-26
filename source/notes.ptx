@@ -23,6 +23,8 @@
     <xi:include href="./notes/sec-1-2-2.ptx" xpointer="sec-1-2-2" />
     <!-- <xi:include href="./notes/sec-1-2-2-sols.ptx" xpointer="sec-1-2-2-sols" /> -->
 
+    <xi:include href="./notes/sec-1-3.ptx" xpointer="sec-1-3" />
+
 
     <!-- SAMPLES
     <xi:include href="./notes/week01.ptx" xpointer="notes/1" />
