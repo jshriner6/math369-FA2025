@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<pretext>
+    <article xml:id="notes">
+        <worksheet xml:id="sec-1-2-2">
+        <title><m>\S 1.2</m>: Reduced Row Echelon Form (RREF)</title>
+            <page>
+                <exercise workspace=".25in">
+                    <title>Motivation: RREF</title>
+                    <statement>
+                        <p>
+                            
+                        </p>
+                    </statement>
+                    
+                </exercise>
+                <exercise workspace="1.5in">
+                    <title>Augmented Matrices</title>
+                    <statement>
+                        <p>
+                            Consider the system
+                            <me>
+                                \begin{alignedat}{3}
+                                2x + 4y \amp = \amp 3 \\
+                                -6x - 5y \amp = \amp 1 \\
+                                \end{alignedat}
+                            </me>
+                            Perform the row operation <m>3R_1 + R_2 \to R_2</m>.
+                        </p>
+                    </statement>
+                    
+                    
+                </exercise>
+            </page>
+            <page>
+                <exercise workspace="5in">
+                    <title>Activity: Augmented Matrices and Solution Spaces</title>
+                    <statement>
+	<p> <ol marker="a.">
+	<li> <p> Write the augmented matrix for the linear system
+	<me>
+	  \begin{alignedat}{4}
+	  x \amp  {}+{}  \amp 2y \amp  {}-{}  \amp z \amp  {}={}  \amp 1 \\
+	  3x \amp  {}+{}  \amp 2y \amp  {}+{}  \amp 2z \amp  {}={}  \amp 7 \\
+	  -x \amp  \amp  \amp  {}+{}  \amp 4z \amp  {}={}  \amp -3 \\
+	  \end{alignedat}
+	</me>
+	and perform Gaussian elimination to describe the solution space
+	in as much detail as you can.
+	</p> </li>
+
+	<li> <p>
+	  Suppose that you have a linear system in the variables
+	  <m>x</m> and <m>y</m> whose
+	  augmented matrix is row equivalent to 
+	  <me>
+	    \left[
+	    \begin{array}{rr|r}
+	    1 \amp 0 \amp 3 \\ 
+	    0 \amp 1 \amp 0 \\ 
+	    0 \amp 0 \amp 0 \\
+	    \end{array}
+	    \right].
+	  </me>
+	  Write the linear system corresponding to this
+	  augmented matrix and describe its solution set 
+	  in as much detail as you can.
+	</p>
+	</li>
+
+	<li> <p>
+	  Suppose that you have a linear system in the
+	  variables <m>x</m> and <m>y</m> whose
+	  augmented matrix is row equivalent to 
+	  <me>
+	    \left[
+	    \begin{array}{rr|r}
+	    1 \amp 0 \amp 3 \\ 
+	    0 \amp 1 \amp 0 \\ 
+	    0 \amp 0 \amp 1 \\
+	    \end{array}
+	    \right].
+	  </me>
+	  Write the linear system corresponding to this
+	  augmented matrix and describe its solution set 
+	  in as much detail as you can.
+	</p>
+	</li>
+
+	<li> <p>
+	  Suppose that the augmented matrix of a linear system
+	  has the following shape where <m>*</m> could be
+	  any real number.
+	  <me>
+	    \left[
+	    \begin{array}{rrrrr|r}
+	    * \amp * \amp * \amp * \amp * \amp * \\ 
+	    * \amp * \amp * \amp * \amp * \amp * \\ 
+	    * \amp * \amp * \amp * \amp * \amp * \\ 
+	    \end{array}
+	    \right].
+	  </me>
+	  <ol marker="1.">
+	    <li> <p>
+	      How many equations are there in this system and how many
+	      variables?
+	    </p></li>
+	    <li> <p> Based on our earlier discussion in Section 1.1, do you think it's most likely that this
+	    system has exactly one solution, infinitely many
+	    solutions, or no solutions?  </p></li>
+	    <li> <p>
+	      Suppose that this augmented matrix is row equivalent to 
+	      <me>
+		\left[
+		\begin{array}{rrrrr|r}
+		1 \amp 2 \amp 0 \amp 0 \amp 3 \amp 2 \\ 
+		0 \amp 0 \amp 1 \amp 2 \amp -1 \amp -1 \\ 
+		0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \\ 
+		\end{array}
+		\right].
+	      </me>
+	      Make a choice for the names of the variables and write
+	      the corresponding linear system.  Does the system have
+	      exactly one solution, infinitely many solutions, or no
+	      solutions?
+	    </p></li>
+	  </ol>
+	</p>
+	</li>
+	</ol></p>
+      </statement>
+
+
+        </exercise>
+            </page>
+
+            <page>
+                <exercise workspace=".5in">
+                    <title>Definition: RREF</title>
+                    <statement>
+                        <p>
+                            How do we know a matrix is reduced to the "easiest" form?
+
+                        </p>
+                        <p>
+                            We say that a matrix is in <term>reduced row echelon form</term>
+                            if the following properties are satisfied.
+                            <ul>
+                            <li>
+                            <p>
+                                If the entries in a row are all zero, then the same is
+                                true of any row below it.
+                            </p>
+                            </li>
+
+                            <li>
+                            <p>
+                                If we move across a row from left to right, the first nonzero
+                                entry we encounter is 1.  We call this entry the <term> leading
+                                entry</term> in the row.
+                            </p>
+                            </li>
+
+                            <li> <p>The leading entry in any row is to the right of the
+                            leading entries in all the rows above it.</p>
+                            </li>
+
+                            <li> <p>A leading entry is the only nonzero entry in its
+                            column.</p>
+                            </li>
+                            </ul>
+                            We call a matrix in reduced row echelon form a <term>
+                            reduced row echelon matrix</term>.
+                        
+                        </p>
+                        <p>
+                            The following is an example of a matrix in RREF:
+                            <me>
+                            \left[
+                            \begin{array}{rrrrrr}
+                            1 \amp * \amp 0 \amp * \amp 0 \amp * \\ 
+                            0 \amp 0 \amp 1 \amp * \amp 0 \amp * \\ 
+                            0 \amp 0 \amp 0 \amp 0 \amp 1 \amp * \\ 
+                            0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \\ 
+                            0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \\ 
+                            \end{array}
+                            \right].
+                            </me> 
+                        </p>
+                    </statement>
+                    
+                    
+                </exercise>
+
+                <exercise workspace="2in">
+                    <title>Activity: Identifying RREF</title>
+                    <statement>
+      <p> Consider each of the following augmented matrices.
+      Determine if the matrix is in reduced row echelon form.  If it
+      is not, explain why. 
+      <ol marker="a.">
+	<li> <p>
+	  <m>
+	    \left[
+	    \begin{array}{rrr|r}
+	    2 \amp 0 \amp 4 \amp -8 \\
+	    0 \amp 1 \amp 3 \amp 2 \\
+	    \end{array}
+	    \right].
+	  </m>
+	</p></li>
+	<li> <p>
+	  <m>
+	    \left[
+	    \begin{array}{rrr|r}
+	    1 \amp 0 \amp 0 \amp -1 \\
+	    0 \amp 1 \amp 0 \amp 3 \\
+	    0 \amp 0 \amp 1 \amp 1 \\
+	    \end{array}
+	    \right].
+	  </m>
+	</p></li>
+	<li> <p>
+	  <m>
+	    \left[
+	    \begin{array}{rrr|r}
+	    1 \amp 0 \amp 4 \amp 2 \\
+	    0 \amp 1 \amp 3 \amp 2 \\
+	    0 \amp 0 \amp 0 \amp 1 \\
+	    \end{array}
+	    \right].
+	  </m>
+	</p></li>
+	<li> <p>
+	  <m>
+	    \left[
+	    \begin{array}{rrr|r}
+	    0 \amp 1 \amp 3 \amp 2 \\
+	    0 \amp 0 \amp 0 \amp 0 \\
+	    1 \amp 0 \amp 4 \amp 2 \\
+	    \end{array}
+	    \right].
+	  </m>
+	</p></li>
+	<li> <p>
+	  <m>
+	    \left[
+	    \begin{array}{rrr|r}
+	    1 \amp 2 \amp -1 \amp 2 \\
+	    0 \amp 1 \amp -2 \amp 0 \\
+	    0 \amp 0 \amp 1 \amp 1 \\
+	    \end{array}
+	    \right].
+	  </m>
+	</p></li>
+      </ol>
+      </p>
+      </statement>
+
+      
+                    
+                    
+                </exercise>
+            </page>
+            <page>
+                <exercise workspace="5in">
+                    <title>Practice: Using RREF to Describe Solution Spaces</title>
+                    <statement>
+                        <p>
+                            For each matrix in the previous activity, perform necessary row operations to obtain RREF 
+                            if it is not already reduced. Then, use the matrix in RREF to describe the solution space
+                            of the original system.
+                        </p>
+                    </statement>
+                    
+                    
+                </exercise>
+                <exercise workspace="1in">
+                    <title>Fact: RREF</title>
+                    <statement>
+                        <p>
+                            
+                        </p>
+                    </statement>
+                    
+                    
+                    
+                </exercise>
+            </page>
+
+
+        </worksheet>
+    </article>
+</pretext>
