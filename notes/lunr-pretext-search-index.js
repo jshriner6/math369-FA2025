@@ -46,85 +46,85 @@ var ptx_lunr_docs = [
   "body": " Two more grids   Repeate the previous task for the two grids below    Grid with 5 rows and 4 columns. The upper left square is labeled with \"Start\" and and the square in row 3 column 4 is labeled with \"Finish\".    Grid with 5 rows and 5 columns. The upper left square is labeled with \"Start\" and and bottom right square is labeled with \"Finish\".      With a deeper understanding of the original question, we now have tools to approach related questions more effectively. Using similar reasoning, we can conclude it is not possible for the grid on the left, but it is possible for the grid on the right.   "
 },
 {
-  "id": "sec-1-1",
+  "id": "sec-1-1-sols",
   "level": "1",
-  "url": "sec-1-1.html",
+  "url": "sec-1-1-sols.html",
   "type": "Worksheet",
   "number": "",
   "title": "<span class=\"process-math\">\\(\\S 1.1\\text{:}\\)<\/span> What Can We Expect",
-  "body": " : What Can We Expect    Motivation: Linear Equations and Solutions        Activity: Linear Equation in Two Variables   In this activity, we consider sets of linear equations having just two unknowns. In this case, we can graph the solutions sets for the equations, which allows us to visualize different types of behavior.     On the grid below, graph the lines   At what point or points , do the lines intersect? How many points satisfy both equations?    An empty coordinate system.            On the grid below, graph the lines   At what point or points , do the lines intersect? How many points satisfy both equations?    An empty coordinate system.        On the grid below, graph the line .  How many points satisfy this equation?    An empty coordinate system.            On the grid below, graph the lines   At what point or points , do the lines intersect? How many points satisfy all three equations?    An empty coordinate system.          Observations   Let's notice three important factors involved in the previous activity.     Linear Equations: Unknowns          Activity: Linear Equations in Three Unknowns   This activity considers sets of equations having three unknowns. In this case, we know that the solutions of a single equation form a plane. If it helps with visualization, consider using -inch index cards to represent planes.   Is it possible that there are no solutions to two linear equations in three unknowns? Either sketch an example or state a reason why it can't happen.    Is it possible that there is exactly one solution to two linear equations in three unknowns? Either sketch an example or state a reason why it can't happen.    Is it possible that the solutions to four equations in three unknowns form a line? Either sketch an example or state a reason why it can't happen.    What would you usually expect for the set of solutions to four equations in three unknowns?    Suppose we have a set of 500 linear equations in 10 unknowns. What would you expect regarding the number of solutions?   Suppose we have a set of 10 linear equations in 500 unknowns. What would you expect regarding the number of solutions?      Observations   Let's make some observations from our work so far.       Definition: Linear System and Solutions        Activity: Linear Equations and Their Solutions     Which of the following equations are linear? Please provide a justification for your response.   .   .   .    Consider the system of linear equations:    Is a solution?   Is a solution?    Is a solution?   Can you find a solution in which ?   Do you think there are other solutions? Please explain your response.          "
+  "body": " : What Can We Expect    Motivation: Linear Equations and Solutions       In essence, linear algebra is all about sets of linear equations. In practice, it helps us deal with lots of linear equations (think trillions of equations with trillions of variables). What types of solutions can we expect?     Activity: Linear Equation in Two Variables   In this activity, we consider sets of linear equations having just two unknowns. In this case, we can graph the solutions sets for the equations, which allows us to visualize different types of behavior.     On the grid below, graph the lines   At what point or points , do the lines intersect? How many points satisfy both equations?    An empty coordinate system.       The graph of the two lines is as shown on the right. There is a single point, the point , at which the lines intersect. Therefore, there is a single point that satisfies both equations.   Two lines intersecting at one point.        On the grid below, graph the lines   At what point or points , do the lines intersect? How many points satisfy both equations?    An empty coordinate system.       These two lines are parallel, which means there is no point at which the lines intersect. Therefore, there is no point that satisfies both equations.   Two parallel lines.        On the grid below, graph the line .  How many points satisfy this equation?    An empty coordinate system.       There are infinitely many points that lie on this line and that, therefore, satisfy this single equation.   A single line.        On the grid below, graph the lines   At what point or points , do the lines intersect? How many points satisfy all three equations?    An empty coordinate system.       These three lines do not have a common intersection point. Consequently, there is no point satisfying all three equations.   Three lines which do not intersect at a single point.          Observations   Let's notice three important factors involved in the previous activity.       The number of equations (number of lines).    The number of variables, also called unknowns (coordinate system).    The number of intersection points (number of solutions: variable values that satisfy all equations).        Linear Equations: Unknowns       If we increase the number of unknowns to , our visuals are now in three-dimensional space, and linear equations are planes.   Two planes intersecting at a line.        Activity: Linear Equations in Three Unknowns   This activity considers sets of equations having three unknowns. In this case, we know that the solutions of a single equation form a plane. If it helps with visualization, consider using -inch index cards to represent planes.   Is it possible that there are no solutions to two linear equations in three unknowns? Either sketch an example or state a reason why it can't happen.    Is it possible that there is exactly one solution to two linear equations in three unknowns? Either sketch an example or state a reason why it can't happen.    Is it possible that the solutions to four equations in three unknowns form a line? Either sketch an example or state a reason why it can't happen.    What would you usually expect for the set of solutions to four equations in three unknowns?    Suppose we have a set of 500 linear equations in 10 unknowns. What would you expect regarding the number of solutions?   Suppose we have a set of 10 linear equations in 500 unknowns. What would you expect regarding the number of solutions?       Yes, it is possible if the two planes are parallel to one another.    No, this is not possible. Two planes will either intersect in a line, if they are not parallel, or not intersect at all, if they are parallel.    Yes, it is possible that four planes intersect in a line. One may sketch four planes that intersect in, say, the -axis.    In general, we would expect there to be no solutions to four equations in three unknowns because there are more equations than unknowns.    Since there are more equations than unknowns, we would expect there to be no solutions. We cannot guarantee this, however.    Since there are fewer equations than unknowns, we would expect there to be infinitely many solutions. We cannot guarantee this, however.       Observations   Let's make some observations from our work so far.       The more equations we have, the fewer solution we have. The more unknowns we have, the more solutions we have. WARNING: this is just vague (but helpful) intuition! We already know of examples that are exceptions to this rule.    There are three possibilities to the number of solutions we have for a system of linear equations:   Infinitely many    Exactly one    None             Definition: Linear System and Solutions       A linear equation with unknowns can be written in the form where are real numbers called coefficients , and are also referred to as variables .  A linear system or system of linear equations is a set of linear equations written in a common set of variables.  A solution to a linear system is a set of numbers for each variable that satisfy all the equations in the system. A solution space is the set of all solutions to a linear system.     Activity: Linear Equations and Their Solutions     Which of the following equations are linear? Please provide a justification for your response.   .   .   .    Consider the system of linear equations:    Is a solution?   Is a solution?    Is a solution?   Can you find a solution in which ?   Do you think there are other solutions? Please explain your response.          There are two linear equations in this list.  This is not a linear equation due to the presence of in the third term on the left.  This is a linear equation.  This is a linear equation since it can be rewritten in the form .     We will see that the system of linear equations has infinitely many solutions.  Yes, this is a solution since all three equations are satisfied if we set , , and .  No, this is not a solution since the first equation is not satisfied if and .  This is also not a solution.  If , then we arrive at the system of three linear equations: We have a solution when and . Therefore, is a solution to the original system of equations.  Since we have found more than one solution to the system of equations, we should expect that there are infinitely many. Therefore, there should be many other solutions.         "
 },
 {
-  "id": "sec-1-1-2-1",
+  "id": "sec-1-1-sols-2-1",
   "level": "2",
-  "url": "sec-1-1.html#sec-1-1-2-1",
+  "url": "sec-1-1-sols.html#sec-1-1-sols-2-1",
   "type": "Worksheet Exercise",
   "number": "1",
   "title": "Motivation: Linear Equations and Solutions.",
-  "body": " Motivation: Linear Equations and Solutions      "
+  "body": " Motivation: Linear Equations and Solutions       In essence, linear algebra is all about sets of linear equations. In practice, it helps us deal with lots of linear equations (think trillions of equations with trillions of variables). What types of solutions can we expect?   "
 },
 {
-  "id": "sec-1-1-2-2",
+  "id": "sec-1-1-sols-2-2",
   "level": "2",
-  "url": "sec-1-1.html#sec-1-1-2-2",
+  "url": "sec-1-1-sols.html#sec-1-1-sols-2-2",
   "type": "Worksheet Exercise",
   "number": "2",
   "title": "Activity: Linear Equation in Two Variables.",
-  "body": " Activity: Linear Equation in Two Variables   In this activity, we consider sets of linear equations having just two unknowns. In this case, we can graph the solutions sets for the equations, which allows us to visualize different types of behavior.     On the grid below, graph the lines   At what point or points , do the lines intersect? How many points satisfy both equations?    An empty coordinate system.      "
+  "body": " Activity: Linear Equation in Two Variables   In this activity, we consider sets of linear equations having just two unknowns. In this case, we can graph the solutions sets for the equations, which allows us to visualize different types of behavior.     On the grid below, graph the lines   At what point or points , do the lines intersect? How many points satisfy both equations?    An empty coordinate system.       The graph of the two lines is as shown on the right. There is a single point, the point , at which the lines intersect. Therefore, there is a single point that satisfies both equations.   Two lines intersecting at one point.        On the grid below, graph the lines   At what point or points , do the lines intersect? How many points satisfy both equations?    An empty coordinate system.       These two lines are parallel, which means there is no point at which the lines intersect. Therefore, there is no point that satisfies both equations.   Two parallel lines.        On the grid below, graph the line .  How many points satisfy this equation?    An empty coordinate system.       There are infinitely many points that lie on this line and that, therefore, satisfy this single equation.   A single line.        On the grid below, graph the lines   At what point or points , do the lines intersect? How many points satisfy all three equations?    An empty coordinate system.       These three lines do not have a common intersection point. Consequently, there is no point satisfying all three equations.   Three lines which do not intersect at a single point.      "
 },
 {
-  "id": "sec-1-1-5-1",
+  "id": "sec-1-1-sols-3-1",
   "level": "2",
-  "url": "sec-1-1.html#sec-1-1-5-1",
+  "url": "sec-1-1-sols.html#sec-1-1-sols-3-1",
   "type": "Worksheet Exercise",
   "number": "3",
   "title": "Observations.",
-  "body": " Observations   Let's notice three important factors involved in the previous activity.   "
+  "body": " Observations   Let's notice three important factors involved in the previous activity.       The number of equations (number of lines).    The number of variables, also called unknowns (coordinate system).    The number of intersection points (number of solutions: variable values that satisfy all equations).      "
 },
 {
-  "id": "sec-1-1-5-2",
+  "id": "sec-1-1-sols-3-2",
   "level": "2",
-  "url": "sec-1-1.html#sec-1-1-5-2",
+  "url": "sec-1-1-sols.html#sec-1-1-sols-3-2",
   "type": "Worksheet Exercise",
   "number": "4",
   "title": "Linear Equations: <span class=\"process-math\">\\(3\\)<\/span> Unknowns.",
-  "body": " Linear Equations: Unknowns      "
+  "body": " Linear Equations: Unknowns       If we increase the number of unknowns to , our visuals are now in three-dimensional space, and linear equations are planes.   Two planes intersecting at a line.    "
 },
 {
-  "id": "sec-1-1-6-1",
+  "id": "sec-1-1-sols-4-1",
   "level": "2",
-  "url": "sec-1-1.html#sec-1-1-6-1",
+  "url": "sec-1-1-sols.html#sec-1-1-sols-4-1",
   "type": "Worksheet Exercise",
   "number": "5",
   "title": "Activity: Linear Equations in Three Unknowns.",
-  "body": " Activity: Linear Equations in Three Unknowns   This activity considers sets of equations having three unknowns. In this case, we know that the solutions of a single equation form a plane. If it helps with visualization, consider using -inch index cards to represent planes.   Is it possible that there are no solutions to two linear equations in three unknowns? Either sketch an example or state a reason why it can't happen.    Is it possible that there is exactly one solution to two linear equations in three unknowns? Either sketch an example or state a reason why it can't happen.    Is it possible that the solutions to four equations in three unknowns form a line? Either sketch an example or state a reason why it can't happen.    What would you usually expect for the set of solutions to four equations in three unknowns?    Suppose we have a set of 500 linear equations in 10 unknowns. What would you expect regarding the number of solutions?   Suppose we have a set of 10 linear equations in 500 unknowns. What would you expect regarding the number of solutions?    "
+  "body": " Activity: Linear Equations in Three Unknowns   This activity considers sets of equations having three unknowns. In this case, we know that the solutions of a single equation form a plane. If it helps with visualization, consider using -inch index cards to represent planes.   Is it possible that there are no solutions to two linear equations in three unknowns? Either sketch an example or state a reason why it can't happen.    Is it possible that there is exactly one solution to two linear equations in three unknowns? Either sketch an example or state a reason why it can't happen.    Is it possible that the solutions to four equations in three unknowns form a line? Either sketch an example or state a reason why it can't happen.    What would you usually expect for the set of solutions to four equations in three unknowns?    Suppose we have a set of 500 linear equations in 10 unknowns. What would you expect regarding the number of solutions?   Suppose we have a set of 10 linear equations in 500 unknowns. What would you expect regarding the number of solutions?       Yes, it is possible if the two planes are parallel to one another.    No, this is not possible. Two planes will either intersect in a line, if they are not parallel, or not intersect at all, if they are parallel.    Yes, it is possible that four planes intersect in a line. One may sketch four planes that intersect in, say, the -axis.    In general, we would expect there to be no solutions to four equations in three unknowns because there are more equations than unknowns.    Since there are more equations than unknowns, we would expect there to be no solutions. We cannot guarantee this, however.    Since there are fewer equations than unknowns, we would expect there to be infinitely many solutions. We cannot guarantee this, however.     "
 },
 {
-  "id": "sec-1-1-6-2",
+  "id": "sec-1-1-sols-4-2",
   "level": "2",
-  "url": "sec-1-1.html#sec-1-1-6-2",
+  "url": "sec-1-1-sols.html#sec-1-1-sols-4-2",
   "type": "Worksheet Exercise",
   "number": "6",
   "title": "Observations.",
-  "body": " Observations   Let's make some observations from our work so far.   "
+  "body": " Observations   Let's make some observations from our work so far.       The more equations we have, the fewer solution we have. The more unknowns we have, the more solutions we have. WARNING: this is just vague (but helpful) intuition! We already know of examples that are exceptions to this rule.    There are three possibilities to the number of solutions we have for a system of linear equations:   Infinitely many    Exactly one    None         "
 },
 {
-  "id": "sec-1-1-7-1",
+  "id": "sec-1-1-sols-5-1",
   "level": "2",
-  "url": "sec-1-1.html#sec-1-1-7-1",
+  "url": "sec-1-1-sols.html#sec-1-1-sols-5-1",
   "type": "Worksheet Exercise",
   "number": "7",
   "title": "Definition: Linear System and Solutions.",
-  "body": " Definition: Linear System and Solutions      "
+  "body": " Definition: Linear System and Solutions       A linear equation with unknowns can be written in the form where are real numbers called coefficients , and are also referred to as variables .  A linear system or system of linear equations is a set of linear equations written in a common set of variables.  A solution to a linear system is a set of numbers for each variable that satisfy all the equations in the system. A solution space is the set of all solutions to a linear system.   "
 },
 {
-  "id": "sec-1-1-7-2",
+  "id": "sec-1-1-sols-5-2",
   "level": "2",
-  "url": "sec-1-1.html#sec-1-1-7-2",
+  "url": "sec-1-1-sols.html#sec-1-1-sols-5-2",
   "type": "Worksheet Exercise",
   "number": "8",
   "title": "Activity: Linear Equations and Their Solutions.",
-  "body": " Activity: Linear Equations and Their Solutions     Which of the following equations are linear? Please provide a justification for your response.   .   .   .    Consider the system of linear equations:    Is a solution?   Is a solution?    Is a solution?   Can you find a solution in which ?   Do you think there are other solutions? Please explain your response.        "
+  "body": " Activity: Linear Equations and Their Solutions     Which of the following equations are linear? Please provide a justification for your response.   .   .   .    Consider the system of linear equations:    Is a solution?   Is a solution?    Is a solution?   Can you find a solution in which ?   Do you think there are other solutions? Please explain your response.          There are two linear equations in this list.  This is not a linear equation due to the presence of in the third term on the left.  This is a linear equation.  This is a linear equation since it can be rewritten in the form .     We will see that the system of linear equations has infinitely many solutions.  Yes, this is a solution since all three equations are satisfied if we set , , and .  No, this is not a solution since the first equation is not satisfied if and .  This is also not a solution.  If , then we arrive at the system of three linear equations: We have a solution when and . Therefore, is a solution to the original system of equations.  Since we have found more than one solution to the system of equations, we should expect that there are infinitely many. Therefore, there should be many other solutions.       "
 },
 {
   "id": "sec-1-2-1",
