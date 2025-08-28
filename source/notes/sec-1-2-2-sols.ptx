@@ -316,7 +316,11 @@
                             </me> 
                         </p>
                     </statement>
-                    
+                    <solution>
+						<p>
+							The position of a leading entry in a matrix in RREF is called a <term>pivot position</term>.
+						</p>
+					</solution>
                     
                 </exercise>
 
@@ -541,6 +545,33 @@
                     
                 </exercise>
             </page>
+
+			<page>
+				<exercise >
+					<title>Observations: Solution Spaces and Pivots</title>
+					<statement>
+						<p>
+							
+						</p>
+					</statement>
+					<solution>
+						<p>
+							A linear system is inconsistent exactly when a pivot position appears in the rightmost
+							column of the augmented matrix.
+						</p>
+						<p>
+							A solution is unique when every column of the coefficient matrix contains a pivot position.
+							Columns containing pivot positions correspond to <term>basic variables</term> of the system.
+						</p>
+						<p>
+							There are infinitely many solutions when there is a column of the coefficient matrix without a pivot position.
+							Columns not containing pivot positions correspond to <term>free variables</term> of the system.
+						</p>
+					</solution>
+					
+					
+				</exercise>
+			</page>
 
 
         </worksheet>
