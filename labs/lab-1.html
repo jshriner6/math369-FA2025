@@ -149,11 +149,105 @@ eBookConfig.enable_chatcodes =  false;
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="worksheet" id="lab-1" data-margins="1in 1in 1.25cm 1in"><h2 class="heading hide-type">
 <span class="type">Worksheet</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Lab 1: Systems of Equations</span><div class="print-links"><a href="lab-1-printable.html" class="print-link" title="Print preview"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8ad;</span></a></div>
 </h2>
-<section class="introduction" id="lab-1-2"><div class="para" id="lab-1-2-1">Coming Soon<div class="autopermalink" data-description="Paragraph"><a href="#lab-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<section class="introduction" id="lab-1-2"><div class="para" id="lab-1-2-1">Complete the following exercises in groups of 2 or 3 students including complete explanations of your work.  You should write directly on this handout (if additional pages are necessary, please make sure they are well-organized), and you only need to submit one report to Gradescope.  Make sure you indicate everyone in your group in your submission to Gradescope.<div class="autopermalink" data-description="Paragraph"><a href="#lab-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="lab-1-2-2">There is a <a class="external" href="http://gvsu.edu/s/0Ng" target="_blank">page of Sage cells</a> available for you to use for computation.<div class="autopermalink" data-description="Paragraph"><a href="#lab-1-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section><section class="onepage" id="lab-1-3"><article class="exercise exercise-like" id="lab-1-3-1"><h3 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
-<div class="para" id="lab-1-3-1-1-1"><div class="autopermalink" data-description="Paragraph"><a href="#lab-1-3-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
-<div class="workspace" data-space="1.5in"></div>
-<div class="autopermalink" data-description="Worksheet Exercise 1"><a href="#lab-1-3-1" title="Copy heading and permalink for Worksheet Exercise 1" aria-label="Copy heading and permalink for Worksheet Exercise 1">🔗</a></div></article></section><div class="autopermalink" data-description="Worksheet: Lab 1: Systems of Equations"><a href="#lab-1" title="Copy heading and permalink for Worksheet: Lab 1: Systems of Equations" aria-label="Copy heading and permalink for Worksheet: Lab 1: Systems of Equations">🔗</a></div></section></div>
+<div class="para logical" id="lab-1-3-1-1-1">
+<div class="para">Consider the system of linear equations:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{alignedat}{4} x &amp; {}+{} &amp; 2y &amp; {}-{} &amp; z &amp; {}={} &amp; 1 \\ 3x &amp; {}+{} &amp; 2y &amp; {}+{} &amp; 2z &amp; {}={} &amp; 7 \\ -x &amp; &amp; &amp; {}+{} &amp; 4z &amp; {}={} &amp; -3 \\\end{alignedat}
+\end{equation*}
+</div>
+<div class="para">Write this system as an augmented matrix and use Sage to find a description of the solution space.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#lab-1-3-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Worksheet Exercise 1"><a href="#lab-1-3-1" title="Copy heading and permalink for Worksheet Exercise 1" aria-label="Copy heading and permalink for Worksheet Exercise 1">🔗</a></div></article></section><section class="onepage" id="lab-1-4"><article class="exercise exercise-like" id="lab-1-4-1"><h3 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
+<div class="introduction" id="lab-1-4-1-1"><div class="para" id="lab-1-4-1-1-1">Shown below is the traffic pattern in the downtown area of a large city.  The figures give the number of cars per hour traveling along each road.  Any car that drives into an intersection must also leave the intersection.  This means that the number of cars entering an intersection in an hour is equal to the number of cars leaving the intersection. <div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/traffic-a.png" class="contained" alt="Traffic pattern in a directed graph."></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#lab-1-4-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<article class="task exercise-like" id="lab-1-4-1-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="lab-1-4-1-2-1-1">Write a system of equations for the quantities <span class="process-math">\(x\text{,}\)</span> <span class="process-math">\(y\text{,}\)</span> <span class="process-math">\(z\text{,}\)</span> and <span class="process-math">\(w\)</span> and describe the set of solutions. Is there a single solution, infinitely many solutions, or no solutions?<div class="autopermalink" data-description="Paragraph"><a href="#lab-1-4-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="workspace" data-space="2in"></div>
+<div class="autopermalink" data-description="Task 2.a"><a href="#lab-1-4-1-2" title="Copy heading and permalink for Task 2.a" aria-label="Copy heading and permalink for Task 2.a">🔗</a></div></article><article class="task exercise-like" id="lab-1-4-1-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="lab-1-4-1-3-1-1">Explain why you would expect infinitely many solutions for this particular traffic pattern.<div class="autopermalink" data-description="Paragraph"><a href="#lab-1-4-1-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="workspace" data-space="2in"></div>
+<div class="autopermalink" data-description="Task 2.b"><a href="#lab-1-4-1-3" title="Copy heading and permalink for Task 2.b" aria-label="Copy heading and permalink for Task 2.b">🔗</a></div></article><article class="task exercise-like" id="lab-1-4-1-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="lab-1-4-1-4-1-1">What is the smallest amount of traffic flowing through <span class="process-math">\(x\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#lab-1-4-1-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="workspace" data-space="2in"></div>
+<div class="autopermalink" data-description="Task 2.c"><a href="#lab-1-4-1-4" title="Copy heading and permalink for Task 2.c" aria-label="Copy heading and permalink for Task 2.c">🔗</a></div></article><div class="autopermalink" data-description="Worksheet Exercise 2"><a href="#lab-1-4-1" title="Copy heading and permalink for Worksheet Exercise 2" aria-label="Copy heading and permalink for Worksheet Exercise 2">🔗</a></div></article></section><section class="onepage" id="lab-1-5"><article class="exercise exercise-like" id="lab-1-5-1"><h3 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
+<div class="introduction" id="lab-1-5-1-1">
+<div class="para logical" id="lab-1-5-1-1-1">
+<div class="para">A typical problem in thermodynamics is to determine the temperature distribution across a thin plate if you know the temperature around the boundary. Assume, for instance, that the plate represents a cross section of a metal beam with negligible heat flow in the direction perpendicular to the plate. Let <span class="process-math">\(T_{1}, \ldots, T_{6}\)</span> be the temperatures at the six nodes inside the beam. The temperature at a node is approximately the average of the four nearest nodes: for instance,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+T_{1} = (10 + 15 + T_{2} + T_{4})/4 ~~~\hbox{ or }~~~4T_{1} - T_{2} - T_{4} = 25\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#lab-1-5-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="lab-1-5-1-1-2">
+<div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/heat.png" class="contained" alt="A temperature grid."></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#lab-1-5-1-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<article class="task exercise-like" id="lab-1-5-1-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="lab-1-5-1-2-1-1">In the real world, the approximation becomes better the closer the points are together or as we add more and more into the grid. Set up a system of linear equations to find the temperature inside the plate.<div class="autopermalink" data-description="Paragraph"><a href="#lab-1-5-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="workspace" data-space="1in"></div>
+<div class="autopermalink" data-description="Task 3.a"><a href="#lab-1-5-1-2" title="Copy heading and permalink for Task 3.a" aria-label="Copy heading and permalink for Task 3.a">🔗</a></div></article><article class="task exercise-like" id="lab-1-5-1-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="lab-1-5-1-3-1-1">Solve your equations to find the temperatures inside the plate.<div class="autopermalink" data-description="Paragraph"><a href="#lab-1-5-1-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="lab-1-5-1-3-1-2">Helpful Sage hint: If you have a matrix <em class="emphasis">B</em> containing rational entries (e.g. fractions), you can obtain a decimal approximation using <code class="code-inline tex2jax_ignore">B.numerical_approx(digits=4)</code>. You may, of course, change 4 to any other appropriate value.<div class="autopermalink" data-description="Paragraph"><a href="#lab-1-5-1-3-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="workspace" data-space="2in"></div>
+<div class="autopermalink" data-description="Task 3.b"><a href="#lab-1-5-1-3" title="Copy heading and permalink for Task 3.b" aria-label="Copy heading and permalink for Task 3.b">🔗</a></div></article><div class="autopermalink" data-description="Worksheet Exercise 3"><a href="#lab-1-5-1" title="Copy heading and permalink for Worksheet Exercise 3" aria-label="Copy heading and permalink for Worksheet Exercise 3">🔗</a></div></article></section><section class="onepage" id="lab-1-6"><article class="exercise exercise-like" id="lab-1-6-1"><h3 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
+<div class="introduction" id="lab-1-6-1-1">
+<div class="para" id="lab-1-6-1-1-1">This exercise is about balancing chemical reactions.<div class="autopermalink" data-description="Paragraph"><a href="#lab-1-6-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="lab-1-6-1-1-2">
+<div class="para">Chemists denote a molecule of water as <span class="process-math">\(\text{H}_{2}\text{O}\text{,}\)</span> which means it is composed of two atoms of hydrogen (H) and one atom of oxygen (O). The process by which hydrogen is burned is described by the chemical reaction</div>
+<div class="displaymath process-math">
+\begin{equation*}
+x\thinspace \text{H}_{2} + y\thinspace\text{O}_{2} \to z\thinspace \text{H}_{2}\text{O}
+\end{equation*}
+</div>
+<div class="para">This means that <span class="process-math">\(x\)</span> molecules of hydrogen <span class="process-math">\(\text{H}_{2}\)</span> combine with <span class="process-math">\(y\)</span> molecules of oxygen <span class="process-math">\(\text{O}_{2}\)</span> to produce <span class="process-math">\(z\)</span> water molecules. The number of hydrogen atoms is the same before and after the reaction; the same is true of the oxygen atoms.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#lab-1-6-1-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<article class="task exercise-like" id="lab-1-6-1-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="lab-1-6-1-2-1-1">How many hydrogen atoms are there before the reaction? How many hydrogen atoms are there after the reaction? Find a linear equation in <span class="process-math">\(x\text{,}\)</span> <span class="process-math">\(y\text{,}\)</span> and <span class="process-math">\(z\)</span> by equating these quantities.<div class="autopermalink" data-description="Paragraph"><a href="#lab-1-6-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="workspace" data-space="2in"></div>
+<div class="autopermalink" data-description="Task 4.a"><a href="#lab-1-6-1-2" title="Copy heading and permalink for Task 4.a" aria-label="Copy heading and permalink for Task 4.a">🔗</a></div></article><article class="task exercise-like" id="lab-1-6-1-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="lab-1-6-1-3-1-1">Find a second linear equation in <span class="process-math">\(x\text{,}\)</span> <span class="process-math">\(y\text{,}\)</span> and <span class="process-math">\(z\)</span> by equating the number of oxygen atoms before and after the reaction.<div class="autopermalink" data-description="Paragraph"><a href="#lab-1-6-1-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="workspace" data-space="2in"></div>
+<div class="autopermalink" data-description="Task 4.b"><a href="#lab-1-6-1-3" title="Copy heading and permalink for Task 4.b" aria-label="Copy heading and permalink for Task 4.b">🔗</a></div></article><article class="task exercise-like" id="lab-1-6-1-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="lab-1-6-1-4-1-1">Describe the solutions of this linear system. Why would you expect infinitely many solutions when balancing a chemical reaction?<div class="autopermalink" data-description="Paragraph"><a href="#lab-1-6-1-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="workspace" data-space="2in"></div>
+<div class="autopermalink" data-description="Task 4.c"><a href="#lab-1-6-1-4" title="Copy heading and permalink for Task 4.c" aria-label="Copy heading and permalink for Task 4.c">🔗</a></div></article><article class="task exercise-like" id="lab-1-6-1-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para" id="lab-1-6-1-5-1-1">In this chemical setting, <span class="process-math">\(x\text{,}\)</span> <span class="process-math">\(y\text{,}\)</span> and <span class="process-math">\(z\)</span> should be positive integers. Find the solution where <span class="process-math">\(x\text{,}\)</span> <span class="process-math">\(y\text{,}\)</span> and <span class="process-math">\(z\)</span> are the smallest possible positive integers.<div class="autopermalink" data-description="Paragraph"><a href="#lab-1-6-1-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="workspace" data-space="2in"></div>
+<div class="autopermalink" data-description="Task 4.d"><a href="#lab-1-6-1-5" title="Copy heading and permalink for Task 4.d" aria-label="Copy heading and permalink for Task 4.d">🔗</a></div></article><article class="task exercise-like" id="lab-1-6-1-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
+<div class="para logical" id="lab-1-6-1-6-1-1">
+<div class="para">Consider the reaction where potassium permanganate and manganese sulfate combine with water to produce manganese dioxide, potassium sulfate, and sulfuric acid:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+x_{1}\thinspace \mbox{K}\mbox{Mn}\mbox{O}_{4} + x_{2}\thinspace \mbox{Mn}\mbox{S}\mbox{O}_{4} + x_{3}\thinspace \mbox{H}_{2}\mbox{O}\to x_{4}\thinspace \mbox{Mn}\mbox{O}_{2} + x_{5}\thinspace \mbox{K}_{2}\mbox{S}\mbox{O}_{4} + x_{6}\thinspace \mbox{H}_{2}\mbox{S}\mbox{O}_{4}.
+\end{equation*}
+</div>
+<div class="para">As in the previous exercise, find the appropriate values for <span class="process-math">\(x_{1},x_{2},\ldots, x_{6}\)</span> to balance the chemical reaction.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#lab-1-6-1-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="workspace" data-space="2in"></div>
+<div class="autopermalink" data-description="Task 4.e"><a href="#lab-1-6-1-6" title="Copy heading and permalink for Task 4.e" aria-label="Copy heading and permalink for Task 4.e">🔗</a></div></article><div class="autopermalink" data-description="Worksheet Exercise 4"><a href="#lab-1-6-1" title="Copy heading and permalink for Worksheet Exercise 4" aria-label="Copy heading and permalink for Worksheet Exercise 4">🔗</a></div></article></section><section class="onepage" id="lab-1-7"></section><div class="autopermalink" data-description="Worksheet: Lab 1: Systems of Equations"><a href="#lab-1" title="Copy heading and permalink for Worksheet: Lab 1: Systems of Equations" aria-label="Copy heading and permalink for Worksheet: Lab 1: Systems of Equations">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="labs.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span>
 </div></main>
