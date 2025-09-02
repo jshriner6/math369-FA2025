@@ -296,6 +296,141 @@ var ptx_lunr_docs = [
   "number": "2",
   "title": "",
   "body": "  Access Section 1.3 of our textbook. Follow instructions provided in class.   "
+},
+{
+  "id": "sec-2-1-1",
+  "level": "1",
+  "url": "sec-2-1-1.html",
+  "type": "Worksheet",
+  "number": "",
+  "title": "<span class=\"process-math\">\\(\\S 2.1\\text{:}\\)<\/span> Vectors and Linear Combinations",
+  "body": " : Vectors and Linear Combinations    Motivation: Vectors        Preview Activity: Vectors   Suppose that      Find expressions for the vectors and sketch them using the coordinate system below.  Sketch the vectors on this grid.    An empty coordinate system.          What geometric effect does scalar multiplication have on a vector? Also, describe the effect that multiplying by a negative scalar has.         Sketch the vectors using the coordinate system below.  Sketch the vectors on this grid.    An empty coordinate system.          Consider vectors that have the form where is any scalar. Sketch a few of these vectors when, say, and . Give a geometric description of this set of vectors.  Sketch the vectors on this grid.    An empty coordinate system.            If and are two scalars, then the vector is called a linear combination of the vectors and . Find the vector that is the linear combination when and .      Can the vector be represented as a linear combination of and ? Asked differently, can we find scalars and such that .     Definition: Linear Combination   The linear combination of the vectors with scalars is the vector       Activity: Connection Linear Combinations to Linear Systems   In this activity, we will look at linear combinations of a pair of vectors, and .  There is an interactive diagram in our textbook that accompanies this activity.   The interactive provided should be used to construct linear combinations whose weights and may be varied using the sliders at the top. The vectors and are outlined while the linear combination is shaded red.     The weight is initially set to 0. Explain what happens as you vary while keeping . How is this related to scalar multiplication?   What is the linear combination of and when and ? You may find this result using the diagram, but you should also verify it by computing the linear combination.   Describe the vectors that arise when the weight is set to 1 and is varied. How is this related to our investigations in the preview activity?   Can the vector be expressed as a linear combination of and ? If so, what are the weights and ?   Can the vector be expressed as a linear combination of and ? If so, what are the weights and ?   Verify the result from the previous part by algebraically finding the weights and that form the linear combination .   Can the vector be expressed as a linear combination of and ? What about the vector ?   Are there any two-dimensional vectors that cannot be expressed as linear combinations of and ?        Exercise: Linear Combinations and Linear Systems   Is a linear combination of and ?     "
+},
+{
+  "id": "sec-2-1-1-2-1",
+  "level": "2",
+  "url": "sec-2-1-1.html#sec-2-1-1-2-1",
+  "type": "Worksheet Exercise",
+  "number": "1",
+  "title": "Motivation: Vectors.",
+  "body": " Motivation: Vectors      "
+},
+{
+  "id": "sec-2-1-1-2-2",
+  "level": "2",
+  "url": "sec-2-1-1.html#sec-2-1-1-2-2",
+  "type": "Worksheet Exercise",
+  "number": "2",
+  "title": "Preview Activity: Vectors.",
+  "body": " Preview Activity: Vectors   Suppose that      Find expressions for the vectors and sketch them using the coordinate system below.  Sketch the vectors on this grid.    An empty coordinate system.          What geometric effect does scalar multiplication have on a vector? Also, describe the effect that multiplying by a negative scalar has.    "
+},
+{
+  "id": "fig-activity-2-1-2",
+  "level": "2",
+  "url": "sec-2-1-1.html#fig-activity-2-1-2",
+  "type": "Figure",
+  "number": "2",
+  "title": "",
+  "body": " Sketch the vectors on this grid.    An empty coordinate system.    "
+},
+{
+  "id": "fig-activity-2-1-3",
+  "level": "2",
+  "url": "sec-2-1-1.html#fig-activity-2-1-3",
+  "type": "Figure",
+  "number": "3",
+  "title": "",
+  "body": " Sketch the vectors on this grid.    An empty coordinate system.    "
+},
+{
+  "id": "sec-2-1-1-4-3",
+  "level": "2",
+  "url": "sec-2-1-1.html#sec-2-1-1-4-3",
+  "type": "Worksheet Exercise",
+  "number": "3",
+  "title": "Definition: Linear Combination.",
+  "body": " Definition: Linear Combination   The linear combination of the vectors with scalars is the vector   "
+},
+{
+  "id": "sec-2-1-1-5-1",
+  "level": "2",
+  "url": "sec-2-1-1.html#sec-2-1-1-5-1",
+  "type": "Worksheet Exercise",
+  "number": "4",
+  "title": "Activity: Connection Linear Combinations to Linear Systems.",
+  "body": " Activity: Connection Linear Combinations to Linear Systems   In this activity, we will look at linear combinations of a pair of vectors, and .  There is an interactive diagram in our textbook that accompanies this activity.   The interactive provided should be used to construct linear combinations whose weights and may be varied using the sliders at the top. The vectors and are outlined while the linear combination is shaded red.     The weight is initially set to 0. Explain what happens as you vary while keeping . How is this related to scalar multiplication?   What is the linear combination of and when and ? You may find this result using the diagram, but you should also verify it by computing the linear combination.   Describe the vectors that arise when the weight is set to 1 and is varied. How is this related to our investigations in the preview activity?   Can the vector be expressed as a linear combination of and ? If so, what are the weights and ?   Can the vector be expressed as a linear combination of and ? If so, what are the weights and ?   Verify the result from the previous part by algebraically finding the weights and that form the linear combination .   Can the vector be expressed as a linear combination of and ? What about the vector ?   Are there any two-dimensional vectors that cannot be expressed as linear combinations of and ?    "
+},
+{
+  "id": "sec-2-1-1-6-1",
+  "level": "2",
+  "url": "sec-2-1-1.html#sec-2-1-1-6-1",
+  "type": "Worksheet Exercise",
+  "number": "5",
+  "title": "Exercise: Linear Combinations and Linear Systems.",
+  "body": " Exercise: Linear Combinations and Linear Systems   Is a linear combination of and ?   "
+},
+{
+  "id": "sec-2-1-2",
+  "level": "1",
+  "url": "sec-2-1-2.html",
+  "type": "Worksheet",
+  "number": "",
+  "title": "<span class=\"process-math\">\\(\\S 2.1\\text{:}\\)<\/span> Linear Combinations and Linear Systems",
+  "body": " : Linear Combinations and Linear Systems    Motivation: Linear Combinations and Linear Systems        Example: Notation   Last time we found that is a linear combination of and because     Fact: Linear Combinations and Linear Systems          Notes: Vectors and Matrices in Sage          Activity: Linear Combinations and Linear Systems   Sage cells are provided in the text to help with computations to answer the following questions.    Given the vectors , can be expressed as a linear combination of , , and ? Rephrase this question by writing a linear system for the weights , , and and use Sage cells to answer this question.  Consider the following linear system. Identify vectors , , , and such that the question \"Is this linear system consistent?\" is equivalent to the question \"Can be expressed as a linear combination of , , and ?\"   Consider the vectors . Can be expressed as a linear combination of , , and ? If so, can be written as a linear combination of these vectors in more than one way?   Considering the vectors , , and from the previous part, can we write every three-dimensional vector as a linear combination of these vectors? Explain how the pivot positions of the matrix help answer this question.   Now consider the vectors . Can be expressed as a linear combination of , , and ? If so, can be written as a linear combination of these vectors in more than one way?   Considering the vectors , , and from the previous part, can we write every three-dimensional vector as a linear combination of these vectors? Explain how the pivot positions of the matrix help answer this question.         Visualizing No Solution   Consider the vectors and , as shown in .   Vectors and .         "
+},
+{
+  "id": "sec-2-1-2-2-1",
+  "level": "2",
+  "url": "sec-2-1-2.html#sec-2-1-2-2-1",
+  "type": "Worksheet Exercise",
+  "number": "1",
+  "title": "Motivation: Linear Combinations and Linear Systems.",
+  "body": " Motivation: Linear Combinations and Linear Systems      "
+},
+{
+  "id": "sec-2-1-2-2-2",
+  "level": "2",
+  "url": "sec-2-1-2.html#sec-2-1-2-2-2",
+  "type": "Worksheet Exercise",
+  "number": "2",
+  "title": "Example: Notation.",
+  "body": " Example: Notation   Last time we found that is a linear combination of and because   "
+},
+{
+  "id": "sec-2-1-2-2-3",
+  "level": "2",
+  "url": "sec-2-1-2.html#sec-2-1-2-2-3",
+  "type": "Worksheet Exercise",
+  "number": "3",
+  "title": "Fact: Linear Combinations and Linear Systems.",
+  "body": " Fact: Linear Combinations and Linear Systems      "
+},
+{
+  "id": "sec-2-1-2-3-1",
+  "level": "2",
+  "url": "sec-2-1-2.html#sec-2-1-2-3-1",
+  "type": "Worksheet Exercise",
+  "number": "4",
+  "title": "Notes: Vectors and Matrices in Sage.",
+  "body": " Notes: Vectors and Matrices in Sage      "
+},
+{
+  "id": "sec-2-1-2-4-1",
+  "level": "2",
+  "url": "sec-2-1-2.html#sec-2-1-2-4-1",
+  "type": "Worksheet Exercise",
+  "number": "5",
+  "title": "Activity: Linear Combinations and Linear Systems.",
+  "body": " Activity: Linear Combinations and Linear Systems   Sage cells are provided in the text to help with computations to answer the following questions.    Given the vectors , can be expressed as a linear combination of , , and ? Rephrase this question by writing a linear system for the weights , , and and use Sage cells to answer this question.  Consider the following linear system. Identify vectors , , , and such that the question \"Is this linear system consistent?\" is equivalent to the question \"Can be expressed as a linear combination of , , and ?\"   Consider the vectors . Can be expressed as a linear combination of , , and ? If so, can be written as a linear combination of these vectors in more than one way?   Considering the vectors , , and from the previous part, can we write every three-dimensional vector as a linear combination of these vectors? Explain how the pivot positions of the matrix help answer this question.   Now consider the vectors . Can be expressed as a linear combination of , , and ? If so, can be written as a linear combination of these vectors in more than one way?   Considering the vectors , , and from the previous part, can we write every three-dimensional vector as a linear combination of these vectors? Explain how the pivot positions of the matrix help answer this question.     "
+},
+{
+  "id": "sec-2-1-2-5-1",
+  "level": "2",
+  "url": "sec-2-1-2.html#sec-2-1-2-5-1",
+  "type": "Worksheet Exercise",
+  "number": "6",
+  "title": "Visualizing No Solution.",
+  "body": " Visualizing No Solution   Consider the vectors and , as shown in .   Vectors and .       "
 }
 ]
 
