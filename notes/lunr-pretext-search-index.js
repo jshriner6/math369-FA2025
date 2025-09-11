@@ -298,36 +298,36 @@ var ptx_lunr_docs = [
   "body": "  Access Section 1.3 of our textbook. Follow instructions provided in class.   "
 },
 {
-  "id": "sec-2-1-1",
+  "id": "sec-2-1-1-sols",
   "level": "1",
-  "url": "sec-2-1-1.html",
+  "url": "sec-2-1-1-sols.html",
   "type": "Worksheet",
   "number": "",
   "title": "<span class=\"process-math\">\\(\\S 2.1\\text{:}\\)<\/span> Vectors and Linear Combinations",
-  "body": " : Vectors and Linear Combinations    Motivation: Vectors        Preview Activity: Vectors   Suppose that      Find expressions for the vectors and sketch them using the coordinate system below.  Sketch the vectors on this grid.    An empty coordinate system.          What geometric effect does scalar multiplication have on a vector? Also, describe the effect that multiplying by a negative scalar has.         Sketch the vectors using the coordinate system below.  Sketch the vectors on this grid.    An empty coordinate system.          Consider vectors that have the form where is any scalar. Sketch a few of these vectors when, say, and . Give a geometric description of this set of vectors.  Sketch the vectors on this grid.    An empty coordinate system.            If and are two scalars, then the vector is called a linear combination of the vectors and . Find the vector that is the linear combination when and .      Can the vector be represented as a linear combination of and ? Asked differently, can we find scalars and such that .     Definition: Linear Combination   The linear combination of the vectors with scalars is the vector       Activity: Connection Linear Combinations to Linear Systems   In this activity, we will look at linear combinations of a pair of vectors, and .  There is an interactive diagram in our textbook that accompanies this activity.   The interactive provided should be used to construct linear combinations whose weights and may be varied using the sliders at the top. The vectors and are outlined while the linear combination is shaded red.     The weight is initially set to 0. Explain what happens as you vary while keeping . How is this related to scalar multiplication?   What is the linear combination of and when and ? You may find this result using the diagram, but you should also verify it by computing the linear combination.   Describe the vectors that arise when the weight is set to 1 and is varied. How is this related to our investigations in the preview activity?   Can the vector be expressed as a linear combination of and ? If so, what are the weights and ?   Can the vector be expressed as a linear combination of and ? If so, what are the weights and ?   Verify the result from the previous part by algebraically finding the weights and that form the linear combination .   Can the vector be expressed as a linear combination of and ? What about the vector ?   Are there any two-dimensional vectors that cannot be expressed as linear combinations of and ?        Exercise: Linear Combinations and Linear Systems   Is a linear combination of and ?     "
+  "body": " : Vectors and Linear Combinations    Motivation: Vectors       We've seen that computations with matrices of the form can help us solve linear systems. In this chapter, we'll try to understand the geometric (visual) information held in these matrices to further our understanding of linear systems.     Preview Activity: Vectors   Suppose that      Find expressions for the vectors and sketch them using the coordinate system below.  Sketch the vectors on this grid.    An empty coordinate system.        Solutions to this preview activity are provided in Section 2.1 .      What geometric effect does scalar multiplication have on a vector? Also, describe the effect that multiplying by a negative scalar has.         Sketch the vectors using the coordinate system below.  Sketch the vectors on this grid.    An empty coordinate system.          Consider vectors that have the form where is any scalar. Sketch a few of these vectors when, say, and . Give a geometric description of this set of vectors.  Sketch the vectors on this grid.    An empty coordinate system.            If and are two scalars, then the vector is called a linear combination of the vectors and . Find the vector that is the linear combination when and .      Can the vector be represented as a linear combination of and ? Asked differently, can we find scalars and such that .     Definition: Linear Combination   The linear combination of the vectors with scalars is the vector     The scalars are called the weights of the linear combination.       Activity: Connection Linear Combinations to Linear Systems   In this activity, we will look at linear combinations of a pair of vectors, and .  There is an interactive diagram in our textbook that accompanies this activity.   The interactive provided should be used to construct linear combinations whose weights and may be varied using the sliders at the top. The vectors and are outlined while the linear combination is shaded red.     The weight is initially set to 0. Explain what happens as you vary while keeping . How is this related to scalar multiplication?   What is the linear combination of and when and ? You may find this result using the diagram, but you should also verify it by computing the linear combination.   Describe the vectors that arise when the weight is set to 1 and is varied. How is this related to our investigations in the preview activity?   Can the vector be expressed as a linear combination of and ? If so, what are the weights and ?   Can the vector be expressed as a linear combination of and ? If so, what are the weights and ?   Verify the result from the previous part by algebraically finding the weights and that form the linear combination .   Can the vector be expressed as a linear combination of and ? What about the vector ?   Are there any two-dimensional vectors that cannot be expressed as linear combinations of and ?       When we vary with , the linear combination moves along the line defined by .  When and , we find   When and is allowed to vary, the linear combinations lie on the line through parallel to .  If the weights and , then the linear combination is the vector .  If the weights and , then the linear combination is the vector .  We find the linear system for the weights: If we construct the corresponding augmented matrix and determine its reduced row echelon matrix, we find the weights and .  In the same way, we construct a linear system for the weights whose augmented matrix is which shows that there are weights that produce the desired linear combination. The same will happen for any vector that we ask to write as a linear combination of and .  Every two-dimensional vector can be written as a linear combination of and because the coefficient matrix of the linear system remains the same. Since that coefficient matrix has a pivot position in every row, the augmented matrix can never have a pivot position in the rightmost column.         Exercise: Linear Combinations and Linear Systems   Is a linear combination of and ?    This is example 2.1.11 in the textbook.     "
 },
 {
-  "id": "sec-2-1-1-2-1",
+  "id": "sec-2-1-1-sols-2-1",
   "level": "2",
-  "url": "sec-2-1-1.html#sec-2-1-1-2-1",
+  "url": "sec-2-1-1-sols.html#sec-2-1-1-sols-2-1",
   "type": "Worksheet Exercise",
   "number": "1",
   "title": "Motivation: Vectors.",
-  "body": " Motivation: Vectors      "
+  "body": " Motivation: Vectors       We've seen that computations with matrices of the form can help us solve linear systems. In this chapter, we'll try to understand the geometric (visual) information held in these matrices to further our understanding of linear systems.   "
 },
 {
-  "id": "sec-2-1-1-2-2",
+  "id": "sec-2-1-1-sols-2-2",
   "level": "2",
-  "url": "sec-2-1-1.html#sec-2-1-1-2-2",
+  "url": "sec-2-1-1-sols.html#sec-2-1-1-sols-2-2",
   "type": "Worksheet Exercise",
   "number": "2",
   "title": "Preview Activity: Vectors.",
-  "body": " Preview Activity: Vectors   Suppose that      Find expressions for the vectors and sketch them using the coordinate system below.  Sketch the vectors on this grid.    An empty coordinate system.          What geometric effect does scalar multiplication have on a vector? Also, describe the effect that multiplying by a negative scalar has.    "
+  "body": " Preview Activity: Vectors   Suppose that      Find expressions for the vectors and sketch them using the coordinate system below.  Sketch the vectors on this grid.    An empty coordinate system.        Solutions to this preview activity are provided in Section 2.1 .      What geometric effect does scalar multiplication have on a vector? Also, describe the effect that multiplying by a negative scalar has.    "
 },
 {
   "id": "fig-activity-2-1-2",
   "level": "2",
-  "url": "sec-2-1-1.html#fig-activity-2-1-2",
+  "url": "sec-2-1-1-sols.html#fig-activity-2-1-2",
   "type": "Figure",
   "number": "2",
   "title": "",
@@ -336,38 +336,38 @@ var ptx_lunr_docs = [
 {
   "id": "fig-activity-2-1-3",
   "level": "2",
-  "url": "sec-2-1-1.html#fig-activity-2-1-3",
+  "url": "sec-2-1-1-sols.html#fig-activity-2-1-3",
   "type": "Figure",
   "number": "3",
   "title": "",
   "body": " Sketch the vectors on this grid.    An empty coordinate system.    "
 },
 {
-  "id": "sec-2-1-1-4-3",
+  "id": "sec-2-1-1-sols-4-3",
   "level": "2",
-  "url": "sec-2-1-1.html#sec-2-1-1-4-3",
+  "url": "sec-2-1-1-sols.html#sec-2-1-1-sols-4-3",
   "type": "Worksheet Exercise",
   "number": "3",
   "title": "Definition: Linear Combination.",
-  "body": " Definition: Linear Combination   The linear combination of the vectors with scalars is the vector   "
+  "body": " Definition: Linear Combination   The linear combination of the vectors with scalars is the vector     The scalars are called the weights of the linear combination.   "
 },
 {
-  "id": "sec-2-1-1-5-1",
+  "id": "sec-2-1-1-sols-5-1",
   "level": "2",
-  "url": "sec-2-1-1.html#sec-2-1-1-5-1",
+  "url": "sec-2-1-1-sols.html#sec-2-1-1-sols-5-1",
   "type": "Worksheet Exercise",
   "number": "4",
   "title": "Activity: Connection Linear Combinations to Linear Systems.",
-  "body": " Activity: Connection Linear Combinations to Linear Systems   In this activity, we will look at linear combinations of a pair of vectors, and .  There is an interactive diagram in our textbook that accompanies this activity.   The interactive provided should be used to construct linear combinations whose weights and may be varied using the sliders at the top. The vectors and are outlined while the linear combination is shaded red.     The weight is initially set to 0. Explain what happens as you vary while keeping . How is this related to scalar multiplication?   What is the linear combination of and when and ? You may find this result using the diagram, but you should also verify it by computing the linear combination.   Describe the vectors that arise when the weight is set to 1 and is varied. How is this related to our investigations in the preview activity?   Can the vector be expressed as a linear combination of and ? If so, what are the weights and ?   Can the vector be expressed as a linear combination of and ? If so, what are the weights and ?   Verify the result from the previous part by algebraically finding the weights and that form the linear combination .   Can the vector be expressed as a linear combination of and ? What about the vector ?   Are there any two-dimensional vectors that cannot be expressed as linear combinations of and ?    "
+  "body": " Activity: Connection Linear Combinations to Linear Systems   In this activity, we will look at linear combinations of a pair of vectors, and .  There is an interactive diagram in our textbook that accompanies this activity.   The interactive provided should be used to construct linear combinations whose weights and may be varied using the sliders at the top. The vectors and are outlined while the linear combination is shaded red.     The weight is initially set to 0. Explain what happens as you vary while keeping . How is this related to scalar multiplication?   What is the linear combination of and when and ? You may find this result using the diagram, but you should also verify it by computing the linear combination.   Describe the vectors that arise when the weight is set to 1 and is varied. How is this related to our investigations in the preview activity?   Can the vector be expressed as a linear combination of and ? If so, what are the weights and ?   Can the vector be expressed as a linear combination of and ? If so, what are the weights and ?   Verify the result from the previous part by algebraically finding the weights and that form the linear combination .   Can the vector be expressed as a linear combination of and ? What about the vector ?   Are there any two-dimensional vectors that cannot be expressed as linear combinations of and ?       When we vary with , the linear combination moves along the line defined by .  When and , we find   When and is allowed to vary, the linear combinations lie on the line through parallel to .  If the weights and , then the linear combination is the vector .  If the weights and , then the linear combination is the vector .  We find the linear system for the weights: If we construct the corresponding augmented matrix and determine its reduced row echelon matrix, we find the weights and .  In the same way, we construct a linear system for the weights whose augmented matrix is which shows that there are weights that produce the desired linear combination. The same will happen for any vector that we ask to write as a linear combination of and .  Every two-dimensional vector can be written as a linear combination of and because the coefficient matrix of the linear system remains the same. Since that coefficient matrix has a pivot position in every row, the augmented matrix can never have a pivot position in the rightmost column.     "
 },
 {
-  "id": "sec-2-1-1-6-1",
+  "id": "sec-2-1-1-sols-6-1",
   "level": "2",
-  "url": "sec-2-1-1.html#sec-2-1-1-6-1",
+  "url": "sec-2-1-1-sols.html#sec-2-1-1-sols-6-1",
   "type": "Worksheet Exercise",
   "number": "5",
   "title": "Exercise: Linear Combinations and Linear Systems.",
-  "body": " Exercise: Linear Combinations and Linear Systems   Is a linear combination of and ?   "
+  "body": " Exercise: Linear Combinations and Linear Systems   Is a linear combination of and ?    This is example 2.1.11 in the textbook.   "
 },
 {
   "id": "sec-2-1-2",
@@ -431,6 +431,231 @@ var ptx_lunr_docs = [
   "number": "6",
   "title": "Visualizing No Solution.",
   "body": " Visualizing No Solution   Consider the vectors and , as shown in .   Vectors and .       "
+},
+{
+  "id": "sec-2-2-1",
+  "level": "1",
+  "url": "sec-2-2-1.html",
+  "type": "Worksheet",
+  "number": "",
+  "title": "<span class=\"process-math\">\\(\\S 2.2\\text{:}\\)<\/span> Matrix-Vector Multiplication",
+  "body": " : Matrix-Vector Multiplication    Motivation: Matrix Multiplication        Preview Activity 2.2.1    Compute the scalar multiple .      Find the sum .      Suppose that and are two matrices. What do we need to know about their shapes before we can form the sum ?      The matrix , which we call the identity matrix, is the matrix whose entries are zero except for the diagonal entries, all of which are 1. For instance, . If we can form the sum , what must be true about the matrix ?      Find the matrix where .        Definition: Matrix-Vector Multiplcation        Example: Matrix-Vector Multiplication   Let and .       Activity: Matrix-vector Multiplication     Find the matrix product .   Suppose that is the matrix . If is defined, what is the dimension of the vector and what is the dimension of ?   A vector whose entries are all zero is denoted by . If is a matrix, what is the product ?   Suppose that is the identity matrix and . Find the product and explain why is called the identity matrix.   Suppose we write the matrix in terms of its columns as . If the vector , what is the product ?    Suppose that . Is there a vector such that ?         Activity: Matrix-vector Multiplication in Sage   Sage can find the product of a matrix and vector using the * operator. For example,    Use Sage to evaluate the product from of the previous activity.    In Sage, define the matrix and vectors .   What do you find when you evaluate ?  What do you find when you evaluate and and compare your results?  What do you find when you evaluate and and compare your results?         Properties: Matrix-vector Multiplication        "
+},
+{
+  "id": "sec-2-2-1-2-1",
+  "level": "2",
+  "url": "sec-2-2-1.html#sec-2-2-1-2-1",
+  "type": "Worksheet Exercise",
+  "number": "1",
+  "title": "Motivation: Matrix Multiplication.",
+  "body": " Motivation: Matrix Multiplication      "
+},
+{
+  "id": "sec-2-2-1-2-2",
+  "level": "2",
+  "url": "sec-2-2-1.html#sec-2-2-1-2-2",
+  "type": "Worksheet Exercise",
+  "number": "2",
+  "title": "Preview Activity 2.2.1.",
+  "body": " Preview Activity 2.2.1    Compute the scalar multiple .      Find the sum .      Suppose that and are two matrices. What do we need to know about their shapes before we can form the sum ?      The matrix , which we call the identity matrix, is the matrix whose entries are zero except for the diagonal entries, all of which are 1. For instance, . If we can form the sum , what must be true about the matrix ?      Find the matrix where .    "
+},
+{
+  "id": "sec-2-2-1-3-1",
+  "level": "2",
+  "url": "sec-2-2-1.html#sec-2-2-1-3-1",
+  "type": "Worksheet Exercise",
+  "number": "3",
+  "title": "Definition: Matrix-Vector Multiplcation.",
+  "body": " Definition: Matrix-Vector Multiplcation      "
+},
+{
+  "id": "sec-2-2-1-3-2",
+  "level": "2",
+  "url": "sec-2-2-1.html#sec-2-2-1-3-2",
+  "type": "Worksheet Exercise",
+  "number": "4",
+  "title": "Example: Matrix-Vector Multiplication.",
+  "body": " Example: Matrix-Vector Multiplication   Let and .   "
+},
+{
+  "id": "sec-2-2-1-4-1",
+  "level": "2",
+  "url": "sec-2-2-1.html#sec-2-2-1-4-1",
+  "type": "Worksheet Exercise",
+  "number": "5",
+  "title": "Activity: Matrix-vector Multiplication.",
+  "body": " Activity: Matrix-vector Multiplication     Find the matrix product .   Suppose that is the matrix . If is defined, what is the dimension of the vector and what is the dimension of ?   A vector whose entries are all zero is denoted by . If is a matrix, what is the product ?   Suppose that is the identity matrix and . Find the product and explain why is called the identity matrix.   Suppose we write the matrix in terms of its columns as . If the vector , what is the product ?    Suppose that . Is there a vector such that ?     "
+},
+{
+  "id": "sec-2-2-1-5-1",
+  "level": "2",
+  "url": "sec-2-2-1.html#sec-2-2-1-5-1",
+  "type": "Worksheet Exercise",
+  "number": "6",
+  "title": "Activity: Matrix-vector Multiplication in Sage.",
+  "body": " Activity: Matrix-vector Multiplication in Sage   Sage can find the product of a matrix and vector using the * operator. For example,    Use Sage to evaluate the product from of the previous activity.    In Sage, define the matrix and vectors .   What do you find when you evaluate ?  What do you find when you evaluate and and compare your results?  What do you find when you evaluate and and compare your results?     "
+},
+{
+  "id": "sec-2-2-1-6-1",
+  "level": "2",
+  "url": "sec-2-2-1.html#sec-2-2-1-6-1",
+  "type": "Worksheet Exercise",
+  "number": "7",
+  "title": "Properties: Matrix-vector Multiplication.",
+  "body": " Properties: Matrix-vector Multiplication      "
+},
+{
+  "id": "sec-2-2-2",
+  "level": "1",
+  "url": "sec-2-2-2.html",
+  "type": "Worksheet",
+  "number": "",
+  "title": "<span class=\"process-math\">\\(\\S 2.2\\text{:}\\)<\/span> Matrix Multiplication and Linear Systems",
+  "body": " : Matrix Multiplication and Linear Systems    Motivation: Matrix Multiplication and Linear Systems        Membership: Three Perspectives          Example: Three Perspectives   Find all such that .       Activity: The equation     Consider the linear system Identify the matrix and vector to express this system in the form .   If and are as below, write the linear system corresponding to the equation and describe its solution space, using a parametric description if appropriate:    Describe the solution space of the equation .   Suppose is an matrix. What can you guarantee about the solution space of the equation ?        Definition: Matrix-Matrix Multiplication   Let .     Example: Matrix-Matrix Multiplication   Let        Activity: Properites of Matrix Multiplication   Consider the matrices .   Before computing, first explain why the shapes of and enable us to form the product . Then describe the shape of .   Compute the product .  Sage can multiply matrices using the * operator. Define the matrices and in the Sage cell below and check your work by computing .   Are we able to form the matrix product ? If so, use the Sage cell above to find . Is it generally true that ?  Suppose we form the three matrices. . Compare what happens when you compute and . State your finding as a general principle.   Compare the results of evaluating and and state your finding as a general principle.         Activity (continued)     When we are dealing with real numbers, we know if and , then . Define matrices and compute and . If , is it necessarily true that ?  Again, with real numbers, we know that if , then either or . Define and compute . If , is it necessarily true that either or ?       Properties: Matrix Multiplication        "
+},
+{
+  "id": "sec-2-2-2-2-1",
+  "level": "2",
+  "url": "sec-2-2-2.html#sec-2-2-2-2-1",
+  "type": "Worksheet Exercise",
+  "number": "1",
+  "title": "Motivation: Matrix Multiplication and Linear Systems.",
+  "body": " Motivation: Matrix Multiplication and Linear Systems      "
+},
+{
+  "id": "sec-2-2-2-2-2",
+  "level": "2",
+  "url": "sec-2-2-2.html#sec-2-2-2-2-2",
+  "type": "Worksheet Exercise",
+  "number": "2",
+  "title": "Membership: Three Perspectives.",
+  "body": " Membership: Three Perspectives      "
+},
+{
+  "id": "sec-2-2-2-3-1",
+  "level": "2",
+  "url": "sec-2-2-2.html#sec-2-2-2-3-1",
+  "type": "Worksheet Exercise",
+  "number": "3",
+  "title": "Example: Three Perspectives.",
+  "body": " Example: Three Perspectives   Find all such that .   "
+},
+{
+  "id": "sec-2-2-2-4-1",
+  "level": "2",
+  "url": "sec-2-2-2.html#sec-2-2-2-4-1",
+  "type": "Worksheet Exercise",
+  "number": "4",
+  "title": "Activity: The equation <span class=\"process-math\">\\(A\\xvec = \\bvec\\)<\/span>.",
+  "body": " Activity: The equation     Consider the linear system Identify the matrix and vector to express this system in the form .   If and are as below, write the linear system corresponding to the equation and describe its solution space, using a parametric description if appropriate:    Describe the solution space of the equation .   Suppose is an matrix. What can you guarantee about the solution space of the equation ?    "
+},
+{
+  "id": "sec-2-2-2-5-1",
+  "level": "2",
+  "url": "sec-2-2-2.html#sec-2-2-2-5-1",
+  "type": "Worksheet Exercise",
+  "number": "5",
+  "title": "Definition: Matrix-Matrix Multiplication.",
+  "body": " Definition: Matrix-Matrix Multiplication   Let .   "
+},
+{
+  "id": "sec-2-2-2-5-2",
+  "level": "2",
+  "url": "sec-2-2-2.html#sec-2-2-2-5-2",
+  "type": "Worksheet Exercise",
+  "number": "6",
+  "title": "Example: Matrix-Matrix Multiplication.",
+  "body": " Example: Matrix-Matrix Multiplication   Let    "
+},
+{
+  "id": "sec-2-2-2-6-1",
+  "level": "2",
+  "url": "sec-2-2-2.html#sec-2-2-2-6-1",
+  "type": "Worksheet Exercise",
+  "number": "7",
+  "title": "Activity: Properites of Matrix Multiplication.",
+  "body": " Activity: Properites of Matrix Multiplication   Consider the matrices .   Before computing, first explain why the shapes of and enable us to form the product . Then describe the shape of .   Compute the product .  Sage can multiply matrices using the * operator. Define the matrices and in the Sage cell below and check your work by computing .   Are we able to form the matrix product ? If so, use the Sage cell above to find . Is it generally true that ?  Suppose we form the three matrices. . Compare what happens when you compute and . State your finding as a general principle.   Compare the results of evaluating and and state your finding as a general principle.     "
+},
+{
+  "id": "sec-2-2-2-7-1",
+  "level": "2",
+  "url": "sec-2-2-2.html#sec-2-2-2-7-1",
+  "type": "Worksheet Exercise",
+  "number": "8",
+  "title": "Activity (continued).",
+  "body": " Activity (continued)     When we are dealing with real numbers, we know if and , then . Define matrices and compute and . If , is it necessarily true that ?  Again, with real numbers, we know that if , then either or . Define and compute . If , is it necessarily true that either or ?     "
+},
+{
+  "id": "sec-2-2-2-7-2",
+  "level": "2",
+  "url": "sec-2-2-2.html#sec-2-2-2-7-2",
+  "type": "Worksheet Exercise",
+  "number": "9",
+  "title": "Properties: Matrix Multiplication.",
+  "body": " Properties: Matrix Multiplication      "
+},
+{
+  "id": "sec-2-3-1",
+  "level": "1",
+  "url": "sec-2-3-1.html",
+  "type": "Worksheet",
+  "number": "",
+  "title": "<span class=\"process-math\">\\(\\S 2.3\\text{:}\\)<\/span> The Span of Vectors",
+  "body": " : The Span of Vectors    Motivation: Span        Preview 2.3.1    If the equation is inconsistent, what can we say about the pivot positions of the augmented matrix ?      Consider the matrix  . If , is the equation consistent? If so, find a solution.       If , is the equation consistent? If so, find a solution.       Identify the pivot positions of .      For our two choices of the vector , one equation has a solution and the other does not. What feature of the pivot positions of the matrix tells us to expect this?        Definition: Span   The span of a set of vectors is     Example: Span   Let and .       Activity: Span   Let's look at two examples to develop some intuition for the concept of span.  First, we will consider the set of vectors .  There is an interactive diagram in our textbook that accompanies this activity.    What vector is the linear combination of and with weights:    and ?    and ?    and ?      Can the vector be expressed as a linear combination of and ? Is the vector in the span of and ?   Can the vector be expressed as a linear combination of and ? Is the vector in the span of and ?   Describe the set of vectors in the span of and .   For what vectors does the equation have a solution?         Activity (continued)   We will now look at an example where .  There is an interactive diagram in our textbook that accompanies this activity.    What vector is the linear combination of and with weights:    and ?    and ?    and ?      Can the vector be expressed as a linear combination of and ? Is the vector in the span of and ?   Can the vector be expressed as a linear combination of and ? Is the vector in the span of and ?   Describe the set of vectors in the span of and .   For what vectors does the equation have a solution?       "
+},
+{
+  "id": "sec-2-3-1-2-1",
+  "level": "2",
+  "url": "sec-2-3-1.html#sec-2-3-1-2-1",
+  "type": "Worksheet Exercise",
+  "number": "1",
+  "title": "Motivation: Span.",
+  "body": " Motivation: Span      "
+},
+{
+  "id": "sec-2-3-1-2-2",
+  "level": "2",
+  "url": "sec-2-3-1.html#sec-2-3-1-2-2",
+  "type": "Worksheet Exercise",
+  "number": "2",
+  "title": "Preview 2.3.1.",
+  "body": " Preview 2.3.1    If the equation is inconsistent, what can we say about the pivot positions of the augmented matrix ?      Consider the matrix  . If , is the equation consistent? If so, find a solution.       If , is the equation consistent? If so, find a solution.       Identify the pivot positions of .      For our two choices of the vector , one equation has a solution and the other does not. What feature of the pivot positions of the matrix tells us to expect this?    "
+},
+{
+  "id": "sec-2-3-1-3-1",
+  "level": "2",
+  "url": "sec-2-3-1.html#sec-2-3-1-3-1",
+  "type": "Worksheet Exercise",
+  "number": "3",
+  "title": "Definition: Span.",
+  "body": " Definition: Span   The span of a set of vectors is   "
+},
+{
+  "id": "sec-2-3-1-3-2",
+  "level": "2",
+  "url": "sec-2-3-1.html#sec-2-3-1-3-2",
+  "type": "Worksheet Exercise",
+  "number": "4",
+  "title": "Example: Span.",
+  "body": " Example: Span   Let and .   "
+},
+{
+  "id": "sec-2-3-1-4-1",
+  "level": "2",
+  "url": "sec-2-3-1.html#sec-2-3-1-4-1",
+  "type": "Worksheet Exercise",
+  "number": "5",
+  "title": "Activity: Span.",
+  "body": " Activity: Span   Let's look at two examples to develop some intuition for the concept of span.  First, we will consider the set of vectors .  There is an interactive diagram in our textbook that accompanies this activity.    What vector is the linear combination of and with weights:    and ?    and ?    and ?      Can the vector be expressed as a linear combination of and ? Is the vector in the span of and ?   Can the vector be expressed as a linear combination of and ? Is the vector in the span of and ?   Describe the set of vectors in the span of and .   For what vectors does the equation have a solution?     "
+},
+{
+  "id": "sec-2-3-1-5-1",
+  "level": "2",
+  "url": "sec-2-3-1.html#sec-2-3-1-5-1",
+  "type": "Worksheet Exercise",
+  "number": "6",
+  "title": "Activity (continued).",
+  "body": " Activity (continued)   We will now look at an example where .  There is an interactive diagram in our textbook that accompanies this activity.    What vector is the linear combination of and with weights:    and ?    and ?    and ?      Can the vector be expressed as a linear combination of and ? Is the vector in the span of and ?   Can the vector be expressed as a linear combination of and ? Is the vector in the span of and ?   Describe the set of vectors in the span of and .   For what vectors does the equation have a solution?     "
 }
 ]
 
