@@ -1,0 +1,406 @@
+<pretext>
+    <article xml:id="notes">
+        <worksheet xml:id="sec-2-3-1-sols">
+        <title><m>\S 2.3</m>: The Span of Vectors</title>
+            <page>
+                <exercise workspace="2in">
+                    <title>Motivation: Span</title>
+                    <statement>
+                        <p>
+                            
+                        </p>
+                    </statement>
+                    <solution>
+						<p>
+							We'll continue to deepen our understanding of the "membership" question in the context of 
+							matrix equations: "Is there a solution to <m>A\xvec = \bvec</m>" is equivalent to
+							"Is <m>\bvec</m> a linear combination of columns of <m>A</m>"?
+						</p>
+					</solution>
+                </exercise>
+            </page>
+            <page>
+
+                <exercise>
+                    <title>Preview 2.3.1</title>
+                    <task >
+        <statement>
+	  <p> If the equation <m>A\xvec = \bvec</m> is
+	  inconsistent, what can we say about the pivot positions of the
+	  augmented matrix
+	  <m>\left[\begin{array}{r|r} A \amp \bvec
+	  \end{array}\right]</m>?
+	  </p>
+        </statement>
+       
+        <solution>
+	  <p> We know there must be a pivot position in the rightmost
+	  column of the augmented matrix.
+	  </p>
+        </solution>
+        
+      </task>
+
+      <task >
+        <statement>
+	  <p>
+	    Consider the matrix <m>A</m>
+	    <me>
+	      A = \left[
+	      \begin{array}{rrr}
+	      1 \amp 0 \amp -2 \\
+	      -2 \amp 2 \amp 2 \\
+	      1 \amp 1 \amp -3
+	      \end{array}\right]
+	    </me>.
+	    If <m>\bvec=\threevec{2}{2}{5}</m>, is the equation
+	    <m>A\xvec = \bvec</m> consistent?  If so, find a solution.
+	    <sage>
+	      <input>
+	      </input>
+	    </sage>
+	  </p>
+        </statement>
+        
+        <solution>
+	  <p>
+	    We construct the augmented matrix
+	    <me>
+	      \left[\begin{array}{rrr|r}
+	      1 \amp 0 \amp -2 \amp 2 \\
+	      -2 \amp 2 \amp 2 \amp 2 \\
+	      1 \amp 1 \amp -3 \amp 5
+	      \end{array}\right]
+	      \sim
+	      \left[\begin{array}{rrr|r}
+	      1 \amp 0 \amp -2 \amp 2 \\
+	      0 \amp 1 \amp -1 \amp 3 \\
+	      0 \amp 0 \amp 0 \amp 0
+	      \end{array}\right]\text{,}
+	    </me>
+	    which shows that the system is consistent.  The solution
+	    space is described parametrically as
+	    <me>
+	      \xvec=\threevec{2}{3}{0}+x_3\threevec{2}{1}{1}
+	    </me>.
+	  </p>
+        </solution>
+        
+      </task>
+
+      <task >
+        <statement>
+	  <p> If <m>\bvec=\threevec{2}{2}{6}</m>, is the equation
+	  <m>A\xvec = \bvec</m> consistent?  If so, find a solution.
+	  <sage>
+	    <input>
+	    </input>
+	  </sage>
+	  </p>
+        </statement>
+        
+        <solution>
+	  <p>
+	    Now the augmented matrix is
+	    <me>
+	      \left[\begin{array}{rrr|r}
+	      1 \amp 0 \amp -2 \amp 2 \\
+	      -2 \amp 2 \amp 2 \amp 2 \\
+	      1 \amp 1 \amp -3 \amp 6
+	      \end{array}\right]
+	      \sim
+	      \left[\begin{array}{rrr|r}
+	      1 \amp 0 \amp -2 \amp 0 \\
+	      0 \amp 1 \amp -1 \amp 0 \\
+	      0 \amp 0 \amp 0 \amp 1
+	      \end{array}\right]
+	    </me>
+	    showing that the equation <m>A\xvec=\bvec</m> is
+	    inconsistent.
+	  </p>
+        </solution>
+        
+      </task>
+
+      <task >
+        <statement>
+	  <p> Identify the pivot positions of <m>A</m>. </p>
+        </statement>
+        
+        <solution>
+	  <p>
+	    There are two pivot positions in <m>A</m>, as shown.
+	    <me>
+	      \left[\begin{array}{rrr}
+	      {\mathbf 1} \amp 0 \amp -2 \\
+	      -2 \amp {\mathbf 2} \amp 2 \\
+	      1 \amp 1 \amp -3 \\
+	      \end{array}\right]
+	      \sim
+	      \left[\begin{array}{rrr}
+	      {\mathbf 1} \amp 0 \amp -2 \\
+	      0 \amp {\mathbf 1} \amp -1 \\
+	      0 \amp 0 \amp 0 \\
+	      \end{array}\right]\text{.}
+	    </me>
+	  </p>
+        </solution>
+        
+      </task>
+
+      <task >
+        <statement>
+	  <p> For our two choices of the vector <m>\bvec</m>, one
+	  equation <m>A\xvec = \bvec</m> has a solution and the other
+	  does not.  What feature of the pivot positions of the
+	  matrix <m>A</m> tells us to expect this? </p>
+        </statement>
+        
+        <solution>
+	  <p>
+	    Since there is a row of <m>A</m> that does not have a
+	    pivot position, it is possible to augment <m>A</m> by a
+	    vector <m>\bvec</m> so that we obtain a pivot position in
+	    the rightmost column of the augmented matrix.  In this
+	    case, we have an inconsistent system.
+	  </p>
+        </solution>
+        
+      </task>
+
+                    
+                </exercise>
+            </page>
+
+            <page>
+                <exercise workspace="2in">
+                    <title>Definition: Span</title>
+                    <statement>
+                        <p>
+                            The <term>span</term> of a set of vectors <m>\vvec_1, \dots, \vvec_n</m> is
+                        </p>
+                    </statement>
+                    <solution>
+						<p>
+							See <url href="https://understandinglinearalgebra.org/sec-span.html#sec-span-3-4">Definition 2.3.1</url>.
+						</p>
+					</solution>
+                    
+                </exercise>
+
+                <exercise workspace="4in">
+                    <title>Example: Span</title>
+                    <statement>
+                        <p>
+                            Let <m>\vvec =\twovec{-2}{1}</m> and <m>\wvec =\twovec{8}{-4}</m>.
+                        </p>
+                    </statement>
+                    <solution>
+						<p>
+							See <url href="https://understandinglinearalgebra.org/sec-span.html#sec-span-3-5">Example 2.3.2</url>.
+						</p>
+					</solution>
+                    
+                </exercise>
+            </page>
+            <page>
+                <exercise>
+                    <title>Activity: Span</title>
+                    <statement>
+      <p>  Let's look at two examples to develop some intuition for
+      the concept of span.
+      <ol marker="a.">
+	<li><p> First, we will consider the set of vectors
+	<me>
+	  \vvec = \twovec{1}{2}, ~~~\wvec = \twovec{-2}{-4}
+	</me>.
+      </p>
+
+      <p>
+		There is an <url href="https://understandinglinearalgebra.org/sec-span.html#activity-intro-span-1-1-1-1">interactive diagram in our textbook</url>
+		that accompanies this activity.
+	</p>
+
+      <p> <ol marker="1.">
+	<li><p> What vector is the linear combination of <m>\vvec</m>
+	and <m>\wvec</m> with weights:
+	<ul>
+	  <li> <p> <m> c = 2</m> and <m>d=0</m>? </p></li>
+	  <li> <p> <m> c = 1</m> and <m>d=1</m>? </p></li>
+	  <li> <p> <m> c = 0</m> and <m>d=-1</m>? </p></li>
+	</ul>
+	</p> </li>
+
+	<li> <p>
+	  Can the vector <m> \twovec{2}{4}</m> be expressed as a
+	  linear combination of <m>\vvec</m> and <m>\wvec</m>?  Is the
+	  vector <m> \twovec{2}{4}</m> in the span of <m>\vvec</m> and
+	  <m>\wvec</m>?  
+	</p></li>
+
+	<li> <p>
+	  Can the vector <m> \twovec{3}{0}</m> be expressed as a
+	  linear combination of <m>\vvec</m> and <m>\wvec</m>?  Is the
+	  vector <m> \twovec{3}{0}</m> in the span of <m>\vvec</m> and
+	  <m>\wvec</m>?  
+	</p></li>
+
+	<li> <p>
+	  Describe the set of vectors in the span of <m>\vvec</m> and
+	  <m>\wvec</m>.
+	</p></li>
+
+	<li> <p> For what vectors <m>\bvec</m> does the equation
+	<me>
+	  \left[\begin{array}{rr} 1 \amp -2 \\ 2 \amp -4
+	  \end{array}\right] \xvec = \bvec
+	</me>
+	have a solution?
+	</p></li>
+      </ol> </p>
+      </li> 
+
+      <li> <p>
+	We will now look at an example where
+	<me>
+	  \vvec = \twovec{2}{1}, ~~~\wvec = \twovec{1}{2}
+	</me>.
+      </p>
+  <p>
+		There is an <url href="https://understandinglinearalgebra.org/sec-span.html#activity-intro-span-1-1-1-2">interactive diagram in our textbook</url>
+		that accompanies this activity.
+	</p>
+      
+      <p> <ol marker="1.">
+	<li><p> What vector is the linear combination of <m>\vvec</m>
+	and <m>\wvec</m> with weights:
+	<ul>
+	  <li> <p> <m> c = 2</m> and <m>d=0</m>? </p></li>
+	  <li> <p> <m> c = 1</m> and <m>d=1</m>? </p></li>
+	  <li> <p> <m> c = 0</m> and <m>d=-1</m>? </p></li>
+	</ul>
+	</p> </li>
+
+	<li> <p>
+	  Can the vector <m> \twovec{-2}{2}</m> be expressed as a
+	  linear combination of <m>\vvec</m> and <m>\wvec</m>?  Is the
+	  vector <m> \twovec{-2}{2}</m> in the span of <m>\vvec</m> and
+	  <m>\wvec</m>?  
+	</p></li>
+
+	<li> <p>
+	  Can the vector <m> \twovec{3}{0}</m> be expressed as a
+	  linear combination of <m>\vvec</m> and <m>\wvec</m>?  Is the
+	  vector <m> \twovec{3}{0}</m> in the span of <m>\vvec</m> and
+	  <m>\wvec</m>?  
+	</p></li>
+
+	<li> <p>
+	  Describe the set of vectors in the span of <m>\vvec</m> and
+	  <m>\wvec</m>.
+	</p></li>
+
+	<li> <p> For what vectors <m>\bvec</m> does the equation
+	<me>
+	  \left[\begin{array}{rr} 2 \amp 1 \\ 1 \amp 2
+	  \end{array}\right] \xvec = \bvec
+	</me>
+	have a solution?
+	</p></li>
+      </ol> </p>
+      </li> 
+
+      </ol></p>
+      </statement>
+
+      <solution>
+	<p><ol marker="a.">
+	  <li><p> For the first set of vectors, we find:
+	  <ol marker="1.">
+	    <li><p> We can form the linear combinations:
+	      <ul>
+		<li><p> When <m> c = 2</m> and <m>d=0</m>,
+		the linear combination is <m>\twovec{2}{4}</m>.
+		</p></li>
+		<li> <p> When <m> c = 1</m> and <m>d=1</m>, the linear
+		combination is <m>\twovec{-1}{-2}</m>.
+		</p></li>
+		<li> <p> When <m> c = 0</m> and <m>d=-1</m>, the
+		linear combination is <m>\twovec{2}{4}</m>.
+		</p></li>
+	      </ul>
+	    </p></li>
+
+	    <li><p> Yes, we saw that there are at least two ways.
+	    For instance, when the weights are <m>c=2</m> and
+	    <m>d=0</m>.  This means that <m>\twovec24</m> is in
+	    the span of <m>\vvec</m> and <m>\wvec</m>.
+	    </p></li>
+
+	    <li><p>
+	      No.  No matter how we change the weights, the linear
+	      combination lies on the line through <m>\vvec</m> and
+	      <m>\wvec</m>.  This means that <m>\twovec{3}{0}</m> is
+	      not in the span of <m>\vvec</m> and <m>\wvec</m>.
+	    </p></li>
+
+	    <li><p>
+	      The span of <m>\vvec</m> and <m>\wvec</m> is the set of
+	      all vectors on the line through <m>\vvec</m>.
+	    </p></li>
+
+	    <li><p>
+	      If the equation has a solution, <m>\bvec</m> must lie on
+	      the line defined by <m>\vvec</m>.
+	    </p></li>
+
+	  </ol></p> </li>
+
+	  <li><p> For the second set of vectors, we have:
+	    <ol marker="1.">
+	      <li><p> We can form the linear combinations:
+		<ul>
+		  <li> <p> When <m> c = 2</m> and <m>d=0</m>, the
+		  linear combination is <m>\twovec42</m>.
+		  </p></li>
+		  <li> <p> When <m> c = 1</m> and <m>d=1</m>, the
+		  linear combination is <m>\twovec{3}{3}</m>.
+		  </p></li>
+		  <li> <p> When <m> c = 0</m> and <m>d=-1</m>, the
+		  linear combination is <m>\twovec{-1}{-2}</m>.
+		  </p></li>
+		</ul>
+	      </p></li>
+
+	      <li><p>
+		Yes.  Using the diagram, we see that
+		<m>\twovec{-2}{2}=-2\vvec + 2\wvec</m>.  This means
+		that <m>\twovec{-2}{2}</m> is in the span of
+		<m>\vvec</m> and <m>\wvec</m>.
+	      </p></li>
+
+	      <li><p>
+		Yes.  Using the diagram, we see that
+		<m>\twovec{3}{0}=2\vvec-1\wvec</m>.  This means that
+		<m>\twovec{3}{0}</m> is in the span of <m>\vvec</m>
+		and <m>\wvec</m>.
+	      </p></li>
+
+	      <li><p>
+		Every two-dimensional vector is in the span of
+		<m>\vvec</m> and <m>\wvec</m>.
+	      </p></li>
+
+	      <li><p>
+		The equation has a solution for every <m>\bvec</m>.
+	      </p></li>
+	    </ol></p></li>
+	</ol></p>
+      </solution>
+                    
+                </exercise>
+            </page>
+
+        </worksheet>
+    </article>
+</pretext>

@@ -1,0 +1,248 @@
+<pretext>
+    <article xml:id="notes">
+        <worksheet xml:id="sec-2-3-1">
+        <title><m>\S 2.3</m>: The Span of Vectors</title>
+            <page>
+                <exercise workspace="2in">
+                    <title>Motivation: Span</title>
+                    <statement>
+                        <p>
+                            
+                        </p>
+                    </statement>
+                    
+                </exercise>
+            
+
+                <exercise>
+                    <title>Preview 2.3.1</title>
+                    <task >
+        <statement>
+	  <p> If the equation <m>A\xvec = \bvec</m> is
+	  inconsistent, what can we say about the pivot positions of the
+	  augmented matrix
+	  <m>\left[\begin{array}{r|r} A \amp \bvec
+	  \end{array}\right]</m>?
+	  </p>
+        </statement>
+       
+        
+        
+      </task>
+
+      <task >
+        <statement>
+	  <p>
+	    Consider the matrix <m>A</m>
+	    <me>
+	      A = \left[
+	      \begin{array}{rrr}
+	      1 \amp 0 \amp -2 \\
+	      -2 \amp 2 \amp 2 \\
+	      1 \amp 1 \amp -3
+	      \end{array}\right]
+	    </me>.
+	    If <m>\bvec=\threevec{2}{2}{5}</m>, is the equation
+	    <m>A\xvec = \bvec</m> consistent?  If so, find a solution.
+	    <sage>
+	      <input>
+	      </input>
+	    </sage>
+	  </p>
+        </statement>
+        
+        
+      </task>
+
+      <task >
+        <statement>
+	  <p> If <m>\bvec=\threevec{2}{2}{6}</m>, is the equation
+	  <m>A\xvec = \bvec</m> consistent?  If so, find a solution.
+	  <sage>
+	    <input>
+	    </input>
+	  </sage>
+	  </p>
+        </statement>
+        
+        
+        
+      </task>
+
+      <task >
+        <statement>
+	  <p> Identify the pivot positions of <m>A</m>. </p>
+        </statement>
+        
+        
+        
+      </task>
+
+      <task >
+        <statement>
+	  <p> For our two choices of the vector <m>\bvec</m>, one
+	  equation <m>A\xvec = \bvec</m> has a solution and the other
+	  does not.  What feature of the pivot positions of the
+	  matrix <m>A</m> tells us to expect this? </p>
+        </statement>
+        
+        
+        
+      </task>
+
+                    
+                </exercise>
+            </page>
+
+            <page>
+                <exercise workspace="2in">
+                    <title>Definition: Span</title>
+                    <statement>
+                        <p>
+                            The <term>span</term> of a set of vectors <m>\vvec_1, \dots, \vvec_n</m> is
+                        </p>
+                    </statement>
+                    
+                    
+                </exercise>
+
+                <exercise workspace="4in">
+                    <title>Example: Span</title>
+                    <statement>
+                        <p>
+                            Let <m>\vvec =\twovec{-2}{1}</m> and <m>\wvec =\twovec{8}{-4}</m>.
+                        </p>
+                    </statement>
+                    
+                    
+                </exercise>
+            </page>
+            <page>
+                <exercise>
+                    <title>Activity: Span</title>
+                    <statement>
+      <p>  Let's look at two examples to develop some intuition for
+      the concept of span.
+      </p>
+	<p> First, we will consider the set of vectors
+	<me>
+	  \vvec = \twovec{1}{2}, ~~~\wvec = \twovec{-2}{-4}
+	</me>.
+      </p>
+
+      <p>
+		There is an <url href="https://understandinglinearalgebra.org/sec-span.html#activity-intro-span-1-1-1-1">interactive diagram in our textbook</url>
+		that accompanies this activity.
+	</p>
+
+      <p> <ol marker="1.">
+	<li><p> What vector is the linear combination of <m>\vvec</m>
+	and <m>\wvec</m> with weights:
+	<ul>
+	  <li> <p> <m> c = 2</m> and <m>d=0</m>? </p></li>
+	  <li> <p> <m> c = 1</m> and <m>d=1</m>? </p></li>
+	  <li> <p> <m> c = 0</m> and <m>d=-1</m>? </p></li>
+	</ul>
+	</p> </li>
+
+	<li> <p>
+	  Can the vector <m> \twovec{2}{4}</m> be expressed as a
+	  linear combination of <m>\vvec</m> and <m>\wvec</m>?  Is the
+	  vector <m> \twovec{2}{4}</m> in the span of <m>\vvec</m> and
+	  <m>\wvec</m>?  
+	</p></li>
+
+	<li> <p>
+	  Can the vector <m> \twovec{3}{0}</m> be expressed as a
+	  linear combination of <m>\vvec</m> and <m>\wvec</m>?  Is the
+	  vector <m> \twovec{3}{0}</m> in the span of <m>\vvec</m> and
+	  <m>\wvec</m>?  
+	</p></li>
+
+	<li> <p>
+	  Describe the set of vectors in the span of <m>\vvec</m> and
+	  <m>\wvec</m>.
+	</p></li>
+
+	<li> <p> For what vectors <m>\bvec</m> does the equation
+	<me>
+	  \left[\begin{array}{rr} 1 \amp -2 \\ 2 \amp -4
+	  \end{array}\right] \xvec = \bvec
+	</me>
+	have a solution?
+	</p></li>
+      </ol> </p>
+  
+
+      
+
+   
+      </statement>
+
+      
+                    
+                </exercise>
+            </page>
+            <page>
+                <exercise>
+                    <title>Activity (continued)</title>
+                    <statement>
+                        <p>
+                  
+	We will now look at an example where
+	<me>
+	  \vvec = \twovec{2}{1}, ~~~\wvec = \twovec{1}{2}
+	</me>.
+      </p>
+  <p>
+		There is an <url href="https://understandinglinearalgebra.org/sec-span.html#activity-intro-span-1-1-1-2">interactive diagram in our textbook</url>
+		that accompanies this activity.
+	</p>
+      
+      <p> <ol marker="1.">
+	<li><p> What vector is the linear combination of <m>\vvec</m>
+	and <m>\wvec</m> with weights:
+	<ul>
+	  <li> <p> <m> c = 2</m> and <m>d=0</m>? </p></li>
+	  <li> <p> <m> c = 1</m> and <m>d=1</m>? </p></li>
+	  <li> <p> <m> c = 0</m> and <m>d=-1</m>? </p></li>
+	</ul>
+	</p> </li>
+
+	<li> <p>
+	  Can the vector <m> \twovec{-2}{2}</m> be expressed as a
+	  linear combination of <m>\vvec</m> and <m>\wvec</m>?  Is the
+	  vector <m> \twovec{-2}{2}</m> in the span of <m>\vvec</m> and
+	  <m>\wvec</m>?  
+	</p></li>
+
+	<li> <p>
+	  Can the vector <m> \twovec{3}{0}</m> be expressed as a
+	  linear combination of <m>\vvec</m> and <m>\wvec</m>?  Is the
+	  vector <m> \twovec{3}{0}</m> in the span of <m>\vvec</m> and
+	  <m>\wvec</m>?  
+	</p></li>
+
+	<li> <p>
+	  Describe the set of vectors in the span of <m>\vvec</m> and
+	  <m>\wvec</m>.
+	</p></li>
+
+	<li> <p> For what vectors <m>\bvec</m> does the equation
+	<me>
+	  \left[\begin{array}{rr} 2 \amp 1 \\ 1 \amp 2
+	  \end{array}\right] \xvec = \bvec
+	</me>
+	have a solution?
+	</p></li>
+      </ol> </p>
+    
+      
+                    </statement>
+                    
+                </exercise>
+            </page>
+
+        </worksheet>
+    </article>
+</pretext>

@@ -1,0 +1,469 @@
+<pretext>
+    <article xml:id="notes">
+        <worksheet xml:id="sec-2-2-2-sols">
+        <title><m>\S 2.2</m>: Matrix Multiplication and Linear Systems</title>
+            <page>
+                <exercise workspace="2in">
+                    <title>Motivation: Matrix Multiplication and Linear Systems</title>
+                    <statement>
+                        <p>
+                            
+                        </p>
+                    </statement>
+					<solution>
+						<p>
+							Last time we made sense of <m>A\xvec = \bvec</m> in terms of linear combinations
+							of column vectors with specific weights to get a new vector. Recall also that the
+							"membership" question is important. We'll rephrase and answer this question
+							in this new context.
+						</p>
+					</solution>
+                    
+                </exercise>
+                <exercise workspace="5in">
+                    <title>Membership: Three Perspectives</title>
+                    <statement>
+                        <p>
+                            
+                        </p>
+                    </statement>
+                    <solution>
+						<p>
+							The following questions are all equivalent:
+							<ol>
+								<li>
+									<p>
+										For an <m>m \times n</m> matrix <m>A</m> and vector <m>\bvec \in \R^m</m>, 
+										does there exist a vector <m>\xvec \in \R^n</m> such that <m>A\xvec = \bvec</m>?
+									</p>
+								</li>
+								<li>
+									<p>
+										Are there weights <m>c_1, \dots, c_n</m> such that <m>c_1\vvec_1 + \dots + c_n\vvec_n = \bvec</m>?
+									</p>
+								</li>
+								<li>
+									<p>
+										Does the system represented by <m>[\vvec_1 \dots \vvec_n | \bvec]</m> have a solution?
+									</p>
+								</li>
+							</ol>
+						</p>
+						<p>
+						This is also summarized in <url href="https://understandinglinearalgebra.org/sec-matrices-lin-combs.html#prop-matrix-eq-solution">Proposition 2.2.4</url>.
+						</p>
+					</solution>
+                    
+                </exercise>
+            </page>
+
+            <page>
+                <exercise workspace="4in">
+                    <title>Example: Three Perspectives</title>
+                    <statement>
+                        <p>
+                            Find all <m>\xvec</m> such that 
+                            <me>
+                                \left[
+                                \begin{array}{rrr}
+                                2 \amp 0 \amp 2 \\
+                                4 \amp -1 \amp 6 \\
+                                1 \amp 3 \amp -5 \\
+                                \end{array}
+                                \right]
+                                \xvec = \threevec{0}{-5}{15}
+                            </me>.
+
+                        </p>
+                    </statement>
+                    <solution>
+						<p>
+							This example is summarized in <url href="https://understandinglinearalgebra.org/sec-matrices-lin-combs.html#sec-matrices-lin-combs-5-9">Example 2.2.5 </url>.
+						</p>
+					</solution>
+                    
+                </exercise>
+            </page>
+
+
+            <page>
+                <exercise>
+                    <title>Activity: The equation <m>A\xvec = \bvec</m></title>
+                    <statement><p>
+      <ol marker="a.">
+	<li> <p> Consider the linear system
+	<me>
+	  \begin{alignedat}{4}
+	  2x \amp {}+{} \amp y \amp {}-{} \amp 3z \amp {}={} \amp 4 \\
+	  -x \amp {}+{} \amp 2y \amp {}+{} \amp z \amp {}={} \amp 3 \\
+	  3x \amp {}-{} \amp y \amp \amp \amp {}={} \amp -4. \\
+	  \end{alignedat}
+	</me>
+	Identify the matrix <m>A</m> and vector <m>\bvec</m> to
+	express this system in the form <m>A\xvec = \bvec</m>.
+	</p></li>
+
+	<li> <p> If <m>A</m> and <m>\bvec</m> are as below, write the
+	linear system corresponding to the equation
+	<m>A\xvec=\bvec</m> and describe its solution space, using a
+	parametric description if appropriate:
+	<me>
+	  A = \left[\begin{array}{rrr}
+	  3 \amp -1 \amp 0 \\
+	  -2 \amp 0 \amp 6
+	  \end{array}
+	  \right],~~~
+	  \bvec = \left[\begin{array}{r}
+	  -6 \\ 2
+	  \end{array}
+	  \right].
+	</me>
+	<sage>
+	  <input>
+	  </input>
+	</sage>
+	</p></li>
+
+	<li><p>
+	  Describe the solution space of the equation
+	  <me>
+	    \left[
+	    \begin{array}{rrrr}
+	    1 \amp 2 \amp 0 \amp -1 \\
+	    2 \amp 4 \amp -3 \amp -2 \\
+	    -1 \amp -2 \amp 6 \amp 1 \\
+	    \end{array}
+	    \right]
+	    \xvec
+	    = 
+	    \left[\begin{array}{r}
+	    -1 \\ 1 \\ 5
+	    \end{array}
+	    \right]
+	  </me>.
+	  <sage>
+	    <input>
+	    </input>
+	  </sage>
+	</p></li>
+
+	<li><p> Suppose <m>A</m> is an <m>m\times n</m> matrix.  What
+	can you guarantee about the solution space of the equation <m>A\xvec
+	= \zerovec</m>?  </p></li>
+      </ol>
+      </p></statement>
+
+      <solution>
+	<p><ol marker="a.">
+	  <li><p>
+	    <m>A = \left[\begin{array}{rrr}
+	    2 \amp 1 \amp -3 \\
+	    -1 \amp 2 \amp 1 \\
+	    3 \amp -1 \amp 0 \\
+	    \end{array}\right]
+	    </m>
+	    and <m>\bvec=\threevec{4}{3}{-4}</m>.
+	  </p></li>
+
+	  <li><p>
+	    Form the augmented matrix
+	    <me>
+	      \left[\begin{array}{rrrr}
+	      3 \amp -1 \amp 0 \amp -6 \\
+	      -2 \amp 0 \amp 6 \amp 2
+	      \end{array}\right]
+	      \sim
+	      \left[\begin{array}{rrrr}
+	      1 \amp 0 \amp -3 \amp -1 \\
+	      0 \amp 1 \amp -9 \amp 3
+	      \end{array}\right]
+	    </me>
+	    so that
+	    <me>
+	      \xvec = \threevec{x_1}{x_2}{x_3} =
+	      \threevec{-1+3x_3}{3+9x_3}{x_3} =
+	      \threevec{-1}{3}{0}+x_3\threevec{3}{9}{1}\text{.}
+	    </me>
+	  </p></li>
+
+	  <li><p>
+	    We have the augmented matrix
+	    <me>
+	      \left[\begin{array}{rrrrr}
+	      1 \amp 2 \amp 0 \amp -1 \amp -1 \\
+	      2 \amp 4 \amp -3 \amp -2 \amp 1 \\
+	      -1 \amp -2 \amp 6 \amp 1 \amp 5
+	      \end{array}\right]
+	      \sim
+	      \left[\begin{array}{rrrrr}
+	      1 \amp 2 \amp 0 \amp -1 \amp 0 \\
+	      0 \amp 0 \amp 1 \amp 0 \amp 0 \\
+	      0 \amp 0 \amp 0 \amp 0 \amp 1
+	      \end{array}\right]\text{.}
+	    </me>
+	    Since this system is inconsistent, there are no solutions
+	    to the matrix equation.
+	  </p></li>
+
+	  <li><p>
+	    We know that there is at least one solution, namely,
+	    <m>\xvec=\zerovec</m>.
+	  </p></li>
+
+	</ol></p>
+      </solution>
+
+                    
+                    
+                </exercise>
+            </page>
+
+            <page>
+                <exercise workspace="2in">
+                    <title>Definition: Matrix-Matrix Multiplication</title>
+                    <statement>
+                        <p>
+                            Let <m>B = [\vvec_1 \dots \vvec_p]</m>.
+                        </p>
+                    </statement>
+                    <solution>
+						<p>
+							See <url href="https://understandinglinearalgebra.org/sec-matrices-lin-combs.html#sec-matrices-lin-combs-6-3">Definition 2.2.6</url>.
+						</p>
+					</solution>
+                    
+                </exercise>
+
+                <exercise workspace="4in">
+                    <title>Example: Matrix-Matrix Multiplication</title>
+                    <statement>
+                        <p>
+                            Let 
+                            <me>
+                            A= \left[\begin{array}{rr}
+                            3 \amp 2  \\
+                            0 \amp 1  \\
+                            -1 \amp 4 
+                            \end{array}\right]
+                            ,
+                            B = \left[\begin{array}{rrr}
+                            2 \amp 0 \amp 1  \\
+                            1 \amp 5 \amp 6 \\
+                            
+                            \end{array}\right]\text{.}
+                            </me>
+                        </p>
+                    </statement>
+                    <solution>
+						<p>
+							<m>AB = \left[ 
+								A\twovec{2}{1} A\twovec{0}{5} A\twovec{1}{6}
+								\right] = 
+							\left[\begin{array}{rrr}
+                            8 \amp 10 \amp 15  \\
+                            1 \amp 5 \amp 6 \\
+							2 \amp 20 \amp 23 \\
+                            
+                            \end{array}\right]
+						</m>
+						</p>
+					</solution>
+                    
+                </exercise>
+            </page>
+
+            <page>
+                <exercise >
+                    <title>Activity: Properites of Matrix Multiplication</title>
+                    <statement>
+      <p> Consider the matrices
+	<me>
+	  A = \left[\begin{array}{rrr}
+	  1 \amp 3 \amp 2 \\
+	  -3 \amp 4 \amp -1 \\
+	  \end{array}\right],~~~
+	  B = \left[\begin{array}{rr}
+	  3 \amp 0 \\
+	  1 \amp 2 \\
+	  -2 \amp -1 \\
+	  \end{array}\right]
+	</me>.
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      Before
+	      computing, first explain why the shapes of
+	      <m>A</m> and <m>B</m> enable us to form the product <m>AB</m>.
+	      Then describe the shape of <m>AB</m>.
+	    </p>
+	  </li>
+
+	  <li><p> Compute the product <m>AB</m>. </p></li>
+
+	  <li><p> Sage can multiply matrices using the <c>*</c>
+	  operator.  Define the matrices <m>A</m> and <m>B</m> in the
+	  Sage cell below and
+	  check your work by computing <m>AB</m>.
+	  <sage>
+	    <input>
+	    </input>
+	  </sage>
+	  </p></li>
+	  
+	  <li><p> Are we able to form the matrix product <m>BA</m>?  If
+	  so, use the Sage cell above to find <m>BA</m>.  Is it
+	  generally true that <m>AB = BA</m>?
+	  </p></li>
+	  
+	  <li><p> Suppose we form the three matrices.
+	  <me>
+	    A = \left[\begin{array}{rr}
+	    1 \amp 2 \\
+	    3 \amp -2 \\
+	    \end{array}\right],
+	    B = \left[\begin{array}{rr}
+	    0 \amp 4 \\
+	    2 \amp -1 \\
+	    \end{array}\right],
+	    C = \left[\begin{array}{rr}
+	    -1 \amp 3 \\
+	    4 \amp 3 \\
+	    \end{array}\right]
+	    </me>.
+	    Compare what happens when you compute <m>A(B+C)</m> and <m>AB
+	    + AC</m>.  State your finding as a general principle.
+	    <sage>
+	      <input>
+	      </input>
+	    </sage>
+	    
+	  </p></li>
+	  
+	  <li><p> Compare the results of evaluating <m>A(BC)</m> and
+	  <m>(AB)C</m> and state your finding as a general
+	  principle. </p></li> 
+	  
+	  <li><p> When we are dealing with real numbers, we know if
+	  <m>a\neq 0</m> and <m>ab = ac</m>, then <m>b=c</m>.  Define
+	  matrices 
+	  <me>
+	    A = \left[\begin{array}{rr}
+	    1 \amp 2 \\
+	    -2 \amp -4 \\
+	    \end{array}\right],
+	    B = \left[\begin{array}{rr}
+	    3 \amp 0 \\
+	    1 \amp 3 \\
+	    \end{array}\right],
+	    C = \left[\begin{array}{rr}
+	    1 \amp 2 \\
+	    2 \amp 2 \\
+	    \end{array}\right]
+	  </me>
+	  and compute <m>AB</m> and <m>AC</m>.
+	  <sage>
+	    <input>
+	    </input>
+	  </sage>
+	  If <m>AB = AC</m>, is it necessarily true that <m>B = C</m>?
+	  </p></li>
+	  
+	  <li><p> Again, with real numbers, we know that if <m>ab =
+	  0</m>, then either <m>a = 0</m> or <m>b=0</m>.  Define
+	  <me>
+	    A = \left[\begin{array}{rr}
+	    1 \amp 2 \\
+	    -2 \amp -4 \\
+	    \end{array}\right],
+	    B = \left[\begin{array}{rr}
+	    2 \amp -4 \\
+	    -1 \amp 2 \\
+	    \end{array}\right]
+	  </me>
+	  and compute <m>AB</m>.
+	  <sage>
+	    <input>
+	    </input>
+	  </sage>
+	  If <m>AB = 0</m>, is it necessarily true that either
+	  <m>A=0</m> or <m>B=0</m>?
+	  </p></li>
+	</ol>
+      </p>
+      </statement>
+      
+      <solution>
+	<p><ol marker="a.">
+	  <li><p>
+	    The product <m>AB</m> exists because the number of columns
+	    of <m>A</m> equals the number of rows of <m>B</m>.  The
+	    dimensions of <m>AB</m> are <m>2\times 2</m>.
+	  </p></li>
+
+	  <li><p>
+	    We have
+	    <m>AB =
+	    \left[\begin{array}{rr}
+	    2 \amp 4 \\
+	    -3 \amp 9
+	    \end{array}\right]
+	    </m>.
+	  </p></li>
+
+	  <li><p> Define
+	    <cd>
+A = matrix(2, 3, [1, 3, 2, -3, 4, -1])
+B = matrix(3, 2, [3, 0, 1, 2, -2, -1])
+A*B
+	    </cd>
+	  </p></li>
+
+	  <li><p>
+	    Yes, we can form the product <m>BA</m> because the number
+	    of columns of <m>B</m> equals the number of rows of
+	    <m>A</m>.  This product <m>AB</m> will be <m>3\times3</m>,
+	    however, so it must be true that <m>AB\neq BA</m>.
+	  </p></li>
+
+	  <li><p> We find that <m>A(B+C)=AB + AC</m>.
+	  </p></li>
+
+	  <li><p> We find that <m>A(BC) = (AB)C</m>.
+	  </p></li>
+
+	  <li><p>
+	    It is not generally true that <m>B=C</m> if <m>AB=AC</m>,
+	    as illustrated by this example.
+	  </p></li>
+
+	  <li><p>
+	    It is not generally true that <m>A=0</m> or <m>B=0</m> if
+	    <m>AB=0</m>, as illustrated by this example.
+	  </p></li>
+
+	</ol></p>
+      </solution>
+                    
+                    
+                </exercise>
+            </page>
+            <page>
+                <exercise workspace="4in">
+                    <title>Properties: Matrix Multiplication</title>
+                    <statement>
+                        <p>
+                            
+                        </p>
+                    </statement>
+                    <solution>
+						<p>
+							See <url href="https://understandinglinearalgebra.org/sec-matrices-lin-combs.html#sec-matrices-lin-combs-6-8">some important properties of matrices</url> and 
+							<url href="https://understandinglinearalgebra.org/sec-matrices-lin-combs.html#sec-matrices-lin-combs-6-10">some important non-properties of matrices</url>.
+						</p>
+					</solution>
+                    
+                </exercise>
+            </page>
+        </worksheet>
+    </article>
+</pretext>

@@ -1,0 +1,323 @@
+<pretext>
+    <article xml:id="notes">
+        <worksheet xml:id="sec-2-2-2">
+        <title><m>\S 2.2</m>: Matrix Multiplication and Linear Systems</title>
+            <page>
+                <exercise workspace="2in">
+                    <title>Motivation: Matrix Multiplication and Linear Systems</title>
+                    <statement>
+                        <p>
+                            
+                        </p>
+                    </statement>
+                    
+                </exercise>
+                <exercise workspace="5in">
+                    <title>Membership: Three Perspectives</title>
+                    <statement>
+                        <p>
+                            
+                        </p>
+                    </statement>
+                    
+                    
+                </exercise>
+            </page>
+
+            <page>
+                <exercise workspace="4in">
+                    <title>Example: Three Perspectives</title>
+                    <statement>
+                        <p>
+                            Find all <m>\xvec</m> such that 
+                            <me>
+                                \left[
+                                \begin{array}{rrr}
+                                2 \amp 0 \amp 2 \\
+                                4 \amp -1 \amp 6 \\
+                                1 \amp 3 \amp -5 \\
+                                \end{array}
+                                \right]
+                                \xvec = \threevec{0}{-5}{15}
+                            </me>.
+
+                        </p>
+                    </statement>
+                    
+                    
+                </exercise>
+            </page>
+
+
+            <page>
+                <exercise>
+                    <title>Activity: The equation <m>A\xvec = \bvec</m></title>
+                    <statement><p>
+      <ol marker="a.">
+	<li> <p> Consider the linear system
+	<me>
+	  \begin{alignedat}{4}
+	  2x \amp {}+{} \amp y \amp {}-{} \amp 3z \amp {}={} \amp 4 \\
+	  -x \amp {}+{} \amp 2y \amp {}+{} \amp z \amp {}={} \amp 3 \\
+	  3x \amp {}-{} \amp y \amp \amp \amp {}={} \amp -4. \\
+	  \end{alignedat}
+	</me>
+	Identify the matrix <m>A</m> and vector <m>\bvec</m> to
+	express this system in the form <m>A\xvec = \bvec</m>.
+	</p></li>
+
+	<li> <p> If <m>A</m> and <m>\bvec</m> are as below, write the
+	linear system corresponding to the equation
+	<m>A\xvec=\bvec</m> and describe its solution space, using a
+	parametric description if appropriate:
+	<me>
+	  A = \left[\begin{array}{rrr}
+	  3 \amp -1 \amp 0 \\
+	  -2 \amp 0 \amp 6
+	  \end{array}
+	  \right],~~~
+	  \bvec = \left[\begin{array}{r}
+	  -6 \\ 2
+	  \end{array}
+	  \right].
+	</me>
+	<sage>
+	  <input>
+	  </input>
+	</sage>
+	</p></li>
+
+	<li><p>
+	  Describe the solution space of the equation
+	  <me>
+	    \left[
+	    \begin{array}{rrrr}
+	    1 \amp 2 \amp 0 \amp -1 \\
+	    2 \amp 4 \amp -3 \amp -2 \\
+	    -1 \amp -2 \amp 6 \amp 1 \\
+	    \end{array}
+	    \right]
+	    \xvec
+	    = 
+	    \left[\begin{array}{r}
+	    -1 \\ 1 \\ 5
+	    \end{array}
+	    \right]
+	  </me>.
+	  <sage>
+	    <input>
+	    </input>
+	  </sage>
+	</p></li>
+
+	<li><p> Suppose <m>A</m> is an <m>m\times n</m> matrix.  What
+	can you guarantee about the solution space of the equation <m>A\xvec
+	= \zerovec</m>?  </p></li>
+      </ol>
+      </p></statement>
+
+      
+
+                    
+                    
+                </exercise>
+            </page>
+
+            <page>
+                <exercise workspace="2in">
+                    <title>Definition: Matrix-Matrix Multiplication</title>
+                    <statement>
+                        <p>
+                            Let <m>B = [\vvec_1 \dots \vvec_p]</m>.
+                        </p>
+                    </statement>
+                    
+                    
+                </exercise>
+
+                <exercise workspace="4in">
+                    <title>Example: Matrix-Matrix Multiplication</title>
+                    <statement>
+                        <p>
+                            Let 
+                            <me>
+                            A= \left[\begin{array}{rr}
+                            3 \amp 2  \\
+                            0 \amp 1  \\
+                            -1 \amp 4 
+                            \end{array}\right]
+                            ,
+                            B = \left[\begin{array}{rrr}
+                            2 \amp 0 \amp 1  \\
+                            1 \amp 5 \amp 6 \\
+                            
+                            \end{array}\right]\text{.}
+                            </me>
+                        </p>
+                    </statement>
+                    
+                    
+                </exercise>
+            </page>
+
+            <page>
+          <exercise>
+                    <title>Activity: Properites of Matrix Multiplication</title>
+                    <statement>
+      <p> Consider the matrices
+	<me>
+	  A = \left[\begin{array}{rrr}
+	  1 \amp 3 \amp 2 \\
+	  -3 \amp 4 \amp -1 \\
+	  \end{array}\right],~~~
+	  B = \left[\begin{array}{rr}
+	  3 \amp 0 \\
+	  1 \amp 2 \\
+	  -2 \amp -1 \\
+	  \end{array}\right]
+	</me>.
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      Before
+	      computing, first explain why the shapes of
+	      <m>A</m> and <m>B</m> enable us to form the product <m>AB</m>.
+	      Then describe the shape of <m>AB</m>.
+	    </p>
+	  </li>
+
+	  <li><p> Compute the product <m>AB</m>. </p></li>
+
+	  <li><p> Sage can multiply matrices using the <c>*</c>
+	  operator.  Define the matrices <m>A</m> and <m>B</m> in the
+	  Sage cell below and
+	  check your work by computing <m>AB</m>.
+	  <sage>
+	    <input>
+	    </input>
+	  </sage>
+	  </p></li>
+	  
+	  <li><p> Are we able to form the matrix product <m>BA</m>?  If
+	  so, use the Sage cell above to find <m>BA</m>.  Is it
+	  generally true that <m>AB = BA</m>?
+	  </p></li>
+	  
+	  <li><p> Suppose we form the three matrices.
+	  <me>
+	    A = \left[\begin{array}{rr}
+	    1 \amp 2 \\
+	    3 \amp -2 \\
+	    \end{array}\right],
+	    B = \left[\begin{array}{rr}
+	    0 \amp 4 \\
+	    2 \amp -1 \\
+	    \end{array}\right],
+	    C = \left[\begin{array}{rr}
+	    -1 \amp 3 \\
+	    4 \amp 3 \\
+	    \end{array}\right]
+	    </me>.
+	    Compare what happens when you compute <m>A(B+C)</m> and <m>AB
+	    + AC</m>.  State your finding as a general principle.
+	    <sage>
+	      <input>
+	      </input>
+	    </sage>
+	    
+	  </p></li>
+	  
+	  <li><p> Compare the results of evaluating <m>A(BC)</m> and
+	  <m>(AB)C</m> and state your finding as a general
+	  principle. </p></li> 
+	  
+	  
+	</ol>
+      </p>
+      </statement>
+      
+      
+                    
+                    
+                </exercise>
+                
+            </page>
+
+            
+            <page>
+             <exercise workspace="1in">
+                    <title>Activity (continued)</title>
+                    <statement>
+                        <p>
+                        <ol>
+                        
+                            <li><p> When we are dealing with real numbers, we know if
+	  <m>a\neq 0</m> and <m>ab = ac</m>, then <m>b=c</m>.  Define
+	  matrices 
+	  <me>
+	    A = \left[\begin{array}{rr}
+	    1 \amp 2 \\
+	    -2 \amp -4 \\
+	    \end{array}\right],
+	    B = \left[\begin{array}{rr}
+	    3 \amp 0 \\
+	    1 \amp 3 \\
+	    \end{array}\right],
+	    C = \left[\begin{array}{rr}
+	    1 \amp 2 \\
+	    2 \amp 2 \\
+	    \end{array}\right]
+	  </me>
+	  and compute <m>AB</m> and <m>AC</m>.
+	  <sage>
+	    <input>
+	    </input>
+	  </sage>
+	  If <m>AB = AC</m>, is it necessarily true that <m>B = C</m>?
+	  </p></li>
+	  
+	  <li><p> Again, with real numbers, we know that if <m>ab =
+	  0</m>, then either <m>a = 0</m> or <m>b=0</m>.  Define
+	  <me>
+	    A = \left[\begin{array}{rr}
+	    1 \amp 2 \\
+	    -2 \amp -4 \\
+	    \end{array}\right],
+	    B = \left[\begin{array}{rr}
+	    2 \amp -4 \\
+	    -1 \amp 2 \\
+	    \end{array}\right]
+	  </me>
+	  and compute <m>AB</m>.
+	  <sage>
+	    <input>
+	    </input>
+	  </sage>
+	  If <m>AB = 0</m>, is it necessarily true that either
+	  <m>A=0</m> or <m>B=0</m>?
+	  </p></li>
+                        
+                        
+                    </ol>
+                    </p>
+                    </statement>
+                    
+                    
+                </exercise>
+
+               
+            
+                <exercise workspace="4in">
+                    <title>Properties: Matrix Multiplication</title>
+                    <statement>
+                        <p>
+                            
+                        </p>
+                    </statement>
+                    
+                    
+                </exercise>
+            </page>
+        </worksheet>
+    </article>
+</pretext>
