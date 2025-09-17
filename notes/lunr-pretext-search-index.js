@@ -370,229 +370,220 @@ var ptx_lunr_docs = [
   "body": " Exercise: Linear Combinations and Linear Systems   Is a linear combination of and ?    This is example 2.1.11 in the textbook.   "
 },
 {
-  "id": "sec-2-1-2",
+  "id": "sec-2-1-2-sols",
   "level": "1",
-  "url": "sec-2-1-2.html",
+  "url": "sec-2-1-2-sols.html",
   "type": "Worksheet",
   "number": "",
   "title": "<span class=\"process-math\">\\(\\S 2.1\\text{:}\\)<\/span> Linear Combinations and Linear Systems",
-  "body": " : Linear Combinations and Linear Systems    Motivation: Linear Combinations and Linear Systems        Example: Notation   Last time we found that is a linear combination of and because     Fact: Linear Combinations and Linear Systems          Notes: Vectors and Matrices in Sage          Activity: Linear Combinations and Linear Systems   Sage cells are provided in the text to help with computations to answer the following questions.    Given the vectors , can be expressed as a linear combination of , , and ? Rephrase this question by writing a linear system for the weights , , and and use Sage cells to answer this question.  Consider the following linear system. Identify vectors , , , and such that the question \"Is this linear system consistent?\" is equivalent to the question \"Can be expressed as a linear combination of , , and ?\"   Consider the vectors . Can be expressed as a linear combination of , , and ? If so, can be written as a linear combination of these vectors in more than one way?   Considering the vectors , , and from the previous part, can we write every three-dimensional vector as a linear combination of these vectors? Explain how the pivot positions of the matrix help answer this question.   Now consider the vectors . Can be expressed as a linear combination of , , and ? If so, can be written as a linear combination of these vectors in more than one way?   Considering the vectors , , and from the previous part, can we write every three-dimensional vector as a linear combination of these vectors? Explain how the pivot positions of the matrix help answer this question.         Visualizing No Solution   Consider the vectors and , as shown in .   Vectors and .         "
+  "body": " : Linear Combinations and Linear Systems    Motivation: Linear Combinations and Linear Systems       Last time we saw    can be visualized as walking along a total of times, then walking along a total of times (in ).    In general, asking whether is a linear combination of other vectors is equivalent to asking whether a specific linear system has a solution.        Example: Notation   Last time we found that is a linear combination of and because     As shorthand, we will often write augmented matrices that come from linear combinations as      Fact: Linear Combinations and Linear Systems       See Proposition 2.1.12 .       Notes: Vectors and Matrices in Sage   See tips from the textbook for how vectors can be defined in Sage.  You can also use column vectors to define matrices in Sage using the following syntax:          Activity: Linear Combinations and Linear Systems   Sage cells are provided in the text to help with computations to answer the following questions.    Given the vectors , can be expressed as a linear combination of , , and ? Rephrase this question by writing a linear system for the weights , , and and use Sage cells to answer this question.  Consider the following linear system. Identify vectors , , , and such that the question \"Is this linear system consistent?\" is equivalent to the question \"Can be expressed as a linear combination of , , and ?\"   Consider the vectors . Can be expressed as a linear combination of , , and ? If so, can be written as a linear combination of these vectors in more than one way?   Considering the vectors , , and from the previous part, can we write every three-dimensional vector as a linear combination of these vectors? Explain how the pivot positions of the matrix help answer this question.   Now consider the vectors . Can be expressed as a linear combination of , , and ? If so, can be written as a linear combination of these vectors in more than one way?   Considering the vectors , , and from the previous part, can we write every three-dimensional vector as a linear combination of these vectors? Explain how the pivot positions of the matrix help answer this question.        We find the linear system with corresponding augmented matrix This shows that the linear system is inconsistent so there are no such weights , , and . This means that is not a linear combination of , , and .  We find vectors   This is the same as asking if the linear system corresponding to the following augmented matrix is consistent: From the reduced row echelon form, we see that the system is consistent, which means that can be expressed as a linear combination of , , and . Moreover, there are infinitely many ways in which we can do so.  No, it is not possible to write every three-dimensional as a linear combination of , , and because the matrix does not have a pivot position in every row. This means that, with some choice of vector , we will obtain an inconsistent system.  We find the augmented matrix This shows that can be expressed as a linear combination of , , and in exactly one way.  Every vector can be expressed as a linear combination of , , and in exactly one way because has a pivot position in every row and every column.         Visualizing No Solution   Consider the vectors and , as shown in .   Vectors and .        Review Example 2.1.13 .     "
 },
 {
-  "id": "sec-2-1-2-2-1",
+  "id": "sec-2-1-2-sols-2-1",
   "level": "2",
-  "url": "sec-2-1-2.html#sec-2-1-2-2-1",
+  "url": "sec-2-1-2-sols.html#sec-2-1-2-sols-2-1",
   "type": "Worksheet Exercise",
   "number": "1",
   "title": "Motivation: Linear Combinations and Linear Systems.",
-  "body": " Motivation: Linear Combinations and Linear Systems      "
+  "body": " Motivation: Linear Combinations and Linear Systems       Last time we saw    can be visualized as walking along a total of times, then walking along a total of times (in ).    In general, asking whether is a linear combination of other vectors is equivalent to asking whether a specific linear system has a solution.      "
 },
 {
-  "id": "sec-2-1-2-2-2",
+  "id": "sec-2-1-2-sols-2-2",
   "level": "2",
-  "url": "sec-2-1-2.html#sec-2-1-2-2-2",
+  "url": "sec-2-1-2-sols.html#sec-2-1-2-sols-2-2",
   "type": "Worksheet Exercise",
   "number": "2",
   "title": "Example: Notation.",
-  "body": " Example: Notation   Last time we found that is a linear combination of and because   "
+  "body": " Example: Notation   Last time we found that is a linear combination of and because     As shorthand, we will often write augmented matrices that come from linear combinations as    "
 },
 {
-  "id": "sec-2-1-2-2-3",
+  "id": "sec-2-1-2-sols-2-3",
   "level": "2",
-  "url": "sec-2-1-2.html#sec-2-1-2-2-3",
+  "url": "sec-2-1-2-sols.html#sec-2-1-2-sols-2-3",
   "type": "Worksheet Exercise",
   "number": "3",
   "title": "Fact: Linear Combinations and Linear Systems.",
-  "body": " Fact: Linear Combinations and Linear Systems      "
+  "body": " Fact: Linear Combinations and Linear Systems       See Proposition 2.1.12 .   "
 },
 {
-  "id": "sec-2-1-2-3-1",
+  "id": "sec-2-1-2-sols-3-1",
   "level": "2",
-  "url": "sec-2-1-2.html#sec-2-1-2-3-1",
+  "url": "sec-2-1-2-sols.html#sec-2-1-2-sols-3-1",
   "type": "Worksheet Exercise",
   "number": "4",
   "title": "Notes: Vectors and Matrices in Sage.",
-  "body": " Notes: Vectors and Matrices in Sage      "
+  "body": " Notes: Vectors and Matrices in Sage   See tips from the textbook for how vectors can be defined in Sage.  You can also use column vectors to define matrices in Sage using the following syntax:      "
 },
 {
-  "id": "sec-2-1-2-4-1",
+  "id": "sec-2-1-2-sols-4-1",
   "level": "2",
-  "url": "sec-2-1-2.html#sec-2-1-2-4-1",
+  "url": "sec-2-1-2-sols.html#sec-2-1-2-sols-4-1",
   "type": "Worksheet Exercise",
   "number": "5",
   "title": "Activity: Linear Combinations and Linear Systems.",
-  "body": " Activity: Linear Combinations and Linear Systems   Sage cells are provided in the text to help with computations to answer the following questions.    Given the vectors , can be expressed as a linear combination of , , and ? Rephrase this question by writing a linear system for the weights , , and and use Sage cells to answer this question.  Consider the following linear system. Identify vectors , , , and such that the question \"Is this linear system consistent?\" is equivalent to the question \"Can be expressed as a linear combination of , , and ?\"   Consider the vectors . Can be expressed as a linear combination of , , and ? If so, can be written as a linear combination of these vectors in more than one way?   Considering the vectors , , and from the previous part, can we write every three-dimensional vector as a linear combination of these vectors? Explain how the pivot positions of the matrix help answer this question.   Now consider the vectors . Can be expressed as a linear combination of , , and ? If so, can be written as a linear combination of these vectors in more than one way?   Considering the vectors , , and from the previous part, can we write every three-dimensional vector as a linear combination of these vectors? Explain how the pivot positions of the matrix help answer this question.     "
+  "body": " Activity: Linear Combinations and Linear Systems   Sage cells are provided in the text to help with computations to answer the following questions.    Given the vectors , can be expressed as a linear combination of , , and ? Rephrase this question by writing a linear system for the weights , , and and use Sage cells to answer this question.  Consider the following linear system. Identify vectors , , , and such that the question \"Is this linear system consistent?\" is equivalent to the question \"Can be expressed as a linear combination of , , and ?\"   Consider the vectors . Can be expressed as a linear combination of , , and ? If so, can be written as a linear combination of these vectors in more than one way?   Considering the vectors , , and from the previous part, can we write every three-dimensional vector as a linear combination of these vectors? Explain how the pivot positions of the matrix help answer this question.   Now consider the vectors . Can be expressed as a linear combination of , , and ? If so, can be written as a linear combination of these vectors in more than one way?   Considering the vectors , , and from the previous part, can we write every three-dimensional vector as a linear combination of these vectors? Explain how the pivot positions of the matrix help answer this question.        We find the linear system with corresponding augmented matrix This shows that the linear system is inconsistent so there are no such weights , , and . This means that is not a linear combination of , , and .  We find vectors   This is the same as asking if the linear system corresponding to the following augmented matrix is consistent: From the reduced row echelon form, we see that the system is consistent, which means that can be expressed as a linear combination of , , and . Moreover, there are infinitely many ways in which we can do so.  No, it is not possible to write every three-dimensional as a linear combination of , , and because the matrix does not have a pivot position in every row. This means that, with some choice of vector , we will obtain an inconsistent system.  We find the augmented matrix This shows that can be expressed as a linear combination of , , and in exactly one way.  Every vector can be expressed as a linear combination of , , and in exactly one way because has a pivot position in every row and every column.     "
 },
 {
-  "id": "sec-2-1-2-5-1",
+  "id": "sec-2-1-2-sols-5-1",
   "level": "2",
-  "url": "sec-2-1-2.html#sec-2-1-2-5-1",
+  "url": "sec-2-1-2-sols.html#sec-2-1-2-sols-5-1",
   "type": "Worksheet Exercise",
   "number": "6",
   "title": "Visualizing No Solution.",
-  "body": " Visualizing No Solution   Consider the vectors and , as shown in .   Vectors and .       "
+  "body": " Visualizing No Solution   Consider the vectors and , as shown in .   Vectors and .        Review Example 2.1.13 .   "
 },
 {
-  "id": "sec-2-2-1",
+  "id": "sec-2-2-1-sols",
   "level": "1",
-  "url": "sec-2-2-1.html",
+  "url": "sec-2-2-1-sols.html",
   "type": "Worksheet",
   "number": "",
   "title": "<span class=\"process-math\">\\(\\S 2.2\\text{:}\\)<\/span> Matrix-Vector Multiplication",
-  "body": " : Matrix-Vector Multiplication    Motivation: Matrix Multiplication        Preview Activity 2.2.1    Compute the scalar multiple .      Find the sum .      Suppose that and are two matrices. What do we need to know about their shapes before we can form the sum ?      The matrix , which we call the identity matrix, is the matrix whose entries are zero except for the diagonal entries, all of which are 1. For instance, . If we can form the sum , what must be true about the matrix ?      Find the matrix where .        Definition: Matrix-Vector Multiplcation        Example: Matrix-Vector Multiplication   Let and .       Activity: Matrix-vector Multiplication     Find the matrix product .   Suppose that is the matrix . If is defined, what is the dimension of the vector and what is the dimension of ?   A vector whose entries are all zero is denoted by . If is a matrix, what is the product ?   Suppose that is the identity matrix and . Find the product and explain why is called the identity matrix.   Suppose we write the matrix in terms of its columns as . If the vector , what is the product ?    Suppose that . Is there a vector such that ?         Activity: Matrix-vector Multiplication in Sage   Sage can find the product of a matrix and vector using the * operator. For example,    Use Sage to evaluate the product from of the previous activity.    In Sage, define the matrix and vectors .   What do you find when you evaluate ?  What do you find when you evaluate and and compare your results?  What do you find when you evaluate and and compare your results?         Properties: Matrix-vector Multiplication        "
+  "body": " : Matrix-Vector Multiplication    Motivation: Matrix Multiplication       Matrix multiplication is often introduced as a \"recipe\" for combining matrices. Its definition is motivated by linear combinations, and is useful for expressing linear systems in compact ways.     Preview Activity 2.2.1    Compute the scalar multiple .           Find the sum .           Suppose that and are two matrices. What do we need to know about their shapes before we can form the sum ?    The shapes must be the same.      The matrix , which we call the identity matrix, is the matrix whose entries are zero except for the diagonal entries, all of which are 1. For instance, . If we can form the sum , what must be true about the matrix ?    The shape of must be .      Find the matrix where .             Definition: Matrix-Vector Multiplcation       Matrix-vector multiplication is a way to express a linear combination of vectors. See Definition 2.2.2 .     Example: Matrix-Vector Multiplication   Let and .    If we label the columns of as , then .       Activity: Matrix-vector Multiplication     Find the matrix product .   Suppose that is the matrix . If is defined, what is the dimension of the vector and what is the dimension of ?   A vector whose entries are all zero is denoted by . If is a matrix, what is the product ?   Suppose that is the identity matrix and . Find the product and explain why is called the identity matrix.   Suppose we write the matrix in terms of its columns as . If the vector , what is the product ?    Suppose that . Is there a vector such that ?       We have   The dimension of must be the same as the number of columns of so is three-dimensional. The dimension of equals the number of rows of so is four-dimensional.  We have .  We have ; that is, multiplying a vector by produces the same vector.  The product .  If , then we have with corresponding augmented matrix This means that is the unique solution to the equation .        Activity: Matrix-vector Multiplication in Sage   Sage can find the product of a matrix and vector using the * operator. For example,    Use Sage to evaluate the product from of the previous activity.    In Sage, define the matrix and vectors .   What do you find when you evaluate ?  What do you find when you evaluate and and compare your results?  What do you find when you evaluate and and compare your results?       We define A = matrix(3, 4, [1, 2, 0, -1, 2, 4, -3, -2, -1, -2, 6, 1]) v = vector([3, 1, -1, 1]) A*v   We define A = matrix(2, 3, [-2, 0, 3, 1, 4, 2]) zero = vector([0, 0]) v = vector([-2, 3]) w = vector([1, 2])    .   .           Properties: Matrix-vector Multiplication       See Proposition 2.2.3 .     "
 },
 {
-  "id": "sec-2-2-1-2-1",
+  "id": "sec-2-2-1-sols-2-1",
   "level": "2",
-  "url": "sec-2-2-1.html#sec-2-2-1-2-1",
+  "url": "sec-2-2-1-sols.html#sec-2-2-1-sols-2-1",
   "type": "Worksheet Exercise",
   "number": "1",
   "title": "Motivation: Matrix Multiplication.",
-  "body": " Motivation: Matrix Multiplication      "
+  "body": " Motivation: Matrix Multiplication       Matrix multiplication is often introduced as a \"recipe\" for combining matrices. Its definition is motivated by linear combinations, and is useful for expressing linear systems in compact ways.   "
 },
 {
-  "id": "sec-2-2-1-2-2",
+  "id": "sec-2-2-1-sols-2-2",
   "level": "2",
-  "url": "sec-2-2-1.html#sec-2-2-1-2-2",
+  "url": "sec-2-2-1-sols.html#sec-2-2-1-sols-2-2",
   "type": "Worksheet Exercise",
   "number": "2",
   "title": "Preview Activity 2.2.1.",
-  "body": " Preview Activity 2.2.1    Compute the scalar multiple .      Find the sum .      Suppose that and are two matrices. What do we need to know about their shapes before we can form the sum ?      The matrix , which we call the identity matrix, is the matrix whose entries are zero except for the diagonal entries, all of which are 1. For instance, . If we can form the sum , what must be true about the matrix ?      Find the matrix where .    "
+  "body": " Preview Activity 2.2.1    Compute the scalar multiple .           Find the sum .           Suppose that and are two matrices. What do we need to know about their shapes before we can form the sum ?    The shapes must be the same.      The matrix , which we call the identity matrix, is the matrix whose entries are zero except for the diagonal entries, all of which are 1. For instance, . If we can form the sum , what must be true about the matrix ?    The shape of must be .      Find the matrix where .         "
 },
 {
-  "id": "sec-2-2-1-3-1",
+  "id": "sec-2-2-1-sols-3-1",
   "level": "2",
-  "url": "sec-2-2-1.html#sec-2-2-1-3-1",
+  "url": "sec-2-2-1-sols.html#sec-2-2-1-sols-3-1",
   "type": "Worksheet Exercise",
   "number": "3",
   "title": "Definition: Matrix-Vector Multiplcation.",
-  "body": " Definition: Matrix-Vector Multiplcation      "
+  "body": " Definition: Matrix-Vector Multiplcation       Matrix-vector multiplication is a way to express a linear combination of vectors. See Definition 2.2.2 .   "
 },
 {
-  "id": "sec-2-2-1-3-2",
+  "id": "sec-2-2-1-sols-3-2",
   "level": "2",
-  "url": "sec-2-2-1.html#sec-2-2-1-3-2",
+  "url": "sec-2-2-1-sols.html#sec-2-2-1-sols-3-2",
   "type": "Worksheet Exercise",
   "number": "4",
   "title": "Example: Matrix-Vector Multiplication.",
-  "body": " Example: Matrix-Vector Multiplication   Let and .   "
+  "body": " Example: Matrix-Vector Multiplication   Let and .    If we label the columns of as , then .   "
 },
 {
-  "id": "sec-2-2-1-4-1",
+  "id": "sec-2-2-1-sols-4-1",
   "level": "2",
-  "url": "sec-2-2-1.html#sec-2-2-1-4-1",
+  "url": "sec-2-2-1-sols.html#sec-2-2-1-sols-4-1",
   "type": "Worksheet Exercise",
   "number": "5",
   "title": "Activity: Matrix-vector Multiplication.",
-  "body": " Activity: Matrix-vector Multiplication     Find the matrix product .   Suppose that is the matrix . If is defined, what is the dimension of the vector and what is the dimension of ?   A vector whose entries are all zero is denoted by . If is a matrix, what is the product ?   Suppose that is the identity matrix and . Find the product and explain why is called the identity matrix.   Suppose we write the matrix in terms of its columns as . If the vector , what is the product ?    Suppose that . Is there a vector such that ?     "
+  "body": " Activity: Matrix-vector Multiplication     Find the matrix product .   Suppose that is the matrix . If is defined, what is the dimension of the vector and what is the dimension of ?   A vector whose entries are all zero is denoted by . If is a matrix, what is the product ?   Suppose that is the identity matrix and . Find the product and explain why is called the identity matrix.   Suppose we write the matrix in terms of its columns as . If the vector , what is the product ?    Suppose that . Is there a vector such that ?       We have   The dimension of must be the same as the number of columns of so is three-dimensional. The dimension of equals the number of rows of so is four-dimensional.  We have .  We have ; that is, multiplying a vector by produces the same vector.  The product .  If , then we have with corresponding augmented matrix This means that is the unique solution to the equation .    "
 },
 {
-  "id": "sec-2-2-1-5-1",
+  "id": "sec-2-2-1-sols-5-1",
   "level": "2",
-  "url": "sec-2-2-1.html#sec-2-2-1-5-1",
+  "url": "sec-2-2-1-sols.html#sec-2-2-1-sols-5-1",
   "type": "Worksheet Exercise",
   "number": "6",
   "title": "Activity: Matrix-vector Multiplication in Sage.",
-  "body": " Activity: Matrix-vector Multiplication in Sage   Sage can find the product of a matrix and vector using the * operator. For example,    Use Sage to evaluate the product from of the previous activity.    In Sage, define the matrix and vectors .   What do you find when you evaluate ?  What do you find when you evaluate and and compare your results?  What do you find when you evaluate and and compare your results?     "
+  "body": " Activity: Matrix-vector Multiplication in Sage   Sage can find the product of a matrix and vector using the * operator. For example,    Use Sage to evaluate the product from of the previous activity.    In Sage, define the matrix and vectors .   What do you find when you evaluate ?  What do you find when you evaluate and and compare your results?  What do you find when you evaluate and and compare your results?       We define A = matrix(3, 4, [1, 2, 0, -1, 2, 4, -3, -2, -1, -2, 6, 1]) v = vector([3, 1, -1, 1]) A*v   We define A = matrix(2, 3, [-2, 0, 3, 1, 4, 2]) zero = vector([0, 0]) v = vector([-2, 3]) w = vector([1, 2])    .   .       "
 },
 {
-  "id": "sec-2-2-1-6-1",
+  "id": "sec-2-2-1-sols-6-1",
   "level": "2",
-  "url": "sec-2-2-1.html#sec-2-2-1-6-1",
+  "url": "sec-2-2-1-sols.html#sec-2-2-1-sols-6-1",
   "type": "Worksheet Exercise",
   "number": "7",
   "title": "Properties: Matrix-vector Multiplication.",
-  "body": " Properties: Matrix-vector Multiplication      "
+  "body": " Properties: Matrix-vector Multiplication       See Proposition 2.2.3 .   "
 },
 {
-  "id": "sec-2-2-2",
+  "id": "sec-2-2-2-sols",
   "level": "1",
-  "url": "sec-2-2-2.html",
+  "url": "sec-2-2-2-sols.html",
   "type": "Worksheet",
   "number": "",
   "title": "<span class=\"process-math\">\\(\\S 2.2\\text{:}\\)<\/span> Matrix Multiplication and Linear Systems",
-  "body": " : Matrix Multiplication and Linear Systems    Motivation: Matrix Multiplication and Linear Systems        Membership: Three Perspectives          Example: Three Perspectives   Find all such that .       Activity: The equation     Consider the linear system Identify the matrix and vector to express this system in the form .   If and are as below, write the linear system corresponding to the equation and describe its solution space, using a parametric description if appropriate:    Describe the solution space of the equation .   Suppose is an matrix. What can you guarantee about the solution space of the equation ?        Definition: Matrix-Matrix Multiplication   Let .     Example: Matrix-Matrix Multiplication   Let        Activity: Properites of Matrix Multiplication   Consider the matrices .   Before computing, first explain why the shapes of and enable us to form the product . Then describe the shape of .   Compute the product .  Sage can multiply matrices using the * operator. Define the matrices and in the Sage cell below and check your work by computing .   Are we able to form the matrix product ? If so, use the Sage cell above to find . Is it generally true that ?  Suppose we form the three matrices. . Compare what happens when you compute and . State your finding as a general principle.   Compare the results of evaluating and and state your finding as a general principle.         Activity (continued)     When we are dealing with real numbers, we know if and , then . Define matrices and compute and . If , is it necessarily true that ?  Again, with real numbers, we know that if , then either or . Define and compute . If , is it necessarily true that either or ?       Properties: Matrix Multiplication        "
+  "body": " : Matrix Multiplication and Linear Systems    Motivation: Matrix Multiplication and Linear Systems       Last time we made sense of in terms of linear combinations of column vectors with specific weights to get a new vector. Recall also that the \"membership\" question is important. We'll rephrase and answer this question in this new context.     Membership: Three Perspectives       The following questions are all equivalent:   For an matrix and vector , does there exist a vector such that ?    Are there weights such that ?    Does the system represented by have a solution?     This is also summarized in Proposition 2.2.4 .       Example: Three Perspectives   Find all such that .    This example is summarized in Example 2.2.5 .       Activity: The equation     Consider the linear system Identify the matrix and vector to express this system in the form .   If and are as below, write the linear system corresponding to the equation and describe its solution space, using a parametric description if appropriate:    Describe the solution space of the equation .   Suppose is an matrix. What can you guarantee about the solution space of the equation ?       and .  Form the augmented matrix so that   We have the augmented matrix Since this system is inconsistent, there are no solutions to the matrix equation.  We know that there is at least one solution, namely, .        Definition: Matrix-Matrix Multiplication   Let .    See Definition 2.2.6 .     Example: Matrix-Matrix Multiplication   Let             Activity: Properites of Matrix Multiplication   Consider the matrices .   Before computing, first explain why the shapes of and enable us to form the product . Then describe the shape of .   Compute the product .  Sage can multiply matrices using the * operator. Define the matrices and in the Sage cell below and check your work by computing .   Are we able to form the matrix product ? If so, use the Sage cell above to find . Is it generally true that ?  Suppose we form the three matrices. . Compare what happens when you compute and . State your finding as a general principle.   Compare the results of evaluating and and state your finding as a general principle.  When we are dealing with real numbers, we know if and , then . Define matrices and compute and . If , is it necessarily true that ?  Again, with real numbers, we know that if , then either or . Define and compute . If , is it necessarily true that either or ?       The product exists because the number of columns of equals the number of rows of . The dimensions of are .  We have .  Define A = matrix(2, 3, [1, 3, 2, -3, 4, -1]) B = matrix(3, 2, [3, 0, 1, 2, -2, -1]) A*B   Yes, we can form the product because the number of columns of equals the number of rows of . This product will be , however, so it must be true that .  We find that .  We find that .  It is not generally true that if , as illustrated by this example.  It is not generally true that or if , as illustrated by this example.        Properties: Matrix Multiplication       See some important properties of matrices and some important non-properties of matrices .     "
 },
 {
-  "id": "sec-2-2-2-2-1",
+  "id": "sec-2-2-2-sols-2-1",
   "level": "2",
-  "url": "sec-2-2-2.html#sec-2-2-2-2-1",
+  "url": "sec-2-2-2-sols.html#sec-2-2-2-sols-2-1",
   "type": "Worksheet Exercise",
   "number": "1",
   "title": "Motivation: Matrix Multiplication and Linear Systems.",
-  "body": " Motivation: Matrix Multiplication and Linear Systems      "
+  "body": " Motivation: Matrix Multiplication and Linear Systems       Last time we made sense of in terms of linear combinations of column vectors with specific weights to get a new vector. Recall also that the \"membership\" question is important. We'll rephrase and answer this question in this new context.   "
 },
 {
-  "id": "sec-2-2-2-2-2",
+  "id": "sec-2-2-2-sols-2-2",
   "level": "2",
-  "url": "sec-2-2-2.html#sec-2-2-2-2-2",
+  "url": "sec-2-2-2-sols.html#sec-2-2-2-sols-2-2",
   "type": "Worksheet Exercise",
   "number": "2",
   "title": "Membership: Three Perspectives.",
-  "body": " Membership: Three Perspectives      "
+  "body": " Membership: Three Perspectives       The following questions are all equivalent:   For an matrix and vector , does there exist a vector such that ?    Are there weights such that ?    Does the system represented by have a solution?     This is also summarized in Proposition 2.2.4 .   "
 },
 {
-  "id": "sec-2-2-2-3-1",
+  "id": "sec-2-2-2-sols-3-1",
   "level": "2",
-  "url": "sec-2-2-2.html#sec-2-2-2-3-1",
+  "url": "sec-2-2-2-sols.html#sec-2-2-2-sols-3-1",
   "type": "Worksheet Exercise",
   "number": "3",
   "title": "Example: Three Perspectives.",
-  "body": " Example: Three Perspectives   Find all such that .   "
+  "body": " Example: Three Perspectives   Find all such that .    This example is summarized in Example 2.2.5 .   "
 },
 {
-  "id": "sec-2-2-2-4-1",
+  "id": "sec-2-2-2-sols-4-1",
   "level": "2",
-  "url": "sec-2-2-2.html#sec-2-2-2-4-1",
+  "url": "sec-2-2-2-sols.html#sec-2-2-2-sols-4-1",
   "type": "Worksheet Exercise",
   "number": "4",
   "title": "Activity: The equation <span class=\"process-math\">\\(A\\xvec = \\bvec\\)<\/span>.",
-  "body": " Activity: The equation     Consider the linear system Identify the matrix and vector to express this system in the form .   If and are as below, write the linear system corresponding to the equation and describe its solution space, using a parametric description if appropriate:    Describe the solution space of the equation .   Suppose is an matrix. What can you guarantee about the solution space of the equation ?    "
+  "body": " Activity: The equation     Consider the linear system Identify the matrix and vector to express this system in the form .   If and are as below, write the linear system corresponding to the equation and describe its solution space, using a parametric description if appropriate:    Describe the solution space of the equation .   Suppose is an matrix. What can you guarantee about the solution space of the equation ?       and .  Form the augmented matrix so that   We have the augmented matrix Since this system is inconsistent, there are no solutions to the matrix equation.  We know that there is at least one solution, namely, .    "
 },
 {
-  "id": "sec-2-2-2-5-1",
+  "id": "sec-2-2-2-sols-5-1",
   "level": "2",
-  "url": "sec-2-2-2.html#sec-2-2-2-5-1",
+  "url": "sec-2-2-2-sols.html#sec-2-2-2-sols-5-1",
   "type": "Worksheet Exercise",
   "number": "5",
   "title": "Definition: Matrix-Matrix Multiplication.",
-  "body": " Definition: Matrix-Matrix Multiplication   Let .   "
+  "body": " Definition: Matrix-Matrix Multiplication   Let .    See Definition 2.2.6 .   "
 },
 {
-  "id": "sec-2-2-2-5-2",
+  "id": "sec-2-2-2-sols-5-2",
   "level": "2",
-  "url": "sec-2-2-2.html#sec-2-2-2-5-2",
+  "url": "sec-2-2-2-sols.html#sec-2-2-2-sols-5-2",
   "type": "Worksheet Exercise",
   "number": "6",
   "title": "Example: Matrix-Matrix Multiplication.",
-  "body": " Example: Matrix-Matrix Multiplication   Let    "
+  "body": " Example: Matrix-Matrix Multiplication   Let         "
 },
 {
-  "id": "sec-2-2-2-6-1",
+  "id": "sec-2-2-2-sols-6-1",
   "level": "2",
-  "url": "sec-2-2-2.html#sec-2-2-2-6-1",
+  "url": "sec-2-2-2-sols.html#sec-2-2-2-sols-6-1",
   "type": "Worksheet Exercise",
   "number": "7",
   "title": "Activity: Properites of Matrix Multiplication.",
-  "body": " Activity: Properites of Matrix Multiplication   Consider the matrices .   Before computing, first explain why the shapes of and enable us to form the product . Then describe the shape of .   Compute the product .  Sage can multiply matrices using the * operator. Define the matrices and in the Sage cell below and check your work by computing .   Are we able to form the matrix product ? If so, use the Sage cell above to find . Is it generally true that ?  Suppose we form the three matrices. . Compare what happens when you compute and . State your finding as a general principle.   Compare the results of evaluating and and state your finding as a general principle.     "
+  "body": " Activity: Properites of Matrix Multiplication   Consider the matrices .   Before computing, first explain why the shapes of and enable us to form the product . Then describe the shape of .   Compute the product .  Sage can multiply matrices using the * operator. Define the matrices and in the Sage cell below and check your work by computing .   Are we able to form the matrix product ? If so, use the Sage cell above to find . Is it generally true that ?  Suppose we form the three matrices. . Compare what happens when you compute and . State your finding as a general principle.   Compare the results of evaluating and and state your finding as a general principle.  When we are dealing with real numbers, we know if and , then . Define matrices and compute and . If , is it necessarily true that ?  Again, with real numbers, we know that if , then either or . Define and compute . If , is it necessarily true that either or ?       The product exists because the number of columns of equals the number of rows of . The dimensions of are .  We have .  Define A = matrix(2, 3, [1, 3, 2, -3, 4, -1]) B = matrix(3, 2, [3, 0, 1, 2, -2, -1]) A*B   Yes, we can form the product because the number of columns of equals the number of rows of . This product will be , however, so it must be true that .  We find that .  We find that .  It is not generally true that if , as illustrated by this example.  It is not generally true that or if , as illustrated by this example.    "
 },
 {
-  "id": "sec-2-2-2-7-1",
+  "id": "sec-2-2-2-sols-7-1",
   "level": "2",
-  "url": "sec-2-2-2.html#sec-2-2-2-7-1",
+  "url": "sec-2-2-2-sols.html#sec-2-2-2-sols-7-1",
   "type": "Worksheet Exercise",
   "number": "8",
-  "title": "Activity (continued).",
-  "body": " Activity (continued)     When we are dealing with real numbers, we know if and , then . Define matrices and compute and . If , is it necessarily true that ?  Again, with real numbers, we know that if , then either or . Define and compute . If , is it necessarily true that either or ?     "
-},
-{
-  "id": "sec-2-2-2-7-2",
-  "level": "2",
-  "url": "sec-2-2-2.html#sec-2-2-2-7-2",
-  "type": "Worksheet Exercise",
-  "number": "9",
   "title": "Properties: Matrix Multiplication.",
-  "body": " Properties: Matrix Multiplication      "
+  "body": " Properties: Matrix Multiplication       See some important properties of matrices and some important non-properties of matrices .   "
 },
 {
   "id": "sec-2-3-1",
