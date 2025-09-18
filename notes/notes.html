@@ -202,6 +202,9 @@ sagecell.makeSagecell({
 #4 \\ #5 \\ \end{array}\right]}
 \newcommand{\cfivevec}[5]{\left[\begin{array}{c}#1 \\ #2 \\ #3 \\
 #4 \\ #5 \\ \end{array}\right]}
+
+\newcommand{\laspan}[1]{\text{Span}\{#1\}}
+ \newcommand{\real}{{\mathbb R}}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
@@ -220,6 +223,8 @@ sagecell.makeSagecell({
 <li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="sec-2-2-1-sols.html" class="internal"><span class="title"><span class="process-math">\(\S 2.2\text{:}\)</span> Matrix-Vector Multiplication</span></a></div></li>
 <li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="sec-2-2-2-sols.html" class="internal"><span class="title"><span class="process-math">\(\S 2.2\text{:}\)</span> Matrix Multiplication and Linear Systems</span></a></div></li>
 <li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="sec-2-3-1.html" class="internal"><span class="title"><span class="process-math">\(\S 2.3\text{:}\)</span> The Span of Vectors</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="sec-2-3-2.html" class="internal"><span class="title"><span class="process-math">\(\S 2.3\text{:}\)</span> Span and Pivots</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="sec-2-4-1.html" class="internal"><span class="title"><span class="process-math">\(\S 2.4\text{:}\)</span> Linear Independence</span></a></div></li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="article" id="notes"><section class="introduction" id="notes-2"><div class="para" id="notes-2-1">The following are guided notes used during class meetings. You are encouraged to print or download them to a device to be used during class.<div class="autopermalink" data-description="Paragraph"><a href="#notes-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section><nav class="summary-links"><ul>
@@ -233,6 +238,8 @@ sagecell.makeSagecell({
 <li><a href="sec-2-2-1-sols.html" class="internal"><span class="title"><span class="process-math">\(\S 2.2\text{:}\)</span> Matrix-Vector Multiplication</span></a></li>
 <li><a href="sec-2-2-2-sols.html" class="internal"><span class="title"><span class="process-math">\(\S 2.2\text{:}\)</span> Matrix Multiplication and Linear Systems</span></a></li>
 <li><a href="sec-2-3-1.html" class="internal"><span class="title"><span class="process-math">\(\S 2.3\text{:}\)</span> The Span of Vectors</span></a></li>
+<li><a href="sec-2-3-2.html" class="internal"><span class="title"><span class="process-math">\(\S 2.3\text{:}\)</span> Span and Pivots</span></a></li>
+<li><a href="sec-2-4-1.html" class="internal"><span class="title"><span class="process-math">\(\S 2.4\text{:}\)</span> Linear Independence</span></a></li>
 </ul></nav><div class="autopermalink" data-description="Article: Course Notes"><a href="#notes" title="Copy heading and permalink for Article: Course Notes" aria-label="Copy heading and permalink for Article: Course Notes">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <span class="previous-button button disabled"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></span><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="intro-sols.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>

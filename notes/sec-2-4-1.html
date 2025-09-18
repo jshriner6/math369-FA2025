@@ -14,7 +14,7 @@
 <!--******************************************-->
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>\S 1.3 Computation with Sage</title>
+<title>\S 2.4 Linear Independence</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
@@ -127,6 +127,18 @@ eBookConfig.enable_chatcodes =  false;
 <script src="_static/prefix-runtime.fea5c754ab3e056b.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.b37c97cbe7a5455b.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
 <link rel="stylesheet" type="text/css" href="_static/prefix-runestone.8141ae22fd347e48.css">
 <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><script>// Make *any* div with class 'sagecell-sage' an executable Sage cell
+// Their results will be linked, only within language type
+sagecell.makeSagecell({
+  "inputLocation": "div.sagecell-sage",
+  "linked": true,
+  "linkKey": "linked-sage",
+  "autoeval": false,
+  "languages": [
+    "sage"
+  ],
+  "evalButtonText": "Evaluate (Sage)"
+});
 </script>
 </head>
 <body class="pretext article ignore-math">
@@ -151,7 +163,7 @@ eBookConfig.enable_chatcodes =  false;
 <textarea class="embed-code-textbox" id="embed-code-textbox" readonly aria-label="textbox"><iframe src="https://example.com/embed" width="100%" height="1000"></iframe></textarea><button class="copy-embed-button button" id="copy-embed-button" title="Copy embed code"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe14d;</span><span class="name">Copy</span></button>
 </div>
 </div>
-<button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="sec-1-2-2-sols.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="notes.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec-2-1-1-sols.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+<button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="sec-2-3-2.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="notes.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span></span>
 </div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
 \newcommand{\Z}{\mathbb Z}
 \newcommand{\Q}{\mathbb Q}
@@ -205,49 +217,123 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="sec-1-1-sols.html" class="internal"><span class="title"><span class="process-math">\(\S 1.1\text{:}\)</span> What Can We Expect</span></a></div></li>
 <li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="sec-1-2-1-sols.html" class="internal"><span class="title"><span class="process-math">\(\S 1.2\text{:}\)</span> Gaussian Elimination</span></a></div></li>
 <li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="sec-1-2-2-sols.html" class="internal"><span class="title"><span class="process-math">\(\S 1.2\text{:}\)</span> Reduced Row Echelon Form (RREF)</span></a></div></li>
-<li class="toc-item toc-worksheet active"><div class="toc-title-box"><a href="sec-1-3.html" class="internal"><span class="title"><span class="process-math">\(\S 1.3\text{:}\)</span> Computation with Sage</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="sec-1-3.html" class="internal"><span class="title"><span class="process-math">\(\S 1.3\text{:}\)</span> Computation with Sage</span></a></div></li>
 <li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="sec-2-1-1-sols.html" class="internal"><span class="title"><span class="process-math">\(\S 2.1\text{:}\)</span> Vectors and Linear Combinations</span></a></div></li>
 <li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="sec-2-1-2-sols.html" class="internal"><span class="title"><span class="process-math">\(\S 2.1\text{:}\)</span> Linear Combinations and Linear Systems</span></a></div></li>
 <li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="sec-2-2-1-sols.html" class="internal"><span class="title"><span class="process-math">\(\S 2.2\text{:}\)</span> Matrix-Vector Multiplication</span></a></div></li>
 <li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="sec-2-2-2-sols.html" class="internal"><span class="title"><span class="process-math">\(\S 2.2\text{:}\)</span> Matrix Multiplication and Linear Systems</span></a></div></li>
 <li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="sec-2-3-1.html" class="internal"><span class="title"><span class="process-math">\(\S 2.3\text{:}\)</span> The Span of Vectors</span></a></div></li>
 <li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="sec-2-3-2.html" class="internal"><span class="title"><span class="process-math">\(\S 2.3\text{:}\)</span> Span and Pivots</span></a></div></li>
-<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="sec-2-4-1.html" class="internal"><span class="title"><span class="process-math">\(\S 2.4\text{:}\)</span> Linear Independence</span></a></div></li>
+<li class="toc-item toc-worksheet active"><div class="toc-title-box"><a href="sec-2-4-1.html" class="internal"><span class="title"><span class="process-math">\(\S 2.4\text{:}\)</span> Linear Independence</span></a></div></li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="worksheet" id="sec-1-3" data-margins="0.75in 0.75in 0.75in 0.75in"><h2 class="heading hide-type">
-<span class="type">Worksheet</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title"><span class="process-math">\(\S 1.3\text{:}\)</span> Computation with Sage</span><div class="print-links"><a href="sec-1-3-printable.html" class="print-link" title="Print preview"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8ad;</span></a></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="worksheet" id="sec-2-4-1" data-margins="0.75in 0.75in 0.75in 0.75in"><h2 class="heading hide-type">
+<span class="type">Worksheet</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title"><span class="process-math">\(\S 2.4\text{:}\)</span> Linear Independence</span><div class="print-links"><a href="sec-2-4-1-printable.html" class="print-link" title="Print preview"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8ad;</span></a></div>
 </h2>
-<section class="onepage" id="sec-1-3-2"><article class="exercise exercise-like" id="sec-1-3-2-1"><h3 class="heading">
-<span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Motivation: Sage.</span>
+<section class="onepage" id="sec-2-4-1-2"><article class="exercise exercise-like" id="sec-2-4-1-2-1"><h3 class="heading">
+<span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Motivation: Linear Independence.</span>
 </h3>
-<div class="para logical" id="sec-1-3-2-1-2-1">
-<div class="para">Real applications of linear algebra are on very large systems, and require technology to compute with and manipulate. There are many possible tools one could use for this task. We’ll work with Sage. The goals of this activity are to</div>
-<ol class="lower-alpha lower-alpha-level-1" id="sec-1-3-2-1-2-1-1">
-<li id="sec-1-3-2-1-2-1-1-1">
-<div class="para" id="sec-1-3-2-1-2-1-1-1-1">Introduce ways to access Sage and references when you need help.<div class="autopermalink" data-description="Paragraph"><a href="#sec-1-3-2-1-2-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="sec-2-4-1-2-1-2-1"><div class="autopermalink" data-description="Paragraph"><a href="#sec-2-4-1-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="workspace" data-space="2in"></div>
+<div class="autopermalink" data-description="Worksheet Exercise 1: Motivation: Linear Independence"><a href="#sec-2-4-1-2-1" title="Copy heading and permalink for Worksheet Exercise 1: Motivation: Linear Independence" aria-label="Copy heading and permalink for Worksheet Exercise 1: Motivation: Linear Independence">🔗</a></div></article></section><section class="onepage" id="sec-2-4-1-3"><article class="exercise exercise-like" id="sec-2-4-1-3-1"><h3 class="heading">
+<span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Preview Activity 2.4.1.</span>
+</h3>
+<div class="introduction" id="sec-2-4-1-3-1-2"><div class="para" id="sec-2-4-1-3-1-2-1">Let’s begin by looking at some sets of vectors in <span class="process-math">\(\real^3\text{.}\)</span>  As we saw in the previous section, the span of a set of vectors in <span class="process-math">\(\real^3\)</span> will be either a line, a plane, or <span class="process-math">\(\real^3\)</span> itself.<div class="autopermalink" data-description="Paragraph"><a href="#sec-2-4-1-3-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<article class="task exercise-like" id="sec-2-4-1-3-1-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para logical" id="sec-2-4-1-3-1-3-1-1">
+<div class="para">Consider the following vectors in <span class="process-math">\(\real^3\text{:}\)</span>
 </div>
-<div class="autopermalink" data-description="Item 1.a"><a href="#sec-1-3-2-1-2-1-1-1" title="Copy heading and permalink for Item 1.a" aria-label="Copy heading and permalink for Item 1.a">🔗</a></div>
-</li>
-<li id="sec-1-3-2-1-2-1-1-2">
-<div class="para" id="sec-1-3-2-1-2-1-1-2-1">Learn the basic syntax to use Sage.<div class="autopermalink" data-description="Paragraph"><a href="#sec-1-3-2-1-2-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="displaymath process-math">
+\begin{equation*}
+\vvec_1=\threevec{0}{-1}{2},
+\vvec_2=\threevec{3}{1}{-1},
+\vvec_3=\threevec{2}{0}{1}\text{.}
+\end{equation*}
 </div>
-<div class="autopermalink" data-description="Item 1.b"><a href="#sec-1-3-2-1-2-1-1-2" title="Copy heading and permalink for Item 1.b" aria-label="Copy heading and permalink for Item 1.b">🔗</a></div>
-</li>
-<li id="sec-1-3-2-1-2-1-1-3">
-<div class="para" id="sec-1-3-2-1-2-1-1-3-1">Use Sage to answer questions we’ve addressed by hand so far in Chapter 1.<div class="autopermalink" data-description="Paragraph"><a href="#sec-1-3-2-1-2-1-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para">Describe the span of these vectors, <span class="process-math">\(\laspan{\vvec_1,\vvec_2,\vvec_3}\text{,}\)</span> as a line, a plane, or <span class="process-math">\(\real^3\text{.}\)</span> <div id="sec-2-4-1-3-1-3-1-1-5" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">
+</script></div>
 </div>
-<div class="autopermalink" data-description="Item 1.c"><a href="#sec-1-3-2-1-2-1-1-3" title="Copy heading and permalink for Item 1.c" aria-label="Copy heading and permalink for Item 1.c">🔗</a></div>
-</li>
-</ol>
-<div class="autopermalink" data-description="Paragraph"><a href="#sec-1-3-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-2-4-1-3-1-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="workspace" data-space=".25in"></div>
-<div class="autopermalink" data-description="Worksheet Exercise 1: Motivation: Sage"><a href="#sec-1-3-2-1" title="Copy heading and permalink for Worksheet Exercise 1: Motivation: Sage" aria-label="Copy heading and permalink for Worksheet Exercise 1: Motivation: Sage">🔗</a></div></article><article class="exercise exercise-like" id="sec-1-3-2-2"><h3 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
-<div class="para" id="sec-1-3-2-2-1-1">Access <a class="external" href="https://understandinglinearalgebra.org/sec-sage-introduction.html" target="_blank">Section 1.3</a> of our textbook. Follow instructions provided in class.<div class="autopermalink" data-description="Paragraph"><a href="#sec-1-3-2-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Task 2.a"><a href="#sec-2-4-1-3-1-3" title="Copy heading and permalink for Task 2.a" aria-label="Copy heading and permalink for Task 2.a">🔗</a></div></article><article class="task exercise-like" id="sec-2-4-1-3-1-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para logical" id="sec-2-4-1-3-1-4-1-1">
+<div class="para">Now consider the set of vectors:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\wvec_1=\threevec{0}{-1}{2},
+\wvec_2=\threevec{3}{1}{-1},
+\wvec_3=\threevec{3}{0}{1}\text{.}
+\end{equation*}
 </div>
-<div class="autopermalink" data-description="Worksheet Exercise 2"><a href="#sec-1-3-2-2" title="Copy heading and permalink for Worksheet Exercise 2" aria-label="Copy heading and permalink for Worksheet Exercise 2">🔗</a></div></article></section><div class="autopermalink" data-description="Worksheet: \S 1.3 Computation with Sage"><a href="#sec-1-3" title="Copy heading and permalink for Worksheet: \S 1.3 Computation with Sage" aria-label="Copy heading and permalink for Worksheet: \S 1.3 Computation with Sage">🔗</a></div></section></div>
+<div class="para">Describe the span of these vectors, <span class="process-math">\(\laspan{\wvec_1,\wvec_2,\wvec_3}\text{,}\)</span> as a line, a plane, or <span class="process-math">\(\real^3\text{.}\)</span> <div id="sec-2-4-1-3-1-4-1-1-4" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">
+</script></div>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-2-4-1-3-1-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 2.b"><a href="#sec-2-4-1-3-1-4" title="Copy heading and permalink for Task 2.b" aria-label="Copy heading and permalink for Task 2.b">🔗</a></div></article><article class="task exercise-like" id="sec-2-4-1-3-1-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para logical" id="sec-2-4-1-3-1-5-1-1">
+<div class="para">Show that the vector <span class="process-math">\(\wvec_3\)</span> is a linear combination of <span class="process-math">\(\wvec_1\)</span> and <span class="process-math">\(\wvec_2\)</span> by finding weights such that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\wvec_3 = c\wvec_1 + d\wvec_2\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-2-4-1-3-1-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 2.c"><a href="#sec-2-4-1-3-1-5" title="Copy heading and permalink for Task 2.c" aria-label="Copy heading and permalink for Task 2.c">🔗</a></div></article><article class="task exercise-like" id="sec-2-4-1-3-1-6"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para logical" id="sec-2-4-1-3-1-6-1-1">
+<div class="para">Explain why any linear combination of <span class="process-math">\(\wvec_1\text{,}\)</span> <span class="process-math">\(\wvec_2\text{,}\)</span> and <span class="process-math">\(\wvec_3\text{,}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+c_1\wvec_1 + c_2\wvec_2 + c_3\wvec_3
+\end{equation*}
+</div>
+<div class="para">can be written as a linear combination of <span class="process-math">\(\wvec_1\)</span> and <span class="process-math">\(\wvec_2\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-2-4-1-3-1-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 2.d"><a href="#sec-2-4-1-3-1-6" title="Copy heading and permalink for Task 2.d" aria-label="Copy heading and permalink for Task 2.d">🔗</a></div></article><article class="task exercise-like" id="sec-2-4-1-3-1-7"><h4 class="heading"><span class="codenumber">(e)</span></h4>
+<div class="para logical" id="sec-2-4-1-3-1-7-1-1">
+<div class="para">Explain why</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\laspan{\wvec_1,\wvec_2,\wvec_3} = \laspan{\wvec_1,\wvec_2}\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-2-4-1-3-1-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 2.e"><a href="#sec-2-4-1-3-1-7" title="Copy heading and permalink for Task 2.e" aria-label="Copy heading and permalink for Task 2.e">🔗</a></div></article><div class="autopermalink" data-description="Worksheet Exercise 2: Preview Activity 2.4.1"><a href="#sec-2-4-1-3-1" title="Copy heading and permalink for Worksheet Exercise 2: Preview Activity 2.4.1" aria-label="Copy heading and permalink for Worksheet Exercise 2: Preview Activity 2.4.1">🔗</a></div></article></section><section class="onepage" id="sec-2-4-1-4"><article class="exercise exercise-like" id="sec-2-4-1-4-1"><h3 class="heading">
+<span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Span of three vectors.</span>
+</h3>
+<div class="para" id="sec-2-4-1-4-1-2-1">Let’s make more precise the difference between three vectors whose span is a plan and three vectors whose span is <span class="process-math">\(\R^3\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-2-4-1-4-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="sec-2-4-1-4-1-2-2">Let’s compare <span class="process-math">\(\vvec_1 = \threevec220,~~~
+\vvec_2 = \threevec11{-1},~~~
+\vvec_3 = \threevec{-1}01\)</span> and <span class="process-math">\(\wvec_1 = \threevec220,~~~
+\wvec_2 = \threevec11{-1},~~~
+\wvec_3 = \threevec{-5}{-5}{1}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-2-4-1-4-1-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="workspace" data-space="4in"></div>
+<div class="autopermalink" data-description="Worksheet Exercise 3: Span of three vectors"><a href="#sec-2-4-1-4-1" title="Copy heading and permalink for Worksheet Exercise 3: Span of three vectors" aria-label="Copy heading and permalink for Worksheet Exercise 3: Span of three vectors">🔗</a></div></article></section><section class="onepage" id="sec-2-4-1-5"><article class="exercise exercise-like" id="sec-2-4-1-5-1"><h3 class="heading">
+<span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Span Geometrically.</span>
+</h3>
+<div class="para" id="sec-2-4-1-5-1-2-1">
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;grid-template-columns:50% 50%;column-gap:0%;">
+<div class="sbspanel sbspanel--top top" style=""><img src="external/geospan1.jpeg" class="contained" alt="When three vectors span all of R 3. Two vectors form a plane, and the third vector is not in that plane.🔗"></div>
+<div class="sbspanel sbspanel--top top" style=""><img src="external/geospan2.jpeg" class="contained" alt="When three vectors span a plane in R 3. Two vectors form a plane, and the third vector is in that plane.🔗"></div>
+</div></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-2-4-1-5-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="workspace" data-space="2in"></div>
+<div class="autopermalink" data-description="Worksheet Exercise 4: Span Geometrically"><a href="#sec-2-4-1-5-1" title="Copy heading and permalink for Worksheet Exercise 4: Span Geometrically" aria-label="Copy heading and permalink for Worksheet Exercise 4: Span Geometrically">🔗</a></div></article><article class="exercise exercise-like" id="sec-2-4-1-5-2"><h3 class="heading">
+<span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Definition: Linear Independence.</span>
+</h3>
+<div class="para" id="sec-2-4-1-5-2-2-1">A set of vectors is called <dfn class="terminology">linearly dependent</dfn> if<div class="autopermalink" data-description="Paragraph"><a href="#sec-2-4-1-5-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="workspace" data-space="2in"></div>
+<div class="autopermalink" data-description="Worksheet Exercise 5: Definition: Linear Independence"><a href="#sec-2-4-1-5-2" title="Copy heading and permalink for Worksheet Exercise 5: Definition: Linear Independence" aria-label="Copy heading and permalink for Worksheet Exercise 5: Definition: Linear Independence">🔗</a></div></article></section><div class="autopermalink" data-description="Worksheet: \S 2.4 Linear Independence"><a href="#sec-2-4-1" title="Copy heading and permalink for Worksheet: \S 2.4 Linear Independence" aria-label="Copy heading and permalink for Worksheet: \S 2.4 Linear Independence">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
-<a class="previous-button button" href="sec-1-2-2-sols.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-2-1-1-sols.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="sec-2-3-2.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">

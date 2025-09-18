@@ -647,6 +647,132 @@ var ptx_lunr_docs = [
   "number": "6",
   "title": "Activity (continued).",
   "body": " Activity (continued)   We will now look at an example where .  There is an interactive diagram in our textbook that accompanies this activity.    What vector is the linear combination of and with weights:    and ?    and ?    and ?      Can the vector be expressed as a linear combination of and ? Is the vector in the span of and ?   Can the vector be expressed as a linear combination of and ? Is the vector in the span of and ?   Describe the set of vectors in the span of and .   For what vectors does the equation have a solution?     "
+},
+{
+  "id": "sec-2-3-2",
+  "level": "1",
+  "url": "sec-2-3-2.html",
+  "type": "Worksheet",
+  "number": "",
+  "title": "<span class=\"process-math\">\\(\\S 2.3\\text{:}\\)<\/span> Span and Pivots",
+  "body": " : Span and Pivots    Motivation: Span and Pivots        Review: Span    vs.     Vectors v and w in the coordinate plane.    Vectors v and w in the coordinate plane.         Activity: Pivots and Span in   In this activity, we will look at the span of sets of vectors in .   Suppose . Give a geometric description of and a rough sketch of and its span in .   A three-dimensional coordinate system for sketching and its span.    Three dimensional coordinate plane.       Now consider the two vectors . Sketch the vectors below. Then give a geometric description of and a rough sketch of the span in .   A coordinate system for sketching , , and .              Activity (continued)     Let's now look at this situation algebraically by writing write . Determine the conditions on , , and so that is in by considering the linear system or . Explain how this relates to your sketch of .   Consider the vectors    Is the vector in ?    Is the vector in ?   Give a geometric description of .           Activity (continued)     Consider the vectors . Form the matrix and find its reduced row echelon form. What does this tell you about ?   If the span of a set of vectors is , what can you say about the pivot positions of the matrix ?  What is the smallest number of vectors such that ?        Summary ( )        Facts: Span and Pivots   Let . Then     "
+},
+{
+  "id": "sec-2-3-2-2-1",
+  "level": "2",
+  "url": "sec-2-3-2.html#sec-2-3-2-2-1",
+  "type": "Worksheet Exercise",
+  "number": "1",
+  "title": "Motivation: Span and Pivots.",
+  "body": " Motivation: Span and Pivots      "
+},
+{
+  "id": "sec-2-3-2-2-2",
+  "level": "2",
+  "url": "sec-2-3-2.html#sec-2-3-2-2-2",
+  "type": "Worksheet Exercise",
+  "number": "2",
+  "title": "Review: Span.",
+  "body": " Review: Span    vs.     Vectors v and w in the coordinate plane.    Vectors v and w in the coordinate plane.     "
+},
+{
+  "id": "sec-2-3-2-3-1",
+  "level": "2",
+  "url": "sec-2-3-2.html#sec-2-3-2-3-1",
+  "type": "Worksheet Exercise",
+  "number": "3",
+  "title": "Activity: Pivots and Span in <span class=\"process-math\">\\(\\R^3\\)<\/span>.",
+  "body": " Activity: Pivots and Span in   In this activity, we will look at the span of sets of vectors in .   Suppose . Give a geometric description of and a rough sketch of and its span in .   A three-dimensional coordinate system for sketching and its span.    Three dimensional coordinate plane.       Now consider the two vectors . Sketch the vectors below. Then give a geometric description of and a rough sketch of the span in .   A coordinate system for sketching , , and .          "
+},
+{
+  "id": "sec-2-3-2-4-1",
+  "level": "2",
+  "url": "sec-2-3-2.html#sec-2-3-2-4-1",
+  "type": "Worksheet Exercise",
+  "number": "4",
+  "title": "Activity (continued).",
+  "body": " Activity (continued)     Let's now look at this situation algebraically by writing write . Determine the conditions on , , and so that is in by considering the linear system or . Explain how this relates to your sketch of .   Consider the vectors    Is the vector in ?    Is the vector in ?   Give a geometric description of .       "
+},
+{
+  "id": "sec-2-3-2-5-1",
+  "level": "2",
+  "url": "sec-2-3-2.html#sec-2-3-2-5-1",
+  "type": "Worksheet Exercise",
+  "number": "5",
+  "title": "Activity (continued).",
+  "body": " Activity (continued)     Consider the vectors . Form the matrix and find its reduced row echelon form. What does this tell you about ?   If the span of a set of vectors is , what can you say about the pivot positions of the matrix ?  What is the smallest number of vectors such that ?    "
+},
+{
+  "id": "sec-2-3-2-6-1",
+  "level": "2",
+  "url": "sec-2-3-2.html#sec-2-3-2-6-1",
+  "type": "Worksheet Exercise",
+  "number": "6",
+  "title": "Summary (<span class=\"process-math\">\\(\\R^3\\)<\/span>).",
+  "body": " Summary ( )      "
+},
+{
+  "id": "sec-2-3-2-6-2",
+  "level": "2",
+  "url": "sec-2-3-2.html#sec-2-3-2-6-2",
+  "type": "Worksheet Exercise",
+  "number": "7",
+  "title": "Facts: Span and Pivots.",
+  "body": " Facts: Span and Pivots   Let . Then   "
+},
+{
+  "id": "sec-2-4-1",
+  "level": "1",
+  "url": "sec-2-4-1.html",
+  "type": "Worksheet",
+  "number": "",
+  "title": "<span class=\"process-math\">\\(\\S 2.4\\text{:}\\)<\/span> Linear Independence",
+  "body": " : Linear Independence    Motivation: Linear Independence          Preview Activity 2.4.1   Let's begin by looking at some sets of vectors in . As we saw in the previous section, the span of a set of vectors in will be either a line, a plane, or itself.     Consider the following vectors in : . Describe the span of these vectors, , as a line, a plane, or .       Now consider the set of vectors: . Describe the span of these vectors, , as a line, a plane, or .       Show that the vector is a linear combination of and by finding weights such that .      Explain why any linear combination of , , and , can be written as a linear combination of and .      Explain why .        Span of three vectors   Let's make more precise the difference between three vectors whose span is a plan and three vectors whose span is .  Let's compare and .       Span Geometrically      When three vectors span all of R 3. Two vectors form a plane, and the third vector is not in that plane.     When three vectors span a plane in R 3. Two vectors form a plane, and the third vector is in that plane.         Definition: Linear Independence   A set of vectors is called linearly dependent if     "
+},
+{
+  "id": "sec-2-4-1-2-1",
+  "level": "2",
+  "url": "sec-2-4-1.html#sec-2-4-1-2-1",
+  "type": "Worksheet Exercise",
+  "number": "1",
+  "title": "Motivation: Linear Independence.",
+  "body": " Motivation: Linear Independence      "
+},
+{
+  "id": "sec-2-4-1-3-1",
+  "level": "2",
+  "url": "sec-2-4-1.html#sec-2-4-1-3-1",
+  "type": "Worksheet Exercise",
+  "number": "2",
+  "title": "Preview Activity 2.4.1.",
+  "body": " Preview Activity 2.4.1   Let's begin by looking at some sets of vectors in . As we saw in the previous section, the span of a set of vectors in will be either a line, a plane, or itself.     Consider the following vectors in : . Describe the span of these vectors, , as a line, a plane, or .       Now consider the set of vectors: . Describe the span of these vectors, , as a line, a plane, or .       Show that the vector is a linear combination of and by finding weights such that .      Explain why any linear combination of , , and , can be written as a linear combination of and .      Explain why .    "
+},
+{
+  "id": "sec-2-4-1-4-1",
+  "level": "2",
+  "url": "sec-2-4-1.html#sec-2-4-1-4-1",
+  "type": "Worksheet Exercise",
+  "number": "3",
+  "title": "Span of three vectors.",
+  "body": " Span of three vectors   Let's make more precise the difference between three vectors whose span is a plan and three vectors whose span is .  Let's compare and .   "
+},
+{
+  "id": "sec-2-4-1-5-1",
+  "level": "2",
+  "url": "sec-2-4-1.html#sec-2-4-1-5-1",
+  "type": "Worksheet Exercise",
+  "number": "4",
+  "title": "Span Geometrically.",
+  "body": " Span Geometrically      When three vectors span all of R 3. Two vectors form a plane, and the third vector is not in that plane.     When three vectors span a plane in R 3. Two vectors form a plane, and the third vector is in that plane.       "
+},
+{
+  "id": "sec-2-4-1-5-2",
+  "level": "2",
+  "url": "sec-2-4-1.html#sec-2-4-1-5-2",
+  "type": "Worksheet Exercise",
+  "number": "5",
+  "title": "Definition: Linear Independence.",
+  "body": " Definition: Linear Independence   A set of vectors is called linearly dependent if   "
 }
 ]
 
