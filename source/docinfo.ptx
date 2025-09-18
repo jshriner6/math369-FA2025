@@ -56,6 +56,9 @@
     #4 \\ #5 \\ \end{array}\right]}
     \newcommand{\cfivevec}[5]{\left[\begin{array}{c}#1 \\ #2 \\ #3 \\
     #4 \\ #5 \\ \end{array}\right]}
+
+    \newcommand{\laspan}[1]{\text{Span}\{#1\}}
+     \newcommand{\real}{{\mathbb R}}
   </macros>
 
   <!-- If you put any latex-image elements you can include preambles -->

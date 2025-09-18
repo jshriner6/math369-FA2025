@@ -1,0 +1,179 @@
+<pretext>
+    <article xml:id="notes">
+        <worksheet xml:id="sec-2-4-1">
+        <title><m>\S 2.4</m>: Linear Independence</title>
+            <page>
+                <exercise workspace="2in">
+                    <title>Motivation: Linear Independence</title>
+                    <statement>
+                        <p>
+                            
+                        </p>
+                    </statement>
+                    
+                </exercise>
+            </page>
+            <page>
+                <exercise>
+                    <title>Preview Activity 2.4.1</title>
+                    <introduction>
+        <p>
+	  Let's begin by looking at some sets of vectors in
+	  <m>\real^3</m>.  As we saw in the previous section, the span of
+	  a set of vectors in <m>\real^3</m> will be either a line, a
+	  plane, or <m>\real^3</m> itself.
+        </p>
+      </introduction>
+
+      <task>
+        <statement>
+	  <p>
+	    Consider the following vectors in <m>\real^3</m>:
+	    <me>
+	      \vvec_1=\threevec{0}{-1}{2},
+	      \vvec_2=\threevec{3}{1}{-1},
+	      \vvec_3=\threevec{2}{0}{1}
+	    </me>.
+	    Describe the span of these vectors,
+	    <m>\laspan{\vvec_1,\vvec_2,\vvec_3}</m>, as a line, a plane,
+	    or <m>\real^3</m>.
+	    <sage>
+	      <input>
+	      </input>
+	    </sage>
+	  </p>
+        </statement>
+        
+      </task>
+
+      <task >
+        <statement>
+	  <p>
+	    Now consider the set of vectors:
+	    <me>
+	      \wvec_1=\threevec{0}{-1}{2},
+	      \wvec_2=\threevec{3}{1}{-1},
+	      \wvec_3=\threevec{3}{0}{1}
+	    </me>.
+	    Describe the span of these vectors,
+	    <m>\laspan{\wvec_1,\wvec_2,\wvec_3}</m>, as a line, a plane,
+	    or <m>\real^3</m>.
+	    <sage>
+	      <input>
+	      </input>
+	    </sage>
+	  </p>
+        </statement>
+        
+        
+      </task>
+
+      <task>
+        <statement>
+	  <p>
+	    Show that the vector <m>\wvec_3</m> is a linear combination
+	    of <m>\wvec_1</m> and <m>\wvec_2</m> by finding weights such
+	    that
+	    <me>
+	      \wvec_3 = c\wvec_1 + d\wvec_2
+	    </me>.
+	  </p>
+        </statement>
+        
+        
+      </task>
+
+      <task>
+        <statement>
+          <p>
+	    Explain why any linear combination of <m>\wvec_1</m>,
+	    <m>\wvec_2</m>, and <m>\wvec_3</m>,
+	    <me>
+	      c_1\wvec_1 + c_2\wvec_2 + c_3\wvec_3
+	    </me>
+	    can be written as a linear combination of <m>\wvec_1</m> and
+	    <m>\wvec_2</m>.
+	  </p>
+        </statement>
+        
+        
+        
+      </task>
+      <task>
+        <statement>
+	  <p>
+	    Explain why
+	    <me>
+	      \laspan{\wvec_1,\wvec_2,\wvec_3} = \laspan{\wvec_1,\wvec_2}
+	    </me>.
+	  </p>
+        </statement>
+        
+        
+        
+      </task>
+                    
+                    
+                </exercise>
+            </page>
+
+            <page>
+                <exercise workspace="4in">
+                    <title>Span of three vectors</title>
+                    <statement>
+                        <p>
+                            Let's make more precise the difference between three vectors whose span is a plan and three
+                            vectors whose span is <m>\R^3</m>.
+                        </p>
+                        <p>
+                            Let's compare <m> \vvec_1 = \threevec220,~~~
+	    \vvec_2 = \threevec11{-1},~~~
+	    \vvec_3 = \threevec{-1}01</m> and <m>\wvec_1 = \threevec220,~~~
+	    \wvec_2 = \threevec11{-1},~~~
+	    \wvec_3 = \threevec{-5}{-5}{1}</m>.
+                        </p>
+                    </statement>
+                    
+                    
+                </exercise>
+            </page>
+            <page> 
+                <exercise workspace="2in">
+                    <title>Span Geometrically</title>
+                    <statement>
+                        <p>
+                            <sidebyside>
+                                <image source="geospan1.jpeg">
+                                    <shortdescription><p>When three vectors span all of R 3.
+                                        Two vectors form a plane, and the third vector is not in that plane.
+                                    </p>
+                                    </shortdescription>
+                                </image>
+                                <image source="geospan2.jpeg">
+                                    <shortdescription><p>When three vectors span a plane in R 3.
+                                        Two vectors form a plane, and the third vector is in that plane.</p>
+                                    </shortdescription>
+                                </image>
+                            </sidebyside>
+                        </p>
+                    </statement>
+                    
+                    
+                    
+                </exercise>
+
+                <exercise workspace="2in">
+                    <title>Definition: Linear Independence</title>
+                    <statement>
+                        <p>
+                            A set of vectors is called <term>linearly dependent</term> if
+                        </p>
+                    </statement>
+                    
+                    
+                </exercise>
+            </page>
+
+        </worksheet>
+    </article>
+</pretext>

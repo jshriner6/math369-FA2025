@@ -1,0 +1,375 @@
+<pretext>
+    <article xml:id="notes">
+        <worksheet xml:id="sec-2-3-2-sols">
+        <title><m>\S 2.3</m>: Span and Pivots</title>
+            <page>
+                <exercise workspace="2in">
+                    <title>Motivation: Span and Pivots</title>
+                    <statement>
+                        <p>
+                            
+                        </p>
+                    </statement>
+                    <solution>
+                        <p>
+                            Last time we introduced the notion of "span" to rephrase the membership question as 
+                            "Is <m>\bvec</m> in the span of column vectors of <m>A</m>?". Now we'll make a connection
+                            between the span of vectors and pivot positions of a RREF matrix.
+                        </p>
+                    </solution>
+                    
+                </exercise>
+
+                <exercise workspace="5in">
+                    <title>Review: Span</title>
+                    <statement>
+                        <p>
+                            <m>\vvec = \twovec{2}{0}, \wvec = \twovec{-1}{1}</m> vs. <m>\vvec = \twovec{-1}{1}, \wvec = \twovec{2}{-2}</m>
+                        </p>
+                        <sidebyside>
+                            <image source="span1.jpeg">
+                                <shortdescription>Vectors v and w in the coordinate plane.</shortdescription>
+                            </image>
+                            <image source="span2.jpeg">
+                                <shortdescription>Vectors v and w in the coordinate plane.</shortdescription>
+                            </image>
+                        </sidebyside>
+                    </statement>
+                    <solution>
+                        <p>
+                            See <url href="https://understandinglinearalgebra.org/sec-span.html#example-span-linear-indep">Example 2.3.5</url> 
+                            and <url href="https://understandinglinearalgebra.org/sec-span.html#example-span-linear-dep">Example 2.3.7 </url>.
+                        </p>
+                    </solution>
+                    
+                </exercise>
+            </page>
+
+            <page>
+                <exercise >
+                    <title>Activity: Pivots and Span in <m>\R^3</m></title>
+                    <statement>
+	<p> In this activity, we will look at the span of sets of
+	vectors in <m>\real^3</m>.
+	<ol marker="a.">
+	  <li> <p> Suppose <m>\vvec=\threevec{1}{2}{1}</m>.  Give a
+	  geometric 
+	  description of 
+	  <m>\laspan{\vvec}</m> and a rough sketch of <m>\vvec</m> and
+	  its span in <xref ref="fig-3d-span-1-sols"/>.
+	  </p>
+	  <figure xml:id="fig-3d-span-1-sols">
+	    <caption>
+	      A three-dimensional coordinate system for sketching
+	      <m>\vvec</m> and its span.
+	    </caption>
+	    <sidebyside width="50%">
+	      <image source ="images/coordinates-3d">
+            <shortdescription>
+                Three dimensional coordinate plane.
+            </shortdescription>
+            </image>
+	    </sidebyside>
+	  </figure>
+	  </li>
+
+	  <li> <p> Now consider the two vectors
+	  <me>
+	    \evec_1 = \threevec{1}{0}{0},~~~
+	    \evec_2 = \threevec{0}{1}{0}
+	  </me>.
+	  Sketch the vectors below.  Then give a geometric description of
+	  <m>\laspan{\evec_1,\evec_2}</m> and a rough sketch of  the
+	  span in <xref ref = "fig-3d-span-2-sols"/>.
+	</p>
+	<figure xml:id="fig-3d-span-2-sols">
+	  <caption>
+	    A coordinate system for sketching <m>\evec_1</m>,
+	    <m>\evec_2</m>, and <m>\laspan{\evec_1,\evec_2}</m>.
+	  </caption>
+	  <sidebyside width="50%">
+	    <image source ="images/coordinates-3d" />
+	  </sidebyside>
+	</figure>
+	</li>
+</ol>
+</p>
+</statement>
+</exercise>
+</page>
+<page>
+    
+<exercise>
+    <title>Activity (continued)</title>
+    <statement>
+    <p>
+    <ol>
+	<li><p> Let's now look at this situation algebraically by
+	writing write <m>\bvec = \threevec{b_1}{b_2}{b_3}</m>.
+	Determine the conditions on <m>b_1</m>, <m>b_2</m>, and
+	<m>b_3</m> so that <m>\bvec</m> is in
+	<m>\laspan{\evec_1,\evec_2}</m> by considering the linear
+	system
+	<me>
+	  \left[\begin{array}{rr}
+	  \evec_1 \amp \evec_2 \\
+	  \end{array}\right]
+	  ~\xvec =
+	  \bvec
+	</me>
+	or
+	<me>
+	  \left[\begin{array}{rr}
+	  1 \amp 0 \\
+	  0 \amp 1 \\
+	  0 \amp 0 \\
+	  \end{array}\right]
+	  \xvec =
+	  \threevec{b_1}{b_2}{b_3}
+	</me>.
+	Explain how this relates to your sketch of
+	<m>\laspan{\evec_1,\evec_2}</m>. 
+	  
+	</p></li>
+
+	<li> <p> Consider the vectors
+	<me>
+	  \vvec_1 = \threevec{1}{1}{-1},~~
+	  \vvec_2 = \threevec{0}{2}{1}.
+	</me>
+	  <ol marker="1.">
+	    <li> <p> Is the vector <m>\bvec=\threevec{1}{-2}{4}</m> in
+	    <m>\laspan{\vvec_1,\vvec_2}</m>?
+
+	    <sage>
+	      <input>
+	      </input>
+	    </sage>
+	    </p></li>
+
+	    <li> <p> Is the vector <m>\bvec=\threevec{-2}{0}{3}</m> in
+	    <m>\laspan{\vvec_1,\vvec_2}</m>?
+	    <sage>
+	      <input>
+	      </input>
+	    </sage>
+	    </p></li>
+
+	    <li><p> Give a geometric description of 
+	    <m>\laspan{\vvec_1,\vvec_2}</m>.
+	    </p></li>
+
+	  </ol></p>
+	  </li>
+    </ol>
+</p>
+</statement>
+</exercise>
+</page>
+<page>
+    <exercise>
+        <title>Activity (continued)</title>
+        <statement>
+        <p>
+            <ol>
+
+	  <li><p> Consider the vectors
+	  <me>
+	    \vvec_1 = \threevec{1}{1}{-1},
+	    \vvec_2 = \threevec{0}{2}{1},
+	    \vvec_3 = \threevec{1}{-2}{4}
+	  </me>.
+	  Form the matrix <m>\left[\begin{array}{rrrr} \vvec_1 \amp \vvec_2
+	  \amp \vvec_3 \end{array}\right]</m> and find its reduced row
+	  echelon form.
+	    <sage>
+	      <input>
+	      </input>
+	    </sage>
+	    What does this tell you about
+	    <m>\laspan{\vvec_1,\vvec_2,\vvec_3}</m>? 
+	  </p></li>
+
+	  <li> <p> If the span of a set of vectors
+	  <m>\vvec_1,\vvec_2,\ldots,\vvec_n</m> is <m>\real^3</m>,
+	  what can you say about the pivot positions of the matrix
+	  <m>\left[\begin{array}{rrrr}
+	  \vvec_1\amp\vvec_2\amp\ldots\amp\vvec_n
+	  \end{array}\right]</m>?
+	  </p></li>
+
+	  <li><p> What is the smallest number of vectors such that
+	  <m>\laspan{\vvec_1,\vvec_2,\ldots,\vvec_n} = \real^3</m>?
+	  </p></li>	  
+	</ol></p>
+      </statement>
+
+      <solution>
+	<p><ol marker="a.">
+	  <li><p> <m>\laspan{\vvec}</m> is the line defined by
+	  <m>\vvec</m>.
+	  </p></li>
+	  
+	  <li><p>
+	    <m>\laspan{\evec_1,\evec_2}</m> is the
+	    <m>xy</m>-plane.
+	  </p></li>
+
+	  <li>
+	    <p>
+	      For the linear system to be consistent, we need
+	      <m>b_3=0</m>, which means that the third coordinate of
+	      the vector <m>\bvec</m> must be 0 for <m>\bvec</m> to be
+	      in <m>\laspan{\evec_1,\evec_2}</m>.  In other words,
+	      <m>\bvec</m> must lie in the <m>xy</m>-plane.
+	    </p>
+	  </li>
+	  
+	  <li><p> We consider the two cases.
+	  <ol marker="1.">
+	    <li><p>
+	      We have the augmented matrix
+	      <me>
+		\left[\begin{array}{rr|r}
+		1 \amp 0 \amp 1 \\
+		1 \amp 2 \amp -2 \\
+		-1 \amp 1 \amp 4
+		\end{array}\right]
+		\sim
+		\left[\begin{array}{rr|r}
+		1 \amp 0 \amp 0 \\
+		0 \amp 1 \amp 0 \\
+		0 \amp 0 \amp 1
+		\end{array}\right]\text{,}
+	      </me>
+	      which shows that the system is inconsistent.  Therefore,
+	      <m>\bvec</m> is not in <m>\laspan{\vvec_1, \vvec_2}</m>.
+	    </p></li>
+	    
+	    <li><p>
+	      We have the augmented matrix
+	      <me>
+		\left[\begin{array}{rr|r}
+		1 \amp 0 \amp -2 \\
+		1 \amp 2 \amp 0 \\
+		-1 \amp 1 \amp 3
+		\end{array}\right]
+		\sim
+		\left[\begin{array}{rr|r}
+		1 \amp 0 \amp -2 \\
+		0 \amp 1 \amp 1 \\
+		0 \amp 0 \amp 0
+		\end{array}\right]\text{,}
+	      </me>
+	      which shows that the system is consistent.  Therefore,
+	      <m>\bvec</m> is in <m>\laspan{\vvec_1, \vvec_2}</m>.
+	    </p></li>
+	    
+	    <li><p> The span is the plane in <m>\real^3</m>
+		defined by <m>\vvec_1</m> and <m>\vvec_2</m>.
+	    </p></li>
+	    
+	  </ol></p></li>
+	  
+	  <li><p>
+	    We have the reduced row echelon form
+	    <me>
+	      \left[\begin{array}{rrr}
+	      1 \amp 0 \amp 1 \\
+	      1 \amp 2 \amp -2 \\
+	      -1 \amp 1 \amp 4
+	      \end{array}\right]
+	      \sim
+	      \left[\begin{array}{rrr}
+	      1 \amp 0 \amp 0 \\
+	      0 \amp 1 \amp 0 \\
+	      0 \amp 0 \amp 1
+	      \end{array}\right]\text{.}
+	    </me>
+	    Since there is a pivot position in every row, this says
+	    that every equation <m>A\xvec=\bvec</m> is consistent.
+	    The <m>\laspan{\vvec_1, \vvec_2, \vvec_3}</m> is therefore
+	    <m>\real^3</m>.
+	  </p></li>
+	  
+	  <li><p>
+	    There must be a pivot position in every row.
+	  </p></li>
+	  
+	  <li><p>
+	    If a set of vectors spans <m>\real^3</m>, its
+	    corresponding matrix must have a pivot position in every
+	    row. Because there can be at most one pivot position in a
+	    column, there must be at least three columns.  
+	    Therefore, the smallest number of vectors that span
+	    <m>\real^3</m> is three.
+	  </p></li>
+	</ol></p>
+      </solution>
+                    
+                    
+                </exercise>
+
+               
+            </page>
+            <page>
+                 <exercise workspace="3in">
+                    <title>Summary (<m>\R^3</m>)</title>
+                    <statement>
+                        <p>
+                            
+                        </p>
+                    </statement>
+                    <solution>
+                        <p>
+                            <ol>
+                                <li>
+                                    <p>
+                                        The span of a single vector, <m>\laspan{\vvec}</m>, is a line. If we look at the RREF
+                                        of a matrix containing this single column vector, it will contain one row with a pivot.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        The span of two vectors which do not lie on the same line, <m>\laspan{\vvec, \wvec}</m>,
+                                        is a plane. If we look at the RREF
+                                        of a matrix containing these two column vectors, it will contain two rows with a pivot.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        The span of three vectors which do not lie in the same plane, <m>\laspan{\vvec, \wvec, \uvec}</m>,
+                                        is <m>\R^3</m>. If we look at the RREF
+                                        of a matrix containing these three column vectors, it will contain three rows with a pivot.
+                                    </p>
+                                </li>
+                            </ol>
+                        </p>
+                    </solution>
+                    
+                </exercise>
+                <exercise workspace="3in">
+                    <title>Facts: Span and Pivots</title>
+                    <statement>
+                        <p>
+                            Let <m>\vvec_1, \vvec_2, \dots \vvec_n \in \R^m</m>. Then
+                        </p>
+                    </statement>
+                    <solution>
+                        <p>
+                            <m>\laspan{\vvec_1, \dots, \vvec_n} = \R^m</m> exactly when the RREF of <m>[\vvec_1 \dots \vvec_n]</m> 
+                            has a pivot in every row.
+                        </p>
+                        <p>
+                            Since a matrix can have a most one pivot position in every column, this also implies that a set of vectors
+                            spanning <m>\R^m</m> must contain at least <m>m</m> vectors.
+                        </p>
+                    </solution>
+                    
+                </exercise>
+            </page>
+
+
+        </worksheet>
+    </article>
+</pretext>
