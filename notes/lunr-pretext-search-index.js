@@ -586,139 +586,130 @@ var ptx_lunr_docs = [
   "body": " Properties: Matrix Multiplication       See some important properties of matrices and some important non-properties of matrices .   "
 },
 {
-  "id": "sec-2-3-1",
+  "id": "sec-2-3-1-sols",
   "level": "1",
-  "url": "sec-2-3-1.html",
+  "url": "sec-2-3-1-sols.html",
   "type": "Worksheet",
   "number": "",
   "title": "<span class=\"process-math\">\\(\\S 2.3\\text{:}\\)<\/span> The Span of Vectors",
-  "body": " : The Span of Vectors    Motivation: Span        Preview 2.3.1    If the equation is inconsistent, what can we say about the pivot positions of the augmented matrix ?      Consider the matrix  . If , is the equation consistent? If so, find a solution.       If , is the equation consistent? If so, find a solution.       Identify the pivot positions of .      For our two choices of the vector , one equation has a solution and the other does not. What feature of the pivot positions of the matrix tells us to expect this?        Definition: Span   The span of a set of vectors is     Example: Span   Let and .       Activity: Span   Let's look at two examples to develop some intuition for the concept of span.  First, we will consider the set of vectors .  There is an interactive diagram in our textbook that accompanies this activity.    What vector is the linear combination of and with weights:    and ?    and ?    and ?      Can the vector be expressed as a linear combination of and ? Is the vector in the span of and ?   Can the vector be expressed as a linear combination of and ? Is the vector in the span of and ?   Describe the set of vectors in the span of and .   For what vectors does the equation have a solution?         Activity (continued)   We will now look at an example where .  There is an interactive diagram in our textbook that accompanies this activity.    What vector is the linear combination of and with weights:    and ?    and ?    and ?      Can the vector be expressed as a linear combination of and ? Is the vector in the span of and ?   Can the vector be expressed as a linear combination of and ? Is the vector in the span of and ?   Describe the set of vectors in the span of and .   For what vectors does the equation have a solution?       "
+  "body": " : The Span of Vectors    Motivation: Span       We'll continue to deepen our understanding of the \"membership\" question in the context of matrix equations: \"Is there a solution to \" is equivalent to \"Is a linear combination of columns of \"?       Preview 2.3.1    If the equation is inconsistent, what can we say about the pivot positions of the augmented matrix ?    We know there must be a pivot position in the rightmost column of the augmented matrix.      Consider the matrix  . If , is the equation consistent? If so, find a solution.     We construct the augmented matrix which shows that the system is consistent. The solution space is described parametrically as .      If , is the equation consistent? If so, find a solution.     Now the augmented matrix is showing that the equation is inconsistent.      Identify the pivot positions of .    There are two pivot positions in , as shown.       For our two choices of the vector , one equation has a solution and the other does not. What feature of the pivot positions of the matrix tells us to expect this?    Since there is a row of that does not have a pivot position, it is possible to augment by a vector so that we obtain a pivot position in the rightmost column of the augmented matrix. In this case, we have an inconsistent system.        Definition: Span   The span of a set of vectors is    See Definition 2.3.1 .     Example: Span   Let and .    See Example 2.3.2 .       Activity: Span   Let's look at two examples to develop some intuition for the concept of span.  First, we will consider the set of vectors .  There is an interactive diagram in our textbook that accompanies this activity.    What vector is the linear combination of and with weights:    and ?    and ?    and ?      Can the vector be expressed as a linear combination of and ? Is the vector in the span of and ?   Can the vector be expressed as a linear combination of and ? Is the vector in the span of and ?   Describe the set of vectors in the span of and .   For what vectors does the equation have a solution?      We will now look at an example where .  There is an interactive diagram in our textbook that accompanies this activity.    What vector is the linear combination of and with weights:    and ?    and ?    and ?      Can the vector be expressed as a linear combination of and ? Is the vector in the span of and ?   Can the vector be expressed as a linear combination of and ? Is the vector in the span of and ?   Describe the set of vectors in the span of and .   For what vectors does the equation have a solution?         For the first set of vectors, we find:  We can form the linear combinations:  When and , the linear combination is .   When and , the linear combination is .   When and , the linear combination is .    Yes, we saw that there are at least two ways. For instance, when the weights are and . This means that is in the span of and .  No. No matter how we change the weights, the linear combination lies on the line through and . This means that is not in the span of and .  The span of and is the set of all vectors on the line through .  If the equation has a solution, must lie on the line defined by .    For the second set of vectors, we have:  We can form the linear combinations:   When and , the linear combination is .   When and , the linear combination is .   When and , the linear combination is .    Yes. Using the diagram, we see that . This means that is in the span of and .  Yes. Using the diagram, we see that . This means that is in the span of and .  Every two-dimensional vector is in the span of and .  The equation has a solution for every .       "
 },
 {
-  "id": "sec-2-3-1-2-1",
+  "id": "sec-2-3-1-sols-2-1",
   "level": "2",
-  "url": "sec-2-3-1.html#sec-2-3-1-2-1",
+  "url": "sec-2-3-1-sols.html#sec-2-3-1-sols-2-1",
   "type": "Worksheet Exercise",
   "number": "1",
   "title": "Motivation: Span.",
-  "body": " Motivation: Span      "
+  "body": " Motivation: Span       We'll continue to deepen our understanding of the \"membership\" question in the context of matrix equations: \"Is there a solution to \" is equivalent to \"Is a linear combination of columns of \"?   "
 },
 {
-  "id": "sec-2-3-1-2-2",
+  "id": "sec-2-3-1-sols-3-1",
   "level": "2",
-  "url": "sec-2-3-1.html#sec-2-3-1-2-2",
+  "url": "sec-2-3-1-sols.html#sec-2-3-1-sols-3-1",
   "type": "Worksheet Exercise",
   "number": "2",
   "title": "Preview 2.3.1.",
-  "body": " Preview 2.3.1    If the equation is inconsistent, what can we say about the pivot positions of the augmented matrix ?      Consider the matrix  . If , is the equation consistent? If so, find a solution.       If , is the equation consistent? If so, find a solution.       Identify the pivot positions of .      For our two choices of the vector , one equation has a solution and the other does not. What feature of the pivot positions of the matrix tells us to expect this?    "
+  "body": " Preview 2.3.1    If the equation is inconsistent, what can we say about the pivot positions of the augmented matrix ?    We know there must be a pivot position in the rightmost column of the augmented matrix.      Consider the matrix  . If , is the equation consistent? If so, find a solution.     We construct the augmented matrix which shows that the system is consistent. The solution space is described parametrically as .      If , is the equation consistent? If so, find a solution.     Now the augmented matrix is showing that the equation is inconsistent.      Identify the pivot positions of .    There are two pivot positions in , as shown.       For our two choices of the vector , one equation has a solution and the other does not. What feature of the pivot positions of the matrix tells us to expect this?    Since there is a row of that does not have a pivot position, it is possible to augment by a vector so that we obtain a pivot position in the rightmost column of the augmented matrix. In this case, we have an inconsistent system.    "
 },
 {
-  "id": "sec-2-3-1-3-1",
+  "id": "sec-2-3-1-sols-4-1",
   "level": "2",
-  "url": "sec-2-3-1.html#sec-2-3-1-3-1",
+  "url": "sec-2-3-1-sols.html#sec-2-3-1-sols-4-1",
   "type": "Worksheet Exercise",
   "number": "3",
   "title": "Definition: Span.",
-  "body": " Definition: Span   The span of a set of vectors is   "
+  "body": " Definition: Span   The span of a set of vectors is    See Definition 2.3.1 .   "
 },
 {
-  "id": "sec-2-3-1-3-2",
+  "id": "sec-2-3-1-sols-4-2",
   "level": "2",
-  "url": "sec-2-3-1.html#sec-2-3-1-3-2",
+  "url": "sec-2-3-1-sols.html#sec-2-3-1-sols-4-2",
   "type": "Worksheet Exercise",
   "number": "4",
   "title": "Example: Span.",
-  "body": " Example: Span   Let and .   "
+  "body": " Example: Span   Let and .    See Example 2.3.2 .   "
 },
 {
-  "id": "sec-2-3-1-4-1",
+  "id": "sec-2-3-1-sols-5-1",
   "level": "2",
-  "url": "sec-2-3-1.html#sec-2-3-1-4-1",
+  "url": "sec-2-3-1-sols.html#sec-2-3-1-sols-5-1",
   "type": "Worksheet Exercise",
   "number": "5",
   "title": "Activity: Span.",
-  "body": " Activity: Span   Let's look at two examples to develop some intuition for the concept of span.  First, we will consider the set of vectors .  There is an interactive diagram in our textbook that accompanies this activity.    What vector is the linear combination of and with weights:    and ?    and ?    and ?      Can the vector be expressed as a linear combination of and ? Is the vector in the span of and ?   Can the vector be expressed as a linear combination of and ? Is the vector in the span of and ?   Describe the set of vectors in the span of and .   For what vectors does the equation have a solution?     "
+  "body": " Activity: Span   Let's look at two examples to develop some intuition for the concept of span.  First, we will consider the set of vectors .  There is an interactive diagram in our textbook that accompanies this activity.    What vector is the linear combination of and with weights:    and ?    and ?    and ?      Can the vector be expressed as a linear combination of and ? Is the vector in the span of and ?   Can the vector be expressed as a linear combination of and ? Is the vector in the span of and ?   Describe the set of vectors in the span of and .   For what vectors does the equation have a solution?      We will now look at an example where .  There is an interactive diagram in our textbook that accompanies this activity.    What vector is the linear combination of and with weights:    and ?    and ?    and ?      Can the vector be expressed as a linear combination of and ? Is the vector in the span of and ?   Can the vector be expressed as a linear combination of and ? Is the vector in the span of and ?   Describe the set of vectors in the span of and .   For what vectors does the equation have a solution?         For the first set of vectors, we find:  We can form the linear combinations:  When and , the linear combination is .   When and , the linear combination is .   When and , the linear combination is .    Yes, we saw that there are at least two ways. For instance, when the weights are and . This means that is in the span of and .  No. No matter how we change the weights, the linear combination lies on the line through and . This means that is not in the span of and .  The span of and is the set of all vectors on the line through .  If the equation has a solution, must lie on the line defined by .    For the second set of vectors, we have:  We can form the linear combinations:   When and , the linear combination is .   When and , the linear combination is .   When and , the linear combination is .    Yes. Using the diagram, we see that . This means that is in the span of and .  Yes. Using the diagram, we see that . This means that is in the span of and .  Every two-dimensional vector is in the span of and .  The equation has a solution for every .     "
 },
 {
-  "id": "sec-2-3-1-5-1",
-  "level": "2",
-  "url": "sec-2-3-1.html#sec-2-3-1-5-1",
-  "type": "Worksheet Exercise",
-  "number": "6",
-  "title": "Activity (continued).",
-  "body": " Activity (continued)   We will now look at an example where .  There is an interactive diagram in our textbook that accompanies this activity.    What vector is the linear combination of and with weights:    and ?    and ?    and ?      Can the vector be expressed as a linear combination of and ? Is the vector in the span of and ?   Can the vector be expressed as a linear combination of and ? Is the vector in the span of and ?   Describe the set of vectors in the span of and .   For what vectors does the equation have a solution?     "
-},
-{
-  "id": "sec-2-3-2",
+  "id": "sec-2-3-2-sols",
   "level": "1",
-  "url": "sec-2-3-2.html",
+  "url": "sec-2-3-2-sols.html",
   "type": "Worksheet",
   "number": "",
   "title": "<span class=\"process-math\">\\(\\S 2.3\\text{:}\\)<\/span> Span and Pivots",
-  "body": " : Span and Pivots    Motivation: Span and Pivots        Review: Span    vs.     Vectors v and w in the coordinate plane.    Vectors v and w in the coordinate plane.         Activity: Pivots and Span in   In this activity, we will look at the span of sets of vectors in .   Suppose . Give a geometric description of and a rough sketch of and its span in .   A three-dimensional coordinate system for sketching and its span.    Three dimensional coordinate plane.       Now consider the two vectors . Sketch the vectors below. Then give a geometric description of and a rough sketch of the span in .   A coordinate system for sketching , , and .              Activity (continued)     Let's now look at this situation algebraically by writing write . Determine the conditions on , , and so that is in by considering the linear system or . Explain how this relates to your sketch of .   Consider the vectors    Is the vector in ?    Is the vector in ?   Give a geometric description of .           Activity (continued)     Consider the vectors . Form the matrix and find its reduced row echelon form. What does this tell you about ?   If the span of a set of vectors is , what can you say about the pivot positions of the matrix ?  What is the smallest number of vectors such that ?        Summary ( )        Facts: Span and Pivots   Let . Then     "
+  "body": " : Span and Pivots    Motivation: Span and Pivots       Last time we introduced the notion of \"span\" to rephrase the membership question as \"Is in the span of column vectors of ?\". Now we'll make a connection between the span of vectors and pivot positions of a RREF matrix.     Review: Span    vs.     Vectors v and w in the coordinate plane.    Vectors v and w in the coordinate plane.      See Example 2.3.5 and Example 2.3.7 .       Activity: Pivots and Span in   In this activity, we will look at the span of sets of vectors in .   Suppose . Give a geometric description of and a rough sketch of and its span in .   A three-dimensional coordinate system for sketching and its span.    Three dimensional coordinate plane.       Now consider the two vectors . Sketch the vectors below. Then give a geometric description of and a rough sketch of the span in .   A coordinate system for sketching , , and .              Activity (continued)     Let's now look at this situation algebraically by writing write . Determine the conditions on , , and so that is in by considering the linear system or . Explain how this relates to your sketch of .   Consider the vectors    Is the vector in ?    Is the vector in ?   Give a geometric description of .           Activity (continued)     Consider the vectors . Form the matrix and find its reduced row echelon form. What does this tell you about ?   If the span of a set of vectors is , what can you say about the pivot positions of the matrix ?  What is the smallest number of vectors such that ?       is the line defined by .   is the -plane.   For the linear system to be consistent, we need , which means that the third coordinate of the vector must be 0 for to be in . In other words, must lie in the -plane.   We consider the two cases.  We have the augmented matrix which shows that the system is inconsistent. Therefore, is not in .  We have the augmented matrix which shows that the system is consistent. Therefore, is in .  The span is the plane in defined by and .   We have the reduced row echelon form Since there is a pivot position in every row, this says that every equation is consistent. The is therefore .  There must be a pivot position in every row.  If a set of vectors spans , its corresponding matrix must have a pivot position in every row. Because there can be at most one pivot position in a column, there must be at least three columns. Therefore, the smallest number of vectors that span is three.        Summary ( )          The span of a single vector, , is a line. If we look at the RREF of a matrix containing this single column vector, it will contain one row with a pivot.    The span of two vectors which do not lie on the same line, , is a plane. If we look at the RREF of a matrix containing these two column vectors, it will contain two rows with a pivot.    The span of three vectors which do not lie in the same plane, , is . If we look at the RREF of a matrix containing these three column vectors, it will contain three rows with a pivot.        Facts: Span and Pivots   Let . Then     exactly when the RREF of has a pivot in every row.  Since a matrix can have a most one pivot position in every column, this also implies that a set of vectors spanning must contain at least vectors.     "
 },
 {
-  "id": "sec-2-3-2-2-1",
+  "id": "sec-2-3-2-sols-2-1",
   "level": "2",
-  "url": "sec-2-3-2.html#sec-2-3-2-2-1",
+  "url": "sec-2-3-2-sols.html#sec-2-3-2-sols-2-1",
   "type": "Worksheet Exercise",
   "number": "1",
   "title": "Motivation: Span and Pivots.",
-  "body": " Motivation: Span and Pivots      "
+  "body": " Motivation: Span and Pivots       Last time we introduced the notion of \"span\" to rephrase the membership question as \"Is in the span of column vectors of ?\". Now we'll make a connection between the span of vectors and pivot positions of a RREF matrix.   "
 },
 {
-  "id": "sec-2-3-2-2-2",
+  "id": "sec-2-3-2-sols-2-2",
   "level": "2",
-  "url": "sec-2-3-2.html#sec-2-3-2-2-2",
+  "url": "sec-2-3-2-sols.html#sec-2-3-2-sols-2-2",
   "type": "Worksheet Exercise",
   "number": "2",
   "title": "Review: Span.",
-  "body": " Review: Span    vs.     Vectors v and w in the coordinate plane.    Vectors v and w in the coordinate plane.     "
+  "body": " Review: Span    vs.     Vectors v and w in the coordinate plane.    Vectors v and w in the coordinate plane.      See Example 2.3.5 and Example 2.3.7 .   "
 },
 {
-  "id": "sec-2-3-2-3-1",
+  "id": "sec-2-3-2-sols-3-1",
   "level": "2",
-  "url": "sec-2-3-2.html#sec-2-3-2-3-1",
+  "url": "sec-2-3-2-sols.html#sec-2-3-2-sols-3-1",
   "type": "Worksheet Exercise",
   "number": "3",
   "title": "Activity: Pivots and Span in <span class=\"process-math\">\\(\\R^3\\)<\/span>.",
   "body": " Activity: Pivots and Span in   In this activity, we will look at the span of sets of vectors in .   Suppose . Give a geometric description of and a rough sketch of and its span in .   A three-dimensional coordinate system for sketching and its span.    Three dimensional coordinate plane.       Now consider the two vectors . Sketch the vectors below. Then give a geometric description of and a rough sketch of the span in .   A coordinate system for sketching , , and .          "
 },
 {
-  "id": "sec-2-3-2-4-1",
+  "id": "sec-2-3-2-sols-4-1",
   "level": "2",
-  "url": "sec-2-3-2.html#sec-2-3-2-4-1",
+  "url": "sec-2-3-2-sols.html#sec-2-3-2-sols-4-1",
   "type": "Worksheet Exercise",
   "number": "4",
   "title": "Activity (continued).",
   "body": " Activity (continued)     Let's now look at this situation algebraically by writing write . Determine the conditions on , , and so that is in by considering the linear system or . Explain how this relates to your sketch of .   Consider the vectors    Is the vector in ?    Is the vector in ?   Give a geometric description of .       "
 },
 {
-  "id": "sec-2-3-2-5-1",
+  "id": "sec-2-3-2-sols-5-1",
   "level": "2",
-  "url": "sec-2-3-2.html#sec-2-3-2-5-1",
+  "url": "sec-2-3-2-sols.html#sec-2-3-2-sols-5-1",
   "type": "Worksheet Exercise",
   "number": "5",
   "title": "Activity (continued).",
-  "body": " Activity (continued)     Consider the vectors . Form the matrix and find its reduced row echelon form. What does this tell you about ?   If the span of a set of vectors is , what can you say about the pivot positions of the matrix ?  What is the smallest number of vectors such that ?    "
+  "body": " Activity (continued)     Consider the vectors . Form the matrix and find its reduced row echelon form. What does this tell you about ?   If the span of a set of vectors is , what can you say about the pivot positions of the matrix ?  What is the smallest number of vectors such that ?       is the line defined by .   is the -plane.   For the linear system to be consistent, we need , which means that the third coordinate of the vector must be 0 for to be in . In other words, must lie in the -plane.   We consider the two cases.  We have the augmented matrix which shows that the system is inconsistent. Therefore, is not in .  We have the augmented matrix which shows that the system is consistent. Therefore, is in .  The span is the plane in defined by and .   We have the reduced row echelon form Since there is a pivot position in every row, this says that every equation is consistent. The is therefore .  There must be a pivot position in every row.  If a set of vectors spans , its corresponding matrix must have a pivot position in every row. Because there can be at most one pivot position in a column, there must be at least three columns. Therefore, the smallest number of vectors that span is three.    "
 },
 {
-  "id": "sec-2-3-2-6-1",
+  "id": "sec-2-3-2-sols-6-1",
   "level": "2",
-  "url": "sec-2-3-2.html#sec-2-3-2-6-1",
+  "url": "sec-2-3-2-sols.html#sec-2-3-2-sols-6-1",
   "type": "Worksheet Exercise",
   "number": "6",
   "title": "Summary (<span class=\"process-math\">\\(\\R^3\\)<\/span>).",
-  "body": " Summary ( )      "
+  "body": " Summary ( )          The span of a single vector, , is a line. If we look at the RREF of a matrix containing this single column vector, it will contain one row with a pivot.    The span of two vectors which do not lie on the same line, , is a plane. If we look at the RREF of a matrix containing these two column vectors, it will contain two rows with a pivot.    The span of three vectors which do not lie in the same plane, , is . If we look at the RREF of a matrix containing these three column vectors, it will contain three rows with a pivot.      "
 },
 {
-  "id": "sec-2-3-2-6-2",
+  "id": "sec-2-3-2-sols-6-2",
   "level": "2",
-  "url": "sec-2-3-2.html#sec-2-3-2-6-2",
+  "url": "sec-2-3-2-sols.html#sec-2-3-2-sols-6-2",
   "type": "Worksheet Exercise",
   "number": "7",
   "title": "Facts: Span and Pivots.",
-  "body": " Facts: Span and Pivots   Let . Then   "
+  "body": " Facts: Span and Pivots   Let . Then     exactly when the RREF of has a pivot in every row.  Since a matrix can have a most one pivot position in every column, this also implies that a set of vectors spanning must contain at least vectors.   "
 },
 {
   "id": "sec-2-4-1",
