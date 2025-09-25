@@ -764,6 +764,213 @@ var ptx_lunr_docs = [
   "number": "5",
   "title": "Definition: Linear Independence.",
   "body": " Definition: Linear Independence   A set of vectors is called linearly dependent if   "
+},
+{
+  "id": "sec-2-4-2",
+  "level": "1",
+  "url": "sec-2-4-2.html",
+  "type": "Worksheet",
+  "number": "",
+  "title": "<span class=\"process-math\">\\(\\S 2.4\\text{:}\\)<\/span> Linear Independence (Part 2)",
+  "body": " : Linear Independence (Part 2)    Motivation: Linear Independence          Activity: Determining Linear Independence   We would like to develop a means to detect when a set of vectors is linearly dependent. This activity will point the way.  Suppose we have five vectors in that form the columns of a matrix having reduced row echelon form . Is it possible to write one of the vectors as a linear combination of the others? If so, show explicitly how one vector appears as a linear combination of some of the other vectors. Is this set of vectors linearly dependent or independent?  Suppose we have another set of three vectors in that form the columns of a matrix having reduced row echelon form . Is it possible to write one of these vectors , , as a linear combination of the others? If so, show explicitly how one vector appears as a linear combination of some of the other vectors. Is this set of vectors linearly dependent or independent?  By looking at the pivot positions, how can you determine whether the columns of a matrix are linearly dependent or independent?  If one vector in a set is the zero vector , can the set of vectors be linearly independent?  Suppose a set of vectors in has twelve vectors. Is it possible for this set to be linearly independent?        Facts: Linear Independence        Homogeneous Equations          Activity: Homogeneous Equations and Linear Independence    Explain why the homogeneous equation is consistent no matter the matrix .  Consider the matrix whose columns we denote by , , and . Describe the solution space of the homogeneous equation using a parametric description, if appropriate.   Find a nonzero solution to the homogeneous equation and use it to find weights , , and such that .  Use the equation you found in the previous part to write one of the vectors as a linear combination of the others.  Are the vectors , , and linearly dependent or independent?        Fact: Homogeneous Equations and Linear Indpendence   The column vectors of a matrix are linearly dependent exactly when     Summary: Linear Independence   For , the following are equivalent:     "
+},
+{
+  "id": "sec-2-4-2-2-1",
+  "level": "2",
+  "url": "sec-2-4-2.html#sec-2-4-2-2-1",
+  "type": "Worksheet Exercise",
+  "number": "1",
+  "title": "Motivation: Linear Independence.",
+  "body": " Motivation: Linear Independence      "
+},
+{
+  "id": "sec-2-4-2-3-1",
+  "level": "2",
+  "url": "sec-2-4-2.html#sec-2-4-2-3-1",
+  "type": "Worksheet Exercise",
+  "number": "2",
+  "title": "Activity: Determining Linear Independence.",
+  "body": " Activity: Determining Linear Independence   We would like to develop a means to detect when a set of vectors is linearly dependent. This activity will point the way.  Suppose we have five vectors in that form the columns of a matrix having reduced row echelon form . Is it possible to write one of the vectors as a linear combination of the others? If so, show explicitly how one vector appears as a linear combination of some of the other vectors. Is this set of vectors linearly dependent or independent?  Suppose we have another set of three vectors in that form the columns of a matrix having reduced row echelon form . Is it possible to write one of these vectors , , as a linear combination of the others? If so, show explicitly how one vector appears as a linear combination of some of the other vectors. Is this set of vectors linearly dependent or independent?  By looking at the pivot positions, how can you determine whether the columns of a matrix are linearly dependent or independent?  If one vector in a set is the zero vector , can the set of vectors be linearly independent?  Suppose a set of vectors in has twelve vectors. Is it possible for this set to be linearly independent?    "
+},
+{
+  "id": "sec-2-4-2-4-1",
+  "level": "2",
+  "url": "sec-2-4-2.html#sec-2-4-2-4-1",
+  "type": "Worksheet Exercise",
+  "number": "3",
+  "title": "Facts: Linear Independence.",
+  "body": " Facts: Linear Independence      "
+},
+{
+  "id": "sec-2-4-2-4-2",
+  "level": "2",
+  "url": "sec-2-4-2.html#sec-2-4-2-4-2",
+  "type": "Worksheet Exercise",
+  "number": "4",
+  "title": "Homogeneous Equations.",
+  "body": " Homogeneous Equations      "
+},
+{
+  "id": "sec-2-4-2-5-1",
+  "level": "2",
+  "url": "sec-2-4-2.html#sec-2-4-2-5-1",
+  "type": "Worksheet Exercise",
+  "number": "5",
+  "title": "Activity: Homogeneous Equations and Linear Independence.",
+  "body": " Activity: Homogeneous Equations and Linear Independence    Explain why the homogeneous equation is consistent no matter the matrix .  Consider the matrix whose columns we denote by , , and . Describe the solution space of the homogeneous equation using a parametric description, if appropriate.   Find a nonzero solution to the homogeneous equation and use it to find weights , , and such that .  Use the equation you found in the previous part to write one of the vectors as a linear combination of the others.  Are the vectors , , and linearly dependent or independent?    "
+},
+{
+  "id": "sec-2-4-2-6-1",
+  "level": "2",
+  "url": "sec-2-4-2.html#sec-2-4-2-6-1",
+  "type": "Worksheet Exercise",
+  "number": "6",
+  "title": "Fact: Homogeneous Equations and Linear Indpendence.",
+  "body": " Fact: Homogeneous Equations and Linear Indpendence   The column vectors of a matrix are linearly dependent exactly when   "
+},
+{
+  "id": "sec-2-4-2-6-2",
+  "level": "2",
+  "url": "sec-2-4-2.html#sec-2-4-2-6-2",
+  "type": "Worksheet Exercise",
+  "number": "7",
+  "title": "Summary: Linear Independence.",
+  "body": " Summary: Linear Independence   For , the following are equivalent:   "
+},
+{
+  "id": "sec-2-5-1",
+  "level": "1",
+  "url": "sec-2-5-1.html",
+  "type": "Worksheet",
+  "number": "",
+  "title": "<span class=\"process-math\">\\(\\S 2.5\\text{:}\\)<\/span> Matrix Transformations",
+  "body": " : Matrix Transformations    Motivation: Matrix Transformations          Preview Activity 2.5.1   We will begin by considering a more familiar situation; namely, the function , which takes a real number as an input and produces its square as its output.     What is the value of ?      Can we solve the equation ? If so, is the solution unique?      Can we solve the equation ? If so, is the solution unique?      Sketch a graph of the function in      Graph the function above.        We will now consider functions having the form . Draw a graph of the function on the left in .      Graphs of the function and .        Draw a graph of the function on the right of .      Remember that composing two functions means we use the output from one function as the input into the other; that is, . What function results from composing ?        Definition: Matrix Transformation   The matrix transformation of a matrix is     Example 1: Matrix Transformations   Consider the matrix      Example 2: Matrix Transformations   Consider the function that has the form        Activity: Matrix Transformations   In this activity, we will look at some examples of matrix transformations.  To begin, suppose that is the matrix with associated matrix transformation .  What is ?  What is ?  What is ?  Is there a vector such that ?  Write as a two-dimensional vector.      Suppose that where .  What is the dimension of the vectors that are inputs for ?  What is the dimension of the vectors that are outputs?  If we describe this transformation as , what are the values of and and how do they relate to the shape of ?  Describe the vectors for which .   If is the matrix , what is in terms of the vectors and ? What about ?  Suppose that is a matrix and that . If , what is the matrix ?        Fact: Identifying Matrix Transformations   If is a matrix transformation given by , then       Activity 2: Matrix Transformations   Let's look at some examples and apply these observations.   To begin, suppose that is the matrix transformation that takes a two-dimensional vector as an input and outputs , the two-dimensional vector obtained by rotating counterclockwise by , as shown in .   The matrix transformation takes two-dimensional vectors on the left and rotates them by counterclockwise into the vectors on the right.       We will see in the next section that many geometric operations like this one can be performed by matrix transformations.   If we write , what are the values of and , and what is the shape of the associated matrix ?    Determine the matrix by considering the vectors .    If as shown on the left in , use your matrix to determine and verify that it agrees with that shown on the right of .    If , determine the vector obtained by rotating counterclockwise by .             Activity (continued)      Suppose that we work for a company that makes baked goods, including cakes, doughnuts, and eclairs. The company operates two bakeries, Bakery 1 and Bakery 2. In one hour of operation,  Bakery 1 produces 10 cakes, 50 doughnuts, and 30 eclairs.  Bakery 2 produces 20 cakes, 30 doughnuts, and 30 eclairs.  If Bakery 1 operates for hours and Bakery 2 for hours, we will use the vector to describe the operation of the two bakeries.  We would like to describe a matrix transformation where describes the number of hours the bakeries operate and describes the total number of cakes, doughnuts, and eclairs produced. That is, where is the number of cakes, is the number of doughnuts, and is the number of eclairs produced.   If , what are the values of and , and what is the shape of the associated matrix ?    We can determine the matrix by considering vectors . For instance, will describe the number of cakes, doughnuts, and eclairs produced when Bakery 1 operates for one hour and Bakery 2 sits idle. What is this vector?    In the same way, determine . What is the matrix ?    If Bakery 1 operates for 120 hours and Bakery 2 for 180 hours, what is the total number of cakes, doughnuts, and eclairs produced?     Suppose that in one period of time, the company produces 5060 cakes, 14310 doughnuts, and 10470 eclairs. How long did each bakery operate?    Suppose that the company receives an order for a certain number of cakes, doughnuts, and eclairs. Can you guarantee that you can fill the order without having leftovers?           "
+},
+{
+  "id": "sec-2-5-1-2-1",
+  "level": "2",
+  "url": "sec-2-5-1.html#sec-2-5-1-2-1",
+  "type": "Worksheet Exercise",
+  "number": "1",
+  "title": "Motivation: Matrix Transformations.",
+  "body": " Motivation: Matrix Transformations      "
+},
+{
+  "id": "sec-2-5-1-3-1",
+  "level": "2",
+  "url": "sec-2-5-1.html#sec-2-5-1-3-1",
+  "type": "Worksheet Exercise",
+  "number": "2",
+  "title": "Preview Activity 2.5.1.",
+  "body": " Preview Activity 2.5.1   We will begin by considering a more familiar situation; namely, the function , which takes a real number as an input and produces its square as its output.     What is the value of ?      Can we solve the equation ? If so, is the solution unique?      Can we solve the equation ? If so, is the solution unique?      Sketch a graph of the function in      Graph the function above.        We will now consider functions having the form . Draw a graph of the function on the left in .      Graphs of the function and .        Draw a graph of the function on the right of .      Remember that composing two functions means we use the output from one function as the input into the other; that is, . What function results from composing ?    "
+},
+{
+  "id": "sec-2-5-1-4-1",
+  "level": "2",
+  "url": "sec-2-5-1.html#sec-2-5-1-4-1",
+  "type": "Worksheet Exercise",
+  "number": "3",
+  "title": "Definition: Matrix Transformation.",
+  "body": " Definition: Matrix Transformation   The matrix transformation of a matrix is   "
+},
+{
+  "id": "sec-2-5-1-4-2",
+  "level": "2",
+  "url": "sec-2-5-1.html#sec-2-5-1-4-2",
+  "type": "Worksheet Exercise",
+  "number": "4",
+  "title": "Example 1: Matrix Transformations.",
+  "body": " Example 1: Matrix Transformations   Consider the matrix    "
+},
+{
+  "id": "sec-2-5-1-4-3",
+  "level": "2",
+  "url": "sec-2-5-1.html#sec-2-5-1-4-3",
+  "type": "Worksheet Exercise",
+  "number": "5",
+  "title": "Example 2: Matrix Transformations.",
+  "body": " Example 2: Matrix Transformations   Consider the function that has the form    "
+},
+{
+  "id": "sec-2-5-1-5-1",
+  "level": "2",
+  "url": "sec-2-5-1.html#sec-2-5-1-5-1",
+  "type": "Worksheet Exercise",
+  "number": "6",
+  "title": "Activity: Matrix Transformations.",
+  "body": " Activity: Matrix Transformations   In this activity, we will look at some examples of matrix transformations.  To begin, suppose that is the matrix with associated matrix transformation .  What is ?  What is ?  What is ?  Is there a vector such that ?  Write as a two-dimensional vector.      Suppose that where .  What is the dimension of the vectors that are inputs for ?  What is the dimension of the vectors that are outputs?  If we describe this transformation as , what are the values of and and how do they relate to the shape of ?  Describe the vectors for which .   If is the matrix , what is in terms of the vectors and ? What about ?  Suppose that is a matrix and that . If , what is the matrix ?    "
+},
+{
+  "id": "sec-2-5-1-6-1",
+  "level": "2",
+  "url": "sec-2-5-1.html#sec-2-5-1-6-1",
+  "type": "Worksheet Exercise",
+  "number": "7",
+  "title": "Fact: Identifying Matrix Transformations.",
+  "body": " Fact: Identifying Matrix Transformations   If is a matrix transformation given by , then   "
+},
+{
+  "id": "sec-2-5-1-7-1",
+  "level": "2",
+  "url": "sec-2-5-1.html#sec-2-5-1-7-1",
+  "type": "Worksheet Exercise",
+  "number": "8",
+  "title": "Activity 2: Matrix Transformations.",
+  "body": " Activity 2: Matrix Transformations   Let's look at some examples and apply these observations.   To begin, suppose that is the matrix transformation that takes a two-dimensional vector as an input and outputs , the two-dimensional vector obtained by rotating counterclockwise by , as shown in .   The matrix transformation takes two-dimensional vectors on the left and rotates them by counterclockwise into the vectors on the right.       We will see in the next section that many geometric operations like this one can be performed by matrix transformations.   If we write , what are the values of and , and what is the shape of the associated matrix ?    Determine the matrix by considering the vectors .    If as shown on the left in , use your matrix to determine and verify that it agrees with that shown on the right of .    If , determine the vector obtained by rotating counterclockwise by .         "
+},
+{
+  "id": "sec-2-5-1-8-1",
+  "level": "2",
+  "url": "sec-2-5-1.html#sec-2-5-1-8-1",
+  "type": "Worksheet Exercise",
+  "number": "9",
+  "title": "Activity (continued).",
+  "body": " Activity (continued)      Suppose that we work for a company that makes baked goods, including cakes, doughnuts, and eclairs. The company operates two bakeries, Bakery 1 and Bakery 2. In one hour of operation,  Bakery 1 produces 10 cakes, 50 doughnuts, and 30 eclairs.  Bakery 2 produces 20 cakes, 30 doughnuts, and 30 eclairs.  If Bakery 1 operates for hours and Bakery 2 for hours, we will use the vector to describe the operation of the two bakeries.  We would like to describe a matrix transformation where describes the number of hours the bakeries operate and describes the total number of cakes, doughnuts, and eclairs produced. That is, where is the number of cakes, is the number of doughnuts, and is the number of eclairs produced.   If , what are the values of and , and what is the shape of the associated matrix ?    We can determine the matrix by considering vectors . For instance, will describe the number of cakes, doughnuts, and eclairs produced when Bakery 1 operates for one hour and Bakery 2 sits idle. What is this vector?    In the same way, determine . What is the matrix ?    If Bakery 1 operates for 120 hours and Bakery 2 for 180 hours, what is the total number of cakes, doughnuts, and eclairs produced?     Suppose that in one period of time, the company produces 5060 cakes, 14310 doughnuts, and 10470 eclairs. How long did each bakery operate?    Suppose that the company receives an order for a certain number of cakes, doughnuts, and eclairs. Can you guarantee that you can fill the order without having leftovers?         "
+},
+{
+  "id": "sec-2-5-2",
+  "level": "1",
+  "url": "sec-2-5-2.html",
+  "type": "Worksheet",
+  "number": "",
+  "title": "<span class=\"process-math\">\\(\\S 2.5\\text{:}\\)<\/span> Matrix Transformations and Composition",
+  "body": " : Matrix Transformations and Composition    Motivation: Composition          Activity: Composition   We will explore the composition of matrix transformations by revisiting the matrix transformations from a previous activity.   Let's begin with the matrix transformation that rotates a two-dimensional vector by to produce . We saw in the earlier activity that the associated matrix is . Suppose that we compose this matrix transformation with itself to obtain , which is the result of rotating by twice.   What is the matrix associated to the composition ?    What is the result of rotating twice?    Suppose that is the matrix transformation that rotates vectors by , as shown in .   The matrix transformation takes two-dimensional vectors on the left and rotates them by into the vectors on the right.       Use the vectors to find the matrix associated to and explain why it is the same matrix associated to .    Write the two-dimensional vector . How might this vector be expressed in terms of scalar multiplication and why does this make sense geometrically?             Activity (continued)      In the previous activity, we imagined a company that operates two bakeries. We found the matrix transformation where describes the number of cakes, doughnuts, and eclairs when Bakery1 runs for hours and Bakery 2 runs for hours. The associated matrix is .  Suppose now that  Each cake requires 4 cups of flour and and 2 cups of sugar.  Each doughnut requires 1 cup of flour and 1 cup of sugar.  Each eclair requires 1 cup of flour and 2 cups of sugar.  We will describe a matrix transformation where is a two-dimensional vector describing the number of cups of flour and sugar required to make cakes, doughnuts, and eclairs.   Use the vectors to write the matrix associated to the transformation .    If we make 1200 cakes, 2850 doughnuts, and 2250 eclairs, how many cups of flour and sugar are required?     Suppose that Bakery 1 operates for 75 hours and Bakery 2 operates for 53 hours. How many cakes, doughnuts, and eclairs are produced? How many cups of flour and sugar are required?    What is the meaning of the composition and what is its associated matrix?    In a certain time interval, both bakeries use a total of 5800 cups of flour and 5980 cups of sugar. How long have the two bakeries been operating?             Application: Discrete Dynamical Systems        "
+},
+{
+  "id": "sec-2-5-2-2-1",
+  "level": "2",
+  "url": "sec-2-5-2.html#sec-2-5-2-2-1",
+  "type": "Worksheet Exercise",
+  "number": "1",
+  "title": "Motivation: Composition.",
+  "body": " Motivation: Composition      "
+},
+{
+  "id": "sec-2-5-2-3-1",
+  "level": "2",
+  "url": "sec-2-5-2.html#sec-2-5-2-3-1",
+  "type": "Worksheet Exercise",
+  "number": "2",
+  "title": "Activity: Composition.",
+  "body": " Activity: Composition   We will explore the composition of matrix transformations by revisiting the matrix transformations from a previous activity.   Let's begin with the matrix transformation that rotates a two-dimensional vector by to produce . We saw in the earlier activity that the associated matrix is . Suppose that we compose this matrix transformation with itself to obtain , which is the result of rotating by twice.   What is the matrix associated to the composition ?    What is the result of rotating twice?    Suppose that is the matrix transformation that rotates vectors by , as shown in .   The matrix transformation takes two-dimensional vectors on the left and rotates them by into the vectors on the right.       Use the vectors to find the matrix associated to and explain why it is the same matrix associated to .    Write the two-dimensional vector . How might this vector be expressed in terms of scalar multiplication and why does this make sense geometrically?         "
+},
+{
+  "id": "sec-2-5-2-4-1",
+  "level": "2",
+  "url": "sec-2-5-2.html#sec-2-5-2-4-1",
+  "type": "Worksheet Exercise",
+  "number": "3",
+  "title": "Activity (continued).",
+  "body": " Activity (continued)      In the previous activity, we imagined a company that operates two bakeries. We found the matrix transformation where describes the number of cakes, doughnuts, and eclairs when Bakery1 runs for hours and Bakery 2 runs for hours. The associated matrix is .  Suppose now that  Each cake requires 4 cups of flour and and 2 cups of sugar.  Each doughnut requires 1 cup of flour and 1 cup of sugar.  Each eclair requires 1 cup of flour and 2 cups of sugar.  We will describe a matrix transformation where is a two-dimensional vector describing the number of cups of flour and sugar required to make cakes, doughnuts, and eclairs.   Use the vectors to write the matrix associated to the transformation .    If we make 1200 cakes, 2850 doughnuts, and 2250 eclairs, how many cups of flour and sugar are required?     Suppose that Bakery 1 operates for 75 hours and Bakery 2 operates for 53 hours. How many cakes, doughnuts, and eclairs are produced? How many cups of flour and sugar are required?    What is the meaning of the composition and what is its associated matrix?    In a certain time interval, both bakeries use a total of 5800 cups of flour and 5980 cups of sugar. How long have the two bakeries been operating?         "
+},
+{
+  "id": "sec-2-5-2-5-1",
+  "level": "2",
+  "url": "sec-2-5-2.html#sec-2-5-2-5-1",
+  "type": "Worksheet Exercise",
+  "number": "4",
+  "title": "Application: Discrete Dynamical Systems.",
+  "body": " Application: Discrete Dynamical Systems      "
 }
 ]
 
