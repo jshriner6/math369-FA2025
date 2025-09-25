@@ -1,0 +1,668 @@
+<pretext>
+    <article xml:id="notes">
+        <worksheet xml:id="sec-2-5-1-sols">
+        <title><m>\S 2.5</m>: Matrix Transformations</title>
+            <page>
+                <exercise workspace="2in">
+                    <title>Motivation: Matrix Transformations</title>
+                    <statement>
+                        <p>
+                            
+                        </p>
+                    </statement>
+                    <solution>
+                        <p>
+                            In the previous sections we've seen how matrix-vector multiplication can be viewed
+                            geometrically in terms of linear combinations. In this section, we'll see another perspective
+                            in which matrices can be viewed as functions which transform space.
+                        </p>
+                    </solution>
+                    
+                </exercise>
+            </page>
+            <page>
+                <exercise>
+                    <title>Preview Activity 2.5.1</title>
+                    <introduction>
+        <p> We will begin by considering a more familiar situation;
+        namely, the function <m>f(x) = x^2</m>, which takes a real
+        number <m>x</m> as an input and produces its square <m>x^2</m>
+        as its output.
+        </p>
+      </introduction>
+
+      <task >
+        <statement>
+	  <p> What is the value of <m>f(3)</m>? </p>
+        </statement>
+        
+        <solution>
+	  <p> We find <m>f(3) = 3^2 = 9</m>. </p>
+        </solution>
+        
+      </task>
+
+      <task >
+        <statement>
+	  <p> Can we solve the equation <m>f(x) = 4</m>?  If so, is
+	  the solution unique? </p>
+        </statement>
+        
+        <solution>
+	  <p> If <m>f(x)=x^2 = 4</m>, then <m>x = \pm2</m> so
+	  there is not a unique solution. </p>
+        </solution>
+        
+      </task>
+
+      <task >
+        <statement>
+	  <p> Can we solve the equation <m>f(x) = -10</m>?  If so, is
+	  the solution unique? </p>
+        </statement>
+        
+        <solution>
+	  <p> There are no solutions to the equation
+	  <m>f(x)=x^2=-10</m>. </p>
+        </solution>
+        
+      </task>
+
+      <task>
+        <statement>
+	  <p> Sketch a graph of the function <m>f(x)=x^2</m> in
+	  <xref ref="fig-graph-square-sols" />
+	  <figure xml:id="fig-graph-square-sols">
+	    <sidebyside width="50%">
+	      <image source="images/empty-4" />
+	    </sidebyside>
+	    <caption>
+	      Graph the function <m>f(x)=x^2</m> above.
+	    </caption>
+	  </figure>
+	  </p>
+         
+        </statement>
+       
+        <solution>
+	  <p>
+	    <sidebyside width="50%">
+	      <image source="images/ex-graph-x-squared" />
+	    </sidebyside>
+	  </p>
+        </solution>
+        
+      </task>
+
+      <task >
+        <statement>
+	  <p>
+	    We will now consider functions having the form
+	    <m>g(x)=mx</m>.  Draw a graph of the function
+	    <m>g(x) = 2x</m> on the left in <xref
+	    ref="fig-graph-linear-sols" />.
+	    <figure xml:id="fig-graph-linear-sols">
+	      <sidebyside widths="45% 45%">
+	        <image source="images/empty-4" />
+	        <image source="images/empty-4" />
+	      </sidebyside>
+	      <caption>
+	        Graphs of the function <m>g(x)=2x</m> and <m>h(x) =
+	        -\frac13 x</m>.
+	      </caption>
+	    </figure>
+	  </p>
+          
+        </statement>
+        <solution>
+	  <p> The graph is shown on the left below.
+	  <sidebyside widths="45% 45%">
+	    <image source="images/ex-graph-2x" />
+	    <image source="images/ex-graph-fracx" />
+	  </sidebyside>
+	  </p>
+        </solution>
+        
+      </task>
+
+      <task >
+        <statement>
+	  <p> Draw a graph of the function <m>h(x) = -\frac13 x</m>
+	  on the right of <xref ref="fig-graph-linear" />.  </p>
+          
+        </statement>
+        
+        <solution>
+	  <p> The graph is shown on the right above. </p>
+        </solution>
+        
+      </task>
+
+      <task >
+        <statement>
+	  <p> Remember that composing two functions means we use the
+	  output from one function as the input into the
+	  other; that is, <m>(g\circ h)(x) = g(h(x))</m>.  What function
+	  results from composing <m>(g\circ h)(x)</m>?
+	  </p>
+        </statement>
+        
+        <solution>
+	  <p> Composing the functions, we find that <m>g(h(x)) =
+	  g(-\frac13x)= -\frac23 x</m>.  We see that the composition
+	  is a new linear function whose slope is obtained by
+	  multiplying the slopes of <m>g</m> and <m>h</m>.
+	  </p>
+        </solution>
+        
+      </task>
+
+      
+
+      
+                    
+                </exercise>
+            </page>
+            <page>
+              <exercise workspace="2in">
+                <title>Definition: Matrix Transformation</title>
+                <statement>
+                  <p>
+                    The <term>matrix transformation</term> of a matrix <m>A</m> is 
+                  </p>
+                </statement>
+                <solution>
+                    <p>
+                        the function <m>T(\xvec) = A \xvec</m>. If <m>A</m> is <m>m \times n</m>, note that <m>T</m> is a function from 
+                        <m>\real^n</m> to <m>\real^m</m>, written <m>T: \real^n \to \real^m</m>.
+                    </p>
+                </solution>
+                
+              </exercise>
+              <exercise workspace="3in">
+                <title>Example 1: Matrix Transformations</title>
+                <statement>
+                  <p>
+                    Consider the matrix
+                      <m>A =
+                      \begin{bmatrix} 3 \amp -2 \\
+                      1 \amp 2 \\
+                      0 \amp 3
+                      \end{bmatrix}
+                      </m>
+                  </p>
+                </statement>
+                <solution>
+                    <p>
+                        See <url href="https://understandinglinearalgebra.org/sec-linear-trans.html#example-matrix-to-mt">Example 2.5.4</url>
+                    </p>
+                </solution>
+                
+                
+              </exercise>
+              <exercise workspace="3in">
+                <title>Example 2: Matrix Transformations</title>
+                <statement>
+                  <p>
+                    Consider the function <m>T:\real^3\to\real^2</m> that
+                    has the form
+                    <me>
+                      T\left(\threevec{x_1}{x_2}{x_3}\right) =
+                      \begin{bmatrix}
+                      -4x_1 -x_2 + 2x_3 \\
+                      x_1 + 2x_2 - x_3 \\
+                      \end{bmatrix}.
+                    </me>
+                  </p>
+                </statement>
+                <solution>
+                    <p>
+                        See <url href="https://understandinglinearalgebra.org/sec-linear-trans.html#example-mt-to-matrix">Example 2.5.5</url>
+                    </p>
+                </solution>
+                
+              </exercise>
+            </page>
+
+            <page>
+              <exercise>
+                <title>Activity: Matrix Transformations</title>
+                <statement>
+	<p> In this activity, we will look at some examples of matrix
+	transformations. 
+	<ol marker="a."> 
+	  <li><p>
+	    To begin, suppose that <m>A</m> is the matrix
+	    <me>A = \left[\begin{array}{rr}
+	    2 \amp 1 \\
+	    1 \amp 2 \\
+	    \end{array}\right].
+	    </me>
+	    with associated matrix transformation <m>T(\xvec) =
+	    A\xvec</m>.
+
+	    <ol marker="1.">
+	      <li><p>What is
+	      <m>T\left(\twovec{1}{-2}\right)</m>?</p></li> 
+
+	      <li><p>What is
+	      <m>T\left(\twovec{1}{0}\right)</m>?</p></li> 
+
+	      <li><p>What is
+	      <m>T\left(\twovec{0}{1}\right)</m>?</p></li>
+
+	      <li><p> Is there a vector <m>\xvec</m> such that
+	      <m>T(\xvec) = \twovec{3}{0}</m>? </p></li>
+
+	      <li><p>
+		Write <m>T\left(\twovec xy\right)</m> as a
+		two-dimensional vector.
+	      </p>
+	      </li>
+	    </ol></p>
+	  </li>
+
+	  <li> <p> Suppose that <m>T(\xvec) = A\xvec</m> where
+	  <me>
+	    A=\left[\begin{array}{rrrr}
+	    3 \amp 3 \amp -2 \amp 1 \\
+	    0 \amp 2 \amp 1 \amp -3 \\
+	    -2 \amp 1 \amp 4 \amp -4
+	    \end{array}\right]
+	    </me>.
+	    <ol marker="1.">  
+	      <li><p> What is the dimension of the vectors
+	      <m>\xvec</m> that are inputs for <m>T</m>?  </p></li>
+
+	      <li><p> What is the dimension of the vectors
+	      <m>T(\xvec)=A\xvec</m> that are outputs? </p></li>
+
+	      <li><p> If we describe this transformation as
+	      <m>T:\real^n\to\real^m</m>, what are the values of
+	      <m>n</m> and <m>m</m> and how do they relate to the
+	      shape of <m>A</m>? </p></li>
+
+	      <li><p> Describe the vectors <m>\xvec</m> for which
+	      <m>T(\xvec) = \zerovec</m>. </p></li>
+	  </ol></p></li>
+
+	  <li><p> If <m>A</m> is the matrix
+	  <m>A=\left[\begin{array}{rr} \vvec_1 \amp \vvec_2
+	  \end{array}\right]</m>,
+	  what is <m>T\left(\twovec10\right)</m> in terms of the
+	  vectors <m>\vvec_1</m> and <m>\vvec_2</m>?
+	  What about
+	  <m>T\left(\twovec{0}{1}\right)</m>?
+	  </p></li>
+
+	  <li><p> Suppose that <m>A</m> is a <m>3\times 2</m> matrix
+	  and that <m>T(\xvec)=A\xvec</m>.  If
+	  <me>
+	    T\left(\twovec{1}{0}\right) = \threevec{3}{-1}{1},
+	    T\left(\twovec{0}{1}\right) = \threevec{2}{2}{-1}
+	    </me>,
+	    what is the matrix <m>A</m>?
+	  </p></li>
+
+	</ol></p>
+      </statement>
+
+      <solution>
+	<p><ol marker="a.">
+	  <li><p> If <m>A = \left[\begin{array}{rr} 2 \amp 1 \\
+	  1 \amp 2 \end{array}\right]</m>, then
+	  <ol marker="1.">
+	    <li><p> <m>T\left(\twovec{1}{-2}\right) =
+	    A\twovec{1}{-2} = \twovec{0}{-3}</m>.
+	    </p></li>
+
+	    <li><p> <m>T\left(\twovec{1}{0}\right) =
+	    A\twovec{1}{0} = \twovec{2}{1}</m>.
+	    </p></li>
+
+	    <li><p> <m>T\left(\twovec{0}{1}\right) =
+	    A\twovec{0}{1} = \twovec{1}{2}</m>.
+	    </p></li>
+
+	    <li><p> <m>T\left(\twovec xy\right) =
+	    \twovec{2x+y}{x+2y}</m>.
+	    </p></li>
+
+	    <li><p> We seek a vector <m>\xvec</m> such that
+	    <m>T(\xvec) = A\xvec=\twovec{3}{0}</m>.  We can solve
+	    this equation to find the unique solution
+	    <m>\xvec=\twovec{2}{-1}</m>.
+	    </p></li>
+	  </ol>
+	  </p></li>
+
+	  <li><p> Now if
+	  <me>
+	    A=\left[\begin{array}{rrrr}
+	    3 \amp 3 \amp -2 \amp 1 \\
+	    0 \amp 2 \amp 1 \amp -3 \\
+	    -2 \amp 1 \amp 4 \amp -4
+	    \end{array}\right]\text{,}
+	  </me>
+	  the matrix has dimensions <m>3\times4</m>.
+	  <ol marker="1.">
+	    <li><p> <m>\xvec</m> must be a four-dimensional
+	    vector. </p></li>
+
+	    <li><p> <m>A\xvec</m> must be a three-dimensional
+	    vector. </p></li>
+
+	    <li><p> For this matrix, we have
+	    <m>T:\real^4\to\real^3</m>.  In general, if <m>A</m>
+	    is an <m>m\times n</m> matrix,
+	    <m>T:\real^n\to\real^m</m>.
+	    </p></li>
+
+	    <li><p> If we solve the homogeneous equation
+	    <m>A\xvec=\zerovec</m>, we find that
+	    <m>\xvec=x_4\fourvec{-3}{2}{-1}{1}</m>.
+	    </p></li>
+	  </ol>
+	  </p></li>
+
+	  <li><p> <m>T\left(\twovec{1}{0}\right) = \vvec_1</m>, the
+	  first column of the matrix.  Similarly,
+	  <m>T\left(\twovec{0}{1}\right)</m> gives the second column
+	  of the matrix.  </p></li>
+
+	  <li><p> The matrix is
+	  <m>A=\left[
+	  \begin{array}{rr}
+	  3 \amp 2 \\
+	  -1 \amp 2 \\
+	  1 \amp -1 \\
+	  \end{array}\right]\text{.}
+	  </m>
+	  </p></li>
+	</ol></p>
+      </solution>
+                
+              </exercise>
+            </page>
+
+            <page>
+              <exercise workspace="2in">
+                <title>Fact: Identifying Matrix Transformations</title>
+                <statement>
+                  <p>
+                    If <m>T: \real^n \to \real^m </m> is a matrix transformation given by <m>T(\xvec) = A \xvec</m>, then
+                  </p>
+                </statement>
+                <solution>
+                    <p>
+                        <m>A = [T(\evec_1) \,\, T(\evec_2) \,\, \dots \,\, T(\evec_n) ] </m>.
+                    </p>
+                </solution>
+                
+              </exercise>
+            </page>
+
+            <page>
+              <exercise>
+                <title>Activity 2: Matrix Transformations</title>
+                <statement>
+	<p>
+	  Let's look at some examples and apply these observations.
+	  <ol marker="a.">
+	    <li>
+	      <p>
+		To begin, suppose that <m>T</m> is the matrix
+		transformation that takes a two-dimensional vector
+		<m>\xvec</m> as an input and outputs
+		<m>T(\xvec)</m>, the two-dimensional vector
+		obtained by rotating <m>\xvec</m> counterclockwise by
+		<m>90^\circ</m>, as shown in <xref
+		ref="fig-mt-rotate-sols"/>.
+	      </p>
+	      <figure xml:id="fig-mt-rotate-sols">
+		<caption>
+		  The matrix transformation <m>T</m> takes
+		  two-dimensional vectors on the left and rotates
+		  them by <m>90^\circ</m> counterclockwise into the
+		  vectors on the right.
+		</caption>
+		<sidebyside widths="45% 45%" margins="2% 2%">
+		  <image source = "images/two-dim-basis"/>
+		  <image source = "images/two-dim-basis-rotate"/>
+		</sidebyside>
+	      </figure>
+	      <p>
+		We will see in the next section that many geometric
+		operations like this one can be performed by matrix
+		transformations. 
+		<ol marker="1.">
+		  <li>
+		    <p>
+		      If we write <m>T:\real^n\to\real^m</m>, what are the
+		      values of <m>m</m> and <m>n</m>, and what is the 
+		      shape of the associated matrix <m>A</m>?
+		    </p>
+		  </li>
+		  <li>
+		    <p>
+		      Determine the matrix <m>A</m> 
+		      by considering the vectors <m>\evec_i</m>.
+		    </p>
+		  </li>
+		  <li>
+		    <p>
+		      If <m>\vvec=\twovec{-2}{-1}</m> as shown on the left
+		      in <xref ref="fig-mt-rotate"/>, use your matrix to
+		      determine <m>T(\vvec)</m> and verify that it agrees
+		      with that shown on the right of <xref
+		      ref="fig-mt-rotate"/>.
+		    </p>
+		  </li>
+		  <li>
+		    <p>
+		      If <m>\xvec=\twovec xy</m>, determine the vector
+		      <m>T(\xvec)</m> obtained by rotating <m>\xvec</m>
+		      counterclockwise by <m>90^\circ</m>.
+		    </p>
+		  </li>
+		</ol>
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		Suppose that we work for a company that makes baked
+		goods, including cakes, doughnuts, and eclairs.  The
+		company operates two bakeries, Bakery 1 and Bakery
+		2.  In one hour of operation,
+		<ul>
+		  <li><p> Bakery 1 produces 10 cakes, 50 doughnuts,
+		  and 30 eclairs. </p></li>
+		  
+		  <li><p> Bakery 2 produces 20 cakes, 30 doughnuts,
+		  and 30 eclairs. </p></li>
+		</ul>
+		If Bakery 1 operates for <m>x_1</m> hours and
+		Bakery 2 for <m>x_2</m> hours, we will use the
+		vector <m>\xvec=\twovec{x_1}{x_2}</m> to describe
+		the operation of the two bakeries.
+	      </p>
+	      <p>
+		We would like to describe a matrix transformation
+		<m>T</m> where <m>\xvec</m> describes the number of
+		hours the bakeries operate and <m>T(\xvec)</m>
+		describes the total number of cakes, doughnuts, and
+		eclairs produced.  That is,
+		<m>T(\xvec) = \threevec{y_1}{y_2}{y_3}</m> where
+		<m>y_1</m> is the number of cakes, <m>y_2</m> is the
+		number of doughnuts, and <m>y_3</m> is the number of
+		eclairs produced.
+		<ol marker="1.">
+		  <li>
+		    <p>
+		      If <m>T:\real^n\to\real^m</m>, what are the
+		      values of <m>m</m> and <m>n</m>, and what is
+		      the shape of the associated matrix <m>A</m>?
+		    </p>
+		  </li>
+		  <li>
+		    <p>
+		      We can determine the matrix <m>A</m> by considering vectors <m>\evec_i</m>.  For
+		      instance, <m>T\left(\twovec10\right)</m> will
+		      describe the number of cakes, doughnuts, and
+		      eclairs produced when Bakery 1 operates for
+		      one hour and Bakery 2 sits idle.  What is this
+		      vector?
+		    </p>
+		  </li>
+		  <li>
+		    <p>
+		      In the same way, determine
+		      <m>T\left(\twovec01\right)</m>.  What is the
+		      matrix <m>A</m>?
+		    </p>
+		  </li>
+		  <li>
+		    <p>
+		      If Bakery 1 operates for 120 hours and Bakery
+		      2 for 180 hours, what is the total number of
+		      cakes, doughnuts, and eclairs produced?
+		      <sage>
+			<input>
+			</input>
+		      </sage>
+		    </p>
+		  </li>
+		  <li>
+		    <p>
+		      Suppose that in one period of time, the
+		      company produces 5060 cakes, 14310 doughnuts,
+		      and 10470 eclairs.  How long did each bakery
+		      operate? 
+		    </p>
+		  </li>
+		  <li>
+		    <p>
+		      Suppose that the company receives an order for
+		      a certain number of cakes, doughnuts, and
+		      eclairs.  Can you guarantee that you can fill
+		      the order without having leftovers?
+		    </p>
+		  </li>
+		</ol>
+	      </p>
+	    </li>
+	  </ol>
+	</p>
+      </statement>
+      <solution>
+	<p>
+	  <ol marker="a.">
+	    <li>
+	      <p>
+		<ol marker="1.">
+		  <li>
+		    <p>
+		      Since both the inputs and the outputs of
+		      <m>T</m> are two-dimensional, it follows that
+		      <m>T:\real^2\to\real^2</m> and that <m>A</m>
+		      is a <m>2\times2</m> matrix.
+		    </p>
+		  </li>
+		  <li>
+		    <p>
+		      Since
+		      <me>
+			T\left(\twovec10\right) = \twovec01,~~~
+			T\left(\twovec01\right) = \twovec{-1}0,
+		      </me>
+		      we have <m>A=\begin{bmatrix}
+		      0 \amp -1 \\
+		      1 \amp 0 \\
+		      \end{bmatrix}</m>.
+		    </p>
+		  </li>
+		  <li>
+		    <p>
+		      Multiplying <m>T(\vvec) = A\vvec =
+		      \twovec{1}{-2}</m>, 
+		      which agrees with the vector shown in the
+		      figure.
+		    </p>
+		  </li>
+		  <li>
+		    <p>
+		      <m>T\left(\twovec xy\right) =
+		      \twovec{-y}{x}</m>.
+		    </p>
+		  </li>
+		</ol>
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		<ol marker="1.">
+		  <li>
+		    <p>
+		      The shape of matrix <m>A</m> is <m>3\times
+		      2</m>, and <m>T:\real^2\to\real^3</m>.
+		    </p>
+		  </li>
+		  <li>
+		    <p>
+		      <m>T\left(\twovec10\right) =
+		      \threevec{10}{50}{30}</m>.
+		    </p>
+		  </li>
+		  <li>
+		    <p>
+		      <m>A = \begin{bmatrix}
+		      10 \amp 20 \\
+		      50 \amp 30 \\
+		      30 \amp 30 \\
+		      \end{bmatrix}
+		      </m>.
+		    </p>
+		  </li>
+		  <li>
+		    <p>
+		      <m>T\left(\twovec{120}{180}\right) =
+		      \threevec{4800}{11400}{9000}</m>.
+		    </p>
+		  </li>
+		  <li>
+		    <p>
+		      We solve the equation <m>T(\xvec) = A\xvec =
+		      \threevec{5060}{14310}{10470}</m> to obtain
+		      <m>\xvec = \twovec{192}{157}.
+		      </m>
+		    </p>
+		  </li>
+		  <li>
+		    <p>
+		      No, you cannot guarantee this because the two
+		      columns of <m>A</m> cannot span
+		      <m>\real^3</m>.  If we view an 
+		      order received as a three-dimensional vector
+		      <m>\bvec</m>, then a solution to the equation
+		      <m>A\xvec = \bvec</m> tells us how long to
+		      operate the two bakeries to produce this
+		      order.  However, since <m>A</m> is a
+		      <m>3\times 2</m> matrix, it must have a row
+		      without a pivot position, which means that
+		      the equation <m>A\xvec = \bvec</m> will be
+		      inconsistent for some vectors <m>\bvec</m>.
+		    </p>
+		  </li>
+		</ol>
+	      </p>
+	    </li>
+	  </ol>
+	</p>
+      </solution>
+                
+              </exercise>
+            </page>
+
+        </worksheet>
+    </article>
+</pretext>

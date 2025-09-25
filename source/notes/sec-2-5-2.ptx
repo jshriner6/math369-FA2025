@@ -1,0 +1,204 @@
+<pretext>
+    <article xml:id="notes">
+        <worksheet xml:id="sec-2-5-2">
+        <title><m>\S 2.5</m>: Matrix Transformations and Composition</title>
+            <page>
+                <exercise workspace="2in">
+                    <title>Motivation: Composition</title>
+                    <statement>
+                        <p>
+                            
+                        </p>
+                    </statement>
+                    
+                </exercise>
+            </page>
+            <page>
+                <exercise>
+                    <title>Activity: Composition</title>
+                    <statement>
+	<p>
+	  We will explore the composition of matrix transformations by
+	  revisiting the matrix transformations from a previous activity.
+	  <ol marker="a.">
+	    <li>
+	      <p>
+		Let's begin with the matrix transformation
+		<m>T:\real^2\to\real^2</m> that rotates a
+		two-dimensional vector <m>\xvec</m> by <m>90^\circ</m>
+		to produce <m>T(\xvec)</m>.  We saw in the earlier
+		activity that the associated matrix is
+		<m>A = \begin{bmatrix}
+		0 \amp -1 \\
+		1 \amp 0 \\
+		\end{bmatrix}
+		</m>.
+		Suppose that we compose this matrix transformation
+		with itself to obtain <m>(T\circ T)(\xvec) =
+		T(T(\xvec))</m>, which is the result of rotating
+		<m>\xvec</m> by <m>90^\circ</m> twice.
+		<ol marker="1.">
+		  <li>
+		    <p>
+		      What is the matrix associated to the composition
+		      <m>(T\circ T)</m>?
+		    </p>
+		  </li>
+		  <li>
+		    <p>
+		      What is the result of rotating
+		      <m>\vvec=\twovec{-2}{-1}</m> twice?
+		    </p>
+		  </li>
+		  <li>
+		    <p>
+		      Suppose that 
+		      <m>R:\real^2\to\real^2</m> is the matrix
+		      transformation that rotates vectors by
+		      <m>180^\circ</m>, as shown in <xref
+		      ref="fig-mt-180"/>.
+		    </p>
+		    <figure xml:id="fig-mt-180">
+		      <caption>
+			The matrix transformation <m>R</m> takes
+			two-dimensional vectors on the left and rotates
+			them by <m>180^\circ</m> into the
+			vectors on the right.
+		      </caption>
+		      <sidebyside widths="45% 45%" margins="2% 2%">
+			<image source = "images/two-dim-basis"/>
+			<image source = "images/two-dim-basis-180"/>
+		      </sidebyside>
+		    </figure>
+		    <p>
+		      Use the vectors <m>\evec_i</m> to
+		      find the matrix associated to <m>R</m> and
+		      explain why it is the same matrix associated to
+		      <m>(T\circ T)</m>.
+		    </p>
+		  </li>
+		  <li>
+		    <p>
+		      Write the two-dimensional vector <m>(T\circ
+		      T)\left(\twovec xy\right)</m>.  How might this
+		      vector be expressed in terms of scalar
+		      multiplication and why does this make sense
+		      geometrically?
+		    </p>
+          </li>
+		</ol>
+	      </p>
+	    </li>
+    </ol>
+</p>
+</statement>
+</exercise>
+</page>
+<page>
+    <exercise>
+        <title>Activity (continued)</title>
+        <statement>
+        <p>
+        <ol>
+	    <li>
+	      <p>
+		In the previous activity, we imagined a company that
+		operates two bakeries.
+		We found the matrix transformation
+		<m>T:\real^2\to\real^3</m> where
+		<m>T\left(\twovec{x_1}{x_2}\right)</m> describes the
+		number of cakes, doughnuts, and eclairs when Bakery1
+		runs for <m>x_1</m> hours and Bakery 2 runs for
+		<m>x_2</m> hours.  The associated matrix is
+		<m>A = \begin{bmatrix}
+		10 \amp 20 \\
+		50 \amp 30 \\
+		30 \amp 30 \\
+		\end{bmatrix}
+		</m>.
+	      </p>
+	      <p> Suppose now that 
+	      <ul>
+		<li><p> Each cake requires 4 cups of flour and
+		and 2 cups of sugar. </p></li>
+		
+		<li><p> Each doughnut requires 1 cup of flour and 1 cup of 
+		sugar. </p></li>
+		
+		<li><p> Each eclair requires 1 cup of flour and 2 cups
+		of sugar. </p></li>
+	      </ul>
+	      We will describe a matrix transformation
+	      <m>S:\real^3\to\real^2</m> where
+	      <m>S\left(\threevec{y_1}{y_2}{y_3}\right)</m> is a
+	      two-dimensional vector describing the number of cups of
+	      flour and sugar required to make <m>y_1</m> cakes,
+	      <m>y_2</m> doughnuts, and <m>y_3</m> eclairs.
+	      <ol marker="1.">
+		<li>
+		  <p>
+		    Use the vectors <m>\evec_i</m> to
+		    write the matrix <m>B</m> associated to the
+		    transformation <m>S</m>.
+		  </p>
+		</li>
+		<li>
+		  <p>
+		    If we make 1200 cakes, 2850 doughnuts, and 2250
+		    eclairs, how many cups of flour and sugar are
+		    required?
+		    <sage>
+		      <input>
+		      </input>
+		    </sage>
+		  </p>
+		</li>
+		<li>
+		  <p>
+		    Suppose that Bakery 1 operates for 75 hours and
+		    Bakery 2 operates for 53 hours.  How many cakes,
+		    doughnuts, and eclairs are produced?  How many
+		    cups of flour and sugar are required?
+		  </p>
+		</li>
+		<li>
+		  <p>
+		    What is the meaning of the composition <m>(S\circ
+		    T)</m> and what is its associated matrix?
+		  </p>
+		</li>
+		<li>
+		  <p>
+		    In a certain time interval, both bakeries 
+		    use a total of 5800 cups of flour and 5980 cups of
+		    sugar.  How long have the two bakeries been
+		    operating?
+		  </p>
+		</li>
+	      </ol>
+	      </p>
+	    </li>
+	  </ol>
+	</p>
+      </statement>
+
+      
+                    
+                </exercise>
+            </page>
+
+            <page>
+                <exercise>
+                    <title>Application: Discrete Dynamical Systems</title>
+                    <statement>
+                        <p>
+                            
+                        </p>
+                    </statement>
+                    
+                </exercise>
+            </page>
+
+        </worksheet>
+    </article>
+</pretext>

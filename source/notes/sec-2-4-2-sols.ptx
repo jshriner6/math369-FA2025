@@ -1,0 +1,347 @@
+<pretext>
+    <article xml:id="notes">
+        <worksheet xml:id="sec-2-4-2-sols">
+        <title><m>\S 2.4</m>: Linear Independence (Part 2)</title>
+            <page>
+                <exercise workspace="2in">
+                    <title>Motivation: Linear Independence</title>
+                    <statement>
+                        <p>
+                            
+                        </p>
+                    </statement>
+                    <solution>
+                        <p>
+                            Last time we saw the difference between three vectors spanning all of <m>\R^3</m> and spanning
+                            a plane in <m>\R^3</m> was whether or not one of the vectors was in the span of the other two.
+                            We called three vectors satisfying the former property <term>linearly independent</term>, and
+                            three vectors satisfying the latter property <term>linearly dependent</term>. How can we 
+                            determine when a set of vectors is linearly independent?
+                        </p>
+                    </solution>
+                    
+                </exercise>
+            </page>
+            <page>
+                <exercise>
+                    <title>Activity: Determining Linear Independence</title>
+                <statement>
+
+                    <p> We would like to develop a means to detect when a set of
+      vectors is linearly dependent.  This activity will point the
+      way. 
+      <ol marker="a.">
+	<li ><p> Suppose we have five vectors in <m>\real^4</m> that
+	form the columns of a matrix having reduced row echelon form
+	<me>
+	  \left[\begin{array}{rrrrr}
+	  \vvec_1 \amp 	  \vvec_2 \amp 	  \vvec_3 \amp
+	  \vvec_4 \amp	  \vvec_5 
+	  \end{array}\right]
+	  \sim
+	  \left[\begin{array}{rrrrr}
+	  1 \amp 0 \amp -1 \amp 0 \amp 2 \\
+	  0 \amp 1 \amp 2 \amp 0 \amp 3 \\
+	  0 \amp 0 \amp 0 \amp 1 \amp -1 \\
+	  0 \amp 0 \amp 0 \amp 0 \amp 0 \\
+	  \end{array}\right]
+	</me>.
+	Is it possible to write one of the vectors
+	<m>\vvec_1,\vvec_2,\ldots,\vvec_5</m> as a linear
+	combination of the others?  If so, show explicitly how one
+	vector appears as a linear combination of some of the other
+	vectors.  Is this set of vectors linearly dependent or
+	independent? 
+	</p></li>
+
+	<li><p> Suppose we have another set of three vectors in
+	<m>\real^4</m> that form the columns of a matrix having 
+	reduced row echelon form
+	<me>
+	  \left[\begin{array}{rrr}
+	  \wvec_1 \amp 	  \wvec_2 \amp 	  \wvec_3 \\
+	  \end{array}\right]
+	  \sim
+	  \left[\begin{array}{rrr}
+	  1 \amp 0 \amp 0 \\
+	  0 \amp 1 \amp 0 \\
+	  0 \amp 0 \amp 1 \\
+	  0 \amp 0 \amp 0 \\
+	  \end{array}\right]
+	</me>.
+	Is it possible to write one of these vectors <m>\wvec_1</m>,
+	<m>\wvec_2</m>, <m>\wvec_3</m> as a linear
+	combination of the others?  If so, show explicitly how one
+	vector appears as a linear combination of some of the other
+	vectors.  Is this set of vectors linearly dependent or
+	independent? 
+	</p></li>
+
+	<li><p>
+	  By looking at the pivot positions, how can you determine
+	  whether the columns of a matrix are linearly dependent or
+	  independent?
+	</p></li>
+
+	<li><p>
+	  If one vector in a set is the zero vector <m>\zerovec</m>,
+	  can the set of vectors be linearly independent?
+	</p></li>
+
+	<li><p>
+	  Suppose a set of vectors in <m>\real^{10}</m> has twelve
+	  vectors.  Is it possible for this set to be linearly
+	  independent?
+	</p></li>
+      </ol></p>
+      </statement>
+
+      <solution>
+	<p><ol marker="a.">
+	  <li><p>
+	    Let's focus on the first three vectors and view the matrix
+	    as an augmented one:
+	    <me>
+	      \left[\begin{array}{rr|r}
+	      \vvec_1 \amp \vvec_2 \amp \vvec_3
+	      \end{array}\right]
+	      \sim
+	      \left[\begin{array}{rr|r}
+	      1 \amp 0 \amp -1 \\
+	      0 \amp 1 \amp 2 \\
+	      0 \amp 0 \amp 0 \\
+	      0 \amp 0 \amp 0 \\
+	      \end{array}\right]\text{.}
+	    </me>
+	    This shows that <m>\vvec_3=-\vvec_1+2\vvec_2</m> so it is
+	    possible to write one of the vectors as a linear
+	    combination of the others.  
+	    Therefore, the set is linearly dependent.
+	  </p></li>
+
+	  <li><p>
+	    Applying the same reasoning as in the previous part, we
+	    see that we cannot write any of the vectors as a linear
+	    combination of the others.  Therefore, the set is linearly
+	    independent.   
+	  </p></li>
+
+	  <li><p>
+	    The columns of a matrix are linearly independent exactly
+	    when there is a pivot position in every column of the
+	    matrix.
+	  </p></li>
+
+	  <li><p>
+	    No, because we can write the zero vector <m>\zerovec</m>
+	    as a linear combination of the other vectors: <m>\zerovec
+	    = 0\vvec_2 + \ldots + 0\vvec_n</m>.
+	  </p></li>
+
+	  <li><p>
+	    No, because the matrix formed by the vectors would have 12
+	    columns and only 10 rows.  There can be at most 10 pivot
+	    positions so there are at least two columns without pivot
+	    positions.
+	  </p></li>
+	</ol></p>
+      </solution>
+                    
+                </exercise>
+            </page>
+            <page>
+                <exercise workspace="4in">
+                    <title>Facts: Linear Independence</title>
+                    <statement>
+                        <p>
+                            
+                        </p>
+                    </statement>
+                    <solution>
+                        <p>
+                            The columns of a matrix are linearly independent exactly when every column contains a pivot position.
+                        </p>
+                        <p>
+                            Therefore, a linearly independent set of vectors in <m>\R^m</m> contains at most <m>m</m> vectors.
+                        </p>
+                    </solution>
+                    
+                    
+                </exercise>
+                <exercise workspace="4in">
+                    <title>Homogeneous Equations</title>
+                    <statement>
+                        <p>
+                            
+                        </p>
+                    </statement>
+                    <solution>
+                        <p>
+                            The equation <m>A\xvec=\zerovec</m> can be a particularly useful starting place for answering
+                            many questions, including that of linear independence.
+                        </p>
+                        <p>
+                            The equation <m>A\xvec=\zerovec</m> is called a <term>homogeneous equation</term>.
+                        </p>
+                    </solution>
+                    
+                </exercise>
+            </page>
+            <page>
+                <exercise>
+                    <title>Activity: Homogeneous Equations and Linear Independence</title>
+                    <statement>
+      <p><ol marker="a.">
+	<li><p> Explain why the homogeneous equation <m>A\xvec =
+	\zerovec</m> is consistent no matter the matrix <m>A</m>.
+	</p></li>
+
+	<li><p> Consider the matrix
+	<me>
+	A = \left[\begin{array}{rrr}
+	3 \amp 2 \amp 0 \\
+	-1 \amp 0 \amp -2 \\
+	2 \amp 1 \amp 1
+	\end{array}\right]
+	</me>
+	whose columns we denote by <m>\vvec_1</m>, <m>\vvec_2</m>, and
+	<m>\vvec_3</m>.
+	Describe the solution space of
+	the homogeneous equation <m>A\xvec = \zerovec</m> using a
+	parametric description, if appropriate.
+	<sage>
+	  <input>
+	  </input>
+	</sage>
+	</p></li>
+
+	<li><p>
+	  Find a nonzero solution to the homogeneous equation
+	  and use it to find weights 
+	  <m>c_1</m>, <m>c_2</m>, and <m>c_3</m> such that
+	  <me>
+	    c_1\vvec_1 + c_2\vvec_2 + c_3\vvec_3 = \zerovec
+	  </me>.
+	</p></li>
+
+	<li><p>
+	  Use the equation you found in the previous part to write
+	  one of the vectors as a linear combination of the others.
+	</p></li>
+	<li><p>
+	Are the vectors <m>\vvec_1</m>, <m>\vvec_2</m>, and
+	<m>\vvec_3</m> linearly dependent or independent?
+	</p></li>
+
+      </ol></p>
+      </statement>
+
+      <solution>
+	<p><ol marker="a.">
+	  <li><p>
+	    The vector <m>\zerovec</m> is always a solution.
+	  </p></li>
+
+	  <li><p>
+	    We have
+	    <me>
+	      \left[\begin{array}{rrr}
+	      3 \amp 2 \amp 0 \\
+	      -1 \amp 0 \amp -2 \\
+	      2 \amp 1 \amp 1
+	      \end{array}\right]
+	      \sim
+	      \left[\begin{array}{rrr}
+	      1 \amp 0 \amp 2 \\
+	      0 \amp 1 \amp -3 \\
+	      0 \amp 0 \amp 0
+	      \end{array}\right].
+	    </me>
+	    From the reduced row echelon form, we see that <m>x_3</m>
+	    is a free variable and that we have
+	    <me>
+	      \begin{alignedat}{2}
+	      x_1 \amp {}={} -2x_3 \\
+	      x_2 \amp {}={} 3x_3\text{.} \\
+	      \end{alignedat}
+	    </me>
+	    The solution space is then written parametrically as
+	    <me>
+	      \xvec=\threevec{x_1}{x_2}{x_3} = x_3\threevec{-2}{3}{1}\text{.}
+	    </me>
+	  </p></li>
+
+	  <li><p>
+	    If we set <m>x_3=1</m>, then we have the solution
+	    <m>\xvec=\threevec{-2}{3}{1}</m>, which says that
+	    <me>
+	      -2\vvec_1+3\vvec_2+\vvec_3 = \zerovec\text{.}
+	    </me>
+	  </p></li>
+
+	  <li><p>
+	    We may rewrite this expression as
+	    <m>\vvec_3=2\vvec_1-3\vvec_2</m>, showing that
+	    <m>\vvec_3</m> is a linear combination of <m>\vvec_1</m>
+	    and <m>\vvec_2</m>.
+	  </p></li>
+
+	  <li>
+	    <p>
+	      The vectors <m>\vvec_1</m>, <m>\vvec_2</m>, and
+	      <m>\vvec_3</m> are linearly dependent, and we know this
+	      in two ways.  We have seen how to express one vector as
+	      a linear combination of the others.  Also, we have seen
+	      that the associated matrix has a column without a pivot
+	      position.
+	    </p>
+	  </li>
+	</ol></p>
+      </solution>
+                    
+                </exercise>
+            </page>
+            <page>
+                <exercise workspace="4in">
+                    <title>Fact: Homogeneous Equations and Linear Indpendence</title>
+                    <statement>
+                        <p>
+                            The column vectors of a matrix <m>A</m> are linearly dependent exactly when
+                        </p>
+                    </statement>
+                    <solution>
+                        <p>
+                            <m>A\xvec = \zerovec</m> has a non-zero solution.
+                        </p>
+                        <p>
+                            See <url href="https://understandinglinearalgebra.org/sec-linear-dep.html#sec-linear-dep-5-5">Example 2.4.8</url>.
+                        </p>
+                    </solution>
+                    
+                    
+                </exercise>
+
+                <exercise workspace="4in">
+                    <title>Summary: Linear Independence</title>
+                    <statement>
+                        <p>
+                            For <m>A=[\vvec_1 \vvec_2 \dots \vvec_n ]</m>, the following are equivalent:
+                        </p>
+                    </statement>
+                    <solution>
+                        <p>
+                            See <url href="https://understandinglinearalgebra.org/sec-linear-dep.html#sec-linear-dep-5-7">Proposition 2.4.9</url>.
+                        </p>
+                        <p>
+                            It would also be useful at this point to review
+                            <url href="https://understandinglinearalgebra.org/sec-linear-dep.html#sec-linear-dep-6-5">the parallels between span and linear independence</url>.
+                        </p>
+                    </solution>
+                    
+                    
+                </exercise>
+            </page>
+
+        </worksheet>
+    </article>
+</pretext>
