@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<pretext>
+    <article xml:id="worksheet">
+        <worksheet xmlns:xi="http://www.w3.org/2001/XInclude" margin="1in" bottom="1.25cm" xml:id="lab-3">
+            <title>Lab 3: Computer Animation</title>
+            <page>
+            <introduction>
+                <p>
+                    Complete the following exercises in
+                    groups of 2 or 3 students including complete explanations of your
+                    work.  You should write directly on this handout (if additional pages are necessary, please
+                    make sure they are well-organized), and you
+                    only need to submit one report to Gradescope.  Make sure you indicate everyone in your group
+                    in your submission to Gradescope.
+                </p>
+                <p>
+                    In this lab, we'll see how computer
+                    animators use matrix transformations to tell stories. In fact, when
+                    you watch a Pixar movie, you're actually seeing some very elegant
+                    applications of linear algebra. You may wish to use <url href="https://understandinglinearalgebra.org/sec-transforms-geom.html#sec-transforms-geom-4">Subsection 2.6.2</url>
+                    as a supplemental resource for this lab.
+                </p>
+                <p>
+                    Now, let me introduce you to Wooody, the lovable star of the animated
+                    kids' film <em>Toy Tale</em> due out this holiday season. 
+                    
+                </p>
+                <image source="woody.png" width="35%">
+                        <shortdescription>Stick figure in coordinate plane.</shortdescription>
+                    </image>
+                <p>
+                    The computer animators who made <em>Toy Tale</em> assembled the film
+                frame by frame.  To make us think that Wooody is moving, they make
+                changes in Wooody's position from one frame to the next.  This is
+                where linear algebra is useful.  (Actually, Wooody really lives in a
+                three-dimensional world and each part of his body may be moving in
+                different ways so the situation is a little more complicated but
+                hopefully you will get the idea.)
+
+                </p>
+                <p>
+                    If you go to <url href="http://gvsu.edu/s/0Jb">the animation interactive</url>, you will find a figure that
+                can make Wooody move.  On the left, you see a picture of Wooody,
+                while on the right you will see a picture of him after a matrix
+                transformation has been applied.
+                </p>
+                <p>
+                Here is the function we will consider; it is not quite as simple as what we have seen in class: 
+                    <me>
+                        \begin{array}{ccc}x_r \amp = \amp ax_l + by_l + c  \\ y_r \amp = \amp dx_l + ey_l + f  \end{array}
+                    </me>
+    
+                The six sliders along the top of the diagram represent the quantities
+                    <me>
+                    \begin{array}{ccc}a \amp b \amp c \\ d \amp e \amp f \end{array}
+                    </me>
+                </p>
+            </introduction>
+        </page>
+        
+        <page>
+            <exercise>
+                <introduction>
+                    <p>
+                         Using homogeneous coordinates, we represent this change as
+ <me>
+  \left[\begin{array}{c}x_r \\ y_r \\ 1\end{array}\right] = \left[\begin{array}{ccc}a &#x26; b &#x26; c \\ d &#x26; e &#x26; f \\ 0 &#x26; 0 &#x26; 1\end{array}\right] \threevec{x_l}{y_l}{1}.
+</me>
+                    </p>
+                </introduction>
+               <task workspace="3in">
+                <statement>
+                    <p>
+                        Compute this matrix product and verify that it produces the appropriate expressions for <m>x_{r}</m> and <m>y_{r}</m>.
+                    </p>
+                </statement>
+               </task>
+               <task workspace="3in">
+                <statement>
+                    <p>
+                       The benefit of using homogeneous coordinates is because they introduce additional parameters <m>c</m> and <m>f</m>.
+What role do these two parameters play in the transformation?
+                    </p>
+                </statement>
+               </task>
+
+  
+
+            </exercise>
+        </page>
+
+        <page>
+            <exercise>
+                <statement>
+                    <p>
+                        Press the <term>Reset</term> button if you have modified
+                    Wooody.  As shown above, Wooody is waving with his left hand.  In
+                    the first scene of the movie, Wooody comes on screen and waves with
+                    his right hand.  What is the matrix transformation that has been
+                    applied?  
+                    </p>
+                    <image source="woody1.png" width="35%">
+                        <shortdescription>Stick figure with right arm up and left arm down.</shortdescription>
+                    </image>
+                </statement>
+            </exercise>
+        </page>
+
+        <page>
+            <exercise>
+                <introduction>
+                    <p>
+                        Next, Wooody begins his morning callesthenics and performs
+                        a cartwheel in the following frames reading across the first row and
+                        then the bottom.
+
+                    </p>
+                    <image source="woody-moves.png" width="35%">
+                        <shortdescription>The progression of the stick figure doing four 45 degree rotations counterclockwise.</shortdescription>
+                    </image>
+                </introduction>
+                <task workspace="2in">
+                    <statement>
+                        <p>
+                             What is the transformation <m>M_1</m> that produces the first (upper left)
+  frame?
+                        </p>
+                    </statement>
+                </task>
+                <task workspace="2in">
+                    <statement>
+                        <p>
+                             Using <m>M_{1}</m>, how can you produce the second frame (upper right)? What is the matrix <m>M_{2}</m> that produces the second frame?
+                        </p>
+                    </statement>
+                </task>
+                <task workspace="2in">
+                    <statement>
+                        <p>
+                            How can you continue using <m>M_{1}</m> to generate <m>M_{3}</m> and <m>M_{4}</m>, the matrices that produce the remaining two frames?
+                        </p>
+                    </statement>
+                </task>
+            </exercise>
+        </page>
+
+        <page>
+            <exercise>
+                <introduction>
+                    <p>
+                        At this point in the story, Wooody remembers a
+                        long-ago love and the camera moves in for a close up.
+                    </p>
+                    <image source="woody-close.png" width="45%">
+                        <shortdescription>The progression of the stick figure being magnified.</shortdescription>
+                    </image>
+                    <p>
+                             There are two ways to do this, but one is easy after a little
+                            thought.  The first two frames are rather straightforward.  The
+                            third is a little tricky but the diagram gives you another tool to
+                            help.  Once you have the diagram configured in some way you like,
+                            you may press the button <term>Apply</term>, the image on the left is set
+                            to that on the right and the transformation reset to the identity.
+                            You may then operate on the new figure from scratch.
+                            (Mathematically, you are composing two functions.)
+                        </p>
+                </introduction>
+
+                <task workspace="2in">
+                    <statement>
+        
+                        <p>
+                            Explain a simple way to make the sequence of frames above.  
+                        </p>
+                    </statement>
+                </task>
+                <task workspace="2in">
+                    <statement>
+                        <p>
+                            Determine the function that takes our original picture of Woody into the final close up.
+                        </p>
+                    </statement>
+                </task>
+            </exercise>
+        </page>
+
+        <page>
+            <exercise>
+                <introduction>
+                    <p>
+                        Wooody decides to go out for a walk.  In the morning sun,
+    he casts a shadow that looks like this:
+                    </p>
+                    <image source="woody-shadow.png" width="25%">
+                        <shortdescription>The stick figure sheered to the right.</shortdescription>
+                    </image>
+                </introduction>
+                <task workspace="2in">
+                    <statement>
+                        <p>
+                             Find the matrix transformation that creates the
+    shadow.  You might remember how we have found the matrix
+    representing a matrix transformation by looking at what happens to
+    the vectors <m>\evec_1</m> and <m>\evec_2</m>.
+                        </p>
+                    </statement>
+                </task>
+                <task workspace="4in">
+                    <statement>
+                        <p>
+                             As the sun comes up, his shadow get shorter.
+                        </p>
+                        <image source="woody-shadow2.png" width="35%">
+                        <shortdescription>The progression of the stick figure sheering more to the right.</shortdescription>
+                        </image>
+                        <p>
+                            Explain what matrix transformations achieve this and how you found
+    them.  (Think about composing transformations again.)
+                        </p>
+                    </statement>
+                </task>
+            </exercise>
+        </page>
+        <page>
+            <exercise>
+                <statement>
+                    <p>
+                        Write an ending to our heart-felt story and describe how to
+      illustrate it.
+                    </p>
+                </statement>
+            </exercise>
+        </page>
+        </worksheet>
+    </article>
+</pretext>
