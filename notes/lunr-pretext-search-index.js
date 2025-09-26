@@ -712,58 +712,58 @@ var ptx_lunr_docs = [
   "body": " Facts: Span and Pivots   Let . Then     exactly when the RREF of has a pivot in every row.  Since a matrix can have a most one pivot position in every column, this also implies that a set of vectors spanning must contain at least vectors.   "
 },
 {
-  "id": "sec-2-4-1",
+  "id": "sec-2-4-1-sols",
   "level": "1",
-  "url": "sec-2-4-1.html",
+  "url": "sec-2-4-1-sols.html",
   "type": "Worksheet",
   "number": "",
   "title": "<span class=\"process-math\">\\(\\S 2.4\\text{:}\\)<\/span> Linear Independence",
-  "body": " : Linear Independence    Motivation: Linear Independence          Preview Activity 2.4.1   Let's begin by looking at some sets of vectors in . As we saw in the previous section, the span of a set of vectors in will be either a line, a plane, or itself.     Consider the following vectors in : . Describe the span of these vectors, , as a line, a plane, or .       Now consider the set of vectors: . Describe the span of these vectors, , as a line, a plane, or .       Show that the vector is a linear combination of and by finding weights such that .      Explain why any linear combination of , , and , can be written as a linear combination of and .      Explain why .        Span of three vectors   Let's make more precise the difference between three vectors whose span is a plan and three vectors whose span is .  Let's compare and .       Span Geometrically      When three vectors span all of R 3. Two vectors form a plane, and the third vector is not in that plane.     When three vectors span a plane in R 3. Two vectors form a plane, and the third vector is in that plane.         Definition: Linear Independence   A set of vectors is called linearly dependent if     "
+  "body": " : Linear Independence    Motivation: Linear Independence       Span has given us a way to discuss whether solutions exist to a linear system. We'll now explore ideas that will help us determine if our system is efficient.       Preview Activity 2.4.1   Let's begin by looking at some sets of vectors in . As we saw in the previous section, the span of a set of vectors in will be either a line, a plane, or itself.     Consider the following vectors in : . Describe the span of these vectors, , as a line, a plane, or .     We will construct the matrix whose columns are , , and : Because there is a pivot in every row, we know that .      Now consider the set of vectors: . Describe the span of these vectors, , as a line, a plane, or .     Similarly, As there are two pivot positions, we see that is a plane in .      Show that the vector is a linear combination of and by finding weights such that .    We see that which tells us that .      Explain why any linear combination of , , and , can be written as a linear combination of and .    We have       Explain why .    Any linear combination of , , and is itself a linear combination of and .        Span of three vectors   Let's make more precise the difference between three vectors whose span is a plan and three vectors whose span is .  Let's compare and .    See Example 2.4.1 and Example 2.4.2 .       Span Geometrically       When three vectors span all of R 3. Two vectors form a plane, and the third vector is not in that plane.     When three vectors span a plane in R 3. Two vectors form a plane, and the third vector is in that plane.         Definition: Linear Independence   A set of vectors is called linearly dependent if    one of the vectors is a linear combination of the others. Otherwise, the set of vectors is called linearly independent .     "
 },
 {
-  "id": "sec-2-4-1-2-1",
+  "id": "sec-2-4-1-sols-2-1",
   "level": "2",
-  "url": "sec-2-4-1.html#sec-2-4-1-2-1",
+  "url": "sec-2-4-1-sols.html#sec-2-4-1-sols-2-1",
   "type": "Worksheet Exercise",
   "number": "1",
   "title": "Motivation: Linear Independence.",
-  "body": " Motivation: Linear Independence      "
+  "body": " Motivation: Linear Independence       Span has given us a way to discuss whether solutions exist to a linear system. We'll now explore ideas that will help us determine if our system is efficient.   "
 },
 {
-  "id": "sec-2-4-1-3-1",
+  "id": "sec-2-4-1-sols-3-1",
   "level": "2",
-  "url": "sec-2-4-1.html#sec-2-4-1-3-1",
+  "url": "sec-2-4-1-sols.html#sec-2-4-1-sols-3-1",
   "type": "Worksheet Exercise",
   "number": "2",
   "title": "Preview Activity 2.4.1.",
-  "body": " Preview Activity 2.4.1   Let's begin by looking at some sets of vectors in . As we saw in the previous section, the span of a set of vectors in will be either a line, a plane, or itself.     Consider the following vectors in : . Describe the span of these vectors, , as a line, a plane, or .       Now consider the set of vectors: . Describe the span of these vectors, , as a line, a plane, or .       Show that the vector is a linear combination of and by finding weights such that .      Explain why any linear combination of , , and , can be written as a linear combination of and .      Explain why .    "
+  "body": " Preview Activity 2.4.1   Let's begin by looking at some sets of vectors in . As we saw in the previous section, the span of a set of vectors in will be either a line, a plane, or itself.     Consider the following vectors in : . Describe the span of these vectors, , as a line, a plane, or .     We will construct the matrix whose columns are , , and : Because there is a pivot in every row, we know that .      Now consider the set of vectors: . Describe the span of these vectors, , as a line, a plane, or .     Similarly, As there are two pivot positions, we see that is a plane in .      Show that the vector is a linear combination of and by finding weights such that .    We see that which tells us that .      Explain why any linear combination of , , and , can be written as a linear combination of and .    We have       Explain why .    Any linear combination of , , and is itself a linear combination of and .    "
 },
 {
-  "id": "sec-2-4-1-4-1",
+  "id": "sec-2-4-1-sols-4-1",
   "level": "2",
-  "url": "sec-2-4-1.html#sec-2-4-1-4-1",
+  "url": "sec-2-4-1-sols.html#sec-2-4-1-sols-4-1",
   "type": "Worksheet Exercise",
   "number": "3",
   "title": "Span of three vectors.",
-  "body": " Span of three vectors   Let's make more precise the difference between three vectors whose span is a plan and three vectors whose span is .  Let's compare and .   "
+  "body": " Span of three vectors   Let's make more precise the difference between three vectors whose span is a plan and three vectors whose span is .  Let's compare and .    See Example 2.4.1 and Example 2.4.2 .   "
 },
 {
-  "id": "sec-2-4-1-5-1",
+  "id": "sec-2-4-1-sols-5-1",
   "level": "2",
-  "url": "sec-2-4-1.html#sec-2-4-1-5-1",
+  "url": "sec-2-4-1-sols.html#sec-2-4-1-sols-5-1",
   "type": "Worksheet Exercise",
   "number": "4",
   "title": "Span Geometrically.",
-  "body": " Span Geometrically      When three vectors span all of R 3. Two vectors form a plane, and the third vector is not in that plane.     When three vectors span a plane in R 3. Two vectors form a plane, and the third vector is in that plane.       "
+  "body": " Span Geometrically       When three vectors span all of R 3. Two vectors form a plane, and the third vector is not in that plane.     When three vectors span a plane in R 3. Two vectors form a plane, and the third vector is in that plane.       "
 },
 {
-  "id": "sec-2-4-1-5-2",
+  "id": "sec-2-4-1-sols-5-2",
   "level": "2",
-  "url": "sec-2-4-1.html#sec-2-4-1-5-2",
+  "url": "sec-2-4-1-sols.html#sec-2-4-1-sols-5-2",
   "type": "Worksheet Exercise",
   "number": "5",
   "title": "Definition: Linear Independence.",
-  "body": " Definition: Linear Independence   A set of vectors is called linearly dependent if   "
+  "body": " Definition: Linear Independence   A set of vectors is called linearly dependent if    one of the vectors is a linear combination of the others. Otherwise, the set of vectors is called linearly independent .   "
 },
 {
   "id": "sec-2-4-2",
