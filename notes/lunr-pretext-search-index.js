@@ -766,76 +766,76 @@ var ptx_lunr_docs = [
   "body": " Definition: Linear Independence   A set of vectors is called linearly dependent if    one of the vectors is a linear combination of the others. Otherwise, the set of vectors is called linearly independent .   "
 },
 {
-  "id": "sec-2-4-2",
+  "id": "sec-2-4-2-sols",
   "level": "1",
-  "url": "sec-2-4-2.html",
+  "url": "sec-2-4-2-sols.html",
   "type": "Worksheet",
   "number": "",
   "title": "<span class=\"process-math\">\\(\\S 2.4\\text{:}\\)<\/span> Linear Independence (Part 2)",
-  "body": " : Linear Independence (Part 2)    Motivation: Linear Independence          Activity: Determining Linear Independence   We would like to develop a means to detect when a set of vectors is linearly dependent. This activity will point the way.  Suppose we have five vectors in that form the columns of a matrix having reduced row echelon form . Is it possible to write one of the vectors as a linear combination of the others? If so, show explicitly how one vector appears as a linear combination of some of the other vectors. Is this set of vectors linearly dependent or independent?  Suppose we have another set of three vectors in that form the columns of a matrix having reduced row echelon form . Is it possible to write one of these vectors , , as a linear combination of the others? If so, show explicitly how one vector appears as a linear combination of some of the other vectors. Is this set of vectors linearly dependent or independent?  By looking at the pivot positions, how can you determine whether the columns of a matrix are linearly dependent or independent?  If one vector in a set is the zero vector , can the set of vectors be linearly independent?  Suppose a set of vectors in has twelve vectors. Is it possible for this set to be linearly independent?        Facts: Linear Independence        Homogeneous Equations          Activity: Homogeneous Equations and Linear Independence    Explain why the homogeneous equation is consistent no matter the matrix .  Consider the matrix whose columns we denote by , , and . Describe the solution space of the homogeneous equation using a parametric description, if appropriate.   Find a nonzero solution to the homogeneous equation and use it to find weights , , and such that .  Use the equation you found in the previous part to write one of the vectors as a linear combination of the others.  Are the vectors , , and linearly dependent or independent?        Fact: Homogeneous Equations and Linear Indpendence   The column vectors of a matrix are linearly dependent exactly when     Summary: Linear Independence   For , the following are equivalent:     "
+  "body": " : Linear Independence (Part 2)    Motivation: Linear Independence       Last time we saw the difference between three vectors spanning all of and spanning a plane in was whether or not one of the vectors was in the span of the other two. We called three vectors satisfying the former property linearly independent , and three vectors satisfying the latter property linearly dependent . How can we determine when a set of vectors is linearly independent?       Activity: Determining Linear Independence   We would like to develop a means to detect when a set of vectors is linearly dependent. This activity will point the way.  Suppose we have five vectors in that form the columns of a matrix having reduced row echelon form . Is it possible to write one of the vectors as a linear combination of the others? If so, show explicitly how one vector appears as a linear combination of some of the other vectors. Is this set of vectors linearly dependent or independent?  Suppose we have another set of three vectors in that form the columns of a matrix having reduced row echelon form . Is it possible to write one of these vectors , , as a linear combination of the others? If so, show explicitly how one vector appears as a linear combination of some of the other vectors. Is this set of vectors linearly dependent or independent?  By looking at the pivot positions, how can you determine whether the columns of a matrix are linearly dependent or independent?  If one vector in a set is the zero vector , can the set of vectors be linearly independent?  Suppose a set of vectors in has twelve vectors. Is it possible for this set to be linearly independent?      Let's focus on the first three vectors and view the matrix as an augmented one: This shows that so it is possible to write one of the vectors as a linear combination of the others. Therefore, the set is linearly dependent.  Applying the same reasoning as in the previous part, we see that we cannot write any of the vectors as a linear combination of the others. Therefore, the set is linearly independent.  The columns of a matrix are linearly independent exactly when there is a pivot position in every column of the matrix.  No, because we can write the zero vector as a linear combination of the other vectors: .  No, because the matrix formed by the vectors would have 12 columns and only 10 rows. There can be at most 10 pivot positions so there are at least two columns without pivot positions.        Facts: Linear Independence       The columns of a matrix are linearly independent exactly when every column contains a pivot position.  Therefore, a linearly independent set of vectors in contains at most vectors.     Homogeneous Equations       The equation can be a particularly useful starting place for answering many questions, including that of linear independence.  The equation is called a homogeneous equation .       Activity: Homogeneous Equations and Linear Independence    Explain why the homogeneous equation is consistent no matter the matrix .  Consider the matrix whose columns we denote by , , and . Describe the solution space of the homogeneous equation using a parametric description, if appropriate.   Find a nonzero solution to the homogeneous equation and use it to find weights , , and such that .  Use the equation you found in the previous part to write one of the vectors as a linear combination of the others.  Are the vectors , , and linearly dependent or independent?      The vector is always a solution.  We have From the reduced row echelon form, we see that is a free variable and that we have The solution space is then written parametrically as   If we set , then we have the solution , which says that   We may rewrite this expression as , showing that is a linear combination of and .   The vectors , , and are linearly dependent, and we know this in two ways. We have seen how to express one vector as a linear combination of the others. Also, we have seen that the associated matrix has a column without a pivot position.         Fact: Homogeneous Equations and Linear Indpendence   The column vectors of a matrix are linearly dependent exactly when     has a non-zero solution.  See Example 2.4.8 .     Summary: Linear Independence   For , the following are equivalent:    See Proposition 2.4.9 .  It would also be useful at this point to review the parallels between span and linear independence .     "
 },
 {
-  "id": "sec-2-4-2-2-1",
+  "id": "sec-2-4-2-sols-2-1",
   "level": "2",
-  "url": "sec-2-4-2.html#sec-2-4-2-2-1",
+  "url": "sec-2-4-2-sols.html#sec-2-4-2-sols-2-1",
   "type": "Worksheet Exercise",
   "number": "1",
   "title": "Motivation: Linear Independence.",
-  "body": " Motivation: Linear Independence      "
+  "body": " Motivation: Linear Independence       Last time we saw the difference between three vectors spanning all of and spanning a plane in was whether or not one of the vectors was in the span of the other two. We called three vectors satisfying the former property linearly independent , and three vectors satisfying the latter property linearly dependent . How can we determine when a set of vectors is linearly independent?   "
 },
 {
-  "id": "sec-2-4-2-3-1",
+  "id": "sec-2-4-2-sols-3-1",
   "level": "2",
-  "url": "sec-2-4-2.html#sec-2-4-2-3-1",
+  "url": "sec-2-4-2-sols.html#sec-2-4-2-sols-3-1",
   "type": "Worksheet Exercise",
   "number": "2",
   "title": "Activity: Determining Linear Independence.",
-  "body": " Activity: Determining Linear Independence   We would like to develop a means to detect when a set of vectors is linearly dependent. This activity will point the way.  Suppose we have five vectors in that form the columns of a matrix having reduced row echelon form . Is it possible to write one of the vectors as a linear combination of the others? If so, show explicitly how one vector appears as a linear combination of some of the other vectors. Is this set of vectors linearly dependent or independent?  Suppose we have another set of three vectors in that form the columns of a matrix having reduced row echelon form . Is it possible to write one of these vectors , , as a linear combination of the others? If so, show explicitly how one vector appears as a linear combination of some of the other vectors. Is this set of vectors linearly dependent or independent?  By looking at the pivot positions, how can you determine whether the columns of a matrix are linearly dependent or independent?  If one vector in a set is the zero vector , can the set of vectors be linearly independent?  Suppose a set of vectors in has twelve vectors. Is it possible for this set to be linearly independent?    "
+  "body": " Activity: Determining Linear Independence   We would like to develop a means to detect when a set of vectors is linearly dependent. This activity will point the way.  Suppose we have five vectors in that form the columns of a matrix having reduced row echelon form . Is it possible to write one of the vectors as a linear combination of the others? If so, show explicitly how one vector appears as a linear combination of some of the other vectors. Is this set of vectors linearly dependent or independent?  Suppose we have another set of three vectors in that form the columns of a matrix having reduced row echelon form . Is it possible to write one of these vectors , , as a linear combination of the others? If so, show explicitly how one vector appears as a linear combination of some of the other vectors. Is this set of vectors linearly dependent or independent?  By looking at the pivot positions, how can you determine whether the columns of a matrix are linearly dependent or independent?  If one vector in a set is the zero vector , can the set of vectors be linearly independent?  Suppose a set of vectors in has twelve vectors. Is it possible for this set to be linearly independent?      Let's focus on the first three vectors and view the matrix as an augmented one: This shows that so it is possible to write one of the vectors as a linear combination of the others. Therefore, the set is linearly dependent.  Applying the same reasoning as in the previous part, we see that we cannot write any of the vectors as a linear combination of the others. Therefore, the set is linearly independent.  The columns of a matrix are linearly independent exactly when there is a pivot position in every column of the matrix.  No, because we can write the zero vector as a linear combination of the other vectors: .  No, because the matrix formed by the vectors would have 12 columns and only 10 rows. There can be at most 10 pivot positions so there are at least two columns without pivot positions.    "
 },
 {
-  "id": "sec-2-4-2-4-1",
+  "id": "sec-2-4-2-sols-4-1",
   "level": "2",
-  "url": "sec-2-4-2.html#sec-2-4-2-4-1",
+  "url": "sec-2-4-2-sols.html#sec-2-4-2-sols-4-1",
   "type": "Worksheet Exercise",
   "number": "3",
   "title": "Facts: Linear Independence.",
-  "body": " Facts: Linear Independence      "
+  "body": " Facts: Linear Independence       The columns of a matrix are linearly independent exactly when every column contains a pivot position.  Therefore, a linearly independent set of vectors in contains at most vectors.   "
 },
 {
-  "id": "sec-2-4-2-4-2",
+  "id": "sec-2-4-2-sols-4-2",
   "level": "2",
-  "url": "sec-2-4-2.html#sec-2-4-2-4-2",
+  "url": "sec-2-4-2-sols.html#sec-2-4-2-sols-4-2",
   "type": "Worksheet Exercise",
   "number": "4",
   "title": "Homogeneous Equations.",
-  "body": " Homogeneous Equations      "
+  "body": " Homogeneous Equations       The equation can be a particularly useful starting place for answering many questions, including that of linear independence.  The equation is called a homogeneous equation .   "
 },
 {
-  "id": "sec-2-4-2-5-1",
+  "id": "sec-2-4-2-sols-5-1",
   "level": "2",
-  "url": "sec-2-4-2.html#sec-2-4-2-5-1",
+  "url": "sec-2-4-2-sols.html#sec-2-4-2-sols-5-1",
   "type": "Worksheet Exercise",
   "number": "5",
   "title": "Activity: Homogeneous Equations and Linear Independence.",
-  "body": " Activity: Homogeneous Equations and Linear Independence    Explain why the homogeneous equation is consistent no matter the matrix .  Consider the matrix whose columns we denote by , , and . Describe the solution space of the homogeneous equation using a parametric description, if appropriate.   Find a nonzero solution to the homogeneous equation and use it to find weights , , and such that .  Use the equation you found in the previous part to write one of the vectors as a linear combination of the others.  Are the vectors , , and linearly dependent or independent?    "
+  "body": " Activity: Homogeneous Equations and Linear Independence    Explain why the homogeneous equation is consistent no matter the matrix .  Consider the matrix whose columns we denote by , , and . Describe the solution space of the homogeneous equation using a parametric description, if appropriate.   Find a nonzero solution to the homogeneous equation and use it to find weights , , and such that .  Use the equation you found in the previous part to write one of the vectors as a linear combination of the others.  Are the vectors , , and linearly dependent or independent?      The vector is always a solution.  We have From the reduced row echelon form, we see that is a free variable and that we have The solution space is then written parametrically as   If we set , then we have the solution , which says that   We may rewrite this expression as , showing that is a linear combination of and .   The vectors , , and are linearly dependent, and we know this in two ways. We have seen how to express one vector as a linear combination of the others. Also, we have seen that the associated matrix has a column without a pivot position.     "
 },
 {
-  "id": "sec-2-4-2-6-1",
+  "id": "sec-2-4-2-sols-6-1",
   "level": "2",
-  "url": "sec-2-4-2.html#sec-2-4-2-6-1",
+  "url": "sec-2-4-2-sols.html#sec-2-4-2-sols-6-1",
   "type": "Worksheet Exercise",
   "number": "6",
   "title": "Fact: Homogeneous Equations and Linear Indpendence.",
-  "body": " Fact: Homogeneous Equations and Linear Indpendence   The column vectors of a matrix are linearly dependent exactly when   "
+  "body": " Fact: Homogeneous Equations and Linear Indpendence   The column vectors of a matrix are linearly dependent exactly when     has a non-zero solution.  See Example 2.4.8 .   "
 },
 {
-  "id": "sec-2-4-2-6-2",
+  "id": "sec-2-4-2-sols-6-2",
   "level": "2",
-  "url": "sec-2-4-2.html#sec-2-4-2-6-2",
+  "url": "sec-2-4-2-sols.html#sec-2-4-2-sols-6-2",
   "type": "Worksheet Exercise",
   "number": "7",
   "title": "Summary: Linear Independence.",
-  "body": " Summary: Linear Independence   For , the following are equivalent:   "
+  "body": " Summary: Linear Independence   For , the following are equivalent:    See Proposition 2.4.9 .  It would also be useful at this point to review the parallels between span and linear independence .   "
 },
 {
   "id": "sec-2-5-1",
