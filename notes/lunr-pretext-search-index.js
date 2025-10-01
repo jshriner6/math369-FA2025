@@ -838,94 +838,85 @@ var ptx_lunr_docs = [
   "body": " Summary: Linear Independence   For , the following are equivalent:    See Proposition 2.4.9 .  It would also be useful at this point to review the parallels between span and linear independence .   "
 },
 {
-  "id": "sec-2-5-1",
+  "id": "sec-2-5-1-sols",
   "level": "1",
-  "url": "sec-2-5-1.html",
+  "url": "sec-2-5-1-sols.html",
   "type": "Worksheet",
   "number": "",
   "title": "<span class=\"process-math\">\\(\\S 2.5\\text{:}\\)<\/span> Matrix Transformations",
-  "body": " : Matrix Transformations    Motivation: Matrix Transformations          Preview Activity 2.5.1   We will begin by considering a more familiar situation; namely, the function , which takes a real number as an input and produces its square as its output.     What is the value of ?      Can we solve the equation ? If so, is the solution unique?      Can we solve the equation ? If so, is the solution unique?      Sketch a graph of the function in      Graph the function above.        We will now consider functions having the form . Draw a graph of the function on the left in .      Graphs of the function and .        Draw a graph of the function on the right of .      Remember that composing two functions means we use the output from one function as the input into the other; that is, . What function results from composing ?        Definition: Matrix Transformation   The matrix transformation of a matrix is     Example 1: Matrix Transformations   Consider the matrix      Example 2: Matrix Transformations   Consider the function that has the form        Activity: Matrix Transformations   In this activity, we will look at some examples of matrix transformations.  To begin, suppose that is the matrix with associated matrix transformation .  What is ?  What is ?  What is ?  Is there a vector such that ?  Write as a two-dimensional vector.      Suppose that where .  What is the dimension of the vectors that are inputs for ?  What is the dimension of the vectors that are outputs?  If we describe this transformation as , what are the values of and and how do they relate to the shape of ?  Describe the vectors for which .   If is the matrix , what is in terms of the vectors and ? What about ?  Suppose that is a matrix and that . If , what is the matrix ?        Fact: Identifying Matrix Transformations   If is a matrix transformation given by , then       Activity 2: Matrix Transformations   Let's look at some examples and apply these observations.   To begin, suppose that is the matrix transformation that takes a two-dimensional vector as an input and outputs , the two-dimensional vector obtained by rotating counterclockwise by , as shown in .   The matrix transformation takes two-dimensional vectors on the left and rotates them by counterclockwise into the vectors on the right.       We will see in the next section that many geometric operations like this one can be performed by matrix transformations.   If we write , what are the values of and , and what is the shape of the associated matrix ?    Determine the matrix by considering the vectors .    If as shown on the left in , use your matrix to determine and verify that it agrees with that shown on the right of .    If , determine the vector obtained by rotating counterclockwise by .             Activity (continued)      Suppose that we work for a company that makes baked goods, including cakes, doughnuts, and eclairs. The company operates two bakeries, Bakery 1 and Bakery 2. In one hour of operation,  Bakery 1 produces 10 cakes, 50 doughnuts, and 30 eclairs.  Bakery 2 produces 20 cakes, 30 doughnuts, and 30 eclairs.  If Bakery 1 operates for hours and Bakery 2 for hours, we will use the vector to describe the operation of the two bakeries.  We would like to describe a matrix transformation where describes the number of hours the bakeries operate and describes the total number of cakes, doughnuts, and eclairs produced. That is, where is the number of cakes, is the number of doughnuts, and is the number of eclairs produced.   If , what are the values of and , and what is the shape of the associated matrix ?    We can determine the matrix by considering vectors . For instance, will describe the number of cakes, doughnuts, and eclairs produced when Bakery 1 operates for one hour and Bakery 2 sits idle. What is this vector?    In the same way, determine . What is the matrix ?    If Bakery 1 operates for 120 hours and Bakery 2 for 180 hours, what is the total number of cakes, doughnuts, and eclairs produced?     Suppose that in one period of time, the company produces 5060 cakes, 14310 doughnuts, and 10470 eclairs. How long did each bakery operate?    Suppose that the company receives an order for a certain number of cakes, doughnuts, and eclairs. Can you guarantee that you can fill the order without having leftovers?           "
+  "body": " : Matrix Transformations    Motivation: Matrix Transformations       In the previous sections we've seen how matrix-vector multiplication can be viewed geometrically in terms of linear combinations. In this section, we'll see another perspective in which matrices can be viewed as functions which transform space.       Preview Activity 2.5.1   We will begin by considering a more familiar situation; namely, the function , which takes a real number as an input and produces its square as its output.     What is the value of ?    We find .      Can we solve the equation ? If so, is the solution unique?    If , then so there is not a unique solution.      Can we solve the equation ? If so, is the solution unique?    There are no solutions to the equation .      Sketch a graph of the function in      Graph the function above.               We will now consider functions having the form . Draw a graph of the function on the left in .      Graphs of the function and .      The graph is shown on the left below.          Draw a graph of the function on the right of .    The graph is shown on the right above.      Remember that composing two functions means we use the output from one function as the input into the other; that is, . What function results from composing ?    Composing the functions, we find that . We see that the composition is a new linear function whose slope is obtained by multiplying the slopes of and .        Definition: Matrix Transformation   The matrix transformation of a matrix is    the function . If is , note that is a function from to , written .     Example 1: Matrix Transformations   Consider the matrix     See Example 2.5.4      Example 2: Matrix Transformations   Consider the function that has the form     See Example 2.5.5        Activity: Matrix Transformations   In this activity, we will look at some examples of matrix transformations.  To begin, suppose that is the matrix with associated matrix transformation .  What is ?  What is ?  What is ?  Is there a vector such that ?  Write as a two-dimensional vector.      Suppose that where .  What is the dimension of the vectors that are inputs for ?  What is the dimension of the vectors that are outputs?  If we describe this transformation as , what are the values of and and how do they relate to the shape of ?  Describe the vectors for which .   If is the matrix , what is in terms of the vectors and ? What about ?  Suppose that is a matrix and that . If , what is the matrix ?      If , then   .   .   .   .  We seek a vector such that . We can solve this equation to find the unique solution .    Now if the matrix has dimensions .   must be a four-dimensional vector.   must be a three-dimensional vector.  For this matrix, we have . In general, if is an matrix, .  If we solve the homogeneous equation , we find that .     , the first column of the matrix. Similarly, gives the second column of the matrix.  The matrix is         Fact: Identifying Matrix Transformations   If is a matrix transformation given by , then     .       Activity 2: Matrix Transformations   Let's look at some examples and apply these observations.   To begin, suppose that is the matrix transformation that takes a two-dimensional vector as an input and outputs , the two-dimensional vector obtained by rotating counterclockwise by , as shown in .   The matrix transformation takes two-dimensional vectors on the left and rotates them by counterclockwise into the vectors on the right.       We will see in the next section that many geometric operations like this one can be performed by matrix transformations.   If we write , what are the values of and , and what is the shape of the associated matrix ?    Determine the matrix by considering the vectors .    If as shown on the left in , use your matrix to determine and verify that it agrees with that shown on the right of .    If , determine the vector obtained by rotating counterclockwise by .       Suppose that we work for a company that makes baked goods, including cakes, doughnuts, and eclairs. The company operates two bakeries, Bakery 1 and Bakery 2. In one hour of operation,  Bakery 1 produces 10 cakes, 50 doughnuts, and 30 eclairs.  Bakery 2 produces 20 cakes, 30 doughnuts, and 30 eclairs.  If Bakery 1 operates for hours and Bakery 2 for hours, we will use the vector to describe the operation of the two bakeries.  We would like to describe a matrix transformation where describes the number of hours the bakeries operate and describes the total number of cakes, doughnuts, and eclairs produced. That is, where is the number of cakes, is the number of doughnuts, and is the number of eclairs produced.   If , what are the values of and , and what is the shape of the associated matrix ?    We can determine the matrix by considering vectors . For instance, will describe the number of cakes, doughnuts, and eclairs produced when Bakery 1 operates for one hour and Bakery 2 sits idle. What is this vector?    In the same way, determine . What is the matrix ?    If Bakery 1 operates for 120 hours and Bakery 2 for 180 hours, what is the total number of cakes, doughnuts, and eclairs produced?     Suppose that in one period of time, the company produces 5060 cakes, 14310 doughnuts, and 10470 eclairs. How long did each bakery operate?    Suppose that the company receives an order for a certain number of cakes, doughnuts, and eclairs. Can you guarantee that you can fill the order without having leftovers?                Since both the inputs and the outputs of are two-dimensional, it follows that and that is a matrix.    Since we have .    Multiplying , which agrees with the vector shown in the figure.     .          The shape of matrix is , and .     .     .     .    We solve the equation to obtain     No, you cannot guarantee this because the two columns of cannot span . If we view an order received as a three-dimensional vector , then a solution to the equation tells us how long to operate the two bakeries to produce this order. However, since is a matrix, it must have a row without a pivot position, which means that the equation will be inconsistent for some vectors .           "
 },
 {
-  "id": "sec-2-5-1-2-1",
+  "id": "sec-2-5-1-sols-2-1",
   "level": "2",
-  "url": "sec-2-5-1.html#sec-2-5-1-2-1",
+  "url": "sec-2-5-1-sols.html#sec-2-5-1-sols-2-1",
   "type": "Worksheet Exercise",
   "number": "1",
   "title": "Motivation: Matrix Transformations.",
-  "body": " Motivation: Matrix Transformations      "
+  "body": " Motivation: Matrix Transformations       In the previous sections we've seen how matrix-vector multiplication can be viewed geometrically in terms of linear combinations. In this section, we'll see another perspective in which matrices can be viewed as functions which transform space.   "
 },
 {
-  "id": "sec-2-5-1-3-1",
+  "id": "sec-2-5-1-sols-3-1",
   "level": "2",
-  "url": "sec-2-5-1.html#sec-2-5-1-3-1",
+  "url": "sec-2-5-1-sols.html#sec-2-5-1-sols-3-1",
   "type": "Worksheet Exercise",
   "number": "2",
   "title": "Preview Activity 2.5.1.",
-  "body": " Preview Activity 2.5.1   We will begin by considering a more familiar situation; namely, the function , which takes a real number as an input and produces its square as its output.     What is the value of ?      Can we solve the equation ? If so, is the solution unique?      Can we solve the equation ? If so, is the solution unique?      Sketch a graph of the function in      Graph the function above.        We will now consider functions having the form . Draw a graph of the function on the left in .      Graphs of the function and .        Draw a graph of the function on the right of .      Remember that composing two functions means we use the output from one function as the input into the other; that is, . What function results from composing ?    "
+  "body": " Preview Activity 2.5.1   We will begin by considering a more familiar situation; namely, the function , which takes a real number as an input and produces its square as its output.     What is the value of ?    We find .      Can we solve the equation ? If so, is the solution unique?    If , then so there is not a unique solution.      Can we solve the equation ? If so, is the solution unique?    There are no solutions to the equation .      Sketch a graph of the function in      Graph the function above.               We will now consider functions having the form . Draw a graph of the function on the left in .      Graphs of the function and .      The graph is shown on the left below.          Draw a graph of the function on the right of .    The graph is shown on the right above.      Remember that composing two functions means we use the output from one function as the input into the other; that is, . What function results from composing ?    Composing the functions, we find that . We see that the composition is a new linear function whose slope is obtained by multiplying the slopes of and .    "
 },
 {
-  "id": "sec-2-5-1-4-1",
+  "id": "sec-2-5-1-sols-4-1",
   "level": "2",
-  "url": "sec-2-5-1.html#sec-2-5-1-4-1",
+  "url": "sec-2-5-1-sols.html#sec-2-5-1-sols-4-1",
   "type": "Worksheet Exercise",
   "number": "3",
   "title": "Definition: Matrix Transformation.",
-  "body": " Definition: Matrix Transformation   The matrix transformation of a matrix is   "
+  "body": " Definition: Matrix Transformation   The matrix transformation of a matrix is    the function . If is , note that is a function from to , written .   "
 },
 {
-  "id": "sec-2-5-1-4-2",
+  "id": "sec-2-5-1-sols-4-2",
   "level": "2",
-  "url": "sec-2-5-1.html#sec-2-5-1-4-2",
+  "url": "sec-2-5-1-sols.html#sec-2-5-1-sols-4-2",
   "type": "Worksheet Exercise",
   "number": "4",
   "title": "Example 1: Matrix Transformations.",
-  "body": " Example 1: Matrix Transformations   Consider the matrix    "
+  "body": " Example 1: Matrix Transformations   Consider the matrix     See Example 2.5.4    "
 },
 {
-  "id": "sec-2-5-1-4-3",
+  "id": "sec-2-5-1-sols-4-3",
   "level": "2",
-  "url": "sec-2-5-1.html#sec-2-5-1-4-3",
+  "url": "sec-2-5-1-sols.html#sec-2-5-1-sols-4-3",
   "type": "Worksheet Exercise",
   "number": "5",
   "title": "Example 2: Matrix Transformations.",
-  "body": " Example 2: Matrix Transformations   Consider the function that has the form    "
+  "body": " Example 2: Matrix Transformations   Consider the function that has the form     See Example 2.5.5    "
 },
 {
-  "id": "sec-2-5-1-5-1",
+  "id": "sec-2-5-1-sols-5-1",
   "level": "2",
-  "url": "sec-2-5-1.html#sec-2-5-1-5-1",
+  "url": "sec-2-5-1-sols.html#sec-2-5-1-sols-5-1",
   "type": "Worksheet Exercise",
   "number": "6",
   "title": "Activity: Matrix Transformations.",
-  "body": " Activity: Matrix Transformations   In this activity, we will look at some examples of matrix transformations.  To begin, suppose that is the matrix with associated matrix transformation .  What is ?  What is ?  What is ?  Is there a vector such that ?  Write as a two-dimensional vector.      Suppose that where .  What is the dimension of the vectors that are inputs for ?  What is the dimension of the vectors that are outputs?  If we describe this transformation as , what are the values of and and how do they relate to the shape of ?  Describe the vectors for which .   If is the matrix , what is in terms of the vectors and ? What about ?  Suppose that is a matrix and that . If , what is the matrix ?    "
+  "body": " Activity: Matrix Transformations   In this activity, we will look at some examples of matrix transformations.  To begin, suppose that is the matrix with associated matrix transformation .  What is ?  What is ?  What is ?  Is there a vector such that ?  Write as a two-dimensional vector.      Suppose that where .  What is the dimension of the vectors that are inputs for ?  What is the dimension of the vectors that are outputs?  If we describe this transformation as , what are the values of and and how do they relate to the shape of ?  Describe the vectors for which .   If is the matrix , what is in terms of the vectors and ? What about ?  Suppose that is a matrix and that . If , what is the matrix ?      If , then   .   .   .   .  We seek a vector such that . We can solve this equation to find the unique solution .    Now if the matrix has dimensions .   must be a four-dimensional vector.   must be a three-dimensional vector.  For this matrix, we have . In general, if is an matrix, .  If we solve the homogeneous equation , we find that .     , the first column of the matrix. Similarly, gives the second column of the matrix.  The matrix is     "
 },
 {
-  "id": "sec-2-5-1-6-1",
+  "id": "sec-2-5-1-sols-6-1",
   "level": "2",
-  "url": "sec-2-5-1.html#sec-2-5-1-6-1",
+  "url": "sec-2-5-1-sols.html#sec-2-5-1-sols-6-1",
   "type": "Worksheet Exercise",
   "number": "7",
   "title": "Fact: Identifying Matrix Transformations.",
-  "body": " Fact: Identifying Matrix Transformations   If is a matrix transformation given by , then   "
+  "body": " Fact: Identifying Matrix Transformations   If is a matrix transformation given by , then     .   "
 },
 {
-  "id": "sec-2-5-1-7-1",
+  "id": "sec-2-5-1-sols-7-1",
   "level": "2",
-  "url": "sec-2-5-1.html#sec-2-5-1-7-1",
+  "url": "sec-2-5-1-sols.html#sec-2-5-1-sols-7-1",
   "type": "Worksheet Exercise",
   "number": "8",
   "title": "Activity 2: Matrix Transformations.",
-  "body": " Activity 2: Matrix Transformations   Let's look at some examples and apply these observations.   To begin, suppose that is the matrix transformation that takes a two-dimensional vector as an input and outputs , the two-dimensional vector obtained by rotating counterclockwise by , as shown in .   The matrix transformation takes two-dimensional vectors on the left and rotates them by counterclockwise into the vectors on the right.       We will see in the next section that many geometric operations like this one can be performed by matrix transformations.   If we write , what are the values of and , and what is the shape of the associated matrix ?    Determine the matrix by considering the vectors .    If as shown on the left in , use your matrix to determine and verify that it agrees with that shown on the right of .    If , determine the vector obtained by rotating counterclockwise by .         "
-},
-{
-  "id": "sec-2-5-1-8-1",
-  "level": "2",
-  "url": "sec-2-5-1.html#sec-2-5-1-8-1",
-  "type": "Worksheet Exercise",
-  "number": "9",
-  "title": "Activity (continued).",
-  "body": " Activity (continued)      Suppose that we work for a company that makes baked goods, including cakes, doughnuts, and eclairs. The company operates two bakeries, Bakery 1 and Bakery 2. In one hour of operation,  Bakery 1 produces 10 cakes, 50 doughnuts, and 30 eclairs.  Bakery 2 produces 20 cakes, 30 doughnuts, and 30 eclairs.  If Bakery 1 operates for hours and Bakery 2 for hours, we will use the vector to describe the operation of the two bakeries.  We would like to describe a matrix transformation where describes the number of hours the bakeries operate and describes the total number of cakes, doughnuts, and eclairs produced. That is, where is the number of cakes, is the number of doughnuts, and is the number of eclairs produced.   If , what are the values of and , and what is the shape of the associated matrix ?    We can determine the matrix by considering vectors . For instance, will describe the number of cakes, doughnuts, and eclairs produced when Bakery 1 operates for one hour and Bakery 2 sits idle. What is this vector?    In the same way, determine . What is the matrix ?    If Bakery 1 operates for 120 hours and Bakery 2 for 180 hours, what is the total number of cakes, doughnuts, and eclairs produced?     Suppose that in one period of time, the company produces 5060 cakes, 14310 doughnuts, and 10470 eclairs. How long did each bakery operate?    Suppose that the company receives an order for a certain number of cakes, doughnuts, and eclairs. Can you guarantee that you can fill the order without having leftovers?         "
+  "body": " Activity 2: Matrix Transformations   Let's look at some examples and apply these observations.   To begin, suppose that is the matrix transformation that takes a two-dimensional vector as an input and outputs , the two-dimensional vector obtained by rotating counterclockwise by , as shown in .   The matrix transformation takes two-dimensional vectors on the left and rotates them by counterclockwise into the vectors on the right.       We will see in the next section that many geometric operations like this one can be performed by matrix transformations.   If we write , what are the values of and , and what is the shape of the associated matrix ?    Determine the matrix by considering the vectors .    If as shown on the left in , use your matrix to determine and verify that it agrees with that shown on the right of .    If , determine the vector obtained by rotating counterclockwise by .       Suppose that we work for a company that makes baked goods, including cakes, doughnuts, and eclairs. The company operates two bakeries, Bakery 1 and Bakery 2. In one hour of operation,  Bakery 1 produces 10 cakes, 50 doughnuts, and 30 eclairs.  Bakery 2 produces 20 cakes, 30 doughnuts, and 30 eclairs.  If Bakery 1 operates for hours and Bakery 2 for hours, we will use the vector to describe the operation of the two bakeries.  We would like to describe a matrix transformation where describes the number of hours the bakeries operate and describes the total number of cakes, doughnuts, and eclairs produced. That is, where is the number of cakes, is the number of doughnuts, and is the number of eclairs produced.   If , what are the values of and , and what is the shape of the associated matrix ?    We can determine the matrix by considering vectors . For instance, will describe the number of cakes, doughnuts, and eclairs produced when Bakery 1 operates for one hour and Bakery 2 sits idle. What is this vector?    In the same way, determine . What is the matrix ?    If Bakery 1 operates for 120 hours and Bakery 2 for 180 hours, what is the total number of cakes, doughnuts, and eclairs produced?     Suppose that in one period of time, the company produces 5060 cakes, 14310 doughnuts, and 10470 eclairs. How long did each bakery operate?    Suppose that the company receives an order for a certain number of cakes, doughnuts, and eclairs. Can you guarantee that you can fill the order without having leftovers?                Since both the inputs and the outputs of are two-dimensional, it follows that and that is a matrix.    Since we have .    Multiplying , which agrees with the vector shown in the figure.     .          The shape of matrix is , and .     .     .     .    We solve the equation to obtain     No, you cannot guarantee this because the two columns of cannot span . If we view an order received as a three-dimensional vector , then a solution to the equation tells us how long to operate the two bakeries to produce this order. However, since is a matrix, it must have a row without a pivot position, which means that the equation will be inconsistent for some vectors .         "
 },
 {
   "id": "sec-2-5-2",
