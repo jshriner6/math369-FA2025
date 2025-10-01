@@ -128,7 +128,7 @@
       <task >
         <statement>
 	  <p> Draw a graph of the function <m>h(x) = -\frac13 x</m>
-	  on the right of <xref ref="fig-graph-linear" />.  </p>
+	  on the right of <xref ref="fig-graph-linear-sols" />.  </p>
           
         </statement>
         
@@ -452,10 +452,10 @@
 		  <li>
 		    <p>
 		      If <m>\vvec=\twovec{-2}{-1}</m> as shown on the left
-		      in <xref ref="fig-mt-rotate"/>, use your matrix to
+		      in <xref ref="fig-mt-rotate-sols"/>, use your matrix to
 		      determine <m>T(\vvec)</m> and verify that it agrees
 		      with that shown on the right of <xref
-		      ref="fig-mt-rotate"/>.
+		      ref="fig-mt-rotate-sols"/>.
 		    </p>
 		  </li>
 		  <li>
