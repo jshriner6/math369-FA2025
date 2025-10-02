@@ -156,14 +156,13 @@ What role do these two parameters play in the transformation?
                         <shortdescription>The progression of the stick figure being magnified.</shortdescription>
                     </image>
                     <p>
-                             There are two ways to do this, but one is easy after a little
-                            thought.  The first two frames are rather straightforward.  The
+                             There are two ways to do this, and the sequence of frames above illustrates one.  The first two frames are rather straightforward.  The
                             third is a little tricky but the diagram gives you another tool to
                             help.  Once you have the diagram configured in some way you like,
-                            you may press the button <term>Apply</term>, the image on the left is set
-                            to that on the right and the transformation reset to the identity.
+                            you may press the button <term>Compose</term>, and the image on the left is set
+                            to that on the right and the transformation resets to the identity.
                             You may then operate on the new figure from scratch.
-                            (Mathematically, you are composing two functions.)
+                            Mathematically, you are composing two functions.
                         </p>
                 </introduction>
 
@@ -171,14 +170,14 @@ What role do these two parameters play in the transformation?
                     <statement>
         
                         <p>
-                            Explain a simple way to make the sequence of frames above.  
+                            Explain the transformations required to make the sequence of frames above.  
                         </p>
                     </statement>
                 </task>
                 <task workspace="2in">
                     <statement>
                         <p>
-                            Determine the function that takes our original picture of Woody into the final close up.
+                            Determine the (matrix) function that takes our original picture of Wooody into the final close up.
                         </p>
                     </statement>
                 </task>
