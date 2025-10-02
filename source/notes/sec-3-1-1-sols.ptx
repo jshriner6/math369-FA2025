@@ -1,0 +1,636 @@
+<pretext>
+    <article xml:id="notes">
+        <worksheet xml:id="sec-3-1-1-sols">
+        <title><m>\S 3.1</m>: Invertible Matrices</title>
+            <page>
+                <exercise workspace="2in">
+                    <title>Motivation: Invertible Matrices</title>
+                    <statement>
+                        <p>
+                            
+                        </p>
+                    </statement>
+                    <solution>
+                        <p>
+                            We've explored two important properties ofa set of vectors in <m>\real^m</m> in 
+                            <term>span</term> and <term>linear independence</term>. In this chapter, we'll explore
+                            the implications when a set of vectors both spans <m>\real^m</m> and is also a linearly
+                            independent set.
+                        </p>
+                    </solution>
+                </exercise>
+
+                <exercise>
+                    <title>Preview Activity 3.1.1</title>
+                    <task>
+                    <statement>
+          <p>
+            Explain how you would solve the equation <m>3x =
+	    5</m> using multiplication rather than
+	  division. </p>
+        </statement>
+        
+        <solution>
+          <p> Dividing by <m>3</m> is the same as
+	  multiplying by <m>\frac13</m>, the multiplicative inverse
+	  <m>\frac13</m> of <m>3</m>.  We have
+	    <me>
+	      \begin{array}{rl}
+	      \frac13(3x) \amp = \dfrac13 5  \\
+	      \left(\frac13 3\right)x\amp = \dfrac53   \\
+	      1x \amp = \dfrac 53 \\
+	      x \amp = \dfrac53\text{.} \\
+	      \end{array}
+	    </me>
+	  </p>
+        </solution>
+      </task>
+
+      <task >
+	<statement>
+          <p> Find the <m>2\times2</m> matrix <m>A</m> that
+	  rotates vectors counterclockwise by
+	  <m>90^\circ</m>. </p>
+        </statement>
+        
+        <solution>
+	  <p>
+	    As we have seen a few times, the matrix is
+	    <m>A=\left[\begin{array}{rr}
+	    0 \amp -1 \\
+	    1 \amp 0 \\
+	    \end{array}\right]\text{.}
+	    </m>
+	  </p>
+        </solution>
+      </task>
+
+      <task >
+        <statement>
+	  <p> Find the <m>2\times2</m> matrix <m>B</m> that
+	  rotates vectors <em>clockwise</em> by
+	  <m>90^\circ</m>. </p>
+        </statement>
+        
+        <solution>
+	  <p>
+	    Here, the matrix is
+	    <m>B=\left[\begin{array}{rr}
+	    0 \amp 1 \\
+	    -1 \amp 0 \\
+	    \end{array}\right]\text{.}
+	    </m>
+	  </p>
+        </solution>
+      </task>
+
+      <task >
+        <statement>
+	  <p> What do you expect the product <m>AB</m> to be?
+	  Explain the reasoning behind your expectation and then
+	  compute <m>AB</m> to verify it. </p>
+        </statement>
+        
+        <solution>
+	  <p> We should expect that <m>AB=I</m> since the effect
+	  of rotating by <m>90^\circ</m> clockwise followed by
+	  rotating <m>90^\circ</m> counterclockwise is to leave a
+	  vector unchanged.  We can verify this by performing the
+	  matrix multiplication. 
+	  </p>
+        </solution>
+      </task>
+
+      <task >
+        <statement>
+	  <p> Solve the equation <m>A\xvec = \twovec{3}{-2}</m>
+	  using Gaussian elimination.
+	  <sage>
+	    <input>
+	    </input>
+	  </sage>
+	  </p>
+        </statement>
+       
+        <solution>
+	  <p> We have
+	  <me>
+	    \left[\begin{array}{rr|r}
+	    0 \amp -1 \amp 3 \\
+	    1 \amp 0 \amp -2 \\
+	    \end{array}\right]
+	    \sim
+	    \left[\begin{array}{rr|r}
+	    1 \amp 0 \amp -2 \\
+	    0 \amp 1 \amp -3 \\
+	    \end{array}\right]
+	  </me>
+	  so the solution is <m>\xvec=\twovec{-2}{-3}</m>.
+	  </p>
+        </solution>
+      </task>
+
+      <task label="ula-preview-3-1-f">
+        <statement>
+	  <p> Explain why your solution may also be found by
+	  computing <m>\xvec = B\twovec{3}{-2}</m>. </p>
+        </statement>
+        
+        <solution>
+	  <p>
+	    The equation <m>A\xvec=\twovec{3}{-2}</m> is asking us to
+	    find the vector that becomes <m>\twovec{3}{-2}</m> after
+	    being rotated by <m>90^\circ</m>.  If we rotate
+	    <m>\twovec{3}{-2}</m> by <m>90^\circ</m> in the opposite
+	    direction, it will 
+	    have this property.  That is,
+	    if <m>\xvec = B\twovec{-2}{-3}</m>, then
+	    <me>
+	      A\xvec = A(B\xvec) 
+	      = (AB)\twovec{3}{-2} 
+	      = I\twovec{3}{-2} 
+	      = \twovec{3}{-2}.
+	    </me>
+	  </p>
+        </solution>
+      </task>
+
+      
+                    
+                </exercise>
+            </page>
+
+            <page>
+                <exercise workspace="3in">
+                    <title>Definition: Invertible Matrix</title>
+                    <statement>
+                        <p>
+                            An <m>n \times n</m> matrix <m>A</m> is <term>invertible</term> if 
+                        </p>
+                    </statement>
+                    <solution>
+                        <p>
+                            there is a matrix <m>B</m> such that
+                            <me>
+                                AB = I_n
+                            </me>.
+                            We typically denote the matrix <m>B</m> as <m>A^{-1}</m>.
+                            
+                        </p>
+                        <p>
+                            Two important questions related to this definition are
+                            <ol>
+                                <li>
+                                    <p>
+                                        How do we know if a matrix is invertible?
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        If a matrix is invertible, how do we find its inverse matrix?
+                                    </p>
+                                </li>
+                            </ol>
+                        </p>
+                    </solution>
+                    
+                </exercise>
+               
+            </page>
+
+            <page>
+                <exercise>
+                    <title>Activity: Finding an Inverse Matrix</title>
+                    <statement>
+	<p>
+	  This activity demonstrates a procedure for finding the
+	  inverse of a matrix <m>A</m>.
+
+	  <ol marker="a.">
+	    <li>
+	      <p>
+		Suppose that <m>A = \begin{bmatrix}
+		3 \amp -2 \\
+		1 \amp -1 \\
+		\end{bmatrix}
+		</m>.  To find an inverse <m>B</m>, we write its columns
+		as <m>B = \begin{bmatrix}\bvec_1 \amp \bvec_2
+		\end{bmatrix}</m> and require that
+		<me>
+		  \begin{aligned}
+		  AB \amp = I \\
+		  \begin{bmatrix}
+		  A\bvec_1 \amp A\bvec_2
+		  \end{bmatrix}
+		  \amp = 
+		  \begin{bmatrix}
+		  1 \amp 0 \\
+		  0 \amp 1 \\
+		  \end{bmatrix}.
+		  \end{aligned}
+		</me>
+		In other words, we can find the columns of <m>B</m> by
+		solving the equations
+		<me>
+		  A\bvec_1 = \twovec10,~~~
+		  A\bvec_2 = \twovec01.
+		</me>
+		Solve these equations to find <m>\bvec_1</m> and
+		<m>\bvec_2</m>.  Then write the matrix <m>B</m> and
+		verify that <m>AB=I</m>.  This is enough for us to
+		conclude that <m>B</m> is
+		the inverse of <m>A</m>.
+		<sage>
+		  <input>
+		  </input>
+		</sage>
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		Find the product <m>BA</m> and explain why we now know
+		that <m>B</m> is invertible and <m>B^{-1}=A</m>.
+		<sage>
+		  <input>
+		  </input>
+		</sage>
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		What happens when you try to find the inverse of
+		<m>C = \begin{bmatrix}
+		-2 \amp 1 \\
+		4 \amp -2 \\
+		\end{bmatrix}</m>?
+	      </p>
+	    </li>
+
+	    <li>
+	      <p>
+		We now develop a condition that must be satisfied by
+		an invertible matrix.
+		Suppose that <m>A</m> is an invertible
+		<m>n\times n</m> matrix with inverse <m>B</m> and 
+		suppose that <m>\bvec</m> is any <m>n</m>-dimensional
+		vector. Since <m>AB=I</m>, we have
+		<me>
+		  A(B\bvec) = (AB)\bvec = I\bvec = \bvec.
+		</me>
+		This says that the equation <m>A\xvec = \bvec</m> is
+		consistent and that <m>\xvec=B\bvec</m> is a solution.
+	      </p>
+
+	      <p>
+		Since we know that <m>A\xvec = \bvec</m> is consistent
+		for any vector <m>\bvec</m>, what does this say about
+		the span of the columns of <m>A</m>?
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		Since <m>A</m> is a square matrix,
+		what does this say
+		about the pivot positions of <m>A</m>? What is the
+		reduced row echelon form of <m>A</m>?
+	      </p>
+	    </li>
+
+	    <li>
+	      <p>
+		In this activity, we have studied the matrices
+		<me>
+		  A = \begin{bmatrix}
+		  3 \amp -2 \\
+		  1 \amp -1 \\
+		  \end{bmatrix},~~~
+		  C = \begin{bmatrix}
+		  -2 \amp 1 \\
+		  4 \amp -2 \\
+		  \end{bmatrix}.
+		</me>
+		Find the reduced row echelon form of each and explain
+		how those forms enable us to conclude that one matrix
+		is invertible and the other is not.
+	      </p>
+	    </li>
+	  </ol>
+	</p>
+      </statement>
+
+      <solution>
+	<p><ol marker="a.">
+	  <li><p>
+	    Solving the two equations for <m>\bvec_1</m> and
+	    <m>\bvec_2</m> gives
+	    <m>B = \begin{bmatrix}
+	    1 \amp -2 \\
+	    1 \amp -3 \\
+	    \end{bmatrix}</m>.  We can verify that, as we
+	    expect, <m>AB=I</m>.
+	  </p></li>
+
+	  <li><p>
+	    We find that <m>BA=I</m>, which is the condition that
+	    tells us that <m>B</m> is invertible.
+	  </p></li>
+
+	  <li><p>
+	    Seeking the first column of <m>C^{-1}</m>, we see that
+	    the equation <m>C\xvec = \twovec10</m> is not consistent.
+	    This means that <m>C</m> is not invertible.
+	  </p></li>
+
+	  <li><p>
+	    Since the equation <m>A\xvec = \bvec</m> is consistent for
+	    every <m>\bvec</m>, we know that the span of the columns
+	    of <m>A</m> is <m>\real^n</m>.
+	  </p></li>
+
+	  <li><p>
+	    Because the span of the columns of <m>A</m> is
+	    <m>\real^n</m>, there is a pivot position in every row.
+	    Since <m>A</m> is square, there is also a pivot position
+	    in every column.  This means that the reduced row echelon
+	    form of <m>A</m> must be the identity matrix <m>I_n</m>.
+	  </p></li>
+
+	  <li><p>
+	    We see that
+	    <me>
+	      A\sim \begin{bmatrix}
+	      1 \amp 0 \\
+	      0 \amp 1 \\
+	      \end{bmatrix},~~~
+	      C\sim
+	      \begin{bmatrix}
+	      1 \amp -\frac12 \\
+	      0 \amp 0 \\
+	      \end{bmatrix},
+	    </me>
+	    which shows that <m>A</m> is invertible and <m>C</m> is
+	    not. 
+	  </p></li>
+	</ol></p>
+      </solution>
+                    
+                    
+                </exercise>
+            </page>
+
+            <page>
+                <exercise>
+                    <title>Observations: Invertible Matrices</title>
+                    <statement>
+                        <p>
+                            
+                        </p>
+                    </statement>
+                    <solution>
+                        <p>
+                            <ol>
+                                <li>
+                                    <p>
+                                        The row operations used to solve the two systems involved in computing the inverse
+                                        matrix are the same, since the coefficient matrix in both is <m>A</m>. So in general,
+                                        we can save some work by solving both simultaneously:
+                                    </p>
+                                    <p>
+                                        If an <m>n \times n</m> matrix is invertible, then
+                                        <me>
+                                            \left[
+                                            \begin{array}{r|r}
+                                            A \amp I \\
+                                            \end{array}
+                                            \right]
+                                            \sim
+                                            \left[
+                                            \begin{array}{r|r}
+                                            I \amp A^{-1} \\
+                                            \end{array}
+                                            \right]
+                                        </me>
+                                        
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        If <m>A</m> is invertible, then <m>A\xvec = \bvec</m> is consistent for all vectors <m>\bvec</m>,
+                                        since <m>x=A^{-1}\bvec</m> is a solution. This solution is also unique, because we know
+                                        <m>A</m> has a pivot in every column.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        If <m>A</m> is invertible, we can argue that <m>A^{-1}</m> is also invertible, and its
+                                        inverse is <m>A</m>. That is, <m>(A^{-1})^{-1}=A</m>. See our notes from class 
+                                        or <url href="https://understandinglinearalgebra.org/sec-matrix-inverse.html#ex-right-inverse">Exercise 3.1.5.12</url>
+                                        for details.
+                                    </p>
+                                </li>
+                            </ol>
+                        </p>
+                    </solution>
+                    
+                </exercise>
+            </page>
+
+            <page>
+                <exercise >
+                    <title>Activity: Solving Equations</title>
+                    <statement>
+	<p>
+	  We'll begin by considering the square matrix
+	  <me>
+	    A = \begin{bmatrix}
+	    1 \amp 0 \amp 2 \\
+	    2 \amp 2 \amp 1 \\
+	    1 \amp 1 \amp 1 \\
+	    \end{bmatrix}.
+	  </me>
+	  
+	  <ol marker="a.">
+	    <li>
+	      <p>
+		Describe the solution space to the equation <m>A\xvec
+		= \threevec343</m> by augmenting <m>A</m> and finding
+		the reduced row echelon form.
+		<sage>
+		  <input>
+		  </input>
+		</sage>
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		Explain why <m>A</m> is invertible and find its
+		inverse.
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		Now use the inverse to solve the equation <m>A\xvec =
+		\threevec343</m> and verify that your result agrees
+		with what you found in part a.
+	      </p>
+	    </li>
+		
+	    <li>
+	      <p>
+		If you have defined a matrix <c>B</c> in Sage, you can
+		find it's inverse as <c>B.inverse()</c> or
+		<c>B^-1</c>.  Use Sage to 
+		find the inverse of the matrix
+		<me>
+		  B = \left[\begin{array}{rrr}
+		  1 \amp -2 \amp -1 \\
+		  -1 \amp 5 \amp 6 \\
+		  5 \amp -4 \amp 6 \\
+		  \end{array}\right]
+		</me>
+		and use it to solve the equation <m>B\xvec =
+		\threevec83{36}</m>. 
+		  <sage>
+		    <input>
+		    </input>
+		  </sage>
+	      </p>
+	    </li>
+	    
+	    <li>
+	      <p>
+		If <m>A</m> and <m>B</m> are the two matrices defined
+		in this activity, find their product <m>AB</m> and
+		verify that it is invertible.
+	      </p>
+	    </li>
+
+	    <li>
+	      <p>
+		Compute the products <m>A^{-1}B^{-1}</m> and
+		<m>B^{-1}A^{-1}</m>.  Which one agrees with
+		<m>(AB)^{-1}</m>?
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		Explain your finding by considering the product
+		<me>
+		  (AB)(B^{-1}A^{-1})
+		</me>
+		and using associativity to regroup the products so
+		that the middle two terms are multiplied first.
+	      </p>
+	    </li>
+	  </ol>
+	</p>
+      </statement>
+
+      <solution>
+	<p><ol marker="a.">
+	  <li><p>
+	    Constructing the augmented matrix, we see that
+	    <me>
+	      \left[\begin{array}{rrr|r}
+	      1 \amp 0 \amp 2 \amp 3 \\
+	      2 \amp 2 \amp 1 \amp 4 \\
+	      1 \amp 1 \amp 1 \amp 3
+	      \end{array}\right]
+	      \sim
+	      \left[\begin{array}{rrr|r}
+	      1 \amp 0 \amp 0 \amp -1 \\
+	      0 \amp 1 \amp 0 \amp 2 \\
+	      0 \amp 0 \amp 1 \amp 2
+	      \end{array}\right],
+	    </me>
+	    which says that there is a unique solution <m>\xvec =
+	    \threevec{-1}22</m>.
+	  </p>
+	  </li>
+
+	  <li>
+	    <p>
+	      Our work in part a shows that <m>A\sim I</m> from which
+	      we conclude that <m>A</m> is invertible.  To find the
+	      inverse,
+	      <me>
+		\left[\begin{array}{rrr|rrr}
+		1 \amp 0 \amp 2 \amp 1 \amp 0 \amp 0 \\
+		2 \amp 2 \amp 1 \amp 0 \amp 1 \amp 0 \\
+		1 \amp 1 \amp 1 \amp 0 \amp 0 \amp 1
+		\end{array}\right]
+		\sim
+		\left[\begin{array}{rrr|rrr}
+		1 \amp 0 \amp 0 \amp 1 \amp 2 \amp -4 \\
+		0 \amp 1 \amp 0 \amp -1 \amp -1 \amp 3 \\
+		0 \amp 0 \amp 1 \amp 0 \amp -1 \amp 2
+		\end{array}\right],
+	      </me>
+	      which says that
+	      <me>
+		A^{-1} = \begin{bmatrix}
+		1 \amp 2 \amp -4 \\
+		-1 \amp -1 \amp 3 \\
+		0 \amp -1 \amp 2 \\
+		\end{bmatrix}.
+	      </me>
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      We see that <m>A^{-1}\threevec343 = \threevec{-1}22</m>.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      Sage tells us that <m>B^{-1}\threevec{8}3{36} =
+	      \threevec{76}{47}{-26}</m>.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      Sage helps us see that <m>(AB)\sim I</m>, which tells us
+	      that <m>AB</m> is invertible.
+	    </p>
+	  </li>
+
+	  <li><p>
+	    We find that <m>(AB)^{-1} = B^{-1}A^{-1}</m>.
+	  </p></li>
+
+	  <li>
+	    <p>
+	      We see that
+	      <me>
+		(AB)(B^{-1}A^{-1}) = A(BB^{-1})A^{-1} = AIA^{-1} =
+		AA^{-1} = I.
+	      </me>
+	    </p>
+	  </li>
+	</ol></p>
+      </solution>
+                    
+                    
+                </exercise>
+            </page>
+
+            <page>
+                <exercise>
+                    <title>Summary: Invertible Matrices</title>
+                    <statement>
+                        <p>
+                            
+                        </p>
+                    </statement>
+                    <solution>
+                        <p>
+                            See <url href="https://understandinglinearalgebra.org/sec-matrix-inverse.html#proposition-invertible-properties">Proposition 3.1.7</url>.
+                        </p>
+                    </solution>
+                    
+                </exercise>
+            </page>
+
+        </worksheet>
+    </article>
+</pretext>

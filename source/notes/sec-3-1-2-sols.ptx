@@ -1,0 +1,289 @@
+<pretext>
+    <article xml:id="notes">
+        <worksheet xml:id="sec-3-1-2-sols">
+        <title><m>\S 3.1</m>: Invertible Matrices and Gaussian Elimination</title>
+            <page>
+                <exercise workspace="1in">
+                    <title>Motivation: Invertible Matrices and Gaussian Elimination</title>
+                    <statement>
+                        <p>
+                            
+                        </p>
+                    </statement>
+                    <solution>
+                        <p>
+                            We can re-frame row operations in Gaussian elimination as matrix multiplication by
+                            special matrices. This will be useful for "decomposing" matrices into special forms
+                            in future chapters.
+                        </p>
+                    </solution>
+                    
+                </exercise>
+                <exercise workspace="1in">
+                    <title>Triangular Matrices</title>
+                    <statement>
+                        <p>
+                            <image source="triangular.jpeg">
+                                <shortdescription>Generic lower triangular matrix with all zero entries above
+                                    the main diagonal, and generic upper triangular matrix with all zero entries
+                                    below the main diagonal.
+                                </shortdescription>
+                            </image>
+                        </p>
+                        
+                    </statement>
+                    <solution>
+                        <p>
+                            An <m>n \times n</m> matrix <m>A</m> is <term>lower triangular</term> if all its
+                            entries above the diagonal are zero. It is <term>upper triangular</term> if all the
+                            entries below the diagonal are zero.
+                        </p>
+                        <p>
+                            A triangular matrix is invertible exactly when all its diagonal entries are non-zero.
+                        </p>
+                    </solution>
+                    
+                </exercise>
+                
+            </page>
+            <page>
+                <exercise>
+                    <title>Activity: Gaussian Elmination and Matrix Multiplication</title>
+                    <statement>
+	<p>
+	  This activity explores how the row operations of scaling,
+	  interchange, and replacement can be performed using matrix
+	  multiplication.
+	</p>
+	<p>
+	  As an example, we consider the matrix
+	  <me>
+	    A = \left[\begin{array}{rrr}
+	    1 \amp 2 \amp 1 \\
+	    2 \amp 0 \amp -2 \\
+	    -1 \amp 2 \amp -1 \\
+	    \end{array}\right]
+	  </me>
+	  and apply a replacement operation that multiplies the first
+	  row by <m>-2</m> and adds it to the second row.  Rather than
+	  performing this operation in the usual way, we construct a
+	  new matrix by applying the desired replacement operation to
+	  the identity matrix.  To illustrate, we begin with the
+	  identity matrix
+	  <me>
+	    I = \begin{bmatrix}
+	    1 \amp 0 \amp 0 \\
+	    0 \amp 1 \amp 0 \\
+	    0 \amp 0 \amp 1 \\
+	    \end{bmatrix}
+	  </me>
+	  and form a new matrix by multiplying the first row by
+	  <m>-2</m> and adding it to the second row to obtain
+	  <me>
+	    R = \begin{bmatrix}
+	    1 \amp 0 \amp 0 \\
+	    -2 \amp 1 \amp 0 \\
+	    0 \amp 0 \amp 1 \\
+	    \end{bmatrix}.
+	  </me>
+	  <ol marker="a.">
+	    <li><p>
+	      Show that the product <m>RA</m> is the result of
+	      applying the replacement operation to <m>A</m>.
+	      
+	    </p></li>
+
+	    <li><p> Explain why <m>R</m> is invertible and find its
+	    inverse <m>R^{-1}</m>.
+	    </p></li>
+	    
+	    <li><p> Describe the relationship between <m>R</m> and
+	    <m>R^{-1}</m> and use the connection 
+	    to replacement operations to explain why it holds.
+	    </p></li>
+
+	    <li><p> Other row operations can be performed using a
+	    similar procedure.  For instance, suppose we want to scale
+	    the second row of <m>A</m> by <m>4</m>.  Find a matrix
+	    <m>S</m> so that <m>SA</m> is the same as that obtained
+	    from the scaling operation.  Why is <m>S</m> invertible
+	    and what is <m>S^{-1}</m>?
+	    
+	    </p></li>
+
+	    <li><p> Finally, suppose we want to interchange the first
+	    and third rows of <m>A</m>.  Find a matrix <m>P</m>,
+	    usually called a <em>permutation matrix</em> that performs
+	    this operation.  What is <m>P^{-1}</m>?
+	    </p></li>
+	      
+	    <li><p> The original matrix <m>A</m> is seen to be row
+	    equivalent to the upper triangular matrix <m>U</m> by
+	    performing three replacement operations on <m>A</m>:
+	    <me>
+	      A = \left[\begin{array}{rrr}
+	      1 \amp 2 \amp 1 \\
+	      2 \amp 0 \amp -2 \\
+	      -1 \amp 2 \amp -1 \\
+	      \end{array}\right]
+	      \sim
+	      \left[\begin{array}{rrr}
+	      1 \amp 2 \amp 1 \\
+	      0 \amp -4 \amp -4 \\
+	      0 \amp 0 \amp -4 \\
+	      \end{array}\right] = U.
+	      </me>
+	      Find the matrices <m>L_1</m>, <m>L_2</m>, and <m>L_3</m>
+	      that perform these row replacement operations so that
+	      <m>L_3L_2L_1 A = U</m>.  </p></li>
+	    
+	      <li><p> Explain why the matrix product <m>L_3L_2L_1</m> is
+	      invertible and use this fact to write <m>A = LU</m>.  What
+	      is the matrix <m>L</m> that you find?  Why do you think we
+	      denote it by <m>L</m>?
+	      
+	      
+	      </p></li>
+	  </ol>
+	</p>
+      </statement>
+      <solution>
+	<p><ol marker="a.">
+	  <li><p>
+	    Performing the matrix multiplication, we find that
+	    <me>
+	      RA = 
+	      \left[\begin{array}{rrr}
+	      1 \amp 0 \amp 0 \\
+	      -2 \amp 1 \amp 0 \\
+	      0 \amp 0 \amp 1 \\
+	      \end{array}\right]
+	      \left[\begin{array}{rrr}
+	      1 \amp 2 \amp 1 \\
+	      2 \amp 0 \amp -2 \\
+	      -1 \amp 2 \amp -1 \\
+	      \end{array}\right]
+	      =
+	      \left[\begin{array}{rrr}
+	      1 \amp 2 \amp 1 \\
+	      0 \amp -4 \amp -4 \\
+	      -1 \amp 2 \amp -1 \\
+	      \end{array}\right]\text{.}
+	    </me>
+	  </p></li>
+
+	  <li><p> We know that <m>R</m> is invertible because
+	  it is a lower triangular matrix whose diagonal entries are
+	  all 1.  We find that
+	  <m>
+	    R^{-1}
+	    = \left[\begin{array}{rrr}
+	    1 \amp 0 \amp 0 \\
+	    2 \amp 1 \amp 0 \\
+	    0 \amp 0 \amp 1 \\
+	    \end{array}\right]
+	    </m>, which can be verified.
+	  </p></li>
+
+	  <li><p>
+	    But we can see this in another way as well.
+	    The replacement operation is reversible;  that is, 
+	    multiplying the first row by <m>-2</m> and adding it to the
+	    second row can be undone by multiplying the first row by
+	    <m>2</m> and adding it to the second row.  
+	  </p></li>
+
+	  <li><p> We find that
+	  <me>
+	    S = \begin{bmatrix}
+	    1 \amp 0 \amp 0 \\
+	    0 \amp 4 \amp 0 \\
+	    0 \amp 0 \amp 1 \\
+	    \end{bmatrix},~~~
+	    S^{-1} = \begin{bmatrix}
+	    1 \amp 0 \amp 0 \\
+	    0 \amp \frac14 \amp 0 \\
+	    0 \amp 0 \amp 1 \\
+	    \end{bmatrix}.
+	  </me>
+	  This makes sense because scaling a row by <m>4</m> can be
+	  undone by scaling the same row by <m>\frac14</m>.
+	  </p></li>
+
+	  <li><p> We find that
+	  <me>
+	    P = \begin{bmatrix}
+	    0 \amp 0 \amp 1 \\
+	    0 \amp 1 \amp 0 \\
+	    1 \amp 0 \amp 0 \\
+	    \end{bmatrix}.
+	  </me>
+	  Moreover, <m>P=P^{-1}</m> because we can undo the
+	  interchange operation by repeating it.
+	  </p></li>
+
+	  <li><p>
+	    Continuing with the Gaussian elimination algorithm, we
+	    have <m>L_1 = R</m>, as above, 
+	    <me>
+	      L_2 = \left[\begin{array}{rrr}
+	      1 \amp 0 \amp 0 \\
+	      0 \amp 1 \amp 0 \\
+	      1 \amp 0 \amp 1 \\
+	      \end{array}\right],~~~
+	      L_3 = \left[\begin{array}{rrr}
+	      1 \amp 0 \amp 0 \\
+	      0 \amp 1 \amp 0 \\
+	      0 \amp 1 \amp 1 \\
+	      \end{array}\right]\text{.}
+	    </me>
+	    we then have
+	    <m>L_3L_2L_1A = U</m>.
+	  </p></li>
+
+	  <li><p>
+	    Each of the matrices <m>L_1</m>, <m>L_2</m>, and
+	    <m>L_3</m> is invertible so their product will be as
+	    well.  Since <m>(L_3L_2L_1)A = U</m>, we have <m>A =
+	    (L_3L_2L_1)^{-1}U</m>.  
+	    Moreover,
+	    <m>L = (L_3L_2L_1)^{-1} = L_1^{-1}L_2^{-1}L_3^{-1}</m>
+	    gives
+	    <m>L=\left[\begin{array}{rrr}
+	    1 \amp 0 \amp 0 \\
+	    2 \amp 1 \amp 0 \\
+	    -1 \amp -1 \amp 1 \\
+	    \end{array}\right]</m>.  Notice that this matrix is lower
+	    triangular so we call it <m>L</m>.
+	  </p></li>
+
+	</ol></p>
+      </solution>
+                    
+                </exercise>
+            </page>
+            <page>
+                <exercise>
+                    <title>Elementary Matrices and LU Factorization</title>
+                    <statement>
+                        <p>
+                            
+                        </p>
+                    </statement>
+                    <solution>
+                        <p>
+                            Matrices obtained by performing a single row operation on the identity matrix are called 
+                            <term>elementary matrices</term>.
+                        </p>
+                        <p>
+                            For some square matrices <m>A</m>, we can use elementary matrices to find an 
+                            <term>LU-factorization</term> (<m>A = LU</m>), which can be very useful for computing.
+                        </p>
+                    </solution>
+                    
+                </exercise>
+            </page>
+
+        </worksheet>
+    </article>
+</pretext>

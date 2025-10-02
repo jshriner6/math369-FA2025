@@ -1,0 +1,346 @@
+<pretext>
+    <article xml:id="notes">
+        <worksheet xml:id="sec-3-1-1">
+        <title><m>\S 3.1</m>: Invertible Matrices</title>
+            <page>
+                <exercise workspace="2in">
+                    <title>Motivation: Invertible Matrices</title>
+                    <statement>
+                        <p>
+                            
+                        </p>
+                    </statement>
+                    
+                </exercise>
+
+                <exercise>
+                    <title>Preview Activity 3.1.1</title>
+                    <task>
+                    <statement>
+          <p>
+            Explain how you would solve the equation <m>3x =
+	    5</m> using multiplication rather than
+	  division. </p>
+        </statement>
+        
+        
+      </task>
+
+      <task >
+	<statement>
+          <p> Find the <m>2\times2</m> matrix <m>A</m> that
+	  rotates vectors counterclockwise by
+	  <m>90^\circ</m>. </p>
+        </statement>
+        
+        
+      </task>
+
+      <task >
+        <statement>
+	  <p> Find the <m>2\times2</m> matrix <m>B</m> that
+	  rotates vectors <em>clockwise</em> by
+	  <m>90^\circ</m>. </p>
+        </statement>
+        
+       
+      </task>
+
+      <task >
+        <statement>
+	  <p> What do you expect the product <m>AB</m> to be?
+	  Explain the reasoning behind your expectation and then
+	  compute <m>AB</m> to verify it. </p>
+        </statement>
+        
+        
+      </task>
+
+      <task >
+        <statement>
+	  <p> Solve the equation <m>A\xvec = \twovec{3}{-2}</m>
+	  using Gaussian elimination.
+	  <sage>
+	    <input>
+	    </input>
+	  </sage>
+	  </p>
+        </statement>
+       
+        
+      </task>
+
+      <task >
+        <statement>
+	  <p> Explain why your solution may also be found by
+	  computing <m>\xvec = B\twovec{3}{-2}</m>. </p>
+        </statement>
+        
+        
+      </task>
+
+      
+                    
+                </exercise>
+            </page>
+
+            <page>
+                <exercise workspace="3in">
+                    <title>Definition: Invertible Matrix</title>
+                    <statement>
+                        <p>
+                            An <m>n \times n</m> matrix <m>A</m> is <term>invertible</term> if 
+                        </p>
+                    </statement>
+                    
+                    
+                </exercise>
+               
+            </page>
+
+            <page>
+                <exercise>
+                    <title>Activity: Finding an Inverse Matrix</title>
+                    <statement>
+	<p>
+	  This activity demonstrates a procedure for finding the
+	  inverse of a matrix <m>A</m>.
+
+	  <ol marker="a.">
+	    <li>
+	      <p>
+		Suppose that <m>A = \begin{bmatrix}
+		3 \amp -2 \\
+		1 \amp -1 \\
+		\end{bmatrix}
+		</m>.  To find an inverse <m>B</m>, we write its columns
+		as <m>B = \begin{bmatrix}\bvec_1 \amp \bvec_2
+		\end{bmatrix}</m> and require that
+		<me>
+		  \begin{aligned}
+		  AB \amp = I \\
+		  \begin{bmatrix}
+		  A\bvec_1 \amp A\bvec_2
+		  \end{bmatrix}
+		  \amp = 
+		  \begin{bmatrix}
+		  1 \amp 0 \\
+		  0 \amp 1 \\
+		  \end{bmatrix}.
+		  \end{aligned}
+		</me>
+		In other words, we can find the columns of <m>B</m> by
+		solving the equations
+		<me>
+		  A\bvec_1 = \twovec10,~~~
+		  A\bvec_2 = \twovec01.
+		</me>
+		Solve these equations to find <m>\bvec_1</m> and
+		<m>\bvec_2</m>.  Then write the matrix <m>B</m> and
+		verify that <m>AB=I</m>.  This is enough for us to
+		conclude that <m>B</m> is
+		the inverse of <m>A</m>.
+		<sage>
+		  <input>
+		  </input>
+		</sage>
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		Find the product <m>BA</m> and explain why we now know
+		that <m>B</m> is invertible and <m>B^{-1}=A</m>.
+		
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		What happens when you try to find the inverse of
+		<m>C = \begin{bmatrix}
+		-2 \amp 1 \\
+		4 \amp -2 \\
+		\end{bmatrix}</m>?
+	      </p>
+	    </li>
+
+	    <li>
+	      <p>
+		We now develop a condition that must be satisfied by
+		an invertible matrix.
+		Suppose that <m>A</m> is an invertible
+		<m>n\times n</m> matrix with inverse <m>B</m> and 
+		suppose that <m>\bvec</m> is any <m>n</m>-dimensional
+		vector. Since <m>AB=I</m>, we have
+		<me>
+		  A(B\bvec) = (AB)\bvec = I\bvec = \bvec.
+		</me>
+		This says that the equation <m>A\xvec = \bvec</m> is
+		consistent and that <m>\xvec=B\bvec</m> is a solution.
+	      </p>
+
+	      <p>
+		Since we know that <m>A\xvec = \bvec</m> is consistent
+		for any vector <m>\bvec</m>, what does this say about
+		the span of the columns of <m>A</m>?
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		Since <m>A</m> is a square matrix,
+		what does this say
+		about the pivot positions of <m>A</m>? What is the
+		reduced row echelon form of <m>A</m>?
+	      </p>
+	    </li>
+
+	    <li>
+	      <p>
+		In this activity, we have studied the matrices
+		<me>
+		  A = \begin{bmatrix}
+		  3 \amp -2 \\
+		  1 \amp -1 \\
+		  \end{bmatrix},~~~
+		  C = \begin{bmatrix}
+		  -2 \amp 1 \\
+		  4 \amp -2 \\
+		  \end{bmatrix}.
+		</me>
+		Find the reduced row echelon form of each and explain
+		how those forms enable us to conclude that one matrix
+		is invertible and the other is not.
+	      </p>
+	    </li>
+	  </ol>
+	</p>
+      </statement>
+
+       
+                    
+                </exercise>
+            </page>
+
+            <page>
+                <exercise>
+                    <title>Observations: Invertible Matrices</title>
+                    <statement>
+                        <p>
+                            
+                        </p>
+                    </statement>
+                    
+                    
+                </exercise>
+            </page>
+
+            <page>
+                <exercise >
+                    <title>Activity: Solving Equations</title>
+                    <statement>
+	<p>
+	  We'll begin by considering the square matrix
+	  <me>
+	    A = \begin{bmatrix}
+	    1 \amp 0 \amp 2 \\
+	    2 \amp 2 \amp 1 \\
+	    1 \amp 1 \amp 1 \\
+	    \end{bmatrix}.
+	  </me>
+	  
+	  <ol marker="a.">
+	    <li>
+	      <p>
+		Describe the solution space to the equation <m>A\xvec
+		= \threevec343</m> by augmenting <m>A</m> and finding
+		the reduced row echelon form.
+		<sage>
+		  <input>
+		  </input>
+		</sage>
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		Explain why <m>A</m> is invertible and find its
+		inverse.
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		Now use the inverse to solve the equation <m>A\xvec =
+		\threevec343</m> and verify that your result agrees
+		with what you found in part a.
+	      </p>
+	    </li>
+		
+	    <li>
+	      <p>
+		If you have defined a matrix <c>B</c> in Sage, you can
+		find it's inverse as <c>B.inverse()</c> or
+		<c>B^-1</c>.  Use Sage to 
+		find the inverse of the matrix
+		<me>
+		  B = \left[\begin{array}{rrr}
+		  1 \amp -2 \amp -1 \\
+		  -1 \amp 5 \amp 6 \\
+		  5 \amp -4 \amp 6 \\
+		  \end{array}\right]
+		</me>
+		and use it to solve the equation <m>B\xvec =
+		\threevec83{36}</m>. 
+		  <sage>
+		    <input>
+		    </input>
+		  </sage>
+	      </p>
+	    </li>
+	    
+	    <li>
+	      <p>
+		If <m>A</m> and <m>B</m> are the two matrices defined
+		in this activity, find their product <m>AB</m> and
+		verify that it is invertible.
+	      </p>
+	    </li>
+
+	    <li>
+	      <p>
+		Compute the products <m>A^{-1}B^{-1}</m> and
+		<m>B^{-1}A^{-1}</m>.  Which one agrees with
+		<m>(AB)^{-1}</m>?
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		Explain your finding by considering the product
+		<me>
+		  (AB)(B^{-1}A^{-1})
+		</me>
+		and using associativity to regroup the products so
+		that the middle two terms are multiplied first.
+	      </p>
+	    </li>
+	  </ol>
+	</p>
+      </statement>
+
+        
+                    
+                </exercise>
+            </page>
+
+            <page>
+                <exercise>
+                    <title>Summary: Invertible Matrices</title>
+                    <statement>
+                        <p>
+                            
+                        </p>
+                    </statement>
+                    
+                </exercise>
+            </page>
+
+        </worksheet>
+    </article>
+</pretext>
