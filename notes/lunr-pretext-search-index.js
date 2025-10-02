@@ -962,6 +962,123 @@ var ptx_lunr_docs = [
   "number": "4",
   "title": "Application: Discrete Dynamical Systems.",
   "body": " Application: Discrete Dynamical Systems      "
+},
+{
+  "id": "sec-3-1-1",
+  "level": "1",
+  "url": "sec-3-1-1.html",
+  "type": "Worksheet",
+  "number": "",
+  "title": "<span class=\"process-math\">\\(\\S 3.1\\text{:}\\)<\/span> Invertible Matrices",
+  "body": " : Invertible Matrices    Motivation: Invertible Matrices        Preview Activity 3.1.1    Explain how you would solve the equation using multiplication rather than division.      Find the matrix that rotates vectors counterclockwise by .      Find the matrix that rotates vectors clockwise by .      What do you expect the product to be? Explain the reasoning behind your expectation and then compute to verify it.      Solve the equation using Gaussian elimination.       Explain why your solution may also be found by computing .        Definition: Invertible Matrix   An matrix is invertible if       Activity: Finding an Inverse Matrix   This activity demonstrates a procedure for finding the inverse of a matrix .   Suppose that . To find an inverse , we write its columns as and require that In other words, we can find the columns of by solving the equations Solve these equations to find and . Then write the matrix and verify that . This is enough for us to conclude that is the inverse of .     Find the product and explain why we now know that is invertible and .    What happens when you try to find the inverse of ?    We now develop a condition that must be satisfied by an invertible matrix. Suppose that is an invertible matrix with inverse and suppose that is any -dimensional vector. Since , we have This says that the equation is consistent and that is a solution.  Since we know that is consistent for any vector , what does this say about the span of the columns of ?    Since is a square matrix, what does this say about the pivot positions of ? What is the reduced row echelon form of ?    In this activity, we have studied the matrices Find the reduced row echelon form of each and explain how those forms enable us to conclude that one matrix is invertible and the other is not.          Observations: Invertible Matrices          Activity: Solving Equations   We'll begin by considering the square matrix    Describe the solution space to the equation by augmenting and finding the reduced row echelon form.     Explain why is invertible and find its inverse.    Now use the inverse to solve the equation and verify that your result agrees with what you found in part a.    If you have defined a matrix B in Sage, you can find it's inverse as B.inverse() or B^-1 . Use Sage to find the inverse of the matrix and use it to solve the equation .     If and are the two matrices defined in this activity, find their product and verify that it is invertible.    Compute the products and . Which one agrees with ?    Explain your finding by considering the product and using associativity to regroup the products so that the middle two terms are multiplied first.          Summary: Invertible Matrices        "
+},
+{
+  "id": "sec-3-1-1-2-1",
+  "level": "2",
+  "url": "sec-3-1-1.html#sec-3-1-1-2-1",
+  "type": "Worksheet Exercise",
+  "number": "1",
+  "title": "Motivation: Invertible Matrices.",
+  "body": " Motivation: Invertible Matrices      "
+},
+{
+  "id": "sec-3-1-1-2-2",
+  "level": "2",
+  "url": "sec-3-1-1.html#sec-3-1-1-2-2",
+  "type": "Worksheet Exercise",
+  "number": "2",
+  "title": "Preview Activity 3.1.1.",
+  "body": " Preview Activity 3.1.1    Explain how you would solve the equation using multiplication rather than division.      Find the matrix that rotates vectors counterclockwise by .      Find the matrix that rotates vectors clockwise by .      What do you expect the product to be? Explain the reasoning behind your expectation and then compute to verify it.      Solve the equation using Gaussian elimination.       Explain why your solution may also be found by computing .    "
+},
+{
+  "id": "sec-3-1-1-3-1",
+  "level": "2",
+  "url": "sec-3-1-1.html#sec-3-1-1-3-1",
+  "type": "Worksheet Exercise",
+  "number": "3",
+  "title": "Definition: Invertible Matrix.",
+  "body": " Definition: Invertible Matrix   An matrix is invertible if   "
+},
+{
+  "id": "sec-3-1-1-4-1",
+  "level": "2",
+  "url": "sec-3-1-1.html#sec-3-1-1-4-1",
+  "type": "Worksheet Exercise",
+  "number": "4",
+  "title": "Activity: Finding an Inverse Matrix.",
+  "body": " Activity: Finding an Inverse Matrix   This activity demonstrates a procedure for finding the inverse of a matrix .   Suppose that . To find an inverse , we write its columns as and require that In other words, we can find the columns of by solving the equations Solve these equations to find and . Then write the matrix and verify that . This is enough for us to conclude that is the inverse of .     Find the product and explain why we now know that is invertible and .    What happens when you try to find the inverse of ?    We now develop a condition that must be satisfied by an invertible matrix. Suppose that is an invertible matrix with inverse and suppose that is any -dimensional vector. Since , we have This says that the equation is consistent and that is a solution.  Since we know that is consistent for any vector , what does this say about the span of the columns of ?    Since is a square matrix, what does this say about the pivot positions of ? What is the reduced row echelon form of ?    In this activity, we have studied the matrices Find the reduced row echelon form of each and explain how those forms enable us to conclude that one matrix is invertible and the other is not.      "
+},
+{
+  "id": "sec-3-1-1-5-1",
+  "level": "2",
+  "url": "sec-3-1-1.html#sec-3-1-1-5-1",
+  "type": "Worksheet Exercise",
+  "number": "5",
+  "title": "Observations: Invertible Matrices.",
+  "body": " Observations: Invertible Matrices      "
+},
+{
+  "id": "sec-3-1-1-6-1",
+  "level": "2",
+  "url": "sec-3-1-1.html#sec-3-1-1-6-1",
+  "type": "Worksheet Exercise",
+  "number": "6",
+  "title": "Activity: Solving Equations.",
+  "body": " Activity: Solving Equations   We'll begin by considering the square matrix    Describe the solution space to the equation by augmenting and finding the reduced row echelon form.     Explain why is invertible and find its inverse.    Now use the inverse to solve the equation and verify that your result agrees with what you found in part a.    If you have defined a matrix B in Sage, you can find it's inverse as B.inverse() or B^-1 . Use Sage to find the inverse of the matrix and use it to solve the equation .     If and are the two matrices defined in this activity, find their product and verify that it is invertible.    Compute the products and . Which one agrees with ?    Explain your finding by considering the product and using associativity to regroup the products so that the middle two terms are multiplied first.      "
+},
+{
+  "id": "sec-3-1-1-7-1",
+  "level": "2",
+  "url": "sec-3-1-1.html#sec-3-1-1-7-1",
+  "type": "Worksheet Exercise",
+  "number": "7",
+  "title": "Summary: Invertible Matrices.",
+  "body": " Summary: Invertible Matrices      "
+},
+{
+  "id": "sec-3-1-2",
+  "level": "1",
+  "url": "sec-3-1-2.html",
+  "type": "Worksheet",
+  "number": "",
+  "title": "<span class=\"process-math\">\\(\\S 3.1\\text{:}\\)<\/span> Invertible Matrices and Gaussian Elimination",
+  "body": " : Invertible Matrices and Gaussian Elimination    Motivation: Invertible Matrices and Gaussian Elimination        Triangular Matrices     Generic lower triangular matrix with all zero entries above the main diagonal, and generic upper triangular matrix with all zero entries below the main diagonal.         Activity: Gaussian Elmination and Matrix Multiplication   This activity explores how the row operations of scaling, interchange, and replacement can be performed using matrix multiplication.  As an example, we consider the matrix and apply a replacement operation that multiplies the first row by and adds it to the second row. Rather than performing this operation in the usual way, we construct a new matrix by applying the desired replacement operation to the identity matrix. To illustrate, we begin with the identity matrix and form a new matrix by multiplying the first row by and adding it to the second row to obtain   Show that the product is the result of applying the replacement operation to .  Explain why is invertible and find its inverse .  Describe the relationship between and and use the connection to replacement operations to explain why it holds.  Other row operations can be performed using a similar procedure. For instance, suppose we want to scale the second row of by . Find a matrix so that is the same as that obtained from the scaling operation. Why is invertible and what is ?  Finally, suppose we want to interchange the first and third rows of . Find a matrix , usually called a permutation matrix that performs this operation. What is ?  The original matrix is seen to be row equivalent to the upper triangular matrix by performing three replacement operations on : Find the matrices , , and that perform these row replacement operations so that .  Explain why the matrix product is invertible and use this fact to write . What is the matrix that you find? Why do you think we denote it by ?         Elementary Matrices and LU Factorization        "
+},
+{
+  "id": "sec-3-1-2-2-1",
+  "level": "2",
+  "url": "sec-3-1-2.html#sec-3-1-2-2-1",
+  "type": "Worksheet Exercise",
+  "number": "1",
+  "title": "Motivation: Invertible Matrices and Gaussian Elimination.",
+  "body": " Motivation: Invertible Matrices and Gaussian Elimination      "
+},
+{
+  "id": "sec-3-1-2-2-2",
+  "level": "2",
+  "url": "sec-3-1-2.html#sec-3-1-2-2-2",
+  "type": "Worksheet Exercise",
+  "number": "2",
+  "title": "Triangular Matrices.",
+  "body": " Triangular Matrices     Generic lower triangular matrix with all zero entries above the main diagonal, and generic upper triangular matrix with all zero entries below the main diagonal.     "
+},
+{
+  "id": "sec-3-1-2-3-1",
+  "level": "2",
+  "url": "sec-3-1-2.html#sec-3-1-2-3-1",
+  "type": "Worksheet Exercise",
+  "number": "3",
+  "title": "Activity: Gaussian Elmination and Matrix Multiplication.",
+  "body": " Activity: Gaussian Elmination and Matrix Multiplication   This activity explores how the row operations of scaling, interchange, and replacement can be performed using matrix multiplication.  As an example, we consider the matrix and apply a replacement operation that multiplies the first row by and adds it to the second row. Rather than performing this operation in the usual way, we construct a new matrix by applying the desired replacement operation to the identity matrix. To illustrate, we begin with the identity matrix and form a new matrix by multiplying the first row by and adding it to the second row to obtain   Show that the product is the result of applying the replacement operation to .  Explain why is invertible and find its inverse .  Describe the relationship between and and use the connection to replacement operations to explain why it holds.  Other row operations can be performed using a similar procedure. For instance, suppose we want to scale the second row of by . Find a matrix so that is the same as that obtained from the scaling operation. Why is invertible and what is ?  Finally, suppose we want to interchange the first and third rows of . Find a matrix , usually called a permutation matrix that performs this operation. What is ?  The original matrix is seen to be row equivalent to the upper triangular matrix by performing three replacement operations on : Find the matrices , , and that perform these row replacement operations so that .  Explain why the matrix product is invertible and use this fact to write . What is the matrix that you find? Why do you think we denote it by ?     "
+},
+{
+  "id": "sec-3-1-2-4-1",
+  "level": "2",
+  "url": "sec-3-1-2.html#sec-3-1-2-4-1",
+  "type": "Worksheet Exercise",
+  "number": "4",
+  "title": "Elementary Matrices and LU Factorization.",
+  "body": " Elementary Matrices and LU Factorization      "
 }
 ]
 
