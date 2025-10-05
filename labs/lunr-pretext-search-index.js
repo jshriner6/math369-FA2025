@@ -107,6 +107,69 @@ var ptx_lunr_docs = [
   "number": "6",
   "title": "",
   "body": "  Repeat the analysis from part 5, assuming that all bicycles start at . What happens after a very long time?   "
+},
+{
+  "id": "lab-3",
+  "level": "1",
+  "url": "lab-3.html",
+  "type": "Worksheet",
+  "number": "",
+  "title": "Lab 3: Computer Animation",
+  "body": " Lab 3: Computer Animation    Complete the following exercises in groups of 2 or 3 students including complete explanations of your work. You should write directly on this handout (if additional pages are necessary, please make sure they are well-organized), and you only need to submit one report to Gradescope. Make sure you indicate everyone in your group in your submission to Gradescope.  In this lab, we'll see how computer animators use matrix transformations to tell stories. In fact, when you watch a Pixar movie, you're actually seeing some very elegant applications of linear algebra. You may wish to use Subsection 2.6.2 as a supplemental resource for this lab.  Now, let me introduce you to Wooody, the lovable star of the animated kids' film Toy Tale due out this holiday season.   Stick figure in coordinate plane.   The computer animators who made Toy Tale assembled the film frame by frame. To make us think that Wooody is moving, they make changes in Wooody's position from one frame to the next. This is where linear algebra is useful. (Actually, Wooody really lives in a three-dimensional world and each part of his body may be moving in different ways so the situation is a little more complicated but hopefully you will get the idea.)  If you go to the animation interactive , you will find a figure that can make Wooody move. On the left, you see a picture of Wooody, while on the right you will see a picture of him after a matrix transformation has been applied.  Here is the function we will consider; it is not quite as simple as what we have seen in class: The six sliders along the top of the diagram represent the quantities        Using homogeneous coordinates, we represent this change as      Compute this matrix product and verify that it produces the appropriate expressions for and .      The benefit of using homogeneous coordinates is because they introduce additional parameters and . What role do these two parameters play in the transformation?         Press the Reset button if you have modified Wooody. As shown above, Wooody is waving with his left hand. In the first scene of the movie, Wooody comes on screen and waves with his right hand. What is the matrix transformation that has been applied?   Stick figure with right arm up and left arm down.         Next, Wooody begins his morning callesthenics and performs a cartwheel in the following frames reading across the first row and then the bottom.   The progression of the stick figure doing four 45 degree rotations counterclockwise.      What is the transformation that produces the first (upper left) frame?      Using , how can you produce the second frame (upper right)? What is the matrix that produces the second frame?      How can you continue using to generate and , the matrices that produce the remaining two frames?         At this point in the story, Wooody remembers a long-ago love and the camera moves in for a close up.   The progression of the stick figure being magnified.   There are two ways to do this, and the sequence of frames above illustrates one. The first two frames are rather straightforward. The third is a little tricky but the diagram gives you another tool to help. Once you have the diagram configured in some way you like, you may press the button Compose , and the image on the left is set to that on the right and the transformation resets to the identity. You may then operate on the new figure from scratch. Mathematically, you are composing two functions.     Explain the transformations required to make the sequence of frames above.      Determine the (matrix) function that takes our original picture of Wooody into the final close up.         Wooody decides to go out for a walk. In the morning sun, he casts a shadow that looks like this:   The stick figure sheered to the right.      Find the matrix transformation that creates the shadow. You might remember how we have found the matrix representing a matrix transformation by looking at what happens to the vectors and .      As the sun comes up, his shadow get shorter.   The progression of the stick figure sheering more to the right.   Explain what matrix transformations achieve this and how you found them. (Think about composing transformations again.)         Write an ending to our heart-felt story and describe how to illustrate it.     "
+},
+{
+  "id": "lab-3-3-1",
+  "level": "2",
+  "url": "lab-3.html#lab-3-3-1",
+  "type": "Worksheet Exercise",
+  "number": "1",
+  "title": "",
+  "body": "  Using homogeneous coordinates, we represent this change as      Compute this matrix product and verify that it produces the appropriate expressions for and .      The benefit of using homogeneous coordinates is because they introduce additional parameters and . What role do these two parameters play in the transformation?    "
+},
+{
+  "id": "lab-3-4-1",
+  "level": "2",
+  "url": "lab-3.html#lab-3-4-1",
+  "type": "Worksheet Exercise",
+  "number": "2",
+  "title": "",
+  "body": "  Press the Reset button if you have modified Wooody. As shown above, Wooody is waving with his left hand. In the first scene of the movie, Wooody comes on screen and waves with his right hand. What is the matrix transformation that has been applied?   Stick figure with right arm up and left arm down.    "
+},
+{
+  "id": "lab-3-5-1",
+  "level": "2",
+  "url": "lab-3.html#lab-3-5-1",
+  "type": "Worksheet Exercise",
+  "number": "3",
+  "title": "",
+  "body": "  Next, Wooody begins his morning callesthenics and performs a cartwheel in the following frames reading across the first row and then the bottom.   The progression of the stick figure doing four 45 degree rotations counterclockwise.      What is the transformation that produces the first (upper left) frame?      Using , how can you produce the second frame (upper right)? What is the matrix that produces the second frame?      How can you continue using to generate and , the matrices that produce the remaining two frames?    "
+},
+{
+  "id": "lab-3-6-1",
+  "level": "2",
+  "url": "lab-3.html#lab-3-6-1",
+  "type": "Worksheet Exercise",
+  "number": "4",
+  "title": "",
+  "body": "  At this point in the story, Wooody remembers a long-ago love and the camera moves in for a close up.   The progression of the stick figure being magnified.   There are two ways to do this, and the sequence of frames above illustrates one. The first two frames are rather straightforward. The third is a little tricky but the diagram gives you another tool to help. Once you have the diagram configured in some way you like, you may press the button Compose , and the image on the left is set to that on the right and the transformation resets to the identity. You may then operate on the new figure from scratch. Mathematically, you are composing two functions.     Explain the transformations required to make the sequence of frames above.      Determine the (matrix) function that takes our original picture of Wooody into the final close up.    "
+},
+{
+  "id": "lab-3-7-1",
+  "level": "2",
+  "url": "lab-3.html#lab-3-7-1",
+  "type": "Worksheet Exercise",
+  "number": "5",
+  "title": "",
+  "body": "  Wooody decides to go out for a walk. In the morning sun, he casts a shadow that looks like this:   The stick figure sheered to the right.      Find the matrix transformation that creates the shadow. You might remember how we have found the matrix representing a matrix transformation by looking at what happens to the vectors and .      As the sun comes up, his shadow get shorter.   The progression of the stick figure sheering more to the right.   Explain what matrix transformations achieve this and how you found them. (Think about composing transformations again.)    "
+},
+{
+  "id": "lab-3-8-1",
+  "level": "2",
+  "url": "lab-3.html#lab-3-8-1",
+  "type": "Worksheet Exercise",
+  "number": "6",
+  "title": "",
+  "body": "  Write an ending to our heart-felt story and describe how to illustrate it.   "
 }
 ]
 
