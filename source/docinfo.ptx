@@ -59,6 +59,13 @@
 
     \newcommand{\laspan}[1]{\text{Span}\{#1\}}
      \newcommand{\real}{{\mathbb R}}
+
+     \newcommand{\bcal}{{\cal B}}
+    \newcommand{\ccal}{{\cal C}}
+    \newcommand{\scal}{{\cal S}}
+    \newcommand{\wcal}{{\cal W}}
+    \newcommand{\ecal}{{\cal E}}
+     \newcommand{\coords}[2]{\left\{#1\right\}_{#2}}
   </macros>
 
   <!-- If you put any latex-image elements you can include preambles -->

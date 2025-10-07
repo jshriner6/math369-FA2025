@@ -1,0 +1,264 @@
+<pretext>
+    <article xml:id="notes">
+        <worksheet xml:id="sec-3-2-1">
+        <title><m>\S 3.2</m>: Bases and Coordinate Systems</title>
+            <page>
+                <exercise workspace="1in">
+                    <title>Motivation: Bases and Coordinate Systems</title>
+                    <statement>
+                        <p>
+                            
+                        </p>
+                    </statement>
+                    
+                </exercise>
+
+                <exercise>
+                    <title>Preview Activity 3.2.1</title>
+                    <introduction>
+        <p> Consider the vectors
+        <me>
+	  \vvec_1 = \twovec{2}{1},
+	  \vvec_2 = \twovec{1}{2}
+        </me>
+        in <m>\real^2</m>, which are shown in
+        <xref ref="fig-basis-1" />.
+        </p>
+
+        <figure xml:id="fig-basis-1">
+	  <sidebyside width="40%">
+	    <image source="images/basis-1">
+            <shortdescription>Vectors v1 and v2 in 2 dimensional space.</shortdescription>
+        </image>
+	  </sidebyside>
+	  <caption>
+	    Linear combinations of <m>\vvec_1</m> and <m>\vvec_2</m>.
+	  </caption>
+        </figure>
+      </introduction>
+
+      <task>
+        <statement>
+          <p>Indicate the linear combination <m>\vvec_1 -
+	  2\vvec_2</m> on the figure.
+	  </p>
+        </statement>
+        
+       
+      </task>
+
+      <task >
+        <statement>
+	  <p> Express the vector <m>\twovec{-3}{0}</m> as a linear
+	  combination of <m>\vvec_1</m> and <m>\vvec_2</m>. </p>
+        </statement>
+       
+        
+      </task>
+
+      <task>
+        <statement>
+	  <p> Find the linear combination <m>10\vvec_1 -
+	  13\vvec_2</m>.  </p>
+        </statement>
+        
+       
+      </task>
+
+      <task >
+        <statement>
+	  <p> Express the vector <m>\twovec{16}{-4}</m> as a linear
+	  combination of <m>\vvec_1</m> and <m>\vvec_2</m>. </p>
+        </statement>
+       
+        
+      </task>
+
+      <task>
+        <statement>
+	  <p> Explain why every vector in <m>\real^2</m> can be
+	  written as a linear combination of <m>\vvec_1</m> and
+	  <m>\vvec_2</m> in exactly one way. </p>
+        </statement>
+       
+        
+      </task>
+                    
+                </exercise>
+
+                
+            </page>
+
+            <page>
+
+                <exercise workspace="1in">
+                    <title>Definition: Basis</title>
+                    <statement>
+                        <p>
+                            A set of vectors <m>\vvec_1, \vvec_2, \dots, \vvec_n \in \R^m</m> is a basis for <m>\R^m</m> if
+                        </p>
+                    </statement>
+                    
+                    
+                </exercise>
+                <exercise>
+                    <title>Activity: Bases</title>
+                    <statement>
+	<p>
+	  We will look at some examples of bases in this activity.
+	  <ol marker="a.">
+	    <li><p> In the preview activity, we worked with the set of
+	    vectors in <m>\real^2</m>:
+	    <me>
+	      \vvec_1 = \twovec{2}{1},
+	      \vvec_2 = \twovec{1}{2}
+	      </me>.
+	      Explain why these vectors form a basis for <m>\real^2</m>.
+	    </p></li>
+
+	    <li><p> Consider the set of vectors in <m>\real^3</m>
+	    <me>
+	      \vvec_1 = \threevec{1}{1}{1},
+	      \vvec_2 = \threevec{0}{1}{-1},
+	      \vvec_3 = \threevec{1}{0}{-1}
+	    </me>
+	    and determine whether they form a basis for
+	    <m>\real^3</m>.
+	    <sage>
+	      <input>
+	      </input>
+	    </sage>
+	    </p></li>
+
+	    <li><p> Do the vectors
+	    <me>
+	      \vvec_1 = \threevec{-2}{1}{3},
+	      \vvec_2 = \threevec{3}{0}{-1},
+	      \vvec_3 = \threevec{1}{1}{0},
+	      \vvec_4 = \threevec{0}{3}{-2}
+	    </me>
+	    form a basis for <m>\real^3</m>?  </p></li>
+
+	    <li><p> Explain why the vectors
+	    <m>\evec_1,\evec_2,\evec_3</m> form a basis for
+	    <m>\real^3</m>.  </p></li>
+
+	    <li><p> If a set of vectors
+	    <m>\vvec_1,\vvec_2,\ldots,\vvec_n</m> forms a basis for
+	    <m>\real^m</m>, what can you guarantee about the pivot
+	    positions of the matrix
+	    <me>
+	      \left[\begin{array}{rrrr}
+	      \vvec_1 \amp \vvec_2 \amp \ldots \amp \vvec_n
+	      \end{array}\right]
+	      </me>?
+	    </p></li>
+
+	    <li><p> If the set of vectors
+	    <m>\vvec_1,\vvec_2,\ldots,\vvec_n</m> is a basis 
+	    for <m>\real^{10}</m>, how many vectors must be in the set?
+	    </p></li>
+	  </ol>
+	</p>
+      </statement>
+
+      
+                    
+                </exercise>
+            </page>
+
+            <page>
+                <exercise workspace="3in">
+                    <title>Fact: Bases</title>
+                    <statement>
+                        <p>
+                            The vectors <m>\vvec_1, \dots, \vvec_n \in \R^m</m> form a basis for <m>\R^m</m> exactly when
+                        </p>
+                    </statement>
+                    
+                    
+                </exercise>
+                <exercise workspace="5in">
+                    <title>Bases and Coordinate Systems</title>
+                    <statement>
+                        <p>
+                            Bases are useful because they give us a way to communicate points in space.
+                        </p>
+                    </statement>
+                    
+                    
+                </exercise>
+            </page>
+
+            <page>
+                <exercise>
+                    <title>Activity: Coordinate Systems</title>
+                    <statement>
+      <p> Let's begin with the basis <m>\bcal =
+      \{\vvec_1,\vvec_2\}</m> of <m>\real^2</m> where
+      <me>
+	\vvec_1 = \twovec{3}{-2},
+	\vvec_2 = \twovec{2}{1}
+      </me>.
+      <ol marker="a.">
+	<li><p> If the coordinates of <m>\xvec</m> in the basis
+	<m>\bcal</m> are  <m>\coords{\xvec}{\bcal} = \twovec{-2}{4}</m>, what
+	is the vector <m>\xvec</m>? </p></li>
+
+	<li><p> If <m>\xvec = \twovec{3}{5}</m>, find the coordinates
+	of <m>\xvec</m> in the basis <m>\bcal</m>;  that is, find
+	<m>\coords{\xvec}{\bcal}</m>. </p></li>
+
+	<li><p> Find a matrix <m>A</m> such that, for any vector
+	<m>\xvec</m>, we have <m>\xvec = A\coords{\xvec}{\bcal}</m>.
+	Explain why this matrix is invertible. </p></li>
+
+	<li><p> Using what you found in the previous part, find a
+	matrix <m>B</m> such that, for any vector <m>\xvec</m>, we
+	have <m>\coords{\xvec}{\bcal} = B\xvec</m>.  What is the
+	relationship between the two matrices <m>A</m> and <m>B</m>?
+	Explain why this relationship holds. </p></li>
+
+	<li><p> Suppose we consider the standard basis
+	<me>\ecal = \{\evec_1,\evec_2\}</me>.
+	What is the relationship between <m>\xvec</m> and
+	<m>\coords{\xvec}{\ecal}</m>? </p></li>
+
+	<li><p> Suppose we also consider the basis
+	<me>
+	  \ccal = \left\{\twovec{1}{2}, \twovec{-2}{1}\right\}
+	</me>.
+	Find a matrix <m>C</m> that converts coordinates in the basis
+	<m>\ccal</m> into coordinates in the basis <m>\bcal</m>;  that
+	is, 
+	<me>
+	  \coords{\xvec}{\bcal} = C \coords{\xvec}{\ccal}
+	</me>.
+	You may wish to think about converting coordinates from the basis
+	<m>\ccal</m> into the standard coordinate system and then into
+	the basis <m>\bcal</m>.
+	</p></li>
+      </ol></p>
+      </statement>
+
+      
+                    
+                </exercise>
+            </page>
+
+            <page>
+                <exercise>
+                    <title>Summary: Change of Coordinates</title>
+                    <statement>
+                        <p>
+                            Let <m>\bcal = \{\vvec_1, \vvec_2, \dots, \vvec_n\}</m> be a basis for <m>\R^n</m>, and
+                            <m>P_\bcal</m> be the matrix whose columns are the basis vectors.
+
+                        </p>
+                    </statement>
+                    
+                </exercise>
+            </page>
+        </worksheet>
+    </article>
+</pretext>
