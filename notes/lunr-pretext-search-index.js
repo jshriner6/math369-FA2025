@@ -1159,7 +1159,7 @@ var ptx_lunr_docs = [
   "type": "Worksheet",
   "number": "",
   "title": "<span class=\"process-math\">\\(\\S 3.2\\text{:}\\)<\/span> Bases Examples",
-  "body": " : Bases Examples    Motivation: Bases        "
+  "body": " : Bases Examples    Motivation: Bases          Changing Bases: Quarterly Analysis      Text from example 3.2.9 in the textbook.    Change of basis matrices from example 3.2.9 in the textbook.          Activity: Change of Bases and Edge Detection   An important problem in the field of computer vision is to detect edges in a digital photograph, as is shown in . Edge detection algorithms are useful when, say, we want a robot to locate an object in its field of view. Graphic designers also use these algorithms to create artistic effects.     Full color picture of a canyon wall.    The result of the canyon wall picture after an edge detection algorithm.    A canyon wall in Capitol Reef National Park and the result of an edge detection algorithm.   We will consider a very simple version of an edge detection algorithm to give a sense of how this works. Rather than considering a two-dimensional photograph, we will think about a one-dimensional row of pixels in a photograph. The grayscale values of a pixel measure the brightness of a pixel; a grayscale value of 0 corresponds to black, and a value of 255 corresponds to white.  Suppose, for simplicity, that the grayscale values for a row of six pixels are represented by a vector in :    .   Plot of the six pixels and their gray scale values. The first four are close to black, while the last two are close to white.         Activity (continued)   We can easily see that there is a jump in brightness between pixels 4 and 5, but how can we detect it computationally? We will introduce a new basis for with vectors: .  Construct the matrix that relates the standard coordinate system with the coordinates in the basis .  Determine the matrix that converts the representation of in standard coordinates into the coordinate system defined by .   Suppose the vectors are expressed in general terms as . Using the relationship , determine an expression for the coefficient in terms of . What does measure in terms of the grayscale values of the pixels? What does measure in terms of the grayscale values of the pixels?  Now for the specific vector , determine the representation of in the -coordinate system.  Explain how the coefficients in determine the location of the jump in brightness in the grayscale values represented by the vector .    Readers who are familiar with calculus may recognize that this change of basis converts a vector into , the set of changes in . This process is similar to differentiation in calculus. Similarly, the process of converting into the vector adds together the changes in a process similar to integration. As a result, this change of basis represents a linear algebraic version of the Fundamental Theorem of Calculus.     "
 },
 {
   "id": "sec-3-2-2-2-1",
@@ -1169,6 +1169,33 @@ var ptx_lunr_docs = [
   "number": "1",
   "title": "Motivation: Bases.",
   "body": " Motivation: Bases      "
+},
+{
+  "id": "sec-3-2-2-3-1",
+  "level": "2",
+  "url": "sec-3-2-2.html#sec-3-2-2-3-1",
+  "type": "Worksheet Exercise",
+  "number": "2",
+  "title": "Changing Bases: Quarterly Analysis.",
+  "body": " Changing Bases: Quarterly Analysis      Text from example 3.2.9 in the textbook.    Change of basis matrices from example 3.2.9 in the textbook.      "
+},
+{
+  "id": "sec-3-2-2-4-1",
+  "level": "2",
+  "url": "sec-3-2-2.html#sec-3-2-2-4-1",
+  "type": "Worksheet Exercise",
+  "number": "3",
+  "title": "Activity: Change of Bases and Edge Detection.",
+  "body": " Activity: Change of Bases and Edge Detection   An important problem in the field of computer vision is to detect edges in a digital photograph, as is shown in . Edge detection algorithms are useful when, say, we want a robot to locate an object in its field of view. Graphic designers also use these algorithms to create artistic effects.     Full color picture of a canyon wall.    The result of the canyon wall picture after an edge detection algorithm.    A canyon wall in Capitol Reef National Park and the result of an edge detection algorithm.   We will consider a very simple version of an edge detection algorithm to give a sense of how this works. Rather than considering a two-dimensional photograph, we will think about a one-dimensional row of pixels in a photograph. The grayscale values of a pixel measure the brightness of a pixel; a grayscale value of 0 corresponds to black, and a value of 255 corresponds to white.  Suppose, for simplicity, that the grayscale values for a row of six pixels are represented by a vector in :    .   Plot of the six pixels and their gray scale values. The first four are close to black, while the last two are close to white.     "
+},
+{
+  "id": "sec-3-2-2-5-1",
+  "level": "2",
+  "url": "sec-3-2-2.html#sec-3-2-2-5-1",
+  "type": "Worksheet Exercise",
+  "number": "4",
+  "title": "Activity (continued).",
+  "body": " Activity (continued)   We can easily see that there is a jump in brightness between pixels 4 and 5, but how can we detect it computationally? We will introduce a new basis for with vectors: .  Construct the matrix that relates the standard coordinate system with the coordinates in the basis .  Determine the matrix that converts the representation of in standard coordinates into the coordinate system defined by .   Suppose the vectors are expressed in general terms as . Using the relationship , determine an expression for the coefficient in terms of . What does measure in terms of the grayscale values of the pixels? What does measure in terms of the grayscale values of the pixels?  Now for the specific vector , determine the representation of in the -coordinate system.  Explain how the coefficients in determine the location of the jump in brightness in the grayscale values represented by the vector .    Readers who are familiar with calculus may recognize that this change of basis converts a vector into , the set of changes in . This process is similar to differentiation in calculus. Similarly, the process of converting into the vector adds together the changes in a process similar to integration. As a result, this change of basis represents a linear algebraic version of the Fundamental Theorem of Calculus.   "
 }
 ]
 
