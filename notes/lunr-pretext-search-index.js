@@ -955,76 +955,76 @@ var ptx_lunr_docs = [
   "body": " Application: Discrete Dynamical Systems       See Subsection 2.5.3: Discrete Dynamical Systems .   "
 },
 {
-  "id": "sec-3-1-1",
+  "id": "sec-3-1-1-sols",
   "level": "1",
-  "url": "sec-3-1-1.html",
+  "url": "sec-3-1-1-sols.html",
   "type": "Worksheet",
   "number": "",
   "title": "<span class=\"process-math\">\\(\\S 3.1\\text{:}\\)<\/span> Invertible Matrices",
-  "body": " : Invertible Matrices    Motivation: Invertible Matrices        Preview Activity 3.1.1    Explain how you would solve the equation using multiplication rather than division.      Find the matrix that rotates vectors counterclockwise by .      Find the matrix that rotates vectors clockwise by .      What do you expect the product to be? Explain the reasoning behind your expectation and then compute to verify it.      Solve the equation using Gaussian elimination.       Explain why your solution may also be found by computing .        Definition: Invertible Matrix   An matrix is invertible if       Activity: Finding an Inverse Matrix   This activity demonstrates a procedure for finding the inverse of a matrix .   Suppose that . To find an inverse , we write its columns as and require that In other words, we can find the columns of by solving the equations Solve these equations to find and . Then write the matrix and verify that . This is enough for us to conclude that is the inverse of .     Find the product and explain why we now know that is invertible and .    What happens when you try to find the inverse of ?    We now develop a condition that must be satisfied by an invertible matrix. Suppose that is an invertible matrix with inverse and suppose that is any -dimensional vector. Since , we have This says that the equation is consistent and that is a solution.  Since we know that is consistent for any vector , what does this say about the span of the columns of ?    Since is a square matrix, what does this say about the pivot positions of ? What is the reduced row echelon form of ?    In this activity, we have studied the matrices Find the reduced row echelon form of each and explain how those forms enable us to conclude that one matrix is invertible and the other is not.          Observations: Invertible Matrices          Activity: Solving Equations   We'll begin by considering the square matrix    Describe the solution space to the equation by augmenting and finding the reduced row echelon form.     Explain why is invertible and find its inverse.    Now use the inverse to solve the equation and verify that your result agrees with what you found in part a.    If you have defined a matrix B in Sage, you can find it's inverse as B.inverse() or B^-1 . Use Sage to find the inverse of the matrix and use it to solve the equation .     If and are the two matrices defined in this activity, find their product and verify that it is invertible.    Compute the products and . Which one agrees with ?    Explain your finding by considering the product and using associativity to regroup the products so that the middle two terms are multiplied first.          Summary: Invertible Matrices        "
+  "body": " : Invertible Matrices    Motivation: Invertible Matrices       We've explored two important properties ofa set of vectors in in span and linear independence . In this chapter, we'll explore the implications when a set of vectors both spans and is also a linearly independent set.     Preview Activity 3.1.1    Explain how you would solve the equation using multiplication rather than division.    Dividing by is the same as multiplying by , the multiplicative inverse of . We have       Find the matrix that rotates vectors counterclockwise by .    As we have seen a few times, the matrix is       Find the matrix that rotates vectors clockwise by .    Here, the matrix is       What do you expect the product to be? Explain the reasoning behind your expectation and then compute to verify it.    We should expect that since the effect of rotating by clockwise followed by rotating counterclockwise is to leave a vector unchanged. We can verify this by performing the matrix multiplication.      Solve the equation using Gaussian elimination.     We have so the solution is .      Explain why your solution may also be found by computing .    The equation is asking us to find the vector that becomes after being rotated by . If we rotate by in the opposite direction, it will have this property. That is, if , then         Definition: Invertible Matrix   An matrix is invertible if    there is a matrix such that . We typically denote the matrix as .  Two important questions related to this definition are   How do we know if a matrix is invertible?    If a matrix is invertible, how do we find its inverse matrix?          Activity: Finding an Inverse Matrix   This activity demonstrates a procedure for finding the inverse of a matrix .   Suppose that . To find an inverse , we write its columns as and require that In other words, we can find the columns of by solving the equations Solve these equations to find and . Then write the matrix and verify that . This is enough for us to conclude that is the inverse of .     Find the product and explain why we now know that is invertible and .     What happens when you try to find the inverse of ?    We now develop a condition that must be satisfied by an invertible matrix. Suppose that is an invertible matrix with inverse and suppose that is any -dimensional vector. Since , we have This says that the equation is consistent and that is a solution.  Since we know that is consistent for any vector , what does this say about the span of the columns of ?    Since is a square matrix, what does this say about the pivot positions of ? What is the reduced row echelon form of ?    In this activity, we have studied the matrices Find the reduced row echelon form of each and explain how those forms enable us to conclude that one matrix is invertible and the other is not.        Solving the two equations for and gives . We can verify that, as we expect, .  We find that , which is the condition that tells us that is invertible.  Seeking the first column of , we see that the equation is not consistent. This means that is not invertible.  Since the equation is consistent for every , we know that the span of the columns of is .  Because the span of the columns of is , there is a pivot position in every row. Since is square, there is also a pivot position in every column. This means that the reduced row echelon form of must be the identity matrix .  We see that which shows that is invertible and is not.        Observations: Invertible Matrices          The row operations used to solve the two systems involved in computing the inverse matrix are the same, since the coefficient matrix in both is . So in general, we can save some work by solving both simultaneously:  If an matrix is invertible, then     If is invertible, then is consistent for all vectors , since is a solution. This solution is also unique, because we know has a pivot in every column.    If is invertible, we can argue that is also invertible, and its inverse is . That is, . See our notes from class or Exercise 3.1.5.12 for details.          Activity: Solving Equations   We'll begin by considering the square matrix    Describe the solution space to the equation by augmenting and finding the reduced row echelon form.     Explain why is invertible and find its inverse.    Now use the inverse to solve the equation and verify that your result agrees with what you found in part a.    If you have defined a matrix B in Sage, you can find it's inverse as B.inverse() or B^-1 . Use Sage to find the inverse of the matrix and use it to solve the equation .     If and are the two matrices defined in this activity, find their product and verify that it is invertible.    Compute the products and . Which one agrees with ?    Explain your finding by considering the product and using associativity to regroup the products so that the middle two terms are multiplied first.        Constructing the augmented matrix, we see that which says that there is a unique solution .    Our work in part a shows that from which we conclude that is invertible. To find the inverse, which says that     We see that .    Sage tells us that .    Sage helps us see that , which tells us that is invertible.   We find that .   We see that          Summary: Invertible Matrices       See Proposition 3.1.7 .     "
 },
 {
-  "id": "sec-3-1-1-2-1",
+  "id": "sec-3-1-1-sols-2-1",
   "level": "2",
-  "url": "sec-3-1-1.html#sec-3-1-1-2-1",
+  "url": "sec-3-1-1-sols.html#sec-3-1-1-sols-2-1",
   "type": "Worksheet Exercise",
   "number": "1",
   "title": "Motivation: Invertible Matrices.",
-  "body": " Motivation: Invertible Matrices      "
+  "body": " Motivation: Invertible Matrices       We've explored two important properties ofa set of vectors in in span and linear independence . In this chapter, we'll explore the implications when a set of vectors both spans and is also a linearly independent set.   "
 },
 {
-  "id": "sec-3-1-1-2-2",
+  "id": "sec-3-1-1-sols-2-2",
   "level": "2",
-  "url": "sec-3-1-1.html#sec-3-1-1-2-2",
+  "url": "sec-3-1-1-sols.html#sec-3-1-1-sols-2-2",
   "type": "Worksheet Exercise",
   "number": "2",
   "title": "Preview Activity 3.1.1.",
-  "body": " Preview Activity 3.1.1    Explain how you would solve the equation using multiplication rather than division.      Find the matrix that rotates vectors counterclockwise by .      Find the matrix that rotates vectors clockwise by .      What do you expect the product to be? Explain the reasoning behind your expectation and then compute to verify it.      Solve the equation using Gaussian elimination.       Explain why your solution may also be found by computing .    "
+  "body": " Preview Activity 3.1.1    Explain how you would solve the equation using multiplication rather than division.    Dividing by is the same as multiplying by , the multiplicative inverse of . We have       Find the matrix that rotates vectors counterclockwise by .    As we have seen a few times, the matrix is       Find the matrix that rotates vectors clockwise by .    Here, the matrix is       What do you expect the product to be? Explain the reasoning behind your expectation and then compute to verify it.    We should expect that since the effect of rotating by clockwise followed by rotating counterclockwise is to leave a vector unchanged. We can verify this by performing the matrix multiplication.      Solve the equation using Gaussian elimination.     We have so the solution is .      Explain why your solution may also be found by computing .    The equation is asking us to find the vector that becomes after being rotated by . If we rotate by in the opposite direction, it will have this property. That is, if , then     "
 },
 {
-  "id": "sec-3-1-1-3-1",
+  "id": "sec-3-1-1-sols-3-1",
   "level": "2",
-  "url": "sec-3-1-1.html#sec-3-1-1-3-1",
+  "url": "sec-3-1-1-sols.html#sec-3-1-1-sols-3-1",
   "type": "Worksheet Exercise",
   "number": "3",
   "title": "Definition: Invertible Matrix.",
-  "body": " Definition: Invertible Matrix   An matrix is invertible if   "
+  "body": " Definition: Invertible Matrix   An matrix is invertible if    there is a matrix such that . We typically denote the matrix as .  Two important questions related to this definition are   How do we know if a matrix is invertible?    If a matrix is invertible, how do we find its inverse matrix?      "
 },
 {
-  "id": "sec-3-1-1-4-1",
+  "id": "sec-3-1-1-sols-4-1",
   "level": "2",
-  "url": "sec-3-1-1.html#sec-3-1-1-4-1",
+  "url": "sec-3-1-1-sols.html#sec-3-1-1-sols-4-1",
   "type": "Worksheet Exercise",
   "number": "4",
   "title": "Activity: Finding an Inverse Matrix.",
-  "body": " Activity: Finding an Inverse Matrix   This activity demonstrates a procedure for finding the inverse of a matrix .   Suppose that . To find an inverse , we write its columns as and require that In other words, we can find the columns of by solving the equations Solve these equations to find and . Then write the matrix and verify that . This is enough for us to conclude that is the inverse of .     Find the product and explain why we now know that is invertible and .    What happens when you try to find the inverse of ?    We now develop a condition that must be satisfied by an invertible matrix. Suppose that is an invertible matrix with inverse and suppose that is any -dimensional vector. Since , we have This says that the equation is consistent and that is a solution.  Since we know that is consistent for any vector , what does this say about the span of the columns of ?    Since is a square matrix, what does this say about the pivot positions of ? What is the reduced row echelon form of ?    In this activity, we have studied the matrices Find the reduced row echelon form of each and explain how those forms enable us to conclude that one matrix is invertible and the other is not.      "
+  "body": " Activity: Finding an Inverse Matrix   This activity demonstrates a procedure for finding the inverse of a matrix .   Suppose that . To find an inverse , we write its columns as and require that In other words, we can find the columns of by solving the equations Solve these equations to find and . Then write the matrix and verify that . This is enough for us to conclude that is the inverse of .     Find the product and explain why we now know that is invertible and .     What happens when you try to find the inverse of ?    We now develop a condition that must be satisfied by an invertible matrix. Suppose that is an invertible matrix with inverse and suppose that is any -dimensional vector. Since , we have This says that the equation is consistent and that is a solution.  Since we know that is consistent for any vector , what does this say about the span of the columns of ?    Since is a square matrix, what does this say about the pivot positions of ? What is the reduced row echelon form of ?    In this activity, we have studied the matrices Find the reduced row echelon form of each and explain how those forms enable us to conclude that one matrix is invertible and the other is not.        Solving the two equations for and gives . We can verify that, as we expect, .  We find that , which is the condition that tells us that is invertible.  Seeking the first column of , we see that the equation is not consistent. This means that is not invertible.  Since the equation is consistent for every , we know that the span of the columns of is .  Because the span of the columns of is , there is a pivot position in every row. Since is square, there is also a pivot position in every column. This means that the reduced row echelon form of must be the identity matrix .  We see that which shows that is invertible and is not.    "
 },
 {
-  "id": "sec-3-1-1-5-1",
+  "id": "sec-3-1-1-sols-5-1",
   "level": "2",
-  "url": "sec-3-1-1.html#sec-3-1-1-5-1",
+  "url": "sec-3-1-1-sols.html#sec-3-1-1-sols-5-1",
   "type": "Worksheet Exercise",
   "number": "5",
   "title": "Observations: Invertible Matrices.",
-  "body": " Observations: Invertible Matrices      "
+  "body": " Observations: Invertible Matrices          The row operations used to solve the two systems involved in computing the inverse matrix are the same, since the coefficient matrix in both is . So in general, we can save some work by solving both simultaneously:  If an matrix is invertible, then     If is invertible, then is consistent for all vectors , since is a solution. This solution is also unique, because we know has a pivot in every column.    If is invertible, we can argue that is also invertible, and its inverse is . That is, . See our notes from class or Exercise 3.1.5.12 for details.      "
 },
 {
-  "id": "sec-3-1-1-6-1",
+  "id": "sec-3-1-1-sols-6-1",
   "level": "2",
-  "url": "sec-3-1-1.html#sec-3-1-1-6-1",
+  "url": "sec-3-1-1-sols.html#sec-3-1-1-sols-6-1",
   "type": "Worksheet Exercise",
   "number": "6",
   "title": "Activity: Solving Equations.",
-  "body": " Activity: Solving Equations   We'll begin by considering the square matrix    Describe the solution space to the equation by augmenting and finding the reduced row echelon form.     Explain why is invertible and find its inverse.    Now use the inverse to solve the equation and verify that your result agrees with what you found in part a.    If you have defined a matrix B in Sage, you can find it's inverse as B.inverse() or B^-1 . Use Sage to find the inverse of the matrix and use it to solve the equation .     If and are the two matrices defined in this activity, find their product and verify that it is invertible.    Compute the products and . Which one agrees with ?    Explain your finding by considering the product and using associativity to regroup the products so that the middle two terms are multiplied first.      "
+  "body": " Activity: Solving Equations   We'll begin by considering the square matrix    Describe the solution space to the equation by augmenting and finding the reduced row echelon form.     Explain why is invertible and find its inverse.    Now use the inverse to solve the equation and verify that your result agrees with what you found in part a.    If you have defined a matrix B in Sage, you can find it's inverse as B.inverse() or B^-1 . Use Sage to find the inverse of the matrix and use it to solve the equation .     If and are the two matrices defined in this activity, find their product and verify that it is invertible.    Compute the products and . Which one agrees with ?    Explain your finding by considering the product and using associativity to regroup the products so that the middle two terms are multiplied first.        Constructing the augmented matrix, we see that which says that there is a unique solution .    Our work in part a shows that from which we conclude that is invertible. To find the inverse, which says that     We see that .    Sage tells us that .    Sage helps us see that , which tells us that is invertible.   We find that .   We see that      "
 },
 {
-  "id": "sec-3-1-1-7-1",
+  "id": "sec-3-1-1-sols-7-1",
   "level": "2",
-  "url": "sec-3-1-1.html#sec-3-1-1-7-1",
+  "url": "sec-3-1-1-sols.html#sec-3-1-1-sols-7-1",
   "type": "Worksheet Exercise",
   "number": "7",
   "title": "Summary: Invertible Matrices.",
-  "body": " Summary: Invertible Matrices      "
+  "body": " Summary: Invertible Matrices       See Proposition 3.1.7 .   "
 },
 {
   "id": "sec-3-1-2",
