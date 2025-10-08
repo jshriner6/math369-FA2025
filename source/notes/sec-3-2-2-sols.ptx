@@ -1,6 +1,6 @@
 <pretext>
     <article xml:id="notes">
-        <worksheet xml:id="sec-3-2-2">
+        <worksheet xml:id="sec-3-2-2-sols">
         <title><m>\S 3.2</m>: Bases Examples</title>
             <page>
                 <exercise workspace="1in">
@@ -10,7 +10,19 @@
                             
                         </p>
                     </statement>
-                    
+                    <solution>
+                        <p>
+                            Last time we saw how we can create coordinate systems using bases, and convert data
+                            between two coordinate systems.
+                        </p>
+                        <p>
+                            See <url href="https://understandinglinearalgebra.org/sec-bases.html#sec-bases-5-3">Example 3.2.8</url>
+                            for a basic example.
+                        </p>
+                        <p>
+                            This section will provide some examples illustrating when a basis change could be useful.
+                        </p>
+                    </solution>
                 </exercise>
             </page>
             <page>
@@ -29,6 +41,11 @@
                             </sidebyside>
                         </p>
                     </statement>
+                    <solution>
+                        <p>
+                            See <url href="https://understandinglinearalgebra.org/sec-bases.html#example-wavelet-basis">Example 3.2.9</url>.
+                        </p>
+                    </solution>
                     
                 </exercise>
             </page>
@@ -38,13 +55,13 @@
                     <statement>
       <p> An important problem in the field of computer vision is to
       detect edges in a digital photograph, as is shown in <xref
-      ref="fig-edge-detection" />.  Edge detection algorithms are
+      ref="fig-edge-detection-sol" />.  Edge detection algorithms are
       useful when, say, we want a robot to locate an object in its
       field of view.  Graphic designers also use these algorithms to
       create artistic effects.
       </p>
 
-      <figure xml:id = "fig-edge-detection">
+      <figure xml:id = "fig-edge-detection-sol">
 	<sidebyside widths="45% 45%">
 	  <image source="images/spring-canyon-cropped.jpg">
         <shortdescription>
@@ -177,6 +194,62 @@
       version of the Fundamental Theorem of Calculus.
       </p>
     </statement>
+    <solution>
+      <p><ol marker="a.">
+	<li><p> We form the matrix
+	<me>
+	  P_{\bcal} =
+	  \left[\begin{array}{rrrrrr}
+	  1 \amp 1 \amp 1 \amp 1 \amp 1 \amp 1 \\
+	  0 \amp 1 \amp 1 \amp 1 \amp 1 \amp 1 \\
+	  0 \amp 0 \amp 1 \amp 1 \amp 1 \amp 1 \\
+	  0 \amp 0 \amp 0 \amp 1 \amp 1 \amp 1 \\
+	  0 \amp 0 \amp 0 \amp 0 \amp 1 \amp 1 \\
+	  0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 1
+	  \end{array}\right]\text{.}
+	</me>
+	</p></li>
+
+	<li><p>
+	  We find that
+	  <me>
+	    P_{\bcal}^{-1} = 
+	    \left[\begin{array}{rrrrrr}
+	    1 \amp -1 \amp 0 \amp 0 \amp 0 \amp 0 \\
+	    0 \amp 1 \amp -1 \amp 0 \amp 0 \amp 0 \\
+	    0 \amp 0 \amp 1 \amp -1 \amp 0 \amp 0 \\
+	    0 \amp 0 \amp 0 \amp 1 \amp -1 \amp 0 \\
+	    0 \amp 0 \amp 0 \amp 0 \amp 1 \amp -1 \\
+	    0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 1
+	    \end{array}\right]\text{.}
+	  </me>
+	</p></li>
+
+	<li><p> We see that <m>c_2=x_3-x_2</m> so <m>c_2</m> measures
+	the change in brightness between one pixel and its neighbor.
+	Similarly, <m>c_4=x_5-x_4</m>, which measures another change
+	in brightness.
+	</p></li>
+
+	<li><p> We compute that
+	<me>\coords{\xvec}{\bcal}=P_{\bcal}^{-1}\xvec =
+	\left[\begin{array}{c}
+	-9 \\ 4 \\ -15 \\ -145 \\ -10 \\ 200
+	\end{array}\right]\text{.}
+	</me>
+	</p></li>
+
+	<li><p>
+	  Most of the coefficients that measure changes are relatively
+	  small in absolute value.  The coefficient <m>c_4</m>,
+	  however, which measures the change in brightness between the
+	  fourth and fifth pixel, has a large absolute value.  This
+	  tells us that there is a large change in brightness between
+	  the fourth and fifth pixel, which points to an edge in the
+	  image.
+	</p></li>
+      </ol></p>
+    </solution>
                     
                     
                 </exercise>
