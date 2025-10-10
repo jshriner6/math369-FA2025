@@ -1027,49 +1027,49 @@ var ptx_lunr_docs = [
   "body": " Summary: Invertible Matrices       See Proposition 3.1.7 .   "
 },
 {
-  "id": "sec-3-1-2",
+  "id": "sec-3-1-2-sols",
   "level": "1",
-  "url": "sec-3-1-2.html",
+  "url": "sec-3-1-2-sols.html",
   "type": "Worksheet",
   "number": "",
   "title": "<span class=\"process-math\">\\(\\S 3.1\\text{:}\\)<\/span> Invertible Matrices and Gaussian Elimination",
-  "body": " : Invertible Matrices and Gaussian Elimination    Motivation: Invertible Matrices and Gaussian Elimination        Triangular Matrices     Generic lower triangular matrix with all zero entries above the main diagonal, and generic upper triangular matrix with all zero entries below the main diagonal.         Activity: Gaussian Elmination and Matrix Multiplication   This activity explores how the row operations of scaling, interchange, and replacement can be performed using matrix multiplication.  As an example, we consider the matrix and apply a replacement operation that multiplies the first row by and adds it to the second row. Rather than performing this operation in the usual way, we construct a new matrix by applying the desired replacement operation to the identity matrix. To illustrate, we begin with the identity matrix and form a new matrix by multiplying the first row by and adding it to the second row to obtain   Show that the product is the result of applying the replacement operation to .  Explain why is invertible and find its inverse .  Describe the relationship between and and use the connection to replacement operations to explain why it holds.  Other row operations can be performed using a similar procedure. For instance, suppose we want to scale the second row of by . Find a matrix so that is the same as that obtained from the scaling operation. Why is invertible and what is ?  Finally, suppose we want to interchange the first and third rows of . Find a matrix , usually called a permutation matrix that performs this operation. What is ?  The original matrix is seen to be row equivalent to the upper triangular matrix by performing three replacement operations on : Find the matrices , , and that perform these row replacement operations so that .  Explain why the matrix product is invertible and use this fact to write . What is the matrix that you find? Why do you think we denote it by ?         Elementary Matrices and LU Factorization        "
+  "body": " : Invertible Matrices and Gaussian Elimination    Motivation: Invertible Matrices and Gaussian Elimination       We can re-frame row operations in Gaussian elimination as matrix multiplication by special matrices. This will be useful for \"decomposing\" matrices into special forms in future chapters.     Triangular Matrices     Generic lower triangular matrix with all zero entries above the main diagonal, and generic upper triangular matrix with all zero entries below the main diagonal.      An matrix is lower triangular if all its entries above the diagonal are zero. It is upper triangular if all the entries below the diagonal are zero.  A triangular matrix is invertible exactly when all its diagonal entries are non-zero.       Activity: Gaussian Elmination and Matrix Multiplication   This activity explores how the row operations of scaling, interchange, and replacement can be performed using matrix multiplication.  As an example, we consider the matrix and apply a replacement operation that multiplies the first row by and adds it to the second row. Rather than performing this operation in the usual way, we construct a new matrix by applying the desired replacement operation to the identity matrix. To illustrate, we begin with the identity matrix and form a new matrix by multiplying the first row by and adding it to the second row to obtain   Show that the product is the result of applying the replacement operation to .  Explain why is invertible and find its inverse .  Describe the relationship between and and use the connection to replacement operations to explain why it holds.  Other row operations can be performed using a similar procedure. For instance, suppose we want to scale the second row of by . Find a matrix so that is the same as that obtained from the scaling operation. Why is invertible and what is ?  Finally, suppose we want to interchange the first and third rows of . Find a matrix , usually called a permutation matrix that performs this operation. What is ?  The original matrix is seen to be row equivalent to the upper triangular matrix by performing three replacement operations on : Find the matrices , , and that perform these row replacement operations so that .  Explain why the matrix product is invertible and use this fact to write . What is the matrix that you find? Why do you think we denote it by ?       Performing the matrix multiplication, we find that   We know that is invertible because it is a lower triangular matrix whose diagonal entries are all 1. We find that , which can be verified.  But we can see this in another way as well. The replacement operation is reversible; that is, multiplying the first row by and adding it to the second row can be undone by multiplying the first row by and adding it to the second row.  We find that This makes sense because scaling a row by can be undone by scaling the same row by .  We find that Moreover, because we can undo the interchange operation by repeating it.  Continuing with the Gaussian elimination algorithm, we have , as above, we then have .  Each of the matrices , , and is invertible so their product will be as well. Since , we have . Moreover, gives . Notice that this matrix is lower triangular so we call it .        Elementary Matrices and LU Factorization       Matrices obtained by performing a single row operation on the identity matrix are called elementary matrices .  For some square matrices , we can use elementary matrices to find an LU-factorization ( ), which can be very useful for computing.     "
 },
 {
-  "id": "sec-3-1-2-2-1",
+  "id": "sec-3-1-2-sols-2-1",
   "level": "2",
-  "url": "sec-3-1-2.html#sec-3-1-2-2-1",
+  "url": "sec-3-1-2-sols.html#sec-3-1-2-sols-2-1",
   "type": "Worksheet Exercise",
   "number": "1",
   "title": "Motivation: Invertible Matrices and Gaussian Elimination.",
-  "body": " Motivation: Invertible Matrices and Gaussian Elimination      "
+  "body": " Motivation: Invertible Matrices and Gaussian Elimination       We can re-frame row operations in Gaussian elimination as matrix multiplication by special matrices. This will be useful for \"decomposing\" matrices into special forms in future chapters.   "
 },
 {
-  "id": "sec-3-1-2-2-2",
+  "id": "sec-3-1-2-sols-2-2",
   "level": "2",
-  "url": "sec-3-1-2.html#sec-3-1-2-2-2",
+  "url": "sec-3-1-2-sols.html#sec-3-1-2-sols-2-2",
   "type": "Worksheet Exercise",
   "number": "2",
   "title": "Triangular Matrices.",
-  "body": " Triangular Matrices     Generic lower triangular matrix with all zero entries above the main diagonal, and generic upper triangular matrix with all zero entries below the main diagonal.     "
+  "body": " Triangular Matrices     Generic lower triangular matrix with all zero entries above the main diagonal, and generic upper triangular matrix with all zero entries below the main diagonal.      An matrix is lower triangular if all its entries above the diagonal are zero. It is upper triangular if all the entries below the diagonal are zero.  A triangular matrix is invertible exactly when all its diagonal entries are non-zero.   "
 },
 {
-  "id": "sec-3-1-2-3-1",
+  "id": "sec-3-1-2-sols-3-1",
   "level": "2",
-  "url": "sec-3-1-2.html#sec-3-1-2-3-1",
+  "url": "sec-3-1-2-sols.html#sec-3-1-2-sols-3-1",
   "type": "Worksheet Exercise",
   "number": "3",
   "title": "Activity: Gaussian Elmination and Matrix Multiplication.",
-  "body": " Activity: Gaussian Elmination and Matrix Multiplication   This activity explores how the row operations of scaling, interchange, and replacement can be performed using matrix multiplication.  As an example, we consider the matrix and apply a replacement operation that multiplies the first row by and adds it to the second row. Rather than performing this operation in the usual way, we construct a new matrix by applying the desired replacement operation to the identity matrix. To illustrate, we begin with the identity matrix and form a new matrix by multiplying the first row by and adding it to the second row to obtain   Show that the product is the result of applying the replacement operation to .  Explain why is invertible and find its inverse .  Describe the relationship between and and use the connection to replacement operations to explain why it holds.  Other row operations can be performed using a similar procedure. For instance, suppose we want to scale the second row of by . Find a matrix so that is the same as that obtained from the scaling operation. Why is invertible and what is ?  Finally, suppose we want to interchange the first and third rows of . Find a matrix , usually called a permutation matrix that performs this operation. What is ?  The original matrix is seen to be row equivalent to the upper triangular matrix by performing three replacement operations on : Find the matrices , , and that perform these row replacement operations so that .  Explain why the matrix product is invertible and use this fact to write . What is the matrix that you find? Why do you think we denote it by ?     "
+  "body": " Activity: Gaussian Elmination and Matrix Multiplication   This activity explores how the row operations of scaling, interchange, and replacement can be performed using matrix multiplication.  As an example, we consider the matrix and apply a replacement operation that multiplies the first row by and adds it to the second row. Rather than performing this operation in the usual way, we construct a new matrix by applying the desired replacement operation to the identity matrix. To illustrate, we begin with the identity matrix and form a new matrix by multiplying the first row by and adding it to the second row to obtain   Show that the product is the result of applying the replacement operation to .  Explain why is invertible and find its inverse .  Describe the relationship between and and use the connection to replacement operations to explain why it holds.  Other row operations can be performed using a similar procedure. For instance, suppose we want to scale the second row of by . Find a matrix so that is the same as that obtained from the scaling operation. Why is invertible and what is ?  Finally, suppose we want to interchange the first and third rows of . Find a matrix , usually called a permutation matrix that performs this operation. What is ?  The original matrix is seen to be row equivalent to the upper triangular matrix by performing three replacement operations on : Find the matrices , , and that perform these row replacement operations so that .  Explain why the matrix product is invertible and use this fact to write . What is the matrix that you find? Why do you think we denote it by ?       Performing the matrix multiplication, we find that   We know that is invertible because it is a lower triangular matrix whose diagonal entries are all 1. We find that , which can be verified.  But we can see this in another way as well. The replacement operation is reversible; that is, multiplying the first row by and adding it to the second row can be undone by multiplying the first row by and adding it to the second row.  We find that This makes sense because scaling a row by can be undone by scaling the same row by .  We find that Moreover, because we can undo the interchange operation by repeating it.  Continuing with the Gaussian elimination algorithm, we have , as above, we then have .  Each of the matrices , , and is invertible so their product will be as well. Since , we have . Moreover, gives . Notice that this matrix is lower triangular so we call it .    "
 },
 {
-  "id": "sec-3-1-2-4-1",
+  "id": "sec-3-1-2-sols-4-1",
   "level": "2",
-  "url": "sec-3-1-2.html#sec-3-1-2-4-1",
+  "url": "sec-3-1-2-sols.html#sec-3-1-2-sols-4-1",
   "type": "Worksheet Exercise",
   "number": "4",
   "title": "Elementary Matrices and LU Factorization.",
-  "body": " Elementary Matrices and LU Factorization      "
+  "body": " Elementary Matrices and LU Factorization       Matrices obtained by performing a single row operation on the identity matrix are called elementary matrices .  For some square matrices , we can use elementary matrices to find an LU-factorization ( ), which can be very useful for computing.   "
 },
 {
   "id": "sec-3-2-1",
