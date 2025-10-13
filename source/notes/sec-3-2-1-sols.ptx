@@ -28,7 +28,7 @@
 	  \vvec_2 = \twovec{1}{2}
         </me>
         in <m>\real^2</m>, which are shown in
-        <xref ref="fig-basis-1" />.
+        <xref ref="fig-basis-1-sols" />.
         </p>
 
         <figure xml:id="fig-basis-1-sols">
