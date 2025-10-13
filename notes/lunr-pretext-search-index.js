@@ -1072,85 +1072,85 @@ var ptx_lunr_docs = [
   "body": " Elementary Matrices and LU Factorization       Matrices obtained by performing a single row operation on the identity matrix are called elementary matrices .  For some square matrices , we can use elementary matrices to find an LU-factorization ( ), which can be very useful for computing.   "
 },
 {
-  "id": "sec-3-2-1",
+  "id": "sec-3-2-1-sols",
   "level": "1",
-  "url": "sec-3-2-1.html",
+  "url": "sec-3-2-1-sols.html",
   "type": "Worksheet",
   "number": "",
   "title": "<span class=\"process-math\">\\(\\S 3.2\\text{:}\\)<\/span> Bases and Coordinate Systems",
-  "body": " : Bases and Coordinate Systems    Motivation: Bases and Coordinate Systems        Preview Activity 3.2.1   Consider the vectors in , which are shown in .     Vectors v1 and v2 in 2 dimensional space.    Linear combinations of and .      Indicate the linear combination on the figure.      Express the vector as a linear combination of and .      Find the linear combination .      Express the vector as a linear combination of and .      Explain why every vector in can be written as a linear combination of and in exactly one way.        Definition: Basis   A set of vectors is a basis for if     Activity: Bases   We will look at some examples of bases in this activity.  In the preview activity, we worked with the set of vectors in : . Explain why these vectors form a basis for .  Consider the set of vectors in  and determine whether they form a basis for .   Do the vectors form a basis for ?  Explain why the vectors form a basis for .  If a set of vectors forms a basis for , what can you guarantee about the pivot positions of the matrix ?  If the set of vectors is a basis for , how many vectors must be in the set?         Fact: Bases   The vectors form a basis for exactly when     Bases and Coordinate Systems   Bases are useful because they give us a way to communicate points in space.       Activity: Coordinate Systems   Let's begin with the basis of where .  If the coordinates of in the basis are , what is the vector ?  If , find the coordinates of in the basis ; that is, find .  Find a matrix such that, for any vector , we have . Explain why this matrix is invertible.  Using what you found in the previous part, find a matrix such that, for any vector , we have . What is the relationship between the two matrices and ? Explain why this relationship holds.  Suppose we consider the standard basis . What is the relationship between and ?  Suppose we also consider the basis . Find a matrix that converts coordinates in the basis into coordinates in the basis ; that is, . You may wish to think about converting coordinates from the basis into the standard coordinate system and then into the basis .        Summary: Change of Coordinates   Let be a basis for , and be the matrix whose columns are the basis vectors.     "
+  "body": " : Bases and Coordinate Systems    Motivation: Bases and Coordinate Systems       We intuitively use the vectors and to help us communicate points in . We'll generalize this idea, and see some examples as to why \"changing coordinates\" might be useful.     Preview Activity 3.2.1   Consider the vectors in , which are shown in .     Vectors v1 and v2 in 2 dimensional space.    Linear combinations of and .      Indicate the linear combination on the figure.    We can see graphically, or we can compute, that .      Express the vector as a linear combination of and .    Again, we graphically see that .      Find the linear combination .    Since the linear combination extends beyond the figure, we compute that .      Express the vector as a linear combination of and .    We need to find the solution to the linear system , which is .      Explain why every vector in can be written as a linear combination of and in exactly one way.    The matrix has a pivot position in every row and every column.        Definition: Basis   A set of vectors is a basis for if    the set spans and is a linearly independent set.     Activity: Bases   We will look at some examples of bases in this activity.  In the preview activity, we worked with the set of vectors in : . Explain why these vectors form a basis for .  Consider the set of vectors in  and determine whether they form a basis for .   Do the vectors form a basis for ?  Explain why the vectors form a basis for .  If a set of vectors forms a basis for , what can you guarantee about the pivot positions of the matrix ?  If the set of vectors is a basis for , how many vectors must be in the set?       The matrix is row equivalent to the identity matrix so it has a pivot position in every row. The span of the columns is therefore . There is also a pivot position in every column, which means that the columns are linearly independent.  We note that Since there is a pivot position in every row, the span of the vectors is . Since there is a pivot position in every column, the vectors are linearly independent. Consequently, this set of vectors forms a basis for .  The matrix whose columns are the vectors , , , and has dimensions . Therefore, there cannot be a pivot position in every column, which tells us that the columns cannot be linearly independent. Therefore, the set of vectors do not form a basis for .  Putting these vectors into a matrix produces the identity matrix, which has a pivot position in every row and every column. Therefore, the span of the vectors is , and they are linearly independent.  There must be a pivot position in every row and every column.  A basis for must have vectors. Because the associated matrix must have a pivot position in every row and every column, there must be the same number of columns as there are rows. Since the vectors are -dimensional, there must be 10 vectors.        Fact: Bases   The vectors form a basis for exactly when    the matrix whose columns are the vectors row reduces to the identity matrix. This means that . I.e., it takes linearly independent vectors to form a basis for .  We call the set of vectors the standard basis for .     Bases and Coordinate Systems   Bases are useful because they give us a way to communicate points in space.    A choice of basis creates a coordinate system in which we can communicate vectors based on how they are written as a linear combination of the basis vectors.  See Example 3.2.6 .       Activity: Coordinate Systems   Let's begin with the basis of where .  If the coordinates of in the basis are , what is the vector ?  If , find the coordinates of in the basis ; that is, find .  Find a matrix such that, for any vector , we have . Explain why this matrix is invertible.  Using what you found in the previous part, find a matrix such that, for any vector , we have . What is the relationship between the two matrices and ? Explain why this relationship holds.  Suppose we consider the standard basis . What is the relationship between and ?  Suppose we also consider the basis . Find a matrix that converts coordinates in the basis into coordinates in the basis ; that is, . You may wish to think about converting coordinates from the basis into the standard coordinate system and then into the basis .      We know that .  We solve the linear system to find .  If , we have This matrix , whose columns are the vectors and , has a pivot position in every row and every column because the vectors form a basis. It is, therefore, row equivalent to the identity matrix and hence invertible.  Since we have , we also have .  We have   If we define to be the matrix whose columns are and , then Therefore,         Summary: Change of Coordinates   Let be a basis for , and be the matrix whose columns are the basis vectors.    See Proposition 3.2.7 .     "
 },
 {
-  "id": "sec-3-2-1-2-1",
+  "id": "sec-3-2-1-sols-2-1",
   "level": "2",
-  "url": "sec-3-2-1.html#sec-3-2-1-2-1",
+  "url": "sec-3-2-1-sols.html#sec-3-2-1-sols-2-1",
   "type": "Worksheet Exercise",
   "number": "1",
   "title": "Motivation: Bases and Coordinate Systems.",
-  "body": " Motivation: Bases and Coordinate Systems      "
+  "body": " Motivation: Bases and Coordinate Systems       We intuitively use the vectors and to help us communicate points in . We'll generalize this idea, and see some examples as to why \"changing coordinates\" might be useful.   "
 },
 {
-  "id": "sec-3-2-1-2-2",
+  "id": "sec-3-2-1-sols-2-2",
   "level": "2",
-  "url": "sec-3-2-1.html#sec-3-2-1-2-2",
+  "url": "sec-3-2-1-sols.html#sec-3-2-1-sols-2-2",
   "type": "Worksheet Exercise",
   "number": "2",
   "title": "Preview Activity 3.2.1.",
-  "body": " Preview Activity 3.2.1   Consider the vectors in , which are shown in .     Vectors v1 and v2 in 2 dimensional space.    Linear combinations of and .      Indicate the linear combination on the figure.      Express the vector as a linear combination of and .      Find the linear combination .      Express the vector as a linear combination of and .      Explain why every vector in can be written as a linear combination of and in exactly one way.    "
+  "body": " Preview Activity 3.2.1   Consider the vectors in , which are shown in .     Vectors v1 and v2 in 2 dimensional space.    Linear combinations of and .      Indicate the linear combination on the figure.    We can see graphically, or we can compute, that .      Express the vector as a linear combination of and .    Again, we graphically see that .      Find the linear combination .    Since the linear combination extends beyond the figure, we compute that .      Express the vector as a linear combination of and .    We need to find the solution to the linear system , which is .      Explain why every vector in can be written as a linear combination of and in exactly one way.    The matrix has a pivot position in every row and every column.    "
 },
 {
-  "id": "sec-3-2-1-3-1",
+  "id": "sec-3-2-1-sols-3-1",
   "level": "2",
-  "url": "sec-3-2-1.html#sec-3-2-1-3-1",
+  "url": "sec-3-2-1-sols.html#sec-3-2-1-sols-3-1",
   "type": "Worksheet Exercise",
   "number": "3",
   "title": "Definition: Basis.",
-  "body": " Definition: Basis   A set of vectors is a basis for if   "
+  "body": " Definition: Basis   A set of vectors is a basis for if    the set spans and is a linearly independent set.   "
 },
 {
-  "id": "sec-3-2-1-3-2",
+  "id": "sec-3-2-1-sols-3-2",
   "level": "2",
-  "url": "sec-3-2-1.html#sec-3-2-1-3-2",
+  "url": "sec-3-2-1-sols.html#sec-3-2-1-sols-3-2",
   "type": "Worksheet Exercise",
   "number": "4",
   "title": "Activity: Bases.",
-  "body": " Activity: Bases   We will look at some examples of bases in this activity.  In the preview activity, we worked with the set of vectors in : . Explain why these vectors form a basis for .  Consider the set of vectors in  and determine whether they form a basis for .   Do the vectors form a basis for ?  Explain why the vectors form a basis for .  If a set of vectors forms a basis for , what can you guarantee about the pivot positions of the matrix ?  If the set of vectors is a basis for , how many vectors must be in the set?     "
+  "body": " Activity: Bases   We will look at some examples of bases in this activity.  In the preview activity, we worked with the set of vectors in : . Explain why these vectors form a basis for .  Consider the set of vectors in  and determine whether they form a basis for .   Do the vectors form a basis for ?  Explain why the vectors form a basis for .  If a set of vectors forms a basis for , what can you guarantee about the pivot positions of the matrix ?  If the set of vectors is a basis for , how many vectors must be in the set?       The matrix is row equivalent to the identity matrix so it has a pivot position in every row. The span of the columns is therefore . There is also a pivot position in every column, which means that the columns are linearly independent.  We note that Since there is a pivot position in every row, the span of the vectors is . Since there is a pivot position in every column, the vectors are linearly independent. Consequently, this set of vectors forms a basis for .  The matrix whose columns are the vectors , , , and has dimensions . Therefore, there cannot be a pivot position in every column, which tells us that the columns cannot be linearly independent. Therefore, the set of vectors do not form a basis for .  Putting these vectors into a matrix produces the identity matrix, which has a pivot position in every row and every column. Therefore, the span of the vectors is , and they are linearly independent.  There must be a pivot position in every row and every column.  A basis for must have vectors. Because the associated matrix must have a pivot position in every row and every column, there must be the same number of columns as there are rows. Since the vectors are -dimensional, there must be 10 vectors.    "
 },
 {
-  "id": "sec-3-2-1-4-1",
+  "id": "sec-3-2-1-sols-4-1",
   "level": "2",
-  "url": "sec-3-2-1.html#sec-3-2-1-4-1",
+  "url": "sec-3-2-1-sols.html#sec-3-2-1-sols-4-1",
   "type": "Worksheet Exercise",
   "number": "5",
   "title": "Fact: Bases.",
-  "body": " Fact: Bases   The vectors form a basis for exactly when   "
+  "body": " Fact: Bases   The vectors form a basis for exactly when    the matrix whose columns are the vectors row reduces to the identity matrix. This means that . I.e., it takes linearly independent vectors to form a basis for .  We call the set of vectors the standard basis for .   "
 },
 {
-  "id": "sec-3-2-1-4-2",
+  "id": "sec-3-2-1-sols-4-2",
   "level": "2",
-  "url": "sec-3-2-1.html#sec-3-2-1-4-2",
+  "url": "sec-3-2-1-sols.html#sec-3-2-1-sols-4-2",
   "type": "Worksheet Exercise",
   "number": "6",
   "title": "Bases and Coordinate Systems.",
-  "body": " Bases and Coordinate Systems   Bases are useful because they give us a way to communicate points in space.   "
+  "body": " Bases and Coordinate Systems   Bases are useful because they give us a way to communicate points in space.    A choice of basis creates a coordinate system in which we can communicate vectors based on how they are written as a linear combination of the basis vectors.  See Example 3.2.6 .   "
 },
 {
-  "id": "sec-3-2-1-5-1",
+  "id": "sec-3-2-1-sols-5-1",
   "level": "2",
-  "url": "sec-3-2-1.html#sec-3-2-1-5-1",
+  "url": "sec-3-2-1-sols.html#sec-3-2-1-sols-5-1",
   "type": "Worksheet Exercise",
   "number": "7",
   "title": "Activity: Coordinate Systems.",
-  "body": " Activity: Coordinate Systems   Let's begin with the basis of where .  If the coordinates of in the basis are , what is the vector ?  If , find the coordinates of in the basis ; that is, find .  Find a matrix such that, for any vector , we have . Explain why this matrix is invertible.  Using what you found in the previous part, find a matrix such that, for any vector , we have . What is the relationship between the two matrices and ? Explain why this relationship holds.  Suppose we consider the standard basis . What is the relationship between and ?  Suppose we also consider the basis . Find a matrix that converts coordinates in the basis into coordinates in the basis ; that is, . You may wish to think about converting coordinates from the basis into the standard coordinate system and then into the basis .    "
+  "body": " Activity: Coordinate Systems   Let's begin with the basis of where .  If the coordinates of in the basis are , what is the vector ?  If , find the coordinates of in the basis ; that is, find .  Find a matrix such that, for any vector , we have . Explain why this matrix is invertible.  Using what you found in the previous part, find a matrix such that, for any vector , we have . What is the relationship between the two matrices and ? Explain why this relationship holds.  Suppose we consider the standard basis . What is the relationship between and ?  Suppose we also consider the basis . Find a matrix that converts coordinates in the basis into coordinates in the basis ; that is, . You may wish to think about converting coordinates from the basis into the standard coordinate system and then into the basis .      We know that .  We solve the linear system to find .  If , we have This matrix , whose columns are the vectors and , has a pivot position in every row and every column because the vectors form a basis. It is, therefore, row equivalent to the identity matrix and hence invertible.  Since we have , we also have .  We have   If we define to be the matrix whose columns are and , then Therefore,     "
 },
 {
-  "id": "sec-3-2-1-6-1",
+  "id": "sec-3-2-1-sols-6-1",
   "level": "2",
-  "url": "sec-3-2-1.html#sec-3-2-1-6-1",
+  "url": "sec-3-2-1-sols.html#sec-3-2-1-sols-6-1",
   "type": "Worksheet Exercise",
   "number": "8",
   "title": "Summary: Change of Coordinates.",
-  "body": " Summary: Change of Coordinates   Let be a basis for , and be the matrix whose columns are the basis vectors.   "
+  "body": " Summary: Change of Coordinates   Let be a basis for , and be the matrix whose columns are the basis vectors.    See Proposition 3.2.7 .   "
 },
 {
   "id": "sec-3-2-2",
