@@ -1,0 +1,265 @@
+<pretext>
+    <article xml:id="worksheet">
+        <worksheet xmlns:xi="http://www.w3.org/2001/XInclude" margin="1in" bottom="1.25cm" xml:id="lab-4">
+            <title>Lab 4: Image Compression</title>
+            <page>
+            <introduction>
+                <p>
+                    Complete the following exercises in
+                    groups of 2 or 3 students including complete explanations of your
+                    work.  You should write directly on this handout (if additional pages are necessary, please
+                    make sure they are well-organized), and you
+                    only need to submit one report to Gradescope.  Make sure you indicate everyone in your group
+                    in your submission to Gradescope.
+                </p>
+                <p>
+                    As introduced in class, we are going to study the luminance values in an <m>8 \times 8</m> block of pixels from a digital photo taken 
+                    in Capitol Reef National Park.
+                    <sidebyside width="30%">
+                        <image source="grayscale.png">
+                        <shortdescription>An eight by eight grid of gray pixels.</shortdescription>
+                        </image>
+                        <image source="luminance.png">
+                        <shortdescription>An eight by eight grid showing the luminance values of each pixel.</shortdescription>
+                        </image>
+                        
+                    </sidebyside>
+
+                </p>
+                <p>
+                    To begin, we'll consider the first column of luminance values, which is the 8-dimensional vector 
+                    <me>
+                        
+                        \xvec = \left[\begin{array}{c}
+                        176 \\ 181 \\ 165 \\ \vdots \\ 150 \\
+                        \end{array}\right]\text{.}
+                      
+                    </me>
+                     represented graphically as
+                     <image source="xvec.png" width="30%">
+                        <shortdescription>Graph of the components of the vector x.</shortdescription>
+                     </image>
+                    Two things are important:
+                    <ul>
+                        <li>
+                            <p>
+                                There are not rapid variations in these numbers within the column.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                If some of the values were to change slightly, our eyes would probably not notice because the pixels, when represented on a screen, are so small.
+                            </p>
+                        </li>
+                    </ul>
+
+
+
+
+                </p>
+                <p>
+                    In the daily prep, we encountered the Fourier basis consisting of vectors <m>\vvec_0, \dots, \vvec_7</m>, and
+                    the vector <m>\fvec = \coords{\xvec}{\bcal}</m> consisting of the Fourier coefficients <m>F_0,F_1, \dots, F_7</m>.
+                </p>
+
+                <p>
+                    There is a <url href="http://gvsu.edu/s/0RF">page of Sage cells</url> to use for this lab.  
+                    Be sure to evaluate the first cell and then use the rest of the cells to complete your work.
+                    This cell will load the <m>8\times 8</m> matrix <m>P</m>, whose columns are the vectors <m>\vvec_0, \dots, \vvec_7</m>, 
+                    as well as the vector <m>\xvec</m> shown above and the <m>8\times 8</m> matrix of luminance values called <term>luminance</term>.
+
+                </p>
+            </introduction>
+
+            </page>
+            <page>
+                <exercise>
+                    <task workspace="2in">
+                        <statement>
+                            <p>
+                                Describe in words how to convert the vector <m>\xvec</m> into the vector <m>\fvec</m> of Fourier coefficients and, conversely, 
+                                how to convert <m>\fvec</m> back into <m>\xvec</m>.
+
+                            </p>
+                        </statement>
+                    </task>
+                    <task workspace="2in">
+                        <statement>
+                            <p>
+                                Find the vector <m>\fvec</m> using the page of Sage cells provided, take a screenshot of it, and paste it below.
+                            </p>
+                        </statement>
+                    </task>
+                    <task workspace="3in">
+                        <statement>
+                            <p>
+                                What does the relative size of the Fourier coefficients tell us about the relative contributions of the basis vectors 
+                                <m>\vvec_0, \dots, \vvec_7</m> to the vector <m>\xvec</m>?  How is your observation consistent with the fact that 
+                                “there are not rapid variations” in the vector <m>\xvec</m>?
+
+                            </p>
+                        </statement>
+                    </task>
+                </exercise>
+            </page>
+            <page>
+                <exercise>
+                    <introduction>
+                        <p>
+                            Now form a new vector <m>\fvec_{\text{approx}}</m>, which is formed from <m>\fvec</m> by rounding the 
+                            Fourier coefficients to the nearest integers and setting the last two Fourier coefficients to zero.  
+                            In other words, we are only saving <m>6</m> of the <m>8</m> Fourier coefficients, or <m>75\%</m> of them.  
+                            
+                        </p>
+                    </introduction>
+                    <task workspace="3in">
+                        <statement>
+                            <p>
+                            Find <m>\xvec_{\text{approx}}</m>, an approximation to the vector <m>\xvec</m> formed by the approximate 
+                            Fourier coefficients <m>\fvec_{\text{approx}}</m>.  
+                            Describe the vector <m>\fvec_{\text{approx}}</m> and how you found <m>\xvec_{\text{approx}}</m>. 
+                            Then paste a screenshot of <m>\xvec_{\text{approx}}</m> below.  
+                            (Remember that you can define a vector in Sage as <c>v = vector([2, 1])</c>.) 
+                            </p>
+                        </statement>
+                    </task>
+                    <task workspace="3in">
+                        <statement>
+                            <p>
+                                Paste a screen shot of <m>\xvec-\xvec_{\text{approx}}</m>, and describe what
+                                this measures.
+                            </p>
+                        </statement>
+                    </task>
+                    <task workspace="2in">
+                        <statement>
+                            <p>
+                                Here's the main idea: we have saved only <m>75\%</m> of the Fourier coefficients,
+                                but when we reconstruct the visual information in the vector <m>\xvec</m>, the error is pretty 
+                                small and probably not visible to the human eye (remember that the components of <m>\xvec</m> can 
+                                vary between <m>0</m> and <m>255</m>).  We say that the <term>compression ratio</term> is <m>75\%</m>.   
+                                Let's try again saving only the four largest Fourier coefficients (a compression ratio of <m>50\%</m>);  
+                                that is, form a new <m>\fvec_{\text{approx}}</m> by setting the four smallest Fourier coefficients to zero.  
+                                Paste a screen shot of the new value of <m>\xvec-\xvec_{\text{approx}}</m>. Describe its relationship
+                                to what you obtained in the previous question, and why this makes sense.
+
+                            </p>
+                        </statement>
+                    </task>
+                </exercise>
+            </page>
+
+            <page>
+                <exercise>
+                    <introduction>
+                        <p>
+                            We can, in fact, do better.  Let's return to the <m>8 \times 8</m> block of luminance values 
+                            on page 1 of this document. Each column of luminance values forms an 8-dimensional vector, 
+                            the first of which we studied already.  If <m>\xvec_i</m> is the <m>i^{th}</m> column of the 
+                            luminance matrix, then we can find its corresponding vector <m>\fvec_i</m> of Fourier coefficients.  
+
+                        </p>
+                    </introduction>
+                    <task workspace="3in">
+                        <statement>
+                            <p>
+                                Find the <m>8 \times 8</m> matrix whose columns are the vectors <m>\fvec_0, \fvec_1, \dots, \fvec_7</m> 
+                                and paste a screenshot of your results in the space below.  Include a description of how you 
+                                found this matrix. This may sound daunting at first, but remember how matrix-matrix multiplication 
+                                works, and that you have the <m>8 \times 8</m> matrix <term>luminance</term> of luminance values 
+                                available on your page of Sage cells.
+
+                            </p>
+                        </statement>
+                    </task>
+                    <task workspace="2in">
+                        <statement>
+                            <p>
+                                As you scan across a row, take the first row, for instance, you'll see that the values don't change wildly.
+                                So maybe we can also Fourier transform the rows of the matrix of Fourier coefficients.
+                                Define the 8-dimensional vector <m>\yvec</m> consisting of the rounded values of the first row of the Fourier coefficient 
+                                matrix and then find its Fourier coefficients <m>\coords{\yvec}{\bcal}</m>.  Paste a screenshot of <m>\coords{\yvec}{\bcal}</m> below.
+                                What do you notice about the relative size of these Fourier coefficients?
+
+                            </p>
+                        </statement>
+                    </task>
+                </exercise>
+            </page>
+
+            <page>
+                <exercise>
+                    <introduction>
+                        <p>
+                            Transforming the rows of a Fourier coefficient matrix is called the <term>double Fourier transform</term>, 
+                            and there's a Sage function, <c>double_fourier( luminance )</c>, that can do this for you 
+                            from the original luminance values.
+                        </p>
+                    </introduction>
+                    <task workspace="2in">
+                        <statement>
+                            <p>
+                                Give the matrix obtained after a double Fourier transform a name, and paste a screenshot of it below.
+                                What do you notice about the size of the entries of this matrix?
+                            </p>
+                        </statement>
+                    </task>
+                    <task workspace="3in">
+                        <statement>
+                            <p>
+                                There is another command <c>round_matrix( matrix_name, minimum )</c> that will round the 
+                                entries in the given matrix to the nearest integer and set any entries whose absolute value is smaller 
+                                than minimum to zero. For instance, <c>round_matrix( A, 4 )</c> will round the entries of 
+                                <m>A</m> and set any entries in the range from -3 to 3 equal to zero.  
+                                Round the matrix of double Fourier coefficients with a minimum value of 4 and paste your result below.
+                                How many non-zero double Fourier coefficients are left?  What is the compression ratio? 
+                                (The non-zero entries are the only ones that we need to save, so the ratio of the number of non-zero double Fourier coefficients to 64 represents the compression ratio.)
+
+                            </p>
+                        </statement>
+                    </task>
+                </exercise>
+            </page>
+
+            <page>
+                <exercise>
+                    <introduction>
+                        <p>
+                            There is a final command, <c>inverse_double_fourier( matrix_name )</c>,
+                            that will reconstruct the luminance values from the rounded double Fourier coefficients.
+                            
+            
+                        </p>
+                    </introduction>
+                    <task workspace="2in">
+                        <statement>
+                            <p>
+                                Find this reconstruction and paste it below.
+                            </p>
+                        </statement>
+                    </task>
+                    <task workspace="2in">
+                        <statement>
+                            <p>
+                                 Compute a matrix that represents the error between the original luminance values and the 
+                            reconstructed values, and paste it below.
+
+                            </p>
+                        </statement>
+                    </task>
+                </exercise>
+
+                <p>
+                    Notice that we have only saved about <m>12\%</m> of the Fourier coefficients yet we are able to 
+                    reconstruct the luminance values with a relatively small error. When you take a picture with your phone, 
+                    the software saves the rounded double Fourier coefficients of each <m>8 \times 8</m> block of pixels, 
+                    which represents only a small fraction of the information. When you want to view a picture, the software 
+                    reconstructs the image from the saved double Fourier coefficients with a relatively small error.  
+                    Most photo editing programs allow you to choose the compression ratio, which is controlled by the range of 
+                    Fourier coefficients we save.
+                </p>
+            </page>
+
+        </worksheet>
+    </article>
+</pretext>

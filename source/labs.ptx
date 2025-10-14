@@ -16,6 +16,7 @@
     <xi:include href="./labs/lab1.ptx" xpointer="lab-1" />
     <xi:include href="./labs/lab2.ptx" xpointer="lab-2" /> -->
     <xi:include href="./labs/lab3.ptx" xpointer="lab-3" /> -->
+    <xi:include href="./labs/lab4.ptx" xpointer="lab-4" /> -->
 
     <!-- SAMPLES -->
    <!-- <xi:include href="./labs/wkst-relns-digramphs.ptx"/> -->
