@@ -255,7 +255,7 @@
                     the software saves the rounded double Fourier coefficients of each <m>8 \times 8</m> block of pixels, 
                     which represents only a small fraction of the information. When you want to view a picture, the software 
                     reconstructs the image from the saved double Fourier coefficients with a relatively small error.  
-                    Most photo editing programs allow you to choose the compression ratio, which is controlled by the range of 
+                    Most photo editing programs allow you to choose the compression ratio (quality setting), which is controlled by the range of 
                     Fourier coefficients we save.
                 </p>
             </page>
