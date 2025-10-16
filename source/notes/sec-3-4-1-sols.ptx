@@ -1,6 +1,6 @@
 <pretext>
     <article xml:id="notes">
-        <worksheet xml:id="sec-3-4-1">
+        <worksheet xml:id="sec-3-4-1-sols">
         <title><m>\S 3.4</m>: Determinants</title>
             <page>
                 <exercise workspace="1in">
@@ -10,6 +10,13 @@
                             
                         </p>
                     </statement>
+                    <solution>
+                        <p>
+                            The determinant is a numerical property of a matrix that holds a lot of information
+                            (e.g., is the matrix invertible, how does it behave as a transformation). We'll develop
+                            multiple ways to view the determinant in this section.
+                        </p>
+                    </solution>
                 </exercise>
 
                 <exercise>
@@ -44,6 +51,21 @@
 	    </sidebyside>
 	  </sbsgroup>
         </statement>
+
+        <solution>
+	  <p> We find the following areas.
+	  <ol marker="1.">
+	    <li><p> A <m>1\times1</m> square has area 1. </p></li>
+	    <li><p> A <m>2\times3</m> rectangle has area 6. </p></li>
+	    <li><p> The square has side length <m>\sqrt{2}</m> giving
+	    an area of 2. </p></li>
+	    <li><p> If we consider the horizontal length as the base,
+	    we see that <m>b=h=2</m> so that the area is 4. </p></li>
+	    <li><p> In the same way, we can consider both the base and
+	    height to be 2 so that the area is 4. </p></li>
+	  </ol>
+	  </p>
+        </solution>
         </task>
         <task >
         <statement>
@@ -54,6 +76,12 @@
 	    <image source="images/area-shear" />
 	  </sidebyside>
         </statement>
+        <solution>
+	  <p> If we consider the base to be the length of
+	  <m>\vvec</m>, then the height, which is the perpendicular
+	  distance to its parallel side, is the same in both
+	  parallelograms. </p>
+        </solution>
         </task>
                     
                 </exercise>
@@ -68,6 +96,12 @@
                                 Vectors <m>\vvec_1</m> and <m>\vvec_2</m> are <term>positively oriented</term> if 
                             </p>
                         </statement>
+                        <solution>
+                            <p>
+                                the angle CCW from <m>\vvec_1</m> to <m>\vvec_2</m> is less than <m>180</m> degrees. They
+                                are <term>negatively oriented</term> if this angle is greater than <m>180</m> degrees.
+                            </p>
+                        </solution>
                     </task>
                     <task workspace="3in">
                         <statement>
@@ -76,6 +110,12 @@
                                Then the <term>determinant</term> of <m>A</m>, written <m>\text{det}(A)</m>, is
                             </p>
                         </statement>
+                        <solution>
+                            <p>
+                                the area of the parallelogram form by <m>\vvec_1</m> and <m>\vvec_2</m>. If <m>\vvec_1</m> and <m>\vvec_2</m>
+                                are negatively oriented, then <m>\text{det}(A)</m> is <m>-1</m> times the area of the parallelogram.
+                            </p>
+                        </solution>
                     </task>
                     
                     
@@ -101,6 +141,11 @@ A =
                             
                         </p>
                     </statement>
+                    <solution>
+                        <p>
+                            See <url href="https://understandinglinearalgebra.org/sec-determinants.html#example-det-identity">Example 3.4.4 </url>.
+                        </p>
+                    </solution>
                     
                     
                 </exercise>
@@ -184,6 +229,43 @@ A =
 	</p></li>
       </ol></p>
       </statement>
+
+      <solution>
+	<p><ol marker="a.">
+	  <li><p> The determinant is <m>-1</m> because the vectors are
+	  negatively oriented and the rectangle has sides of length
+	  <m>\frac12</m> and <m>2</m>.  
+	  The determinant of a diagonal matrix seems to be
+	  the product of the diagonal entries.
+	  </p></li>
+
+	  <li><p> The matrix transformation is a reflection over the
+	  line <m>y=x</m> and we see that the determinant is
+	  <m>-1</m>.
+	  </p></li>
+
+	  <li><p> The determinant will continue to be <m>2</m> for any
+	  value of <m>k</m>.  This illustrates the fact that the
+	  determinant of an upper triangular matrix equals the product
+	  of its diagonal entries.
+	  </p></li>
+
+	  <li><p> The same reasoning tells us that this determinant is
+	  <m>2</m> and, in fact, the determinant of a lower triangular
+	  matrix equals the product of its diagonal entries.
+	  </p></li>
+
+	  <li><p> The determinant of this matrix is <m>0</m> because
+	  the parallelogram formed by the vector has no area.  This
+	  suggests that the determinant of a matrix whose columns are
+	  linearly dependent is <m>0</m>.  </p></li>
+
+	  <li><p> We find that <m>\det(A) = -4</m>, <m>\det(B) = 2</m>,
+	  and <m>\det(AB) = -8</m>.  This suggests that
+	  <m>\det(AB) = \det(A) \det(B)</m>.
+	  </p></li>
+	</ol></p>
+      </solution>
                     
                 </exercise>
             </page>
@@ -196,6 +278,45 @@ A =
                             
                         </p>
                     </statement>
+                    <solution>
+                        <p>
+                            <ol>
+                                <li>
+                                    <p>
+                                        We defined <m>\text{det}(A)</m> for a <m>2 \times 2</m> matrix, but we could do this similarly 
+                            for an <m>n \times n</m> matrix. For example, we could define it as the volume created by positively
+                            oriented vectors in three dimensions. However, we'll develop other ways for computing the determinant
+                            that are better suited for high dimensions.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        For an <m>n \times n</m> triangular matrix <m>T</m>, <m>\text{det}(T)</m> is just the
+                                        product of its diagonal entries.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        If <m>\text{det}(A) \lt 0</m>, this tells us that <m>A</m> (as a matrix transformation) reverses
+                                        the spatial orientation.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        Viewing matrices as transformations, we see that <m>A</m> scales areas by the value 
+                                        <m>\text{det}(A)</m>, <m>B</m> scales areas by the value <m>\text{det}(B)</m>, and <m>AB</m> 
+                                        scales areas by <m>\text{det}(A) \times \text{det}(B)</m> (when viewed as composition), but also by
+                                        <m>\text{det}(AB)</m> (when viewed as a single matrix). This implies
+                                        <me>
+                                            \text{det}(AB) = \text{det}(A) \cdot \text{det}(B)
+                                        </me>.
+                                        
+                                    </p>
+                                </li>
+                            </ol>
+                            
+                        </p>
+                    </solution>
                     
                 </exercise>
             </page>

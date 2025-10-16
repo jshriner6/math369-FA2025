@@ -10,6 +10,176 @@
                             
                         </p>
                     </statement>
+                    
+                </exercise>
+                <exercise workspace="5in">
+                    <title>Color Models</title>
+                    <statement>
+                        <p>
+                            We represent images with pixels:
+                            <image source="pixel.png">
+                                <shortdescription>Full picture of an image along with a close-up of an eight by eight array of pixels.</shortdescription>
+                            </image>
+                        </p>
+                    </statement>
+                    
+                
+                    
+                </exercise>
+            </page>
+            <page>
+                <exercise>
+                    <title>Activity: Color Models</title>
+                    <statement>
+      <p> This activity investigates these two color models, which we
+      view as coordinate systems for 
+      describing colors.
+      </p>
+      <p><ol marker="a.">
+	<li>
+	  <p> First, we will explore the <m>RGB</m> color model. Use the interactive in your textbook, also available
+        separately in the <url href="https://davidaustinm.github.io/javascript/colors/">Color Models interactive</url>,
+        to help answer the questions.
+	  </p>
+
+	  
+	  
+	  <p><ol marker="1.">
+	    <li><p> What happens when <m>G=0</m>, <m>B=0</m>
+	    (pushed all the way to the left), and
+	    <m>R</m> is allowed to vary? </p></li>
+	    <li><p> What happens when <m>R=0</m>, <m>G=0</m>, and
+	    <m>B</m> is allowed to vary? </p></li>
+	    <li><p> How can you create black in this color model?
+	    </p></li>
+	    <li><p> How can you create white? </p></li>
+	  </ol>
+	  </p>
+	</li>
+
+	<li><p> Next, we will explore the <m>YC_bC_r</m> color
+	model. Use the interactive in your textbook, also available
+        separately in the <url href="https://davidaustinm.github.io/javascript/colors/">Color Models interactive</url>,
+        to help answer the questions.</p> 
+
+	
+	  
+	<p><ol marker="1.">
+	  <li><p> What happens when <m>C_b=0</m> and <m>C_r=0</m>
+	  (kept in the center) and
+	  <m>Y</m> is allowed to vary? </p></li>
+	  <li><p> What happens when <m>Y=0</m> (pushed to the left),
+	  <m>C_r=0</m> (kept in the center), and <m>C_b</m> is
+	  allowed to increase between 0 and 127.5? </p></li>
+	  <li><p> What happens when <m>Y=0</m>,
+	  <m>C_b=0</m>, and <m>C_r</m> is
+	  allowed to increase between 0 and 127.5? </p></li>
+	  <li><p> How can you create black in this color model?
+	  </p></li>
+	  <li><p> How can you create white? </p></li>
+	</ol>
+	</p></li>
+	
+	<li><p> Verify that <m>\bcal</m> is a basis for
+	<m>\real^3</m>.
+	<sage>
+	  <input>
+	  </input>
+	</sage>
+      </p>
+	</li>
+	
+	
+      </ol>
+      </p>
+      </statement>
+                    
+                </exercise>
+            </page>
+
+            <page>
+                <exercise>
+                    <title>Activity (continued)</title>
+                    <statement>
+                        <p>
+                            <ol>
+                                <li><p> Find the matrix <m>P_{\bcal}</m> that converts from
+	<m>\threevec{Y}{C_b}{C_r}</m> coordinates into
+	<m>\threevec{R}{G}{B}</m> coordinates.  Then find the matrix
+	<m>P_{\bcal}^{-1}</m> that converts from
+	<m>\threevec{R}{G}{B}</m> coordinates back into
+	<m>\threevec{Y}{C_b}{C_r}</m> coordinates.
+      </p>
+
+	</li>
+
+	<li><p> Find the <m>\threevec{Y}{C_b}{C_r}</m> coordinates for
+	the following colors and check, using the diagrams above, that
+	the two representations agree.
+	<ol marker="1.">
+	  <li><p> Pure red is <m>\threevec{R}{G}{B}=
+	  \threevec{255}{0}{0}</m>. </p></li>
+	  <li><p> Pure blue is <m>\threevec{R}{G}{B}=
+	  \threevec{0}{0}{255}</m>. </p></li>
+	  <li><p> Pure white is <m>\threevec{R}{G}{B}=
+	  \threevec{255}{255}{255}</m>. </p></li>
+	  <li><p> Pure black is <m>\threevec{R}{G}{B}=
+	  \threevec{0}{0}{0}</m>. </p></li>
+	</ol></p>
+	</li>
+
+	<li><p> Find the <m>\threevec{R}{G}{B}</m> coordinates for the
+	following colors and check, using the diagrams above, that the
+	two representations agree.
+	<ol marker="1.">
+	  <li><p>
+	  <m>\threevec{Y}{C_b}{C_r}=\threevec{128}{0}{0}</m>. </p></li> 
+	  <li><p>
+	  <m>\threevec{Y}{C_b}{C_r}=\threevec{128}{60}{0}</m>. </p></li> 
+	  <li><p>
+	  <m>\threevec{Y}{C_b}{C_r}=\threevec{128}{0}{60}</m>. </p></li>
+	</ol></p>
+
+      </li>
+
+	<li><p> Write an expression for
+	<ol marker="1.">
+	  <li><p> The luminance <m>Y</m> as it depends on <m>R</m>,
+	  <m>G</m>, and <m>B</m>. </p></li>
+	  <li><p> The blue chrominance <m>C_b</m> as it depends on <m>R</m>,
+	  <m>G</m>, and <m>B</m>. </p></li>
+	  <li><p> The red chrominance <m>C_r</m> as it depends on <m>R</m>,
+	  <m>G</m>, and <m>B</m>. </p></li>
+	</ol></p>
+<!--
+	<p> Explain how these quantities can be roughly interpreted by
+	stating that
+	<ol marker="1.">
+	  <li><p> the luminance represents the brightness of the
+	  color. </p></li>
+	  <li><p> the blue chrominance measures the amount of blue in
+	  the color. </p></li>
+	  <li><p> the red chrominance measures the amount of red in
+	  the color. </p></li>
+	</ol></p>
+    -->
+	</li>
+                            </ol>
+                        </p>
+                    </statement>
+                    
+                </exercise>
+            </page>
+
+            <page>
+                <exercise>
+                    <title>Summary: Color Models</title>
+                    <statement>
+                        <p>
+                            
+                        </p>
+                    </statement>
+                    
                 </exercise>
             </page>
 

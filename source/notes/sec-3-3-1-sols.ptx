@@ -1,0 +1,350 @@
+<pretext>
+    <article xml:id="notes">
+        <worksheet xml:id="sec-3-3-1-sols">
+        <title><m>\S 3.3</m>: Color Models and Image Compression</title>
+            <page>
+                <exercise workspace="1in">
+                    <title>Motivation: Color Models and Image Compression</title>
+                    <statement>
+                        <p>
+                            
+                        </p>
+                    </statement>
+                    <solution>
+                        <p>
+                            Images require data to be stored and shared. Data storage isn't free, so finding efficient
+                            ways to do this is useful. Linear algebra provides one solution. In this section we will
+                            <ol>
+                                <li>
+                                    <p>
+                                        Describe two different color models using vectors in <m>\R^3</m>, and
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        explore how a change to an appropriate basis can help with data compression 
+                                        and retrieval. 
+                                    </p>
+                                </li>
+                            </ol>
+                        </p>
+                    </solution>
+                </exercise>
+                <exercise workspace="5in">
+                    <title>Color Models</title>
+                    <statement>
+                        <p>
+                            We represent images with pixels:
+                            <image source="pixel.png">
+                                <shortdescription>Full picture of an image along with a close-up of an eight by eight array of pixels.</shortdescription>
+                            </image>
+                        </p>
+                    </statement>
+                    <solution>
+                        <p>
+                            Each pixel's color can be described by a vector <m>\threevec{R}{G}{B} \in \R^3</m>, where 
+                            <m>R, G, B</m> take integer values between <m>0</m> and <m>255</m>, indicating the amounts of 
+                            red, green, and blue, respectively, in the pixel.
+                        </p>
+                        <p>
+                            The set <m>\mathcal{B} = \left\{ \threevec{1}{1}{1}, \threevec{0}{-0.34413}{1.772},\threevec{1.402}{-0.71414}{0}  \right\}</m>
+                            is also a basis for <m>\R^3</m>, and defines a new coordinate system:
+                            <me>
+                                \coords{\threevec{R}{G}{B}}{\bcal} = \threevec{Y}{C_b}{C_r}
+                            </me>,
+                            where <m>Y</m> (luminance) takes values between <m>0</m> and <m>255</m>, and <m>C_b,C_r</m> (blue chrominance, red chrominance) take 
+                            values between <m>-127.5</m> and <m>127.5</m>.
+                            
+                        </p>
+                    </solution>
+                
+                    
+                </exercise>
+            </page>
+            <page>
+                <exercise>
+                    <title>Activity: Color Models</title>
+                    <statement>
+      <p> This activity investigates these two color models, which we
+      view as coordinate systems for 
+      describing colors.
+      </p>
+      <p><ol marker="a.">
+	<li>
+	  <p> First, we will explore the <m>RGB</m> color model. Use the interactive in your textbook, also available
+        separately in the <url href="https://davidaustinm.github.io/javascript/colors/">Color Models interactive</url>,
+        to help answer the questions.
+	  </p>
+
+	  
+	  
+	  <p><ol marker="1.">
+	    <li><p> What happens when <m>G=0</m>, <m>B=0</m>
+	    (pushed all the way to the left), and
+	    <m>R</m> is allowed to vary? </p></li>
+	    <li><p> What happens when <m>R=0</m>, <m>G=0</m>, and
+	    <m>B</m> is allowed to vary? </p></li>
+	    <li><p> How can you create black in this color model?
+	    </p></li>
+	    <li><p> How can you create white? </p></li>
+	  </ol>
+	  </p>
+	</li>
+
+	<li><p> Next, we will explore the <m>YC_bC_r</m> color
+	model. Use the interactive in your textbook, also available
+        separately in the <url href="https://davidaustinm.github.io/javascript/colors/">Color Models interactive</url>,
+        to help answer the questions.</p> 
+
+	
+	  
+	<p><ol marker="1.">
+	  <li><p> What happens when <m>C_b=0</m> and <m>C_r=0</m>
+	  (kept in the center) and
+	  <m>Y</m> is allowed to vary? </p></li>
+	  <li><p> What happens when <m>Y=0</m> (pushed to the left),
+	  <m>C_r=0</m> (kept in the center), and <m>C_b</m> is
+	  allowed to increase between 0 and 127.5? </p></li>
+	  <li><p> What happens when <m>Y=0</m>,
+	  <m>C_b=0</m>, and <m>C_r</m> is
+	  allowed to increase between 0 and 127.5? </p></li>
+	  <li><p> How can you create black in this color model?
+	  </p></li>
+	  <li><p> How can you create white? </p></li>
+	</ol>
+	</p></li>
+	
+	<li><p> Verify that <m>\bcal</m> is a basis for
+	<m>\real^3</m>.
+	<sage>
+	  <input>
+	  </input>
+	</sage>
+      </p>
+	</li>
+	
+	
+      </ol>
+      </p>
+      </statement>
+                    
+                </exercise>
+            </page>
+
+            <page>
+                <exercise>
+                    <title>Activity (continued)</title>
+                    <statement>
+                        <p>
+                            <ol>
+                                <li><p> Find the matrix <m>P_{\bcal}</m> that converts from
+	<m>\threevec{Y}{C_b}{C_r}</m> coordinates into
+	<m>\threevec{R}{G}{B}</m> coordinates.  Then find the matrix
+	<m>P_{\bcal}^{-1}</m> that converts from
+	<m>\threevec{R}{G}{B}</m> coordinates back into
+	<m>\threevec{Y}{C_b}{C_r}</m> coordinates.
+      </p>
+
+	</li>
+
+	<li><p> Find the <m>\threevec{Y}{C_b}{C_r}</m> coordinates for
+	the following colors and check, using the diagrams above, that
+	the two representations agree.
+	<ol marker="1.">
+	  <li><p> Pure red is <m>\threevec{R}{G}{B}=
+	  \threevec{255}{0}{0}</m>. </p></li>
+	  <li><p> Pure blue is <m>\threevec{R}{G}{B}=
+	  \threevec{0}{0}{255}</m>. </p></li>
+	  <li><p> Pure white is <m>\threevec{R}{G}{B}=
+	  \threevec{255}{255}{255}</m>. </p></li>
+	  <li><p> Pure black is <m>\threevec{R}{G}{B}=
+	  \threevec{0}{0}{0}</m>. </p></li>
+	</ol></p>
+	</li>
+
+	<li><p> Find the <m>\threevec{R}{G}{B}</m> coordinates for the
+	following colors and check, using the diagrams above, that the
+	two representations agree.
+	<ol marker="1.">
+	  <li><p>
+	  <m>\threevec{Y}{C_b}{C_r}=\threevec{128}{0}{0}</m>. </p></li> 
+	  <li><p>
+	  <m>\threevec{Y}{C_b}{C_r}=\threevec{128}{60}{0}</m>. </p></li> 
+	  <li><p>
+	  <m>\threevec{Y}{C_b}{C_r}=\threevec{128}{0}{60}</m>. </p></li>
+	</ol></p>
+
+      </li>
+
+	<li><p> Write an expression for
+	<ol marker="1.">
+	  <li><p> The luminance <m>Y</m> as it depends on <m>R</m>,
+	  <m>G</m>, and <m>B</m>. </p></li>
+	  <li><p> The blue chrominance <m>C_b</m> as it depends on <m>R</m>,
+	  <m>G</m>, and <m>B</m>. </p></li>
+	  <li><p> The red chrominance <m>C_r</m> as it depends on <m>R</m>,
+	  <m>G</m>, and <m>B</m>. </p></li>
+	</ol></p>
+<!--
+	<p> Explain how these quantities can be roughly interpreted by
+	stating that
+	<ol marker="1.">
+	  <li><p> the luminance represents the brightness of the
+	  color. </p></li>
+	  <li><p> the blue chrominance measures the amount of blue in
+	  the color. </p></li>
+	  <li><p> the red chrominance measures the amount of red in
+	  the color. </p></li>
+	</ol></p>
+    -->
+	</li>
+                            </ol>
+                        </p>
+                    </statement>
+
+                    <solution>
+	<p><ol marker="a.">
+	  <li><p> Working with the <m>RGB</m> color model, we find
+	  that
+	  <ol marker="1.">
+	    <li><p> we produce red with varying degrees of
+	    brightness. </p></li> 
+	    <li><p> we produce blue with varying degrees of
+	    brightness. </p></li> 
+	    <li><p> <m>R=G=B=0</m>. </p></li>
+	    <li><p> <m>R=G=B=255</m>. </p></li>
+	  </ol>
+	  </p></li>
+
+	  <li><p> Working with the <m>YC_bC_r</m> color model, we find
+	  that
+	  <ol marker="1.">
+	    <li><p> we produce gray with varying degrees of
+	    brightness. </p></li>
+	    <li><p> we produce blue with varying degrees of
+	    brightness. </p></li>
+	    <li><p> we produce red with varying degrees of
+	    brightness. </p></li>
+	    <li><p> <m>Y=C_b=C_r = 0</m>.</p></li>
+	    <li><p> <m>Y=255</m> with <m>C_b=C_r=0</m>. </p></li>
+	  </ol>
+	  </p></li>
+
+	  <li><p> If we row reduce the matrix whose columns are the
+	  vectors in <m>\bcal</m>, we obtain the identity matrix,
+	  which means that the vectors are linearly independent and
+	  span <m>\real^3</m>.
+	  </p></li>
+
+	  <li><p>
+	    The matrices are
+	    <me>
+	      P_{\bcal} =
+	      \left[\begin{array}{rrr}
+	      1.0000 \amp 0.00000 \amp 1.4020 \\
+	      1.0000 \amp -0.34413 \amp -0.71414 \\
+	      1.0000 \amp 1.7720 \amp 0.00000
+	      \end{array}\right]
+	    </me>
+	    and
+	    <me>
+	      P_{\bcal}^{-1} =
+	      \left[\begin{array}{rrr}
+	      0.29900 \amp 0.58700 \amp 0.11400 \\
+	      -0.16874 \amp -0.33126 \amp 0.50000 \\
+	      0.50000 \amp -0.41869 \amp -0.081311
+	      \end{array}\right]\text{.}
+	    </me>
+	  </p></li>
+
+	  <li><p> To convert from <m>RGB</m> to <m>YC_bC_r</m>, we
+	  multiply by <m>P_{\bcal}^{-1}</m> so that
+	  <ol marker="1.">
+	    <li><p>
+	      <m>\threevec{Y}{C_b}{C_r} =
+	      \threevec{76.2}{-43.0}{127.5}</m>
+	    </p></li>
+	    <li><p>
+	      <m>\threevec{Y}{C_b}{C_r} =
+	      \threevec{29.1}{127.5}{-20.7}</m>
+	    </p></li>
+	    <li><p>
+	      <m>\threevec{Y}{C_b}{C_r} =
+	      \threevec{255}{0}{0}</m>
+	    </p></li>
+	    <li><p>
+	      <m>\threevec{Y}{C_b}{C_r} =
+	      \threevec{0}{0}{0}</m>
+	    </p></li>
+	  </ol>
+	  </p></li>
+
+	  <li><p> To convert from <m>YC_bC_r</m> to <m>RGB</m>, we
+	  multiply by <m>P_{\bcal}</m> so that
+	  <ol marker="i.">
+	    <li><p>
+	      <m>\threevec{R}{G}{B} = \threevec{128}{128}{128}</m>
+	    </p></li>
+	    <li><p>
+	      <m>\threevec{R}{G}{B} = \threevec{128}{107.4}{234.3}</m>
+	    </p></li>
+	    <li><p>
+	      <m>\threevec{R}{G}{B} = \threevec{212.1}{85.1}{128}</m>
+	    </p></li>
+	  </ol>
+	  </p></li>
+
+	  <li><p> We have
+	  <me>
+	    \begin{alignedat}{4}
+	    Y \amp {}={} \amp 0.299R \amp {}+{} \amp 0.587G \amp {}+{}
+	    \amp 0.114B \\
+	    C_b \amp {}={} \amp -0.169R \amp {}-{} \amp 0.331G \amp {}+{}
+	    \amp 0.500B \\
+	    C_r \amp {}={} \amp 0.500R \amp {}-{} \amp 0.419G \amp {}-{}
+	    \amp 0.081B\text{.} \\
+	    \end{alignedat}
+	  </me>
+	  The expression for <m>Y</m> is a weighted average of the
+	  <m>R</m>, <m>G</m>, and <m>B</m> values.  The expression for
+	  <m>C_b</m> takes half the amount of <m>B</m> and subtracts
+	  the amounts of red and green.  Likewise, the expression for
+	  <m>C_r</m> takes half the amount of <m>R</m> and subtracts
+	  the amounts of green and blue.
+	  </p></li>
+	</ol></p>
+      </solution>
+                    
+                </exercise>
+            </page>
+
+            <page>
+                <exercise>
+                    <title>Summary: Color Models</title>
+                    <statement>
+                        <p>
+                            
+                        </p>
+                    </statement>
+                    <solution>
+                        <p>
+                            The <m>R,G,B</m> model is good for digital display, and requires a lot of data.
+                        </p>
+                        <p>
+                            The <m>Y,C_b,C_r</m> model was created based on research into human vision; the most visually 
+                            important data can be concentrated into the single coordinate <m>Y</m>. 
+                            See the <url href="https://understandinglinearalgebra.org/sec-jpeg.html#fig-jpeg-luminance">
+                                comparison of an original image to just using luminance values
+                            </url>.
+                        </p>
+                        <p>
+                            In the next lab, we'll explore how we can use a change of basis on luminance values for data compression.
+                        </p>
+                    </solution>
+                </exercise>
+            </page>
+
+        </worksheet>
+
+    </article>
+</pretext>
