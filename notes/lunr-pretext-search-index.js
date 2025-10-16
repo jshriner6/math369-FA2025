@@ -1196,6 +1196,123 @@ var ptx_lunr_docs = [
   "number": "4",
   "title": "Activity (continued).",
   "body": " Activity (continued)   We can easily see that there is a jump in brightness between pixels 4 and 5, but how can we detect it computationally? We will introduce a new basis for with vectors: .  Construct the matrix that relates the standard coordinate system with the coordinates in the basis .  Determine the matrix that converts the representation of in standard coordinates into the coordinate system defined by .   Suppose the vectors are expressed in general terms as . Using the relationship , determine an expression for the coefficient in terms of . What does measure in terms of the grayscale values of the pixels? What does measure in terms of the grayscale values of the pixels?  Now for the specific vector , determine the representation of in the -coordinate system.  Explain how the coefficients in determine the location of the jump in brightness in the grayscale values represented by the vector .    Readers who are familiar with calculus may recognize that this change of basis converts a vector into , the set of changes in . This process is similar to differentiation in calculus. Similarly, the process of converting into the vector adds together the changes in a process similar to integration. As a result, this change of basis represents a linear algebraic version of the Fundamental Theorem of Calculus.     We form the matrix   We find that   We see that so measures the change in brightness between one pixel and its neighbor. Similarly, , which measures another change in brightness.  We compute that   Most of the coefficients that measure changes are relatively small in absolute value. The coefficient , however, which measures the change in brightness between the fourth and fifth pixel, has a large absolute value. This tells us that there is a large change in brightness between the fourth and fifth pixel, which points to an edge in the image.    "
+},
+{
+  "id": "sec-3-3-1",
+  "level": "1",
+  "url": "sec-3-3-1.html",
+  "type": "Worksheet",
+  "number": "",
+  "title": "<span class=\"process-math\">\\(\\S 3.3\\text{:}\\)<\/span> Color Models and Image Compression",
+  "body": " : Color Models and Image Compression    Motivation: Color Models and Image Compression        Color Models   We represent images with pixels:  Full picture of an image along with a close-up of an eight by eight array of pixels.         Activity: Color Models   This activity investigates these two color models, which we view as coordinate systems for describing colors.    First, we will explore the color model. Use the interactive in your textbook, also available separately in the Color Models interactive , to help answer the questions.   What happens when , (pushed all the way to the left), and is allowed to vary?  What happens when , , and is allowed to vary?  How can you create black in this color model?  How can you create white?     Next, we will explore the color model. Use the interactive in your textbook, also available separately in the Color Models interactive , to help answer the questions.   What happens when and (kept in the center) and is allowed to vary?  What happens when (pushed to the left), (kept in the center), and is allowed to increase between 0 and 127.5?  What happens when , , and is allowed to increase between 0 and 127.5?  How can you create black in this color model?  How can you create white?    Verify that is a basis for .           Activity (continued)     Find the matrix that converts from coordinates into coordinates. Then find the matrix that converts from coordinates back into coordinates.   Find the coordinates for the following colors and check, using the diagrams above, that the two representations agree.  Pure red is .  Pure blue is .  Pure white is .  Pure black is .    Find the coordinates for the following colors and check, using the diagrams above, that the two representations agree.   .   .   .    Write an expression for  The luminance as it depends on , , and .  The blue chrominance as it depends on , , and .  The red chrominance as it depends on , , and .            Summary: Color Models        "
+},
+{
+  "id": "sec-3-3-1-2-1",
+  "level": "2",
+  "url": "sec-3-3-1.html#sec-3-3-1-2-1",
+  "type": "Worksheet Exercise",
+  "number": "1",
+  "title": "Motivation: Color Models and Image Compression.",
+  "body": " Motivation: Color Models and Image Compression      "
+},
+{
+  "id": "sec-3-3-1-2-2",
+  "level": "2",
+  "url": "sec-3-3-1.html#sec-3-3-1-2-2",
+  "type": "Worksheet Exercise",
+  "number": "2",
+  "title": "Color Models.",
+  "body": " Color Models   We represent images with pixels:  Full picture of an image along with a close-up of an eight by eight array of pixels.     "
+},
+{
+  "id": "sec-3-3-1-3-1",
+  "level": "2",
+  "url": "sec-3-3-1.html#sec-3-3-1-3-1",
+  "type": "Worksheet Exercise",
+  "number": "3",
+  "title": "Activity: Color Models.",
+  "body": " Activity: Color Models   This activity investigates these two color models, which we view as coordinate systems for describing colors.    First, we will explore the color model. Use the interactive in your textbook, also available separately in the Color Models interactive , to help answer the questions.   What happens when , (pushed all the way to the left), and is allowed to vary?  What happens when , , and is allowed to vary?  How can you create black in this color model?  How can you create white?     Next, we will explore the color model. Use the interactive in your textbook, also available separately in the Color Models interactive , to help answer the questions.   What happens when and (kept in the center) and is allowed to vary?  What happens when (pushed to the left), (kept in the center), and is allowed to increase between 0 and 127.5?  What happens when , , and is allowed to increase between 0 and 127.5?  How can you create black in this color model?  How can you create white?    Verify that is a basis for .       "
+},
+{
+  "id": "sec-3-3-1-4-1",
+  "level": "2",
+  "url": "sec-3-3-1.html#sec-3-3-1-4-1",
+  "type": "Worksheet Exercise",
+  "number": "4",
+  "title": "Activity (continued).",
+  "body": " Activity (continued)     Find the matrix that converts from coordinates into coordinates. Then find the matrix that converts from coordinates back into coordinates.   Find the coordinates for the following colors and check, using the diagrams above, that the two representations agree.  Pure red is .  Pure blue is .  Pure white is .  Pure black is .    Find the coordinates for the following colors and check, using the diagrams above, that the two representations agree.   .   .   .    Write an expression for  The luminance as it depends on , , and .  The blue chrominance as it depends on , , and .  The red chrominance as it depends on , , and .        "
+},
+{
+  "id": "sec-3-3-1-5-1",
+  "level": "2",
+  "url": "sec-3-3-1.html#sec-3-3-1-5-1",
+  "type": "Worksheet Exercise",
+  "number": "5",
+  "title": "Summary: Color Models.",
+  "body": " Summary: Color Models      "
+},
+{
+  "id": "sec-3-4-1",
+  "level": "1",
+  "url": "sec-3-4-1.html",
+  "type": "Worksheet",
+  "number": "",
+  "title": "<span class=\"process-math\">\\(\\S 3.4\\text{:}\\)<\/span> Determinants",
+  "body": " : Determinants    Motivation: Determinants        Preview Activity 3.4.1   We will explore the area formula in this preview activity.     Find the area of the following parallelograms.    1.   2.   3.     4.   5.              Explain why the area of the parallelogram formed by the vectors and is the same as that formed by and .          First Definitions    Vectors and are positively oriented if      Let be a matrix, where and are positively oriented. Then the determinant of , written , is      Example: Determinant   Let        Activity: Determinants   In this activity, we will find the determinant of some simple matrices and discover some important properties of determinants. Use the interactive diagram in the textbook, or this interactive determinants diagram to help answer the questions below.    Use the diagram to find the determinant of the matrix . Along with our previous example, what does this lead you to believe is generally true about the determinant of a diagonal matrix?  Use the diagram to find the determinant of the matrix . What is the geometric effect of the matrix transformation defined by this matrix?  Use the diagram to find the determinant of the matrix . More generally, what do you notice about the determinant of any matrix of the form ? What does this say about the determinant of an upper triangular matrix?  Use the diagram to find the determinant of any matrix of the form . What does this say about the determinant of a lower triangular matrix?  Use the diagram to find the determinant of the matrix . In general, what is the determinant of a matrix whose columns are linearly dependent?  Consider the matrices . Use the diagram to find the determinants of , , and . What does this suggest is generally true about the relationship of to and ?        Observations: Determinants        "
+},
+{
+  "id": "sec-3-4-1-2-1",
+  "level": "2",
+  "url": "sec-3-4-1.html#sec-3-4-1-2-1",
+  "type": "Worksheet Exercise",
+  "number": "1",
+  "title": "Motivation: Determinants.",
+  "body": " Motivation: Determinants      "
+},
+{
+  "id": "sec-3-4-1-2-2",
+  "level": "2",
+  "url": "sec-3-4-1.html#sec-3-4-1-2-2",
+  "type": "Worksheet Exercise",
+  "number": "2",
+  "title": "Preview Activity 3.4.1.",
+  "body": " Preview Activity 3.4.1   We will explore the area formula in this preview activity.     Find the area of the following parallelograms.    1.   2.   3.     4.   5.              Explain why the area of the parallelogram formed by the vectors and is the same as that formed by and .      "
+},
+{
+  "id": "sec-3-4-1-3-1",
+  "level": "2",
+  "url": "sec-3-4-1.html#sec-3-4-1-3-1",
+  "type": "Worksheet Exercise",
+  "number": "3",
+  "title": "First Definitions.",
+  "body": " First Definitions    Vectors and are positively oriented if      Let be a matrix, where and are positively oriented. Then the determinant of , written , is    "
+},
+{
+  "id": "sec-3-4-1-3-2",
+  "level": "2",
+  "url": "sec-3-4-1.html#sec-3-4-1-3-2",
+  "type": "Worksheet Exercise",
+  "number": "4",
+  "title": "Example: Determinant.",
+  "body": " Example: Determinant   Let    "
+},
+{
+  "id": "sec-3-4-1-4-1",
+  "level": "2",
+  "url": "sec-3-4-1.html#sec-3-4-1-4-1",
+  "type": "Worksheet Exercise",
+  "number": "5",
+  "title": "Activity: Determinants.",
+  "body": " Activity: Determinants   In this activity, we will find the determinant of some simple matrices and discover some important properties of determinants. Use the interactive diagram in the textbook, or this interactive determinants diagram to help answer the questions below.    Use the diagram to find the determinant of the matrix . Along with our previous example, what does this lead you to believe is generally true about the determinant of a diagonal matrix?  Use the diagram to find the determinant of the matrix . What is the geometric effect of the matrix transformation defined by this matrix?  Use the diagram to find the determinant of the matrix . More generally, what do you notice about the determinant of any matrix of the form ? What does this say about the determinant of an upper triangular matrix?  Use the diagram to find the determinant of any matrix of the form . What does this say about the determinant of a lower triangular matrix?  Use the diagram to find the determinant of the matrix . In general, what is the determinant of a matrix whose columns are linearly dependent?  Consider the matrices . Use the diagram to find the determinants of , , and . What does this suggest is generally true about the relationship of to and ?    "
+},
+{
+  "id": "sec-3-4-1-5-1",
+  "level": "2",
+  "url": "sec-3-4-1.html#sec-3-4-1-5-1",
+  "type": "Worksheet Exercise",
+  "number": "6",
+  "title": "Observations: Determinants.",
+  "body": " Observations: Determinants      "
 }
 ]
 
