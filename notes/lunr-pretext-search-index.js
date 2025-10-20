@@ -1198,58 +1198,58 @@ var ptx_lunr_docs = [
   "body": " Activity (continued)   We can easily see that there is a jump in brightness between pixels 4 and 5, but how can we detect it computationally? We will introduce a new basis for with vectors: .  Construct the matrix that relates the standard coordinate system with the coordinates in the basis .  Determine the matrix that converts the representation of in standard coordinates into the coordinate system defined by .   Suppose the vectors are expressed in general terms as . Using the relationship , determine an expression for the coefficient in terms of . What does measure in terms of the grayscale values of the pixels? What does measure in terms of the grayscale values of the pixels?  Now for the specific vector , determine the representation of in the -coordinate system.  Explain how the coefficients in determine the location of the jump in brightness in the grayscale values represented by the vector .    Readers who are familiar with calculus may recognize that this change of basis converts a vector into , the set of changes in . This process is similar to differentiation in calculus. Similarly, the process of converting into the vector adds together the changes in a process similar to integration. As a result, this change of basis represents a linear algebraic version of the Fundamental Theorem of Calculus.     We form the matrix   We find that   We see that so measures the change in brightness between one pixel and its neighbor. Similarly, , which measures another change in brightness.  We compute that   Most of the coefficients that measure changes are relatively small in absolute value. The coefficient , however, which measures the change in brightness between the fourth and fifth pixel, has a large absolute value. This tells us that there is a large change in brightness between the fourth and fifth pixel, which points to an edge in the image.    "
 },
 {
-  "id": "sec-3-3-1",
+  "id": "sec-3-3-1-sols",
   "level": "1",
-  "url": "sec-3-3-1.html",
+  "url": "sec-3-3-1-sols.html",
   "type": "Worksheet",
   "number": "",
   "title": "<span class=\"process-math\">\\(\\S 3.3\\text{:}\\)<\/span> Color Models and Image Compression",
-  "body": " : Color Models and Image Compression    Motivation: Color Models and Image Compression        Color Models   We represent images with pixels:  Full picture of an image along with a close-up of an eight by eight array of pixels.         Activity: Color Models   This activity investigates these two color models, which we view as coordinate systems for describing colors.    First, we will explore the color model. Use the interactive in your textbook, also available separately in the Color Models interactive , to help answer the questions.   What happens when , (pushed all the way to the left), and is allowed to vary?  What happens when , , and is allowed to vary?  How can you create black in this color model?  How can you create white?     Next, we will explore the color model. Use the interactive in your textbook, also available separately in the Color Models interactive , to help answer the questions.   What happens when and (kept in the center) and is allowed to vary?  What happens when (pushed to the left), (kept in the center), and is allowed to increase between 0 and 127.5?  What happens when , , and is allowed to increase between 0 and 127.5?  How can you create black in this color model?  How can you create white?    Verify that is a basis for .           Activity (continued)     Find the matrix that converts from coordinates into coordinates. Then find the matrix that converts from coordinates back into coordinates.   Find the coordinates for the following colors and check, using the diagrams above, that the two representations agree.  Pure red is .  Pure blue is .  Pure white is .  Pure black is .    Find the coordinates for the following colors and check, using the diagrams above, that the two representations agree.   .   .   .    Write an expression for  The luminance as it depends on , , and .  The blue chrominance as it depends on , , and .  The red chrominance as it depends on , , and .            Summary: Color Models        "
+  "body": " : Color Models and Image Compression    Motivation: Color Models and Image Compression       Images require data to be stored and shared. Data storage isn't free, so finding efficient ways to do this is useful. Linear algebra provides one solution. In this section we will   Describe two different color models using vectors in , and    explore how a change to an appropriate basis can help with data compression and retrieval.        Color Models   We represent images with pixels:  Full picture of an image along with a close-up of an eight by eight array of pixels.      Each pixel's color can be described by a vector , where take integer values between and , indicating the amounts of red, green, and blue, respectively, in the pixel.  The set is also a basis for , and defines a new coordinate system: , where (luminance) takes values between and , and (blue chrominance, red chrominance) take values between and .       Activity: Color Models   This activity investigates these two color models, which we view as coordinate systems for describing colors.    First, we will explore the color model. Use the interactive in your textbook, also available separately in the Color Models interactive , to help answer the questions.   What happens when , (pushed all the way to the left), and is allowed to vary?  What happens when , , and is allowed to vary?  How can you create black in this color model?  How can you create white?     Next, we will explore the color model. Use the interactive in your textbook, also available separately in the Color Models interactive , to help answer the questions.   What happens when and (kept in the center) and is allowed to vary?  What happens when (pushed to the left), (kept in the center), and is allowed to increase between 0 and 127.5?  What happens when , , and is allowed to increase between 0 and 127.5?  How can you create black in this color model?  How can you create white?    Verify that is a basis for .           Activity (continued)     Find the matrix that converts from coordinates into coordinates. Then find the matrix that converts from coordinates back into coordinates.   Find the coordinates for the following colors and check, using the diagrams above, that the two representations agree.  Pure red is .  Pure blue is .  Pure white is .  Pure black is .    Find the coordinates for the following colors and check, using the diagrams above, that the two representations agree.   .   .   .    Write an expression for  The luminance as it depends on , , and .  The blue chrominance as it depends on , , and .  The red chrominance as it depends on , , and .          Working with the color model, we find that  we produce red with varying degrees of brightness.  we produce blue with varying degrees of brightness.   .   .    Working with the color model, we find that  we produce gray with varying degrees of brightness.  we produce blue with varying degrees of brightness.  we produce red with varying degrees of brightness.   .   with .    If we row reduce the matrix whose columns are the vectors in , we obtain the identity matrix, which means that the vectors are linearly independent and span .  The matrices are and   To convert from to , we multiply by so that                To convert from to , we multiply by so that             We have The expression for is a weighted average of the , , and values. The expression for takes half the amount of and subtracts the amounts of red and green. Likewise, the expression for takes half the amount of and subtracts the amounts of green and blue.        Summary: Color Models       The model is good for digital display, and requires a lot of data.  The model was created based on research into human vision; the most visually important data can be concentrated into the single coordinate . See the comparison of an original image to just using luminance values .  In the next lab, we'll explore how we can use a change of basis on luminance values for data compression.     "
 },
 {
-  "id": "sec-3-3-1-2-1",
+  "id": "sec-3-3-1-sols-2-1",
   "level": "2",
-  "url": "sec-3-3-1.html#sec-3-3-1-2-1",
+  "url": "sec-3-3-1-sols.html#sec-3-3-1-sols-2-1",
   "type": "Worksheet Exercise",
   "number": "1",
   "title": "Motivation: Color Models and Image Compression.",
-  "body": " Motivation: Color Models and Image Compression      "
+  "body": " Motivation: Color Models and Image Compression       Images require data to be stored and shared. Data storage isn't free, so finding efficient ways to do this is useful. Linear algebra provides one solution. In this section we will   Describe two different color models using vectors in , and    explore how a change to an appropriate basis can help with data compression and retrieval.      "
 },
 {
-  "id": "sec-3-3-1-2-2",
+  "id": "sec-3-3-1-sols-2-2",
   "level": "2",
-  "url": "sec-3-3-1.html#sec-3-3-1-2-2",
+  "url": "sec-3-3-1-sols.html#sec-3-3-1-sols-2-2",
   "type": "Worksheet Exercise",
   "number": "2",
   "title": "Color Models.",
-  "body": " Color Models   We represent images with pixels:  Full picture of an image along with a close-up of an eight by eight array of pixels.     "
+  "body": " Color Models   We represent images with pixels:  Full picture of an image along with a close-up of an eight by eight array of pixels.      Each pixel's color can be described by a vector , where take integer values between and , indicating the amounts of red, green, and blue, respectively, in the pixel.  The set is also a basis for , and defines a new coordinate system: , where (luminance) takes values between and , and (blue chrominance, red chrominance) take values between and .   "
 },
 {
-  "id": "sec-3-3-1-3-1",
+  "id": "sec-3-3-1-sols-3-1",
   "level": "2",
-  "url": "sec-3-3-1.html#sec-3-3-1-3-1",
+  "url": "sec-3-3-1-sols.html#sec-3-3-1-sols-3-1",
   "type": "Worksheet Exercise",
   "number": "3",
   "title": "Activity: Color Models.",
   "body": " Activity: Color Models   This activity investigates these two color models, which we view as coordinate systems for describing colors.    First, we will explore the color model. Use the interactive in your textbook, also available separately in the Color Models interactive , to help answer the questions.   What happens when , (pushed all the way to the left), and is allowed to vary?  What happens when , , and is allowed to vary?  How can you create black in this color model?  How can you create white?     Next, we will explore the color model. Use the interactive in your textbook, also available separately in the Color Models interactive , to help answer the questions.   What happens when and (kept in the center) and is allowed to vary?  What happens when (pushed to the left), (kept in the center), and is allowed to increase between 0 and 127.5?  What happens when , , and is allowed to increase between 0 and 127.5?  How can you create black in this color model?  How can you create white?    Verify that is a basis for .       "
 },
 {
-  "id": "sec-3-3-1-4-1",
+  "id": "sec-3-3-1-sols-4-1",
   "level": "2",
-  "url": "sec-3-3-1.html#sec-3-3-1-4-1",
+  "url": "sec-3-3-1-sols.html#sec-3-3-1-sols-4-1",
   "type": "Worksheet Exercise",
   "number": "4",
   "title": "Activity (continued).",
-  "body": " Activity (continued)     Find the matrix that converts from coordinates into coordinates. Then find the matrix that converts from coordinates back into coordinates.   Find the coordinates for the following colors and check, using the diagrams above, that the two representations agree.  Pure red is .  Pure blue is .  Pure white is .  Pure black is .    Find the coordinates for the following colors and check, using the diagrams above, that the two representations agree.   .   .   .    Write an expression for  The luminance as it depends on , , and .  The blue chrominance as it depends on , , and .  The red chrominance as it depends on , , and .        "
+  "body": " Activity (continued)     Find the matrix that converts from coordinates into coordinates. Then find the matrix that converts from coordinates back into coordinates.   Find the coordinates for the following colors and check, using the diagrams above, that the two representations agree.  Pure red is .  Pure blue is .  Pure white is .  Pure black is .    Find the coordinates for the following colors and check, using the diagrams above, that the two representations agree.   .   .   .    Write an expression for  The luminance as it depends on , , and .  The blue chrominance as it depends on , , and .  The red chrominance as it depends on , , and .          Working with the color model, we find that  we produce red with varying degrees of brightness.  we produce blue with varying degrees of brightness.   .   .    Working with the color model, we find that  we produce gray with varying degrees of brightness.  we produce blue with varying degrees of brightness.  we produce red with varying degrees of brightness.   .   with .    If we row reduce the matrix whose columns are the vectors in , we obtain the identity matrix, which means that the vectors are linearly independent and span .  The matrices are and   To convert from to , we multiply by so that                To convert from to , we multiply by so that             We have The expression for is a weighted average of the , , and values. The expression for takes half the amount of and subtracts the amounts of red and green. Likewise, the expression for takes half the amount of and subtracts the amounts of green and blue.    "
 },
 {
-  "id": "sec-3-3-1-5-1",
+  "id": "sec-3-3-1-sols-5-1",
   "level": "2",
-  "url": "sec-3-3-1.html#sec-3-3-1-5-1",
+  "url": "sec-3-3-1-sols.html#sec-3-3-1-sols-5-1",
   "type": "Worksheet Exercise",
   "number": "5",
   "title": "Summary: Color Models.",
-  "body": " Summary: Color Models      "
+  "body": " Summary: Color Models       The model is good for digital display, and requires a lot of data.  The model was created based on research into human vision; the most visually important data can be concentrated into the single coordinate . See the comparison of an original image to just using luminance values .  In the next lab, we'll explore how we can use a change of basis on luminance values for data compression.   "
 },
 {
   "id": "sec-3-4-1",
