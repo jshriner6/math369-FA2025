@@ -20,6 +20,10 @@
     <target name="notes-print" format="pdf" source="notes.ptx"
             publication="publication.ptx" output-filename="notes.pdf"/>
 
+    <target name="ebook" format="epub" source="notes.ptx"
+            publication="publication.ptx" output-dir="epub"/>
+      
+
   <!-- The following targets are used to create stand-alone documents, -->
   <!-- either scorm archives or pdfs. Run with `pretext build scorm -i source/[filename.ptx]`-->
     <target name="scorm" standalone="yes" format="html" compression="scorm"
