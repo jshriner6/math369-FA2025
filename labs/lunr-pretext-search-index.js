@@ -170,6 +170,69 @@ var ptx_lunr_docs = [
   "number": "6",
   "title": "",
   "body": "  Write an ending to our heart-felt story and describe how to illustrate it.   "
+},
+{
+  "id": "lab-4",
+  "level": "1",
+  "url": "lab-4.html",
+  "type": "Worksheet",
+  "number": "",
+  "title": "Lab 4: Image Compression",
+  "body": " Lab 4: Image Compression    Complete the following exercises in groups of 2 or 3 students including complete explanations of your work. You should write directly on this handout (if additional pages are necessary, please make sure they are well-organized), and you only need to submit one report to Gradescope. Make sure you indicate everyone in your group in your submission to Gradescope.  As introduced in class, we are going to study the luminance values in an block of pixels from a digital photo taken in Capitol Reef National Park.   An eight by eight grid of gray pixels.    An eight by eight grid showing the luminance values of each pixel.     To begin, we'll consider the first column of luminance values, which is the 8-dimensional vector represented graphically as  Graph of the components of the vector x.  Two things are important:   There are not rapid variations in these numbers within the column.    If some of the values were to change slightly, our eyes would probably not notice because the pixels, when represented on a screen, are so small.     In the daily prep, we encountered the Fourier basis consisting of vectors , and the vector consisting of the Fourier coefficients .  There is a page of Sage cells to use for this lab. Be sure to evaluate the first cell and then use the rest of the cells to complete your work. This cell will load the matrix , whose columns are the vectors , as well as the vector shown above and the matrix of luminance values called luminance .        Describe in words how to convert the vector into the vector of Fourier coefficients and, conversely, how to convert back into .      Find the vector using the page of Sage cells provided, take a screenshot of it, and paste it below.      What does the relative size of the Fourier coefficients tell us about the relative contributions of the basis vectors to the vector ? How is your observation consistent with the fact that “there are not rapid variations” in the vector ?         Now form a new vector , which is formed from by rounding the Fourier coefficients to the nearest integers and setting the last two Fourier coefficients to zero. In other words, we are only saving of the Fourier coefficients, or of them.     Find , an approximation to the vector formed by the approximate Fourier coefficients . Describe the vector and how you found . Then paste a screenshot of below. (Remember that you can define a vector in Sage as v = vector([2, 1]) .)      Paste a screen shot of , and describe what this measures.      Here's the main idea: we have saved only of the Fourier coefficients, but when we reconstruct the visual information in the vector , the error is pretty small and probably not visible to the human eye (remember that the components of can vary between and ). We say that the compression ratio is . Let's try again saving only the four largest Fourier coefficients (a compression ratio of ); that is, form a new by setting the four smallest Fourier coefficients to zero. Paste a screen shot of the new value of . Describe its relationship to what you obtained in the previous question, and why this makes sense.         We can, in fact, do better. Let's return to the block of luminance values on page 1 of this document. Each column of luminance values forms an 8-dimensional vector, the first of which we studied already. If is the column of the luminance matrix, then we can find its corresponding vector of Fourier coefficients.     Find the matrix whose columns are the vectors and paste a screenshot of your results in the space below. Include a description of how you found this matrix. This may sound daunting at first, but remember how matrix-matrix multiplication works, and that you have the matrix luminance of luminance values available on your page of Sage cells.      As you scan across a row, take the first row, for instance, you'll see that the values don't change wildly. So maybe we can also Fourier transform the rows of the matrix of Fourier coefficients. Define the 8-dimensional vector consisting of the rounded values of the first row of the Fourier coefficient matrix and then find its Fourier coefficients . Paste a screenshot of below. What do you notice about the relative size of these Fourier coefficients?         Transforming the rows of a Fourier coefficient matrix is called the double Fourier transform , and there's a Sage function, double_fourier( luminance ) , that can do this for you from the original luminance values.     Give the matrix obtained after a double Fourier transform a name, and paste a screenshot of it below. What do you notice about the size of the entries of this matrix?      There is another command round_matrix( matrix_name, minimum ) that will round the entries in the given matrix to the nearest integer and set any entries whose absolute value is smaller than minimum to zero. For instance, round_matrix( A, 4 ) will round the entries of and set any entries in the range from -3 to 3 equal to zero. Round the matrix of double Fourier coefficients with a minimum value of 4 and paste your result below. How many non-zero double Fourier coefficients are left? What is the compression ratio? (The non-zero entries are the only ones that we need to save, so the ratio of the number of non-zero double Fourier coefficients to 64 represents the compression ratio.)         There is a final command, inverse_double_fourier( matrix_name ) , that will reconstruct the luminance values from the rounded double Fourier coefficients.     Find this reconstruction and paste it below.      Compute a matrix that represents the error between the original luminance values and the reconstructed values, and paste it below.     Notice that we have only saved about of the Fourier coefficients yet we are able to reconstruct the luminance values with a relatively small error. When you take a picture with your phone, the software saves the rounded double Fourier coefficients of each block of pixels, which represents only a small fraction of the information. When you want to view a picture, the software reconstructs the image from the saved double Fourier coefficients with a relatively small error. Most photo editing programs allow you to choose the compression ratio (quality setting), which is controlled by the range of Fourier coefficients we save.   "
+},
+{
+  "id": "lab-4-2-1-5",
+  "level": "2",
+  "url": "lab-4.html#lab-4-2-1-5",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "luminance "
+},
+{
+  "id": "lab-4-3-1",
+  "level": "2",
+  "url": "lab-4.html#lab-4-3-1",
+  "type": "Worksheet Exercise",
+  "number": "1",
+  "title": "",
+  "body": "   Describe in words how to convert the vector into the vector of Fourier coefficients and, conversely, how to convert back into .      Find the vector using the page of Sage cells provided, take a screenshot of it, and paste it below.      What does the relative size of the Fourier coefficients tell us about the relative contributions of the basis vectors to the vector ? How is your observation consistent with the fact that “there are not rapid variations” in the vector ?    "
+},
+{
+  "id": "lab-4-4-1",
+  "level": "2",
+  "url": "lab-4.html#lab-4-4-1",
+  "type": "Worksheet Exercise",
+  "number": "2",
+  "title": "",
+  "body": "  Now form a new vector , which is formed from by rounding the Fourier coefficients to the nearest integers and setting the last two Fourier coefficients to zero. In other words, we are only saving of the Fourier coefficients, or of them.     Find , an approximation to the vector formed by the approximate Fourier coefficients . Describe the vector and how you found . Then paste a screenshot of below. (Remember that you can define a vector in Sage as v = vector([2, 1]) .)      Paste a screen shot of , and describe what this measures.      Here's the main idea: we have saved only of the Fourier coefficients, but when we reconstruct the visual information in the vector , the error is pretty small and probably not visible to the human eye (remember that the components of can vary between and ). We say that the compression ratio is . Let's try again saving only the four largest Fourier coefficients (a compression ratio of ); that is, form a new by setting the four smallest Fourier coefficients to zero. Paste a screen shot of the new value of . Describe its relationship to what you obtained in the previous question, and why this makes sense.    "
+},
+{
+  "id": "lab-4-5-1",
+  "level": "2",
+  "url": "lab-4.html#lab-4-5-1",
+  "type": "Worksheet Exercise",
+  "number": "3",
+  "title": "",
+  "body": "  We can, in fact, do better. Let's return to the block of luminance values on page 1 of this document. Each column of luminance values forms an 8-dimensional vector, the first of which we studied already. If is the column of the luminance matrix, then we can find its corresponding vector of Fourier coefficients.     Find the matrix whose columns are the vectors and paste a screenshot of your results in the space below. Include a description of how you found this matrix. This may sound daunting at first, but remember how matrix-matrix multiplication works, and that you have the matrix luminance of luminance values available on your page of Sage cells.      As you scan across a row, take the first row, for instance, you'll see that the values don't change wildly. So maybe we can also Fourier transform the rows of the matrix of Fourier coefficients. Define the 8-dimensional vector consisting of the rounded values of the first row of the Fourier coefficient matrix and then find its Fourier coefficients . Paste a screenshot of below. What do you notice about the relative size of these Fourier coefficients?    "
+},
+{
+  "id": "lab-4-6-1",
+  "level": "2",
+  "url": "lab-4.html#lab-4-6-1",
+  "type": "Worksheet Exercise",
+  "number": "4",
+  "title": "",
+  "body": "  Transforming the rows of a Fourier coefficient matrix is called the double Fourier transform , and there's a Sage function, double_fourier( luminance ) , that can do this for you from the original luminance values.     Give the matrix obtained after a double Fourier transform a name, and paste a screenshot of it below. What do you notice about the size of the entries of this matrix?      There is another command round_matrix( matrix_name, minimum ) that will round the entries in the given matrix to the nearest integer and set any entries whose absolute value is smaller than minimum to zero. For instance, round_matrix( A, 4 ) will round the entries of and set any entries in the range from -3 to 3 equal to zero. Round the matrix of double Fourier coefficients with a minimum value of 4 and paste your result below. How many non-zero double Fourier coefficients are left? What is the compression ratio? (The non-zero entries are the only ones that we need to save, so the ratio of the number of non-zero double Fourier coefficients to 64 represents the compression ratio.)    "
+},
+{
+  "id": "lab-4-7-1",
+  "level": "2",
+  "url": "lab-4.html#lab-4-7-1",
+  "type": "Worksheet Exercise",
+  "number": "5",
+  "title": "",
+  "body": "  There is a final command, inverse_double_fourier( matrix_name ) , that will reconstruct the luminance values from the rounded double Fourier coefficients.     Find this reconstruction and paste it below.      Compute a matrix that represents the error between the original luminance values and the reconstructed values, and paste it below.    "
 }
 ]
 
