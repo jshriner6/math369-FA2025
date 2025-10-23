@@ -1,0 +1,128 @@
+<pretext>
+    <article xml:id="notes">
+        <worksheet xml:id="sec-3-5-2">
+        <title><m>\S 3.5</m>: The Null Space</title>
+            <page>
+                <exercise workspace="2in">
+                    <title>Motivation: Null Space</title>
+                    <statement>
+                        <p>
+                            
+                        </p>
+                    </statement>
+                </exercise>
+
+                <exercise workspace="4in">
+                    <title>Definition: Null Space</title>
+                    <statement>
+                        <p>
+                            If <m>A</m> is an <m>m \times n</m> matrix, then
+                        </p>
+                    </statement>
+                    
+                </exercise>
+
+            </page>
+            <page>
+                <exercise>
+                    <title>Activity: Null Space</title>
+                    <statement>
+      <p> We will explore some null spaces in this activity and see
+      why <m>\nul(A)</m> satisfies the definition of a subspace.
+      <ol marker="a.">
+	<li><p>
+	  Consider the matrix
+	  <me>A=\begin{bmatrix}
+	  1 \amp 3 \amp -1 \amp 2 \\
+	  -2 \amp 0 \amp -4 \amp 2 \\
+	  1 \amp 2 \amp 0 \amp 1
+	  \end{bmatrix}
+	  </me>
+	  and give a parametric description of the solution space to
+	  the equation <m>A\xvec = \zerovec</m>.  In other words, give
+	  a parametric description of <m>\nul(A)</m>.
+	  <sage>
+	    <input>
+	    </input>
+	  </sage>
+	</p></li>
+
+	<li>
+	  <p>
+	    This parametric description shows that the vectors 
+	    satisfying the equation <m>A\xvec=\zerovec</m> can be written as
+	    a linear combination of a set of vectors.  In other words,
+	    this description shows why <m>\nul(A)</m> is the span of a set
+	    of vectors and is therefore a subspace.
+	    Identify a set of vectors
+	    whose span is <m>\nul(A)</m>.
+	  </p>
+	</li>
+
+	<li>
+	  <p> Use this set of vectors to find a basis for
+	    <m>\nul(A)</m> and state the dimension of <m>\nul(A)</m>. 
+	  </p>
+	</li>
+
+	<li><p> The null space <m>\nul(A)</m> is a subspace of
+	<m>\real^p</m> for which value of <m>p</m>? </p></li>
+
+	<li><p> Now consider the matrix <m>B</m> whose reduced row
+	echelon form is given by
+	<me>
+	  B \sim
+	  \left[\begin{array}{rrrr}
+	  1 \amp 2 \amp 0 \amp -3 \\
+	  0 \amp 0 \amp 0 \amp 0 \\
+	  \end{array}\right].
+	</me>
+	Give a parametric description of <m>\nul(B)</m>.  </p></li>
+
+	<li>
+	  <p>
+	    The parametric description gives a set of vectors that span
+	    <m>\nul(B)</m>.  Explain why this set of vectors is linearly
+	    independent and hence forms a basis.  What is the dimension of
+	    <m>\nul(B)</m>?
+	  </p>
+	</li>
+
+	<li>
+	  <p>
+	    For a general matrix <m>A</m>, how does the number of
+	    pivot positions indicate the dimension of <m>\nul(A)</m>?
+	  </p>
+	</li>
+
+	<li>
+	  <p>
+	    Suppose that the columns of a matrix <m>A</m> are
+	    linearly independent.  What can you say about
+	    <m>\nul(A)</m>? 
+	  </p>
+	</li>
+
+      </ol></p>
+      </statement>
+
+                    
+                    
+                </exercise>
+            </page>
+
+            <page>
+                <exercise>
+                    <title>Connecting Null Space and Column Space</title>
+                    <statement>
+                        <p>
+                            We can frame our observations from the activity to connect the spaces <m>\col(A)</m> and <m>\nul(A)</m>:
+                        </p>
+                    </statement>
+                    
+                </exercise>
+            </page>
+
+        </worksheet>
+    </article>
+</pretext>

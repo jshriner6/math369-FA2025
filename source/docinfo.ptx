@@ -66,6 +66,9 @@
     \newcommand{\wcal}{{\cal W}}
     \newcommand{\ecal}{{\cal E}}
      \newcommand{\coords}[2]{\left\{#1\right\}_{#2}}
+
+     \newcommand{\col}{\text{Col}}
+     \newcommand{\nul}{\text{Nul}}
   </macros>
 
   <!-- If you put any latex-image elements you can include preambles -->

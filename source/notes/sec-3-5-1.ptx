@@ -1,0 +1,369 @@
+<pretext>
+    <article xml:id="notes">
+        <worksheet xml:id="sec-3-5-1">
+        <title><m>\S 3.5</m>: Subspaces</title>
+            <page>
+                <exercise workspace="1in">
+                    <title>Motivation: Subspaces</title>
+                    <statement>
+                        <p>
+                            
+                        </p>
+                    </statement>
+                </exercise>
+                <exercise workspace="6in">
+                    <title>Preview Activity 3.5.1</title>
+
+                    <introduction>
+        <p> Let's consider the following matrix <m>A</m> and its reduced
+        row echelon form.
+        <me>
+	  A = \left[\begin{array}{rrrr}
+	  2 \amp -1 \amp 2 \amp 3 \\
+	  1 \amp 0 \amp 0 \amp 2 \\
+	  -2 \amp 2 \amp -4 \amp -2 \\
+	  \end{array}\right]
+	  \sim
+	  \left[\begin{array}{rrrr}
+	  1 \amp 0 \amp 0 \amp 2 \\
+	  0 \amp 1 \amp -2 \amp 1 \\
+	  0 \amp 0 \amp 0 \amp 0 \\
+	  \end{array}\right]
+        </me>.
+        </p>
+      </introduction>
+                <task>
+                    <statement>
+	  <p> Are the columns of <m>A</m> linearly independent?  Is
+	  the span of the columns <m>\real^3</m>?
+	  </p>
+        </statement>
+        
+       
+      </task>
+
+      <task >
+        <statement>
+	  <p> Give a parametric description of the solution space to
+	  the homogeneous equation <m>A\xvec = \zerovec</m>. </p>
+        </statement>
+      
+        
+      </task>
+
+      <task >
+        <statement>
+	  <p> Explain how this parametric description produces two
+	  vectors <m>\wvec_1</m> and <m>\wvec_2</m> whose span is the
+	  solution space to the equation <m>A\xvec = \zerovec</m>.
+	  </p>
+        </statement>
+     
+        
+      </task>
+
+      <task >
+        <statement>
+	  <p> What can you say about the linear independence of the
+	  set of vectors <m>\wvec_1</m> and <m>\wvec_2</m>? </p>
+        </statement>
+     
+        
+      </task>
+
+      <task>
+        <statement>
+	  <p> Let's denote the columns of <m>A</m> as
+	  <m>\vvec_1</m>,
+	  <m>\vvec_2</m>,
+	  <m>\vvec_3</m>,  and
+	  <m>\vvec_4</m>.
+	  Explain why <m>\vvec_3</m> and <m>\vvec_4</m> can be written
+	  as linear combinations of <m>\vvec_1</m> and <m>\vvec_2</m>.
+	  </p>
+        </statement>
+       
+        
+      </task>
+
+      <task >
+        <statement>
+	  <p> Explain why <m>\vvec_1</m> and <m>\vvec_2</m> are
+	  linearly independent and <me>\laspan{\vvec_1,\vvec_2} =
+	  \laspan{\vvec_1, \vvec_2, \vvec_3, \vvec_4}.</me>
+	  </p>
+        </statement>
+       
+        
+      </task>
+                    
+                    
+                </exercise>
+            </page>
+            <page>
+
+            
+                <exercise workspace="4in">
+                    <title>Definition: Subspace</title>
+                    <statement>
+                        <p>
+                            A <term>subspace</term> of <m>\R^n</m> is a 
+                        </p>
+                    </statement>
+                    
+                    
+                </exercise>
+            </page>
+            <page>
+                <exercise workspace="7in">
+                    <title>Activity: Subspaces</title>
+                    <statement>
+	<p>
+	  We will look at some sets of vectors and
+	  the subspaces they form.
+	  <ol marker="a.">
+	    <li>
+	      <p>
+		If <m>\vvec_1, \vvec_2,\ldots,\vvec_n</m> is a set of
+		vectors in <m>\real^m</m>, explain why <m>\zerovec</m> can
+		be expressed as a 
+		linear combination of these vectors.  Use this fact to
+		explain why the zero vector <m>\zerovec</m> belongs to any
+		subspace in <m>\real^m</m>.  
+	      </p>
+	    </li>
+
+	    <li>
+	      <p>
+		Explain why the line on the left of <xref
+		ref="figure-lines-r2"/> is not a subspace of
+		<m>\real^2</m> and why the line on the right is.
+	      </p>
+
+	      <figure xml:id="figure-lines-r2">
+		<caption> Two lines in <m>\real^2</m>, one of which is a
+		subspace and one of which is not.
+		</caption>
+		<sidebyside widths="40% 40%" margins="5% 5%">
+		  <image source="images/subspace-line-skew.svg" />
+		  <image source="images/subspace-line-origin.svg" />
+		</sidebyside>
+	      </figure>
+	    </li>
+
+	    <li>
+	      <p>
+		Consider the vectors
+		<me>
+		  \vvec_1=\threevec101,~~~
+		  \vvec_2=\threevec011,~~~
+		  \vvec_3=\threevec110,
+		</me>
+		and describe the subspace
+		<m>S=\laspan{\vvec_1,\vvec_2,\vvec_3}</m> of
+		<m>\real^3</m>.
+		
+	      </p>
+	    </li>
+
+	    <li>
+	      <p>
+		Consider the vectors
+		<me>
+		  \wvec_1=\threevec210,~~~
+		  \wvec_2=\threevec{-1}1{-1},~~~
+		  \wvec_3=\threevec03{-2}
+		</me>
+		<ol marker="1.">
+		  <li>
+		    <p>
+		      Write <m>\wvec_3</m> as a linear combination of
+		      <m>\wvec_1</m> and <m>\wvec_2</m>.
+		    </p>
+		  </li>
+		  <li>
+		    <p>
+		      Explain why <m>\laspan{\wvec_1,\wvec_2,\wvec_3} =
+		      \laspan{\wvec_1, \wvec_2}</m>.
+		    </p>
+		  </li>
+		  <li>
+		    <p>
+		      Describe the subspace <m>S =
+		      \laspan{\wvec_1,\wvec_2,\wvec_3}</m> of <m>\real^3</m>.
+		    </p>
+		  </li>
+		</ol>
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		Suppose that <m>\vvec_1</m>, <m>\vvec_2</m>,
+		<m>\vvec_3</m>, and <m>\vvec_4</m> are four vectors in
+		<m>\real^3</m> and that
+		<me>
+		  \begin{bmatrix}
+		  \vvec_1 \amp \vvec_2 \amp \vvec_3 \amp \vvec_4
+		  \end{bmatrix}
+		  \sim
+		  \begin{bmatrix}
+		  1 \amp 2 \amp 0 \amp -2 \\
+		  0 \amp 0 \amp 1 \amp 1 \\
+		  0 \amp 0 \amp 0 \amp 0 \\
+		  \end{bmatrix}.
+		</me>
+		Give a description of the subspace
+		<m>S=\laspan{\vvec_1,\vvec_2,\vvec_3,\vvec_4}</m> of
+		<m>\real^3</m>. 
+	      </p>
+	    </li>
+	  </ol>
+	</p>
+      </statement>
+                    
+                    
+                </exercise>
+            </page>
+            <page>
+                <exercise workspace="2in">
+                    <title>Definition: Basis</title>
+                    <statement>
+                        <p>
+                            Just as with <m>\real^n</m>, we are typically interested in representing a subspace 
+                            efficiently.
+                        </p>
+                        <p>
+                            A <term>basis</term> for a subspace <m>S</m> of <m>\real^n</m> is
+                        </p>
+                    </statement>
+                    
+                    
+                </exercise>
+                <exercise workspace="2in">
+                    <title>Two Important Subspaces</title>
+                    <statement>
+                        <p>
+                            Given a matrix <m>A</m>, there are two important subspaces that we've seen previously:
+                        </p>
+                    </statement>
+                    
+                    
+                </exercise>
+                <exercise workspace="3in">
+                    <title>Definition: Column Space</title>
+                    <statement>
+                        <p>
+                            If <m>A</m> is an <m>m \times n</m> matrix, then 
+                        </p>
+                    </statement>
+                    
+                    
+                </exercise>
+            </page>
+            <page>
+                <exercise>
+                    <title>Activity: Column Space</title>
+                    <statement>
+      <p> We will explore some column spaces in this activity.
+      <ol marker="a.">
+	<li><p>
+	  Consider the matrix
+	  <me>A= \left[\begin{array}{rrr}
+	  \vvec_1 \amp \vvec_2 \amp \vvec_3
+	  \end{array}\right]
+	  =
+	  \left[\begin{array}{rrr}
+	  1 \amp 3 \amp -1 \\
+	  -2 \amp 0 \amp -4 \\
+	  1 \amp 2 \amp 0 \\
+	  \end{array}\right].
+	  </me>
+	  Since <m>\col(A)</m> is the span of the columns,
+	  we have
+	  <me>
+	    \col(A) = \laspan{\vvec_1,\vvec_2,\vvec_3}.
+	  </me>
+	  Explain why <m>\vvec_3</m> can be written as a linear
+	  combination of <m>\vvec_1</m> and <m>\vvec_2</m> and
+	  why <m>\col(A)=\laspan{\vvec_1,\vvec_2}</m>.
+	</p> </li>
+
+	<li><p> Explain why the vectors <m>\vvec_1</m> and
+	<m>\vvec_2</m> form a basis for <m>\col(A)</m> and why
+	<m>\col(A)</m> is a 2-dimensional subspace of
+	<m>\real^3</m> and therefore a plane. </p></li>
+
+	<li><p> Now consider the matrix <m>B</m> and its reduced row
+	echelon form:
+	<me>
+	  B = \left[\begin{array}{rrrr}
+	  -2 \amp -4 \amp 0 \amp 6 \\
+	  1 \amp 2 \amp 0 \amp -3 \\
+	  \end{array}\right]
+	  \sim
+	  \left[\begin{array}{rrrr}
+	  1 \amp 2 \amp 0 \amp -3 \\
+	  0 \amp 0 \amp 0 \amp 0 \\
+	  \end{array}\right].
+	</me>
+	Explain why <m>\col(B)</m> is a 1-dimensional
+	subspace of <m>\real^2</m> and is therefore a line.
+	</p></li>
+
+	<li><p> For a general matrix <m>A</m>, what is the
+	relationship between the dimension 
+	<m>\dim~\col(A)</m> and the number of pivot positions in
+	<m>A</m>? </p></li>
+
+	<li><p> How does the location of the pivot positions indicate
+	a basis for <m>\col(A)</m>?
+	</p></li>
+
+	<li><p> If <m>A</m> is an invertible <m>9\times9</m> matrix,
+	what can you say about the column space <m>\col(A)</m>?
+	</p></li>
+
+	<li>
+	  <p> Suppose that <m>A</m> is an <m>8\times 10</m> matrix and
+	  that <m>\col(A) = \real^8</m>.  If <m>\bvec</m> is an
+	  8-dimensional vector, what can you say about the equation
+	  <m>A\xvec = \bvec</m>?
+	  </p>
+	</li>
+
+      </ol></p>
+      </statement>
+                    
+                </exercise>
+            </page>
+
+            <page>
+                <exercise workspace="3in">
+                    <title>Definition: Rank</title>
+                    <statement>
+                        <p>
+                            Pivot positions are important in helping us determine both the dimension of <m>\col(A)</m> and 
+                            a basis for <m>\col(A)</m>.
+                        </p>
+                        <p>
+                            The <term>rank</term> of a matrix <m>A</m> is 
+                        </p>
+                    </statement>
+                    
+                    
+                </exercise>
+                <exercise workspace="3in">
+                    <title>Summary: Column Space and Rank</title>
+                    <statement>
+                        <p>
+                            If <m>A</m> is an <m>m \times n</m> matrix, then
+                        </p>
+                    </statement>
+                    
+                    
+                </exercise>
+            </page>
+
+        </worksheet>
+    </article>
+</pretext>

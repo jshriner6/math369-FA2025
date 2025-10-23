@@ -1,0 +1,215 @@
+<pretext>
+    <article xml:id="notes">
+        <worksheet xml:id="sec-3-5-2-sols">
+        <title><m>\S 3.5</m>: The Null Space</title>
+            <page>
+                <exercise workspace="2in">
+                    <title>Motivation: Null Space</title>
+                    <statement>
+                        <p>
+                            
+                        </p>
+                    </statement>
+                    <solution>
+                        <p>
+                            Last time we introduced subspaces of <m>\real^n</m>, and how we can describe them 
+                            efficiently with bases. We saw one example from our past, <m>\col(A)</m>, which is the
+                            span of the columns of <m>A</m>. Today, we'll explore one more familiar subspace.
+                        </p>
+                    </solution>
+                </exercise>
+
+                <exercise workspace="4in">
+                    <title>Definition: Null Space</title>
+                    <statement>
+                        <p>
+                            If <m>A</m> is an <m>m \times n</m> matrix, then
+                        </p>
+                    </statement>
+                    <solution>
+                        <p>
+                            solution to <m>A\xvec = \zerovec</m> is the <term>null space</term> of <m>A</m>, 
+                            written <m>\nul(A)</m>. 
+                        </p>
+                        <p>
+                            Unlike <m>\col(A)</m>, it's not clear that this is actually a subspace (i.e., a span 
+                            of a set of vectors). We'll illustrate this with the next activity.
+                        </p>
+                    </solution>
+                    
+                </exercise>
+
+            </page>
+            <page>
+                <exercise>
+                    <title>Activity: Null Space</title>
+                    <statement>
+      <p> We will explore some null spaces in this activity and see
+      why <m>\nul(A)</m> satisfies the definition of a subspace.
+      <ol marker="a.">
+	<li><p>
+	  Consider the matrix
+	  <me>A=\begin{bmatrix}
+	  1 \amp 3 \amp -1 \amp 2 \\
+	  -2 \amp 0 \amp -4 \amp 2 \\
+	  1 \amp 2 \amp 0 \amp 1
+	  \end{bmatrix}
+	  </me>
+	  and give a parametric description of the solution space to
+	  the equation <m>A\xvec = \zerovec</m>.  In other words, give
+	  a parametric description of <m>\nul(A)</m>.
+	  <sage>
+	    <input>
+	    </input>
+	  </sage>
+	</p></li>
+
+	<li>
+	  <p>
+	    This parametric description shows that the vectors 
+	    satisfying the equation <m>A\xvec=\zerovec</m> can be written as
+	    a linear combination of a set of vectors.  In other words,
+	    this description shows why <m>\nul(A)</m> is the span of a set
+	    of vectors and is therefore a subspace.
+	    Identify a set of vectors
+	    whose span is <m>\nul(A)</m>.
+	  </p>
+	</li>
+
+	<li>
+	  <p> Use this set of vectors to find a basis for
+	    <m>\nul(A)</m> and state the dimension of <m>\nul(A)</m>. 
+	  </p>
+	</li>
+
+	<li><p> The null space <m>\nul(A)</m> is a subspace of
+	<m>\real^p</m> for which value of <m>p</m>? </p></li>
+
+	<li><p> Now consider the matrix <m>B</m> whose reduced row
+	echelon form is given by
+	<me>
+	  B \sim
+	  \left[\begin{array}{rrrr}
+	  1 \amp 2 \amp 0 \amp -3 \\
+	  0 \amp 0 \amp 0 \amp 0 \\
+	  \end{array}\right].
+	</me>
+	Give a parametric description of <m>\nul(B)</m>.  </p></li>
+
+	<li>
+	  <p>
+	    The parametric description gives a set of vectors that span
+	    <m>\nul(B)</m>.  Explain why this set of vectors is linearly
+	    independent and hence forms a basis.  What is the dimension of
+	    <m>\nul(B)</m>?
+	  </p>
+	</li>
+
+	<li>
+	  <p>
+	    For a general matrix <m>A</m>, how does the number of
+	    pivot positions indicate the dimension of <m>\nul(A)</m>?
+	  </p>
+	</li>
+
+	<li>
+	  <p>
+	    Suppose that the columns of a matrix <m>A</m> are
+	    linearly independent.  What can you say about
+	    <m>\nul(A)</m>? 
+	  </p>
+	</li>
+
+      </ol></p>
+      </statement>
+
+                    <solution>
+	<p><ol marker="a.">
+	  <li><p>  We have
+	  <me>A=\begin{bmatrix}
+	  1 \amp 3 \amp -1 \amp 2 \\
+	  -2 \amp 0 \amp -4 \amp 2 \\
+	  1 \amp 2 \amp 0 \amp 1 \\
+	  \end{bmatrix}\sim
+	  \begin{bmatrix}
+	  1 \amp 0 \amp 2 \amp -1 \\
+	  0 \amp 1 \amp -1 \amp 1 \\
+	  0 \amp 0 \amp 0 \amp 0\\
+	  \end{bmatrix},
+	  </me>
+	  which leads to the parametric description of the solution
+	  space to the homogeneous equation:
+	  <me>\xvec=x_3\fourvec{-2}{1}{1}0 +
+	  x_4\fourvec{1}{-1}01.
+	  </me>
+	  </p></li>
+
+	  <li><p> The parametric description shows that every solution
+	  to the equation <m>A\xvec=\zerovec</m> is a linear
+	  combination of <m>\wvec_1=\fourvec{-2}110</m> and
+	  <m>\wvec_2=\fourvec1{-1}01</m>. </p></li>
+
+	  <li>
+	    <p>
+	      The vectors <m>\wvec_1</m> and <m>\wvec_2</m> are
+	      linearly independent so they form a basis for
+	      <m>\nul(A)</m>.  Therefore, <m>\nul(A)</m> is
+	      2-dimensional.
+	    </p>
+	  </li>
+
+	  <li><p>
+	    The vectors in <m>\nul(A)</m> are 4-dimensional so
+	    <m>\nul(A)</m> is a subspace of <m>\real^4</m>.
+	  </p></li>
+
+	  <li><p> A parametric description of the null space is
+	  <m>\xvec=x_2\fourvec{-2}{1}{0}{0} + x_3\fourvec0010 + 
+	  x_4\fourvec{3}{0}{-2}{1}</m>.  We can check that the vectors
+	  <me>
+	    \fourvec{-2}100,~~~\fourvec0010,~~~\fourvec30{-2}1
+	  </me>
+	  are linearly independent so they form a basis for
+	  <m>\nul(A)</m>.  This means that <m>\nul(A)</m> is
+	  3-dimensional. 
+	  </p></li>
+
+	  <li><p> The number of vectors in a basis of the null space
+	  equals the number of free variables that appear in the
+	  equation <m>A\xvec=\zerovec</m>, which is the number of columns
+	  that do not have pivot positions.  This says that
+	  <m>\dim~\nul(A)</m> equals the number of columns of <m>A</m>
+	  minus the number of pivot positions. </p></li>
+
+	  <li><p> If the columns are linearly independent, then the
+	  homogeneous equation <m>A\xvec=\zerovec</m> has only the
+	  zero solution <m>\xvec=\zerovec</m>.  Therefore,
+	  <m>\nul(A) = \{\zerovec\}</m>. </p></li>
+
+	</ol></p>
+      </solution>
+                    
+                </exercise>
+            </page>
+
+            <page>
+                <exercise>
+                    <title>Connecting Null Space and Column Space</title>
+                    <statement>
+                        <p>
+                            We can frame our observations from the activity to connect the spaces <m>\col(A)</m> and <m>\nul(A)</m>:
+                        </p>
+                    </statement>
+                    <solution>
+                        <p>
+                            See <url href="https://understandinglinearalgebra.org/sec-subspaces.html#proposition-nul-dim">Proposition 3.5.12</url>
+                            and 
+                            <url href="https://understandinglinearalgebra.org/sec-subspaces.html#sec-subspaces-5-10">Proposition 3.5.13</url>.
+                        </p>
+                    </solution>
+                </exercise>
+            </page>
+
+        </worksheet>
+    </article>
+</pretext>
