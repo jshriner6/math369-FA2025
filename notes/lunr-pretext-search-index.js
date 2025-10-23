@@ -1313,6 +1313,231 @@ var ptx_lunr_docs = [
   "number": "6",
   "title": "Observations: Determinants.",
   "body": " Observations: Determinants      "
+},
+{
+  "id": "sec-3-4-2",
+  "level": "1",
+  "url": "sec-3-4-2.html",
+  "type": "Worksheet",
+  "number": "",
+  "title": "<span class=\"process-math\">\\(\\S 3.4\\text{:}\\)<\/span> Determinants and Invertibility",
+  "body": " : Determinants and Invertibility    Motivation: Determinants and Invertibility        Determinants and Row Reduction   Recall, determinants behave nicely with multiplication: . This suggests     Example: Determinants and Row Reduction   Let .       Observations: Determinants and Elementary Matrices          Activity: Determinants and Invertibility   We will investigate the connection between the determinant of a matrix and its invertibility using Gaussian elimination.  Consider the two upper triangular matrices Which of the matrices and are invertible? What are the determinants and ?  Explain why an upper triangular matrix is invertible if and only if its determinant is not zero.  Let's now consider the matrix and begin the Gaussian elimination process with a row replacement operation . What is the relationship between and ?  Next we perform another row replacement operation: . What is the relationship between and ?  Finally, we perform an interchange: to arrive at an upper triangular matrix . What is the relationship between and ?  Since is upper triangular, we can compute its determinant, which allows us to find . What is ? Is invertible?  Now consider the matrix Perform a sequence of row operations to find an upper triangular matrix that is row equivalent to . Use this to determine and whether is invertible.  Suppose we apply a sequence of row operations on a matrix to obtain . Explain why if and only if .  Explain why an matrix is invertible if and only if .        Remarks: Determinants and Invertibility        Cofactor Expansions   For matrices,        Example: Cofactor Expansions         "
+},
+{
+  "id": "sec-3-4-2-2-1",
+  "level": "2",
+  "url": "sec-3-4-2.html#sec-3-4-2-2-1",
+  "type": "Worksheet Exercise",
+  "number": "1",
+  "title": "Motivation: Determinants and Invertibility.",
+  "body": " Motivation: Determinants and Invertibility      "
+},
+{
+  "id": "sec-3-4-2-2-2",
+  "level": "2",
+  "url": "sec-3-4-2.html#sec-3-4-2-2-2",
+  "type": "Worksheet Exercise",
+  "number": "2",
+  "title": "Determinants and Row Reduction.",
+  "body": " Determinants and Row Reduction   Recall, determinants behave nicely with multiplication: . This suggests   "
+},
+{
+  "id": "sec-3-4-2-2-3",
+  "level": "2",
+  "url": "sec-3-4-2.html#sec-3-4-2-2-3",
+  "type": "Worksheet Exercise",
+  "number": "3",
+  "title": "Example: Determinants and Row Reduction.",
+  "body": " Example: Determinants and Row Reduction   Let .   "
+},
+{
+  "id": "sec-3-4-2-3-1",
+  "level": "2",
+  "url": "sec-3-4-2.html#sec-3-4-2-3-1",
+  "type": "Worksheet Exercise",
+  "number": "4",
+  "title": "Observations: Determinants and Elementary Matrices.",
+  "body": " Observations: Determinants and Elementary Matrices      "
+},
+{
+  "id": "sec-3-4-2-4-1",
+  "level": "2",
+  "url": "sec-3-4-2.html#sec-3-4-2-4-1",
+  "type": "Worksheet Exercise",
+  "number": "5",
+  "title": "Activity: Determinants and Invertibility.",
+  "body": " Activity: Determinants and Invertibility   We will investigate the connection between the determinant of a matrix and its invertibility using Gaussian elimination.  Consider the two upper triangular matrices Which of the matrices and are invertible? What are the determinants and ?  Explain why an upper triangular matrix is invertible if and only if its determinant is not zero.  Let's now consider the matrix and begin the Gaussian elimination process with a row replacement operation . What is the relationship between and ?  Next we perform another row replacement operation: . What is the relationship between and ?  Finally, we perform an interchange: to arrive at an upper triangular matrix . What is the relationship between and ?  Since is upper triangular, we can compute its determinant, which allows us to find . What is ? Is invertible?  Now consider the matrix Perform a sequence of row operations to find an upper triangular matrix that is row equivalent to . Use this to determine and whether is invertible.  Suppose we apply a sequence of row operations on a matrix to obtain . Explain why if and only if .  Explain why an matrix is invertible if and only if .    "
+},
+{
+  "id": "sec-3-4-2-5-1",
+  "level": "2",
+  "url": "sec-3-4-2.html#sec-3-4-2-5-1",
+  "type": "Worksheet Exercise",
+  "number": "6",
+  "title": "Remarks: Determinants and Invertibility.",
+  "body": " Remarks: Determinants and Invertibility      "
+},
+{
+  "id": "sec-3-4-2-5-2",
+  "level": "2",
+  "url": "sec-3-4-2.html#sec-3-4-2-5-2",
+  "type": "Worksheet Exercise",
+  "number": "7",
+  "title": "Cofactor Expansions.",
+  "body": " Cofactor Expansions   For matrices,    "
+},
+{
+  "id": "sec-3-4-2-6-1",
+  "level": "2",
+  "url": "sec-3-4-2.html#sec-3-4-2-6-1",
+  "type": "Worksheet Exercise",
+  "number": "8",
+  "title": "Example: Cofactor Expansions.",
+  "body": " Example: Cofactor Expansions       "
+},
+{
+  "id": "sec-3-5-1",
+  "level": "1",
+  "url": "sec-3-5-1.html",
+  "type": "Worksheet",
+  "number": "",
+  "title": "<span class=\"process-math\">\\(\\S 3.5\\text{:}\\)<\/span> Subspaces",
+  "body": " : Subspaces    Motivation: Subspaces        Preview Activity 3.5.1   Let's consider the following matrix and its reduced row echelon form. .     Are the columns of linearly independent? Is the span of the columns ?      Give a parametric description of the solution space to the homogeneous equation .      Explain how this parametric description produces two vectors and whose span is the solution space to the equation .      What can you say about the linear independence of the set of vectors and ?      Let's denote the columns of as , , , and . Explain why and can be written as linear combinations of and .      Explain why and are linearly independent and         Definition: Subspace   A subspace of is a       Activity: Subspaces   We will look at some sets of vectors and the subspaces they form.   If is a set of vectors in , explain why can be expressed as a linear combination of these vectors. Use this fact to explain why the zero vector belongs to any subspace in .    Explain why the line on the left of is not a subspace of and why the line on the right is.   Two lines in , one of which is a subspace and one of which is not.         Consider the vectors and describe the subspace of .    Consider the vectors    Write as a linear combination of and .    Explain why .    Describe the subspace of .       Suppose that , , , and are four vectors in and that Give a description of the subspace of .          Definition: Basis   Just as with , we are typically interested in representing a subspace efficiently.  A basis for a subspace of is     Two Important Subspaces   Given a matrix , there are two important subspaces that we've seen previously:     Definition: Column Space   If is an matrix, then       Activity: Column Space   We will explore some column spaces in this activity.  Consider the matrix Since is the span of the columns, we have Explain why can be written as a linear combination of and and why .   Explain why the vectors and form a basis for and why is a 2-dimensional subspace of and therefore a plane.  Now consider the matrix and its reduced row echelon form: Explain why is a 1-dimensional subspace of and is therefore a line.  For a general matrix , what is the relationship between the dimension and the number of pivot positions in ?  How does the location of the pivot positions indicate a basis for ?  If is an invertible matrix, what can you say about the column space ?   Suppose that is an matrix and that . If is an 8-dimensional vector, what can you say about the equation ?         Definition: Rank   Pivot positions are important in helping us determine both the dimension of and a basis for .  The rank of a matrix is     Summary: Column Space and Rank   If is an matrix, then     "
+},
+{
+  "id": "sec-3-5-1-2-1",
+  "level": "2",
+  "url": "sec-3-5-1.html#sec-3-5-1-2-1",
+  "type": "Worksheet Exercise",
+  "number": "1",
+  "title": "Motivation: Subspaces.",
+  "body": " Motivation: Subspaces      "
+},
+{
+  "id": "sec-3-5-1-2-2",
+  "level": "2",
+  "url": "sec-3-5-1.html#sec-3-5-1-2-2",
+  "type": "Worksheet Exercise",
+  "number": "2",
+  "title": "Preview Activity 3.5.1.",
+  "body": " Preview Activity 3.5.1   Let's consider the following matrix and its reduced row echelon form. .     Are the columns of linearly independent? Is the span of the columns ?      Give a parametric description of the solution space to the homogeneous equation .      Explain how this parametric description produces two vectors and whose span is the solution space to the equation .      What can you say about the linear independence of the set of vectors and ?      Let's denote the columns of as , , , and . Explain why and can be written as linear combinations of and .      Explain why and are linearly independent and     "
+},
+{
+  "id": "sec-3-5-1-3-1",
+  "level": "2",
+  "url": "sec-3-5-1.html#sec-3-5-1-3-1",
+  "type": "Worksheet Exercise",
+  "number": "3",
+  "title": "Definition: Subspace.",
+  "body": " Definition: Subspace   A subspace of is a   "
+},
+{
+  "id": "sec-3-5-1-4-1",
+  "level": "2",
+  "url": "sec-3-5-1.html#sec-3-5-1-4-1",
+  "type": "Worksheet Exercise",
+  "number": "4",
+  "title": "Activity: Subspaces.",
+  "body": " Activity: Subspaces   We will look at some sets of vectors and the subspaces they form.   If is a set of vectors in , explain why can be expressed as a linear combination of these vectors. Use this fact to explain why the zero vector belongs to any subspace in .    Explain why the line on the left of is not a subspace of and why the line on the right is.   Two lines in , one of which is a subspace and one of which is not.         Consider the vectors and describe the subspace of .    Consider the vectors    Write as a linear combination of and .    Explain why .    Describe the subspace of .       Suppose that , , , and are four vectors in and that Give a description of the subspace of .      "
+},
+{
+  "id": "sec-3-5-1-5-1",
+  "level": "2",
+  "url": "sec-3-5-1.html#sec-3-5-1-5-1",
+  "type": "Worksheet Exercise",
+  "number": "5",
+  "title": "Definition: Basis.",
+  "body": " Definition: Basis   Just as with , we are typically interested in representing a subspace efficiently.  A basis for a subspace of is   "
+},
+{
+  "id": "sec-3-5-1-5-2",
+  "level": "2",
+  "url": "sec-3-5-1.html#sec-3-5-1-5-2",
+  "type": "Worksheet Exercise",
+  "number": "6",
+  "title": "Two Important Subspaces.",
+  "body": " Two Important Subspaces   Given a matrix , there are two important subspaces that we've seen previously:   "
+},
+{
+  "id": "sec-3-5-1-5-3",
+  "level": "2",
+  "url": "sec-3-5-1.html#sec-3-5-1-5-3",
+  "type": "Worksheet Exercise",
+  "number": "7",
+  "title": "Definition: Column Space.",
+  "body": " Definition: Column Space   If is an matrix, then   "
+},
+{
+  "id": "sec-3-5-1-6-1",
+  "level": "2",
+  "url": "sec-3-5-1.html#sec-3-5-1-6-1",
+  "type": "Worksheet Exercise",
+  "number": "8",
+  "title": "Activity: Column Space.",
+  "body": " Activity: Column Space   We will explore some column spaces in this activity.  Consider the matrix Since is the span of the columns, we have Explain why can be written as a linear combination of and and why .   Explain why the vectors and form a basis for and why is a 2-dimensional subspace of and therefore a plane.  Now consider the matrix and its reduced row echelon form: Explain why is a 1-dimensional subspace of and is therefore a line.  For a general matrix , what is the relationship between the dimension and the number of pivot positions in ?  How does the location of the pivot positions indicate a basis for ?  If is an invertible matrix, what can you say about the column space ?   Suppose that is an matrix and that . If is an 8-dimensional vector, what can you say about the equation ?     "
+},
+{
+  "id": "sec-3-5-1-7-1",
+  "level": "2",
+  "url": "sec-3-5-1.html#sec-3-5-1-7-1",
+  "type": "Worksheet Exercise",
+  "number": "9",
+  "title": "Definition: Rank.",
+  "body": " Definition: Rank   Pivot positions are important in helping us determine both the dimension of and a basis for .  The rank of a matrix is   "
+},
+{
+  "id": "sec-3-5-1-7-2",
+  "level": "2",
+  "url": "sec-3-5-1.html#sec-3-5-1-7-2",
+  "type": "Worksheet Exercise",
+  "number": "10",
+  "title": "Summary: Column Space and Rank.",
+  "body": " Summary: Column Space and Rank   If is an matrix, then   "
+},
+{
+  "id": "sec-3-5-2",
+  "level": "1",
+  "url": "sec-3-5-2.html",
+  "type": "Worksheet",
+  "number": "",
+  "title": "<span class=\"process-math\">\\(\\S 3.5\\text{:}\\)<\/span> The Null Space",
+  "body": " : The Null Space    Motivation: Null Space        Definition: Null Space   If is an matrix, then       Activity: Null Space   We will explore some null spaces in this activity and see why satisfies the definition of a subspace.  Consider the matrix and give a parametric description of the solution space to the equation . In other words, give a parametric description of .    This parametric description shows that the vectors satisfying the equation can be written as a linear combination of a set of vectors. In other words, this description shows why is the span of a set of vectors and is therefore a subspace. Identify a set of vectors whose span is .    Use this set of vectors to find a basis for and state the dimension of .   The null space is a subspace of for which value of ?  Now consider the matrix whose reduced row echelon form is given by Give a parametric description of .   The parametric description gives a set of vectors that span . Explain why this set of vectors is linearly independent and hence forms a basis. What is the dimension of ?    For a general matrix , how does the number of pivot positions indicate the dimension of ?    Suppose that the columns of a matrix are linearly independent. What can you say about ?         Connecting Null Space and Column Space   We can frame our observations from the activity to connect the spaces and :     "
+},
+{
+  "id": "sec-3-5-2-2-1",
+  "level": "2",
+  "url": "sec-3-5-2.html#sec-3-5-2-2-1",
+  "type": "Worksheet Exercise",
+  "number": "1",
+  "title": "Motivation: Null Space.",
+  "body": " Motivation: Null Space      "
+},
+{
+  "id": "sec-3-5-2-2-2",
+  "level": "2",
+  "url": "sec-3-5-2.html#sec-3-5-2-2-2",
+  "type": "Worksheet Exercise",
+  "number": "2",
+  "title": "Definition: Null Space.",
+  "body": " Definition: Null Space   If is an matrix, then   "
+},
+{
+  "id": "sec-3-5-2-3-1",
+  "level": "2",
+  "url": "sec-3-5-2.html#sec-3-5-2-3-1",
+  "type": "Worksheet Exercise",
+  "number": "3",
+  "title": "Activity: Null Space.",
+  "body": " Activity: Null Space   We will explore some null spaces in this activity and see why satisfies the definition of a subspace.  Consider the matrix and give a parametric description of the solution space to the equation . In other words, give a parametric description of .    This parametric description shows that the vectors satisfying the equation can be written as a linear combination of a set of vectors. In other words, this description shows why is the span of a set of vectors and is therefore a subspace. Identify a set of vectors whose span is .    Use this set of vectors to find a basis for and state the dimension of .   The null space is a subspace of for which value of ?  Now consider the matrix whose reduced row echelon form is given by Give a parametric description of .   The parametric description gives a set of vectors that span . Explain why this set of vectors is linearly independent and hence forms a basis. What is the dimension of ?    For a general matrix , how does the number of pivot positions indicate the dimension of ?    Suppose that the columns of a matrix are linearly independent. What can you say about ?     "
+},
+{
+  "id": "sec-3-5-2-4-1",
+  "level": "2",
+  "url": "sec-3-5-2.html#sec-3-5-2-4-1",
+  "type": "Worksheet Exercise",
+  "number": "4",
+  "title": "Connecting Null Space and Column Space.",
+  "body": " Connecting Null Space and Column Space   We can frame our observations from the activity to connect the spaces and :   "
 }
 ]
 
