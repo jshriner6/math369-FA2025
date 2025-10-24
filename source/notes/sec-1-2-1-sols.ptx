@@ -3,7 +3,7 @@
 <pretext>
     <article xml:id="notes">
         <worksheet xml:id="sec-1-2-1-sols">
-        <title><m>\S 1.2</m>: Gaussian Elimination</title>
+        <title><m>\S 1.2</m>: Gaussian Elimination (Solutions)</title>
             <page>
                 <exercise workspace=".25in">
                     <title>Motivation: Gaussian Elimination</title>

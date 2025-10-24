@@ -1,10 +1,10 @@
 <pretext>
     <article xml:id="notes">
         <worksheet xml:id="sec-2-1-1-sols">
-        <title><m>\S 2.1</m>: Vectors and Linear Combinations</title>
+        <title><m>\S 2.1</m>: Vectors and Linear Combinations (Solutions)</title>
             <page>
                 <exercise workspace=".25in">
-                    <title>Motivation: Vectors</title>
+                    <title>Motivation: Vectors </title>
                     <statement>
                         <p>
                             
@@ -54,7 +54,7 @@
 	    \end{array}
 	  </me>
 	  and sketch them using the coordinate system below.
-	  <figure xml:id="fig-activity-2-1-1">
+	  <figure xml:id="fig-activity-2-1-1-sols">
 	    <caption>
 	      Sketch the vectors on this grid.
 	    </caption>
@@ -95,7 +95,7 @@
 	    \vvec, \wvec, \vvec + \wvec
 	  </m>
 	  using the coordinate system below.
-	  <figure xml:id="fig-activity-2-1-2">
+	  <figure xml:id="fig-activity-2-1-2-sols">
 	    <caption>
 	      Sketch the vectors on this grid.
 	    </caption>
@@ -119,7 +119,7 @@
 	  of these vectors when, say, <m>c = -2, -1, 0, 1, </m> and
 	  <m>2</m>.  Give a geometric description of this set of
 	  vectors.
-	  <figure xml:id="fig-activity-2-1-3">
+	  <figure xml:id="fig-activity-2-1-3-sols">
 	    <caption>
 	      Sketch the vectors on this grid.
 	    </caption>

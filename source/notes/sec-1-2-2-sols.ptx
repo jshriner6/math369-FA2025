@@ -3,7 +3,7 @@
 <pretext>
     <article xml:id="notes">
         <worksheet xml:id="sec-1-2-2-sols">
-        <title><m>\S 1.2</m>: Reduced Row Echelon Form (RREF)</title>
+        <title><m>\S 1.2</m>: Reduced Row Echelon Form (RREF) (Solutions)</title>
             <page>
                 <exercise workspace=".25in">
                     <title>Motivation: RREF</title>

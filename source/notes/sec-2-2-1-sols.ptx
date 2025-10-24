@@ -1,7 +1,7 @@
 <pretext>
     <article xml:id="notes">
         <worksheet xml:id="sec-2-2-1-sols">
-        <title><m>\S 2.2</m>: Matrix-Vector Multiplication</title>
+        <title><m>\S 2.2</m>: Matrix-Vector Multiplication (Solutions)</title>
             <page>
                 <exercise workspace="2in">
                     <title>Motivation: Matrix Multiplication</title>
