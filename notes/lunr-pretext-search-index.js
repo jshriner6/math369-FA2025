@@ -2575,6 +2575,69 @@ var ptx_lunr_docs = [
   "body": " Observations: Determinants      "
 },
 {
+  "id": "sec-3-4-1-sols",
+  "level": "1",
+  "url": "sec-3-4-1-sols.html",
+  "type": "Worksheet",
+  "number": "",
+  "title": "<span class=\"process-math\">\\(\\S 3.4\\text{:}\\)<\/span> Determinants (Solutions)",
+  "body": " : Determinants (Solutions)    Motivation: Determinants       The determinant is a numerical property of a matrix that holds a lot of information (e.g., is the matrix invertible, how does it behave as a transformation). We'll develop multiple ways to view the determinant in this section.     Preview Activity 3.4.1   We will explore the area formula in this preview activity.     Find the area of the following parallelograms.    1.   2.   3.     4.   5.           We find the following areas.  A square has area 1.  A rectangle has area 6.  The square has side length giving an area of 2.  If we consider the horizontal length as the base, we see that so that the area is 4.  In the same way, we can consider both the base and height to be 2 so that the area is 4.         Explain why the area of the parallelogram formed by the vectors and is the same as that formed by and .      If we consider the base to be the length of , then the height, which is the perpendicular distance to its parallel side, is the same in both parallelograms.        First Definitions    Vectors and are positively oriented if    the angle CCW from to is less than degrees. They are negatively oriented if this angle is greater than degrees.      Let be a matrix, where and are positively oriented. Then the determinant of , written , is    the area of the parallelogram form by and . If and are negatively oriented, then is times the area of the parallelogram.      Example: Determinant   Let     See Example 3.4.4 .       Activity: Determinants   In this activity, we will find the determinant of some simple matrices and discover some important properties of determinants. Use the interactive diagram in the textbook, or this interactive determinants diagram to help answer the questions below.    Use the diagram to find the determinant of the matrix . Along with our previous example, what does this lead you to believe is generally true about the determinant of a diagonal matrix?  Use the diagram to find the determinant of the matrix . What is the geometric effect of the matrix transformation defined by this matrix?  Use the diagram to find the determinant of the matrix . More generally, what do you notice about the determinant of any matrix of the form ? What does this say about the determinant of an upper triangular matrix?  Use the diagram to find the determinant of any matrix of the form . What does this say about the determinant of a lower triangular matrix?  Use the diagram to find the determinant of the matrix . In general, what is the determinant of a matrix whose columns are linearly dependent?  Consider the matrices . Use the diagram to find the determinants of , , and . What does this suggest is generally true about the relationship of to and ?      The determinant is because the vectors are negatively oriented and the rectangle has sides of length and . The determinant of a diagonal matrix seems to be the product of the diagonal entries.  The matrix transformation is a reflection over the line and we see that the determinant is .  The determinant will continue to be for any value of . This illustrates the fact that the determinant of an upper triangular matrix equals the product of its diagonal entries.  The same reasoning tells us that this determinant is and, in fact, the determinant of a lower triangular matrix equals the product of its diagonal entries.  The determinant of this matrix is because the parallelogram formed by the vector has no area. This suggests that the determinant of a matrix whose columns are linearly dependent is .  We find that , , and . This suggests that .        Observations: Determinants          We defined for a matrix, but we could do this similarly for an matrix. For example, we could define it as the volume created by positively oriented vectors in three dimensions. However, we'll develop other ways for computing the determinant that are better suited for high dimensions.    For an triangular matrix , is just the product of its diagonal entries.    If , this tells us that (as a matrix transformation) reverses the spatial orientation.    Viewing matrices as transformations, we see that scales areas by the value , scales areas by the value , and scales areas by (when viewed as composition), but also by (when viewed as a single matrix). This implies .        "
+},
+{
+  "id": "sec-3-4-1-sols-2-1",
+  "level": "2",
+  "url": "sec-3-4-1-sols.html#sec-3-4-1-sols-2-1",
+  "type": "Worksheet Exercise",
+  "number": "1",
+  "title": "Motivation: Determinants.",
+  "body": " Motivation: Determinants       The determinant is a numerical property of a matrix that holds a lot of information (e.g., is the matrix invertible, how does it behave as a transformation). We'll develop multiple ways to view the determinant in this section.   "
+},
+{
+  "id": "sec-3-4-1-sols-2-2",
+  "level": "2",
+  "url": "sec-3-4-1-sols.html#sec-3-4-1-sols-2-2",
+  "type": "Worksheet Exercise",
+  "number": "2",
+  "title": "Preview Activity 3.4.1.",
+  "body": " Preview Activity 3.4.1   We will explore the area formula in this preview activity.     Find the area of the following parallelograms.    1.   2.   3.     4.   5.           We find the following areas.  A square has area 1.  A rectangle has area 6.  The square has side length giving an area of 2.  If we consider the horizontal length as the base, we see that so that the area is 4.  In the same way, we can consider both the base and height to be 2 so that the area is 4.         Explain why the area of the parallelogram formed by the vectors and is the same as that formed by and .      If we consider the base to be the length of , then the height, which is the perpendicular distance to its parallel side, is the same in both parallelograms.    "
+},
+{
+  "id": "sec-3-4-1-sols-3-1",
+  "level": "2",
+  "url": "sec-3-4-1-sols.html#sec-3-4-1-sols-3-1",
+  "type": "Worksheet Exercise",
+  "number": "3",
+  "title": "First Definitions.",
+  "body": " First Definitions    Vectors and are positively oriented if    the angle CCW from to is less than degrees. They are negatively oriented if this angle is greater than degrees.      Let be a matrix, where and are positively oriented. Then the determinant of , written , is    the area of the parallelogram form by and . If and are negatively oriented, then is times the area of the parallelogram.    "
+},
+{
+  "id": "sec-3-4-1-sols-3-2",
+  "level": "2",
+  "url": "sec-3-4-1-sols.html#sec-3-4-1-sols-3-2",
+  "type": "Worksheet Exercise",
+  "number": "4",
+  "title": "Example: Determinant.",
+  "body": " Example: Determinant   Let     See Example 3.4.4 .   "
+},
+{
+  "id": "sec-3-4-1-sols-4-1",
+  "level": "2",
+  "url": "sec-3-4-1-sols.html#sec-3-4-1-sols-4-1",
+  "type": "Worksheet Exercise",
+  "number": "5",
+  "title": "Activity: Determinants.",
+  "body": " Activity: Determinants   In this activity, we will find the determinant of some simple matrices and discover some important properties of determinants. Use the interactive diagram in the textbook, or this interactive determinants diagram to help answer the questions below.    Use the diagram to find the determinant of the matrix . Along with our previous example, what does this lead you to believe is generally true about the determinant of a diagonal matrix?  Use the diagram to find the determinant of the matrix . What is the geometric effect of the matrix transformation defined by this matrix?  Use the diagram to find the determinant of the matrix . More generally, what do you notice about the determinant of any matrix of the form ? What does this say about the determinant of an upper triangular matrix?  Use the diagram to find the determinant of any matrix of the form . What does this say about the determinant of a lower triangular matrix?  Use the diagram to find the determinant of the matrix . In general, what is the determinant of a matrix whose columns are linearly dependent?  Consider the matrices . Use the diagram to find the determinants of , , and . What does this suggest is generally true about the relationship of to and ?      The determinant is because the vectors are negatively oriented and the rectangle has sides of length and . The determinant of a diagonal matrix seems to be the product of the diagonal entries.  The matrix transformation is a reflection over the line and we see that the determinant is .  The determinant will continue to be for any value of . This illustrates the fact that the determinant of an upper triangular matrix equals the product of its diagonal entries.  The same reasoning tells us that this determinant is and, in fact, the determinant of a lower triangular matrix equals the product of its diagonal entries.  The determinant of this matrix is because the parallelogram formed by the vector has no area. This suggests that the determinant of a matrix whose columns are linearly dependent is .  We find that , , and . This suggests that .    "
+},
+{
+  "id": "sec-3-4-1-sols-5-1",
+  "level": "2",
+  "url": "sec-3-4-1-sols.html#sec-3-4-1-sols-5-1",
+  "type": "Worksheet Exercise",
+  "number": "6",
+  "title": "Observations: Determinants.",
+  "body": " Observations: Determinants          We defined for a matrix, but we could do this similarly for an matrix. For example, we could define it as the volume created by positively oriented vectors in three dimensions. However, we'll develop other ways for computing the determinant that are better suited for high dimensions.    For an triangular matrix , is just the product of its diagonal entries.    If , this tells us that (as a matrix transformation) reverses the spatial orientation.    Viewing matrices as transformations, we see that scales areas by the value , scales areas by the value , and scales areas by (when viewed as composition), but also by (when viewed as a single matrix). This implies .      "
+},
+{
   "id": "sec-3-4-2",
   "level": "1",
   "url": "sec-3-4-2.html",
