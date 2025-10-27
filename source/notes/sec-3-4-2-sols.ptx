@@ -265,12 +265,12 @@
 	  0 \amp -3 \amp 3 \\
 	  \end{array}\right]</me>.  Another row replacement operation
 	  gives
-	  <me>A_3=\left[\begin{array}{rrr}
+	  <me>U=\left[\begin{array}{rrr}
 	  1 \amp - 1 \amp 3 \\
 	  0 \amp 1 \amp -1 \\
 	  0 \amp 0 \amp 0 \\
 	  \end{array}\right]</me>.  Putting these operations together,
-	  we see that <m>\det(A) = 2\det(U) = 0</m>.  In this case,
+	  we see that <m>\det(A) = \frac{1}{2}\det(U) = 0</m>.  In this case,
 	  <m>A</m> is not invertible because <m>U</m>, which has a row
 	  without a pivot position, is not invertible.
 	  </p></li>
