@@ -2719,6 +2719,87 @@ var ptx_lunr_docs = [
   "body": " Example: Cofactor Expansions       "
 },
 {
+  "id": "sec-3-4-2-sols",
+  "level": "1",
+  "url": "sec-3-4-2-sols.html",
+  "type": "Worksheet",
+  "number": "",
+  "title": "<span class=\"process-math\">\\(\\S 3.4\\text{:}\\)<\/span> Determinants and Invertibility (Solutions)",
+  "body": " : Determinants and Invertibility (Solutions)    Motivation: Determinants and Invertibility       We've defined determinants geometrically as signed areas. This definition is not effective for computation in large dimensions. We will develop two more perspectives in which to view the determinant.     Determinants and Row Reduction   Recall, determinants behave nicely with multiplication: . This suggests       We can compute by row reducing to a \"nicer\" matrix using elementary matrices, and     is connected to the invertibility of .        Example: Determinants and Row Reduction   Let .    See a similar discussion to what was done in class in Subsection 3.4.2 .       Observations: Determinants and Elementary Matrices       See Proposition 3.4.11 .       Activity: Determinants and Invertibility   We will investigate the connection between the determinant of a matrix and its invertibility using Gaussian elimination.  Consider the two upper triangular matrices Which of the matrices and are invertible? What are the determinants and ?  Explain why an upper triangular matrix is invertible if and only if its determinant is not zero.  Let's now consider the matrix and begin the Gaussian elimination process with a row replacement operation . What is the relationship between and ?  Next we perform another row replacement operation: . What is the relationship between and ?  Finally, we perform an interchange: to arrive at an upper triangular matrix . What is the relationship between and ?  Since is upper triangular, we can compute its determinant, which allows us to find . What is ? Is invertible?  Now consider the matrix Perform a sequence of row operations to find an upper triangular matrix that is row equivalent to . Use this to determine and whether is invertible.  Suppose we apply a sequence of row operations on a matrix to obtain . Explain why if and only if .  Explain why an matrix is invertible if and only if .      The matrix is invertible because we see there is a pivot position in every row and column. The matrix , however, is not invertible because there is not a pivot position in the third row. Also, and .  The determinant of an upper triangular matrix equals the product of its diagonal entries. Consequently, if the determinant of an upper triangular matrix is not zero, then each of its diagonal entries must be nonzero. In this case, there is a pivot position in every row and every column so that the matrix is invertible.  Row replacement operations do not change the determinant so .  In the same way, .  Interchanges change the sign of the determinant so .  The determinant since it is the product of the diagonal entries of . This means that . We see that is invertible because , which has a pivot position in every row and every column, is invertible.  Beginning with a row replacement operation, we arrive at . We next scale the second row by to obtain . Another row replacement operation gives . Putting these operations together, we see that . In this case, is not invertible because , which has a row without a pivot position, is not invertible.  Performing one of the three row operations either leaves the determinant unchanged (row replacement), changes its sign (interchange), or multiplies it by a nonzero number (scaling). Therefore, if we begin with a matrix whose determinant is not zero, the determinant remains nonzero after any row operation is applied.  If we apply a sequence of row operations to to find a row equivalent matrix that is upper triangular, we know that if and only if . We also know that is invertible if and only if is invertible. Putting these facts together, we conclude that if and only if is invertible.        Remarks: Determinants and Invertibility       See the discussion following Activity 3.4.3 .     Cofactor Expansions   For matrices,      . This is the formula for computing the area of a parallelogram. We can compute derterminants of larger matrices recursively by forming cofactors of entries in a single row or column.  See the notes from class, or Example 3.4.13 .  Notes that cofactor expansion will be useful for us for future concepts, but is not as efficient computationally as Gaussian elimination. In Sage, we can use the command A.det() to compute the determinant of matrix .       Example: Cofactor Expansions        Expanding along the first row gives      "
+},
+{
+  "id": "sec-3-4-2-sols-2-1",
+  "level": "2",
+  "url": "sec-3-4-2-sols.html#sec-3-4-2-sols-2-1",
+  "type": "Worksheet Exercise",
+  "number": "1",
+  "title": "Motivation: Determinants and Invertibility.",
+  "body": " Motivation: Determinants and Invertibility       We've defined determinants geometrically as signed areas. This definition is not effective for computation in large dimensions. We will develop two more perspectives in which to view the determinant.   "
+},
+{
+  "id": "sec-3-4-2-sols-2-2",
+  "level": "2",
+  "url": "sec-3-4-2-sols.html#sec-3-4-2-sols-2-2",
+  "type": "Worksheet Exercise",
+  "number": "2",
+  "title": "Determinants and Row Reduction.",
+  "body": " Determinants and Row Reduction   Recall, determinants behave nicely with multiplication: . This suggests       We can compute by row reducing to a \"nicer\" matrix using elementary matrices, and     is connected to the invertibility of .      "
+},
+{
+  "id": "sec-3-4-2-sols-2-3",
+  "level": "2",
+  "url": "sec-3-4-2-sols.html#sec-3-4-2-sols-2-3",
+  "type": "Worksheet Exercise",
+  "number": "3",
+  "title": "Example: Determinants and Row Reduction.",
+  "body": " Example: Determinants and Row Reduction   Let .    See a similar discussion to what was done in class in Subsection 3.4.2 .   "
+},
+{
+  "id": "sec-3-4-2-sols-3-1",
+  "level": "2",
+  "url": "sec-3-4-2-sols.html#sec-3-4-2-sols-3-1",
+  "type": "Worksheet Exercise",
+  "number": "4",
+  "title": "Observations: Determinants and Elementary Matrices.",
+  "body": " Observations: Determinants and Elementary Matrices       See Proposition 3.4.11 .   "
+},
+{
+  "id": "sec-3-4-2-sols-4-1",
+  "level": "2",
+  "url": "sec-3-4-2-sols.html#sec-3-4-2-sols-4-1",
+  "type": "Worksheet Exercise",
+  "number": "5",
+  "title": "Activity: Determinants and Invertibility.",
+  "body": " Activity: Determinants and Invertibility   We will investigate the connection between the determinant of a matrix and its invertibility using Gaussian elimination.  Consider the two upper triangular matrices Which of the matrices and are invertible? What are the determinants and ?  Explain why an upper triangular matrix is invertible if and only if its determinant is not zero.  Let's now consider the matrix and begin the Gaussian elimination process with a row replacement operation . What is the relationship between and ?  Next we perform another row replacement operation: . What is the relationship between and ?  Finally, we perform an interchange: to arrive at an upper triangular matrix . What is the relationship between and ?  Since is upper triangular, we can compute its determinant, which allows us to find . What is ? Is invertible?  Now consider the matrix Perform a sequence of row operations to find an upper triangular matrix that is row equivalent to . Use this to determine and whether is invertible.  Suppose we apply a sequence of row operations on a matrix to obtain . Explain why if and only if .  Explain why an matrix is invertible if and only if .      The matrix is invertible because we see there is a pivot position in every row and column. The matrix , however, is not invertible because there is not a pivot position in the third row. Also, and .  The determinant of an upper triangular matrix equals the product of its diagonal entries. Consequently, if the determinant of an upper triangular matrix is not zero, then each of its diagonal entries must be nonzero. In this case, there is a pivot position in every row and every column so that the matrix is invertible.  Row replacement operations do not change the determinant so .  In the same way, .  Interchanges change the sign of the determinant so .  The determinant since it is the product of the diagonal entries of . This means that . We see that is invertible because , which has a pivot position in every row and every column, is invertible.  Beginning with a row replacement operation, we arrive at . We next scale the second row by to obtain . Another row replacement operation gives . Putting these operations together, we see that . In this case, is not invertible because , which has a row without a pivot position, is not invertible.  Performing one of the three row operations either leaves the determinant unchanged (row replacement), changes its sign (interchange), or multiplies it by a nonzero number (scaling). Therefore, if we begin with a matrix whose determinant is not zero, the determinant remains nonzero after any row operation is applied.  If we apply a sequence of row operations to to find a row equivalent matrix that is upper triangular, we know that if and only if . We also know that is invertible if and only if is invertible. Putting these facts together, we conclude that if and only if is invertible.    "
+},
+{
+  "id": "sec-3-4-2-sols-5-1",
+  "level": "2",
+  "url": "sec-3-4-2-sols.html#sec-3-4-2-sols-5-1",
+  "type": "Worksheet Exercise",
+  "number": "6",
+  "title": "Remarks: Determinants and Invertibility.",
+  "body": " Remarks: Determinants and Invertibility       See the discussion following Activity 3.4.3 .   "
+},
+{
+  "id": "sec-3-4-2-sols-5-2",
+  "level": "2",
+  "url": "sec-3-4-2-sols.html#sec-3-4-2-sols-5-2",
+  "type": "Worksheet Exercise",
+  "number": "7",
+  "title": "Cofactor Expansions.",
+  "body": " Cofactor Expansions   For matrices,      . This is the formula for computing the area of a parallelogram. We can compute derterminants of larger matrices recursively by forming cofactors of entries in a single row or column.  See the notes from class, or Example 3.4.13 .  Notes that cofactor expansion will be useful for us for future concepts, but is not as efficient computationally as Gaussian elimination. In Sage, we can use the command A.det() to compute the determinant of matrix .   "
+},
+{
+  "id": "sec-3-4-2-sols-6-1",
+  "level": "2",
+  "url": "sec-3-4-2-sols.html#sec-3-4-2-sols-6-1",
+  "type": "Worksheet Exercise",
+  "number": "8",
+  "title": "Example: Cofactor Expansions.",
+  "body": " Example: Cofactor Expansions        Expanding along the first row gives    "
+},
+{
   "id": "sec-3-5-1",
   "level": "1",
   "url": "sec-3-5-1.html",
