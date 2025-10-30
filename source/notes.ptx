@@ -77,7 +77,7 @@
     <xi:include href="./notes/sec-3-4-2-sols.ptx" xpointer="sec-3-4-2-sols" /> -->
 
     <xi:include href="./notes/sec-3-5-1.ptx" xpointer="sec-3-5-1" /> -->
-    <!-- <xi:include href="./notes/sec-3-5-1-sols.ptx" xpointer="sec-3-5-1-sols" /> -->
+    <xi:include href="./notes/sec-3-5-1-sols.ptx" xpointer="sec-3-5-1-sols" /> -->
 
     <xi:include href="./notes/sec-3-5-2.ptx" xpointer="sec-3-5-2" /> -->
     <!-- <xi:include href="./notes/sec-3-5-2-sols.ptx" xpointer="sec-3-5-2-sols" /> -->
