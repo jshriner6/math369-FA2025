@@ -2899,6 +2899,105 @@ var ptx_lunr_docs = [
   "body": " Summary: Column Space and Rank   If is an matrix, then   "
 },
 {
+  "id": "sec-3-5-1-sols",
+  "level": "1",
+  "url": "sec-3-5-1-sols.html",
+  "type": "Worksheet",
+  "number": "",
+  "title": "<span class=\"process-math\">\\(\\S 3.5\\text{:}\\)<\/span> Subspaces (Solutions)",
+  "body": " : Subspaces (Solutions)    Motivation: Subspaces       We've devloped the concept of basis to help us describe . We'll now use it as a tool to help us describe important subsets of .     Preview Activity 3.5.1   Let's consider the following matrix and its reduced row echelon form. .     Are the columns of linearly independent? Is the span of the columns ?    The columns of are not linearly independent since there is not a pivot position in every column. Also, the span of the columns is not because there is not a pivot position in every row.      Give a parametric description of the solution space to the homogeneous equation .    From the reduced row echelon form, we see that the homogeneous equation leads to the equations which leads to the parametric description       Explain how this parametric description produces two vectors and whose span is the solution space to the equation .    We see that every vector in the solution space is a linear combination of the vectors and .      What can you say about the linear independence of the set of vectors and ?    This pair of vectors is linearly independent because one is not a scalar multiple of the other.      Let's denote the columns of as , , , and . Explain why and can be written as linear combinations of and .    From the reduced row echelon form of , we see that and .      Explain why and are linearly independent and     We see that and are linearly independent from the reduced row echelon form of . Moreover, we know that and can be written as linear combinations of and . Therefore, any linear combination of , , , and can be written as a linear combination of and alone.      Definition: Subspace   A subspace of is a    subset which is the span of a set of vectors.  Note subset and subspace are not equivalent!       Activity: Subspaces   We will look at some sets of vectors and the subspaces they form.   If is a set of vectors in , explain why can be expressed as a linear combination of these vectors. Use this fact to explain why the zero vector belongs to any subspace in .    Explain why the line on the left of is not a subspace of and why the line on the right is.   Two lines in , one of which is a subspace and one of which is not.         Consider the vectors and describe the subspace of .     Consider the vectors    Write as a linear combination of and .    Explain why .    Describe the subspace of .       Suppose that , , , and are four vectors in and that Give a description of the subspace of .          If we choose all the weights , then the linear combination This means that is the subspace .    The line on the left cannot be a subspace of since it does not contain the zero vector. The line on the right is a subspace because it can be represented as the span of any nonzero vector on the line.    The matrix whose columns are the given vectors has a pivot in every row. Therefore, the span of these vectors is and so .       We see that .    Any linear combination     The subspace is a plane in .       Since we can write and , then which is a plane in .          Definition: Basis   Just as with , we are typically interested in representing a subspace efficiently.  A basis for a subspace of is    a set of vectors which span and are linearly independent.  The dimension of , written , is the number of non-zero vectors in any basis.     Two Important Subspaces   Given a matrix , there are two important subspaces that we've seen previously:       The span of its column vectors, and    The solution space of .        Definition: Column Space   If is an matrix, then    the span of its columns is the column space of , written .       Activity: Column Space   We will explore some column spaces in this activity.  Consider the matrix Since is the span of the columns, we have Explain why can be written as a linear combination of and and why .   Explain why the vectors and form a basis for and why is a 2-dimensional subspace of and therefore a plane.  Now consider the matrix and its reduced row echelon form: Explain why is a 1-dimensional subspace of and is therefore a line.  For a general matrix , what is the relationship between the dimension and the number of pivot positions in ?  How does the location of the pivot positions indicate a basis for ?  If is an invertible matrix, what can you say about the column space ?   Suppose that is an matrix and that . If is an 8-dimensional vector, what can you say about the equation ?       We have which shows that the vectors are not linearly independent and, in fact, that . As we've seen several times, this means that any linear combination of , , and can be written as a linear combination of and alone and hence that   The reduced row echelon form of shows that and are linearly independent. We also know that the span of these two vectors is . Therefore, they form a basis for .  Denoting the columns of as , the reduced row echelon form shows that , , and . Therefore, any linear combination of , , , and can be written as a linear combination of alone. This means that forms a basis for , which is then the line consisting of all scalar multiples of . p  The number of vectors in a basis of equals the number of pivot positions. Therefore, equals the number of pivot positions in .  As the examples in this activity illustrate, the columns of that contain pivot positions form a basis for .  If is invertible, then it has a pivot position in every row, which means that the span of the columns is . Therefore, .  Since , we know that every 8-dimensional vector is in . This means that is in the span of the columns of so the equation must be consistent.        Definition: Rank   Pivot positions are important in helping us determine both the dimension of and a basis for .  The rank of a matrix is    the number of pivot positions in , written .     Summary: Column Space and Rank   If is an matrix, then        is a subspace of ,     , and    columns of containing pivots form a basis for .        "
+},
+{
+  "id": "sec-3-5-1-sols-2-1",
+  "level": "2",
+  "url": "sec-3-5-1-sols.html#sec-3-5-1-sols-2-1",
+  "type": "Worksheet Exercise",
+  "number": "1",
+  "title": "Motivation: Subspaces.",
+  "body": " Motivation: Subspaces       We've devloped the concept of basis to help us describe . We'll now use it as a tool to help us describe important subsets of .   "
+},
+{
+  "id": "sec-3-5-1-sols-2-2",
+  "level": "2",
+  "url": "sec-3-5-1-sols.html#sec-3-5-1-sols-2-2",
+  "type": "Worksheet Exercise",
+  "number": "2",
+  "title": "Preview Activity 3.5.1.",
+  "body": " Preview Activity 3.5.1   Let's consider the following matrix and its reduced row echelon form. .     Are the columns of linearly independent? Is the span of the columns ?    The columns of are not linearly independent since there is not a pivot position in every column. Also, the span of the columns is not because there is not a pivot position in every row.      Give a parametric description of the solution space to the homogeneous equation .    From the reduced row echelon form, we see that the homogeneous equation leads to the equations which leads to the parametric description       Explain how this parametric description produces two vectors and whose span is the solution space to the equation .    We see that every vector in the solution space is a linear combination of the vectors and .      What can you say about the linear independence of the set of vectors and ?    This pair of vectors is linearly independent because one is not a scalar multiple of the other.      Let's denote the columns of as , , , and . Explain why and can be written as linear combinations of and .    From the reduced row echelon form of , we see that and .      Explain why and are linearly independent and     We see that and are linearly independent from the reduced row echelon form of . Moreover, we know that and can be written as linear combinations of and . Therefore, any linear combination of , , , and can be written as a linear combination of and alone.    "
+},
+{
+  "id": "sec-3-5-1-sols-2-3",
+  "level": "2",
+  "url": "sec-3-5-1-sols.html#sec-3-5-1-sols-2-3",
+  "type": "Worksheet Exercise",
+  "number": "3",
+  "title": "Definition: Subspace.",
+  "body": " Definition: Subspace   A subspace of is a    subset which is the span of a set of vectors.  Note subset and subspace are not equivalent!   "
+},
+{
+  "id": "sec-3-5-1-sols-3-1",
+  "level": "2",
+  "url": "sec-3-5-1-sols.html#sec-3-5-1-sols-3-1",
+  "type": "Worksheet Exercise",
+  "number": "4",
+  "title": "Activity: Subspaces.",
+  "body": " Activity: Subspaces   We will look at some sets of vectors and the subspaces they form.   If is a set of vectors in , explain why can be expressed as a linear combination of these vectors. Use this fact to explain why the zero vector belongs to any subspace in .    Explain why the line on the left of is not a subspace of and why the line on the right is.   Two lines in , one of which is a subspace and one of which is not.         Consider the vectors and describe the subspace of .     Consider the vectors    Write as a linear combination of and .    Explain why .    Describe the subspace of .       Suppose that , , , and are four vectors in and that Give a description of the subspace of .          If we choose all the weights , then the linear combination This means that is the subspace .    The line on the left cannot be a subspace of since it does not contain the zero vector. The line on the right is a subspace because it can be represented as the span of any nonzero vector on the line.    The matrix whose columns are the given vectors has a pivot in every row. Therefore, the span of these vectors is and so .       We see that .    Any linear combination     The subspace is a plane in .       Since we can write and , then which is a plane in .      "
+},
+{
+  "id": "sec-3-5-1-sols-4-1",
+  "level": "2",
+  "url": "sec-3-5-1-sols.html#sec-3-5-1-sols-4-1",
+  "type": "Worksheet Exercise",
+  "number": "5",
+  "title": "Definition: Basis.",
+  "body": " Definition: Basis   Just as with , we are typically interested in representing a subspace efficiently.  A basis for a subspace of is    a set of vectors which span and are linearly independent.  The dimension of , written , is the number of non-zero vectors in any basis.   "
+},
+{
+  "id": "sec-3-5-1-sols-4-2",
+  "level": "2",
+  "url": "sec-3-5-1-sols.html#sec-3-5-1-sols-4-2",
+  "type": "Worksheet Exercise",
+  "number": "6",
+  "title": "Two Important Subspaces.",
+  "body": " Two Important Subspaces   Given a matrix , there are two important subspaces that we've seen previously:       The span of its column vectors, and    The solution space of .      "
+},
+{
+  "id": "sec-3-5-1-sols-4-3",
+  "level": "2",
+  "url": "sec-3-5-1-sols.html#sec-3-5-1-sols-4-3",
+  "type": "Worksheet Exercise",
+  "number": "7",
+  "title": "Definition: Column Space.",
+  "body": " Definition: Column Space   If is an matrix, then    the span of its columns is the column space of , written .   "
+},
+{
+  "id": "sec-3-5-1-sols-5-1",
+  "level": "2",
+  "url": "sec-3-5-1-sols.html#sec-3-5-1-sols-5-1",
+  "type": "Worksheet Exercise",
+  "number": "8",
+  "title": "Activity: Column Space.",
+  "body": " Activity: Column Space   We will explore some column spaces in this activity.  Consider the matrix Since is the span of the columns, we have Explain why can be written as a linear combination of and and why .   Explain why the vectors and form a basis for and why is a 2-dimensional subspace of and therefore a plane.  Now consider the matrix and its reduced row echelon form: Explain why is a 1-dimensional subspace of and is therefore a line.  For a general matrix , what is the relationship between the dimension and the number of pivot positions in ?  How does the location of the pivot positions indicate a basis for ?  If is an invertible matrix, what can you say about the column space ?   Suppose that is an matrix and that . If is an 8-dimensional vector, what can you say about the equation ?       We have which shows that the vectors are not linearly independent and, in fact, that . As we've seen several times, this means that any linear combination of , , and can be written as a linear combination of and alone and hence that   The reduced row echelon form of shows that and are linearly independent. We also know that the span of these two vectors is . Therefore, they form a basis for .  Denoting the columns of as , the reduced row echelon form shows that , , and . Therefore, any linear combination of , , , and can be written as a linear combination of alone. This means that forms a basis for , which is then the line consisting of all scalar multiples of . p  The number of vectors in a basis of equals the number of pivot positions. Therefore, equals the number of pivot positions in .  As the examples in this activity illustrate, the columns of that contain pivot positions form a basis for .  If is invertible, then it has a pivot position in every row, which means that the span of the columns is . Therefore, .  Since , we know that every 8-dimensional vector is in . This means that is in the span of the columns of so the equation must be consistent.    "
+},
+{
+  "id": "sec-3-5-1-sols-6-1",
+  "level": "2",
+  "url": "sec-3-5-1-sols.html#sec-3-5-1-sols-6-1",
+  "type": "Worksheet Exercise",
+  "number": "9",
+  "title": "Definition: Rank.",
+  "body": " Definition: Rank   Pivot positions are important in helping us determine both the dimension of and a basis for .  The rank of a matrix is    the number of pivot positions in , written .   "
+},
+{
+  "id": "sec-3-5-1-sols-6-2",
+  "level": "2",
+  "url": "sec-3-5-1-sols.html#sec-3-5-1-sols-6-2",
+  "type": "Worksheet Exercise",
+  "number": "10",
+  "title": "Summary: Column Space and Rank.",
+  "body": " Summary: Column Space and Rank   If is an matrix, then        is a subspace of ,     , and    columns of containing pivots form a basis for .      "
+},
+{
   "id": "sec-3-5-2",
   "level": "1",
   "url": "sec-3-5-2.html",
