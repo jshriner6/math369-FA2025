@@ -3041,6 +3041,231 @@ var ptx_lunr_docs = [
   "number": "4",
   "title": "Connecting Null Space and Column Space.",
   "body": " Connecting Null Space and Column Space   We can frame our observations from the activity to connect the spaces and :   "
+},
+{
+  "id": "sec-4-1",
+  "level": "1",
+  "url": "sec-4-1.html",
+  "type": "Worksheet",
+  "number": "",
+  "title": "<span class=\"process-math\">\\(\\S 4.1\\text{:}\\)<\/span> Introduction to Eigenvectors and Eigenvalues",
+  "body": " : Introduction to Eigenvectors and Eigenvalues    Motivation: Eigenvectors and Eigenvalues        Preview Activity 4.1.1   Before we introduce the definition of eigenvectors and eigenvalues, it will be helpful to remember some ideas we have seen previously.      Suppose that is the vector shown in the figure. Sketch the vector and the vector .   The vector (1,2) in 2 dimensional space.        State the geometric effect that scalar multiplication has on the vector . Then sketch all the vectors of the form where is a scalar.      State the geometric effect of the matrix transformation defined by .      Suppose that is a matrix and that and are vectors such that . Use the linearity of matrix multiplication to express the following vectors in terms of and .   .   .   .   .   .   .         Definition: Eigenvector and Eigenvalue   Given a square matrix , a non-zero vector is an eigenvector if there is a scalar such that     Example: Eigenvector and Eigenvalue   Let and .       Activity: Geometric Interpretation of Eigenvectors   This definition has an important geometric interpretation that we will investigate here.  Suppose that is a nonzero vector and that is a scalar. What is the geometric relationship between and ?  Let's now consider the eigenvector condition: . Here we have two vectors, and . If , what is the geometric relationship between and ?   Use the interactive diagram that accompanies this activity.  Choose the matrix . Move the vector so that the eigenvector condition holds. What is the eigenvector and what is the associated eigenvalue?  By algebraically computing , verify that the eigenvector condition holds for the vector that you found.  If you multiply the eigenvector that you found by , do you still have an eigenvector? If so, what is the associated eigenvalue?  Are you able to find another eigenvector that is not a scalar multiple of the first one that you found? If so, what is the eigenvector and what is the associated eigenvalue?  Now consider the matrix . Use the diagram to describe any eigenvectors and associated eigenvalues.  Finally, consider the matrix . Use the diagram to describe any eigenvectors and associated eigenvalues. What geometric transformation does this matrix perform on vectors? How does this explain the presence of any eigenvectors?         Making Connections         "
+},
+{
+  "id": "sec-4-1-2-1",
+  "level": "2",
+  "url": "sec-4-1.html#sec-4-1-2-1",
+  "type": "Worksheet Exercise",
+  "number": "1",
+  "title": "Motivation: Eigenvectors and Eigenvalues.",
+  "body": " Motivation: Eigenvectors and Eigenvalues      "
+},
+{
+  "id": "sec-4-1-2-2",
+  "level": "2",
+  "url": "sec-4-1.html#sec-4-1-2-2",
+  "type": "Worksheet Exercise",
+  "number": "2",
+  "title": "Preview Activity 4.1.1.",
+  "body": " Preview Activity 4.1.1   Before we introduce the definition of eigenvectors and eigenvalues, it will be helpful to remember some ideas we have seen previously.      Suppose that is the vector shown in the figure. Sketch the vector and the vector .   The vector (1,2) in 2 dimensional space.        State the geometric effect that scalar multiplication has on the vector . Then sketch all the vectors of the form where is a scalar.      State the geometric effect of the matrix transformation defined by .      Suppose that is a matrix and that and are vectors such that . Use the linearity of matrix multiplication to express the following vectors in terms of and .   .   .   .   .   .   .     "
+},
+{
+  "id": "sec-4-1-3-1",
+  "level": "2",
+  "url": "sec-4-1.html#sec-4-1-3-1",
+  "type": "Worksheet Exercise",
+  "number": "3",
+  "title": "Definition: Eigenvector and Eigenvalue.",
+  "body": " Definition: Eigenvector and Eigenvalue   Given a square matrix , a non-zero vector is an eigenvector if there is a scalar such that   "
+},
+{
+  "id": "sec-4-1-3-2",
+  "level": "2",
+  "url": "sec-4-1.html#sec-4-1-3-2",
+  "type": "Worksheet Exercise",
+  "number": "4",
+  "title": "Example: Eigenvector and Eigenvalue.",
+  "body": " Example: Eigenvector and Eigenvalue   Let and .   "
+},
+{
+  "id": "sec-4-1-4-1",
+  "level": "2",
+  "url": "sec-4-1.html#sec-4-1-4-1",
+  "type": "Worksheet Exercise",
+  "number": "5",
+  "title": "Activity: Geometric Interpretation of Eigenvectors.",
+  "body": " Activity: Geometric Interpretation of Eigenvectors   This definition has an important geometric interpretation that we will investigate here.  Suppose that is a nonzero vector and that is a scalar. What is the geometric relationship between and ?  Let's now consider the eigenvector condition: . Here we have two vectors, and . If , what is the geometric relationship between and ?   Use the interactive diagram that accompanies this activity.  Choose the matrix . Move the vector so that the eigenvector condition holds. What is the eigenvector and what is the associated eigenvalue?  By algebraically computing , verify that the eigenvector condition holds for the vector that you found.  If you multiply the eigenvector that you found by , do you still have an eigenvector? If so, what is the associated eigenvalue?  Are you able to find another eigenvector that is not a scalar multiple of the first one that you found? If so, what is the eigenvector and what is the associated eigenvalue?  Now consider the matrix . Use the diagram to describe any eigenvectors and associated eigenvalues.  Finally, consider the matrix . Use the diagram to describe any eigenvectors and associated eigenvalues. What geometric transformation does this matrix perform on vectors? How does this explain the presence of any eigenvectors?     "
+},
+{
+  "id": "sec-4-1-5-1",
+  "level": "2",
+  "url": "sec-4-1.html#sec-4-1-5-1",
+  "type": "Worksheet Exercise",
+  "number": "6",
+  "title": "Making Connections.",
+  "body": " Making Connections       "
+},
+{
+  "id": "sec-4-2",
+  "level": "1",
+  "url": "sec-4-2.html",
+  "type": "Worksheet",
+  "number": "",
+  "title": "<span class=\"process-math\">\\(\\S 4.2\\text{:}\\)<\/span> Finding Eigenvectors and Eigenvalues",
+  "body": " : Finding Eigenvectors and Eigenvalues    Motivation: Finding Eigenvectors and Eigenvalues        Preview Activity 4.2.1   Let's begin by reviewing some important ideas that we have seen previously.     Suppose that is a square matrix and that the nonzero vector is a solution to the homogeneous equation . What can we conclude about the invertibility of ?      How does the determinant tell us if there is a nonzero solution to the homogeneous equation ?      Suppose that . Find the determinant . What does this tell us about the solution space to the homogeneous equation ?      Find a basis for .      What is the relationship between the rank of a matrix and the dimension of its null space?        Finding Eigenvalues   If is an eigenvector, then there is a scalar such that     Example: Finding Eigenvalues   Let        Finding Eigenvectors   Eigenvectors are solutions to     Example: Finding Eigenvectors   If , then .       Dimensions of Eigenspaces    vs.        The Characteristic Polynomial and Dimensions of Eigenspaces   If is an matrix, then the characteristic polynomial is degree , and we can write        Activity: Eigenvalues and Multiplicities     Identify the eigenvalues, and their multiplicities, of an matrix whose characteristic polynomial is . What can you conclude about the dimensions of the eigenspaces? What is the shape of the matrix? Do you have enough information to guarantee that there is a basis of consisting of eigenvectors?  Find the eigenvalues of and state their multiplicities. Can you find a basis of consisting of eigenvectors of this matrix?  Consider the matrix whose characteristic equation is .  Identify the eigenvalues and their multiplicities.  For each eigenvalue , find a basis of the eigenspace and state its dimension.  Is there a basis of consisting of eigenvectors of ?   Now consider the matrix whose characteristic equation is also .  Identify the eigenvalues and their multiplicities.  For each eigenvalue , find a basis of the eigenspace and state its dimension.  Is there a basis of consisting of eigenvectors of ?   Consider the matrix whose characteristic equation is .  Identify the eigenvalues and their multiplicities.  For each eigenvalue , find a basis of the eigenspace and state its dimension.  Is there a basis of consisting of eigenvectors of ?          Eigenvectors and Sage   Review Activity 4.2.5 to see how to compute eigenvectors and eigenvalues using Sage. Be careful when using decimals!     "
+},
+{
+  "id": "sec-4-2-2-1",
+  "level": "2",
+  "url": "sec-4-2.html#sec-4-2-2-1",
+  "type": "Worksheet Exercise",
+  "number": "1",
+  "title": "Motivation: Finding Eigenvectors and Eigenvalues.",
+  "body": " Motivation: Finding Eigenvectors and Eigenvalues      "
+},
+{
+  "id": "sec-4-2-2-2",
+  "level": "2",
+  "url": "sec-4-2.html#sec-4-2-2-2",
+  "type": "Worksheet Exercise",
+  "number": "2",
+  "title": "Preview Activity 4.2.1.",
+  "body": " Preview Activity 4.2.1   Let's begin by reviewing some important ideas that we have seen previously.     Suppose that is a square matrix and that the nonzero vector is a solution to the homogeneous equation . What can we conclude about the invertibility of ?      How does the determinant tell us if there is a nonzero solution to the homogeneous equation ?      Suppose that . Find the determinant . What does this tell us about the solution space to the homogeneous equation ?      Find a basis for .      What is the relationship between the rank of a matrix and the dimension of its null space?    "
+},
+{
+  "id": "sec-4-2-3-1",
+  "level": "2",
+  "url": "sec-4-2.html#sec-4-2-3-1",
+  "type": "Worksheet Exercise",
+  "number": "3",
+  "title": "Finding Eigenvalues.",
+  "body": " Finding Eigenvalues   If is an eigenvector, then there is a scalar such that   "
+},
+{
+  "id": "sec-4-2-3-2",
+  "level": "2",
+  "url": "sec-4-2.html#sec-4-2-3-2",
+  "type": "Worksheet Exercise",
+  "number": "4",
+  "title": "Example: Finding Eigenvalues.",
+  "body": " Example: Finding Eigenvalues   Let    "
+},
+{
+  "id": "sec-4-2-4-1",
+  "level": "2",
+  "url": "sec-4-2.html#sec-4-2-4-1",
+  "type": "Worksheet Exercise",
+  "number": "5",
+  "title": "Finding Eigenvectors.",
+  "body": " Finding Eigenvectors   Eigenvectors are solutions to   "
+},
+{
+  "id": "sec-4-2-4-2",
+  "level": "2",
+  "url": "sec-4-2.html#sec-4-2-4-2",
+  "type": "Worksheet Exercise",
+  "number": "6",
+  "title": "Example: Finding Eigenvectors.",
+  "body": " Example: Finding Eigenvectors   If , then .   "
+},
+{
+  "id": "sec-4-2-5-1",
+  "level": "2",
+  "url": "sec-4-2.html#sec-4-2-5-1",
+  "type": "Worksheet Exercise",
+  "number": "7",
+  "title": "Dimensions of Eigenspaces.",
+  "body": " Dimensions of Eigenspaces    vs.    "
+},
+{
+  "id": "sec-4-2-6-1",
+  "level": "2",
+  "url": "sec-4-2.html#sec-4-2-6-1",
+  "type": "Worksheet Exercise",
+  "number": "8",
+  "title": "The Characteristic Polynomial and Dimensions of Eigenspaces.",
+  "body": " The Characteristic Polynomial and Dimensions of Eigenspaces   If is an matrix, then the characteristic polynomial is degree , and we can write    "
+},
+{
+  "id": "sec-4-2-7-1",
+  "level": "2",
+  "url": "sec-4-2.html#sec-4-2-7-1",
+  "type": "Worksheet Exercise",
+  "number": "9",
+  "title": "Activity: Eigenvalues and Multiplicities.",
+  "body": " Activity: Eigenvalues and Multiplicities     Identify the eigenvalues, and their multiplicities, of an matrix whose characteristic polynomial is . What can you conclude about the dimensions of the eigenspaces? What is the shape of the matrix? Do you have enough information to guarantee that there is a basis of consisting of eigenvectors?  Find the eigenvalues of and state their multiplicities. Can you find a basis of consisting of eigenvectors of this matrix?  Consider the matrix whose characteristic equation is .  Identify the eigenvalues and their multiplicities.  For each eigenvalue , find a basis of the eigenspace and state its dimension.  Is there a basis of consisting of eigenvectors of ?   Now consider the matrix whose characteristic equation is also .  Identify the eigenvalues and their multiplicities.  For each eigenvalue , find a basis of the eigenspace and state its dimension.  Is there a basis of consisting of eigenvectors of ?   Consider the matrix whose characteristic equation is .  Identify the eigenvalues and their multiplicities.  For each eigenvalue , find a basis of the eigenspace and state its dimension.  Is there a basis of consisting of eigenvectors of ?      "
+},
+{
+  "id": "sec-4-2-8-1",
+  "level": "2",
+  "url": "sec-4-2.html#sec-4-2-8-1",
+  "type": "Worksheet Exercise",
+  "number": "10",
+  "title": "Eigenvectors and Sage.",
+  "body": " Eigenvectors and Sage   Review Activity 4.2.5 to see how to compute eigenvectors and eigenvalues using Sage. Be careful when using decimals!   "
+},
+{
+  "id": "sec-4-3-1",
+  "level": "1",
+  "url": "sec-4-3-1.html",
+  "type": "Worksheet",
+  "number": "",
+  "title": "<span class=\"process-math\">\\(\\S 4.3\\text{:}\\)<\/span> Diagonalization",
+  "body": " : Diagonalization    Motivation: Diagonalization   Recall that has eigenvectors and and associated eigenvalues and .  Eigenvectors of A on the left, and the transformation of the eigenvectors after multiplications by A.       Preview Activity 4.3.1   In this preview activity, we will review some familiar properties about matrix multiplication that appear in this section.     Remember that matrix-vector multiplication constructs linear combinations of the columns of the matrix. For instance, if , express the product in terms of and .      What is the product in terms of and ?      Next, remember how matrix-matrix multiplication is defined. Suppose that we have matrices and and that . How can we express the matrix product in terms of the columns of ?      Suppose that is a matrix having eigenvectors and with associated eigenvalues and . Express the product in terms of and .      Suppose that is the matrix from the previous part and that . What is the matrix product         Diagonalization   Suppose is and is a basis consisting of eigenvectors of with associated eigenvalues . If , then       Fact: Diagonalization   An matrix is diagonalizable exactly when     Diagonalizable   Suppose , where      Example: Not Diagonalizable   Let .     "
+},
+{
+  "id": "sec-4-3-1-2-1",
+  "level": "2",
+  "url": "sec-4-3-1.html#sec-4-3-1-2-1",
+  "type": "Worksheet Exercise",
+  "number": "1",
+  "title": "Motivation: Diagonalization.",
+  "body": " Motivation: Diagonalization   Recall that has eigenvectors and and associated eigenvalues and .  Eigenvectors of A on the left, and the transformation of the eigenvectors after multiplications by A.     "
+},
+{
+  "id": "sec-4-3-1-2-2",
+  "level": "2",
+  "url": "sec-4-3-1.html#sec-4-3-1-2-2",
+  "type": "Worksheet Exercise",
+  "number": "2",
+  "title": "Preview Activity 4.3.1.",
+  "body": " Preview Activity 4.3.1   In this preview activity, we will review some familiar properties about matrix multiplication that appear in this section.     Remember that matrix-vector multiplication constructs linear combinations of the columns of the matrix. For instance, if , express the product in terms of and .      What is the product in terms of and ?      Next, remember how matrix-matrix multiplication is defined. Suppose that we have matrices and and that . How can we express the matrix product in terms of the columns of ?      Suppose that is a matrix having eigenvectors and with associated eigenvalues and . Express the product in terms of and .      Suppose that is the matrix from the previous part and that . What is the matrix product     "
+},
+{
+  "id": "sec-4-3-1-3-1",
+  "level": "2",
+  "url": "sec-4-3-1.html#sec-4-3-1-3-1",
+  "type": "Worksheet Exercise",
+  "number": "3",
+  "title": "Diagonalization.",
+  "body": " Diagonalization   Suppose is and is a basis consisting of eigenvectors of with associated eigenvalues . If , then   "
+},
+{
+  "id": "sec-4-3-1-4-1",
+  "level": "2",
+  "url": "sec-4-3-1.html#sec-4-3-1-4-1",
+  "type": "Worksheet Exercise",
+  "number": "4",
+  "title": "Fact: Diagonalization.",
+  "body": " Fact: Diagonalization   An matrix is diagonalizable exactly when   "
+},
+{
+  "id": "sec-4-3-1-4-2",
+  "level": "2",
+  "url": "sec-4-3-1.html#sec-4-3-1-4-2",
+  "type": "Worksheet Exercise",
+  "number": "5",
+  "title": "Diagonalizable.",
+  "body": " Diagonalizable   Suppose , where    "
+},
+{
+  "id": "sec-4-3-1-4-3",
+  "level": "2",
+  "url": "sec-4-3-1.html#sec-4-3-1-4-3",
+  "type": "Worksheet Exercise",
+  "number": "6",
+  "title": "Example: Not Diagonalizable.",
+  "body": " Example: Not Diagonalizable   Let .   "
 }
 ]
 
