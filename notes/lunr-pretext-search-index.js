@@ -3043,6 +3043,51 @@ var ptx_lunr_docs = [
   "body": " Connecting Null Space and Column Space   We can frame our observations from the activity to connect the spaces and :   "
 },
 {
+  "id": "sec-3-5-2-sols",
+  "level": "1",
+  "url": "sec-3-5-2-sols.html",
+  "type": "Worksheet",
+  "number": "",
+  "title": "<span class=\"process-math\">\\(\\S 3.5\\text{:}\\)<\/span> The Null Space (Solutions)",
+  "body": " : The Null Space (Solutions)    Motivation: Null Space       Last time we introduced subspaces of , and how we can describe them efficiently with bases. We saw one example from our past, , which is the span of the columns of . Today, we'll explore one more familiar subspace.     Definition: Null Space   If is an matrix, then    solution to is the null space of , written .  Unlike , it's not clear that this is actually a subspace (i.e., a span of a set of vectors). We'll illustrate this with the next activity.       Activity: Null Space   We will explore some null spaces in this activity and see why satisfies the definition of a subspace.  Consider the matrix and give a parametric description of the solution space to the equation . In other words, give a parametric description of .    This parametric description shows that the vectors satisfying the equation can be written as a linear combination of a set of vectors. In other words, this description shows why is the span of a set of vectors and is therefore a subspace. Identify a set of vectors whose span is .    Use this set of vectors to find a basis for and state the dimension of .   The null space is a subspace of for which value of ?  Now consider the matrix whose reduced row echelon form is given by Give a parametric description of .   The parametric description gives a set of vectors that span . Explain why this set of vectors is linearly independent and hence forms a basis. What is the dimension of ?    For a general matrix , how does the number of pivot positions indicate the dimension of ?    Suppose that the columns of a matrix are linearly independent. What can you say about ?       We have which leads to the parametric description of the solution space to the homogeneous equation:   The parametric description shows that every solution to the equation is a linear combination of and .   The vectors and are linearly independent so they form a basis for . Therefore, is 2-dimensional.   The vectors in are 4-dimensional so is a subspace of .  A parametric description of the null space is . We can check that the vectors are linearly independent so they form a basis for . This means that is 3-dimensional.  The number of vectors in a basis of the null space equals the number of free variables that appear in the equation , which is the number of columns that do not have pivot positions. This says that equals the number of columns of minus the number of pivot positions.  If the columns are linearly independent, then the homogeneous equation has only the zero solution . Therefore, .        Connecting Null Space and Column Space   We can frame our observations from the activity to connect the spaces and :    See Proposition 3.5.12 and Proposition 3.5.13 .     "
+},
+{
+  "id": "sec-3-5-2-sols-2-1",
+  "level": "2",
+  "url": "sec-3-5-2-sols.html#sec-3-5-2-sols-2-1",
+  "type": "Worksheet Exercise",
+  "number": "1",
+  "title": "Motivation: Null Space.",
+  "body": " Motivation: Null Space       Last time we introduced subspaces of , and how we can describe them efficiently with bases. We saw one example from our past, , which is the span of the columns of . Today, we'll explore one more familiar subspace.   "
+},
+{
+  "id": "sec-3-5-2-sols-2-2",
+  "level": "2",
+  "url": "sec-3-5-2-sols.html#sec-3-5-2-sols-2-2",
+  "type": "Worksheet Exercise",
+  "number": "2",
+  "title": "Definition: Null Space.",
+  "body": " Definition: Null Space   If is an matrix, then    solution to is the null space of , written .  Unlike , it's not clear that this is actually a subspace (i.e., a span of a set of vectors). We'll illustrate this with the next activity.   "
+},
+{
+  "id": "sec-3-5-2-sols-3-1",
+  "level": "2",
+  "url": "sec-3-5-2-sols.html#sec-3-5-2-sols-3-1",
+  "type": "Worksheet Exercise",
+  "number": "3",
+  "title": "Activity: Null Space.",
+  "body": " Activity: Null Space   We will explore some null spaces in this activity and see why satisfies the definition of a subspace.  Consider the matrix and give a parametric description of the solution space to the equation . In other words, give a parametric description of .    This parametric description shows that the vectors satisfying the equation can be written as a linear combination of a set of vectors. In other words, this description shows why is the span of a set of vectors and is therefore a subspace. Identify a set of vectors whose span is .    Use this set of vectors to find a basis for and state the dimension of .   The null space is a subspace of for which value of ?  Now consider the matrix whose reduced row echelon form is given by Give a parametric description of .   The parametric description gives a set of vectors that span . Explain why this set of vectors is linearly independent and hence forms a basis. What is the dimension of ?    For a general matrix , how does the number of pivot positions indicate the dimension of ?    Suppose that the columns of a matrix are linearly independent. What can you say about ?       We have which leads to the parametric description of the solution space to the homogeneous equation:   The parametric description shows that every solution to the equation is a linear combination of and .   The vectors and are linearly independent so they form a basis for . Therefore, is 2-dimensional.   The vectors in are 4-dimensional so is a subspace of .  A parametric description of the null space is . We can check that the vectors are linearly independent so they form a basis for . This means that is 3-dimensional.  The number of vectors in a basis of the null space equals the number of free variables that appear in the equation , which is the number of columns that do not have pivot positions. This says that equals the number of columns of minus the number of pivot positions.  If the columns are linearly independent, then the homogeneous equation has only the zero solution . Therefore, .    "
+},
+{
+  "id": "sec-3-5-2-sols-4-1",
+  "level": "2",
+  "url": "sec-3-5-2-sols.html#sec-3-5-2-sols-4-1",
+  "type": "Worksheet Exercise",
+  "number": "4",
+  "title": "Connecting Null Space and Column Space.",
+  "body": " Connecting Null Space and Column Space   We can frame our observations from the activity to connect the spaces and :    See Proposition 3.5.12 and Proposition 3.5.13 .   "
+},
+{
   "id": "sec-4-1",
   "level": "1",
   "url": "sec-4-1.html",
