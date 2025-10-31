@@ -72,6 +72,8 @@
      \newcommand{\rank}{\text{Rank}}
 
      \newcommand{\mattwo}[4]{\left[\begin{array}{rr}#1 \amp #2 \\ #3 \amp #4 \\ \end{array}\right]}
+
+     \newcommand{\avec}{{\mathbf a}}
   </macros>
 
   <!-- If you put any latex-image elements you can include preambles -->

@@ -1,9 +1,9 @@
 <pretext>
     <article xml:id="notes">
-        <worksheet xml:id="sec-4-3-1">
-        <title><m>\S 4.3</m>: Diagonalization</title>
+        <worksheet xml:id="sec-4-3-1-sols">
+        <title><m>\S 4.3</m>: Diagonalization (Solutions)</title>
             <page>
-                <exercise workspace="0.5in">
+                <exercise workspace="2in">
                     <title>Motivation: Diagonalization</title>
                     <statement>
                         <p>
@@ -15,16 +15,24 @@
                         has eigenvectors <m>\vvec_1=\twovec{1}{1}</m> and
     <m>\vvec_2 = \twovec{-1}{1}</m> and associated eigenvalues
     <m>\lambda_1=3</m> and <m>\lambda_2=-1</m>.
-                        <image source="diag-intro.png" width="50%">
+                        <image source="diag-intro.png">
                             <shortdescription>Eigenvectors of A on the left, and the transformation of the eigenvectors
                                 after multiplications by A.
                             </shortdescription>
                         </image>
                         </p>
                     </statement>
+                    <solution>
+                        <p>
+                            We see that <m>A</m> scales vectors in the coordinates of <m>\{\vvec_1 , \vvec_2\}</m> by scaling the
+                            first coordinate by a factor of <m>3</m>, and the second coordinate by a factor of <m>1</m>. In what 
+                            way is <m>A</m> related to the matrix that does the same thing to standard coordinates,
+                            <m>D = \begin{bmatrix} 3 \amp 0 \\ 0 \amp -1 \end{bmatrix}</m>?
+                        </p>
+                    </solution>
                 </exercise>
 
-                <exercise workspace="0.5in">
+                <exercise workspace="1in">
                     <title>Preview Activity 4.3.1</title>
                     <introduction>
 	<p> In this preview activity, we will review some familiar
@@ -45,7 +53,11 @@
 	  </p>
         </statement>
         
-        
+        <solution>
+	  <p>
+	    <m>A\twovec{2}{-3} = 2\avec_1 - 3\avec_2</m>.
+	  </p>
+        </solution>
       </task>
 
       <task >
@@ -56,7 +68,11 @@
 	  </p>
         </statement>
        
-        
+        <solution>
+	  <p>
+	    <m>A\twovec40 = 4\avec_1</m>.
+	  </p>
+        </solution>
       </task>
 
       <task >
@@ -71,7 +87,13 @@
 	  </p>
         </statement>
         
-        
+        <solution>
+	  <p>
+	    <m>AB = \begin{bmatrix}
+	    A\bvec_1 \amp A\bvec_2
+	    \end{bmatrix}</m>.
+	  </p>
+        </solution>
       </task>
 
       <task >
@@ -85,7 +107,11 @@
 	  </p>
         </statement>
        
-        
+        <solution>
+	  <p>
+	    <m>A(2\vvec_1 + 3\vvec_2) = 8\vvec_1 - 3\vvec_2</m>.
+	  </p>
+        </solution>
       </task>
 
       <task >
@@ -102,7 +128,19 @@
 	  </p>
         </statement>
         
-        
+        <solution>
+	  <p>
+	    <m>AP =
+	    \begin{bmatrix}
+	    A\vvec_1 \amp A\vvec_2
+	    \end{bmatrix}
+	    =
+	    \begin{bmatrix}
+	    4\vvec_1 \amp -\vvec_2
+	    \end{bmatrix}
+	    </m>.
+	  </p>
+        </solution>
       </task>
                     
                     
@@ -137,6 +175,18 @@ P = \begin{bmatrix}
                             
                         </p>
                     </statement>
+                    <solution>
+                        <p>
+                            <m>AP = PD</m>. Since <m>A</m> is invertible, <m>A = PDP^{-1}</m>. This shows us precisely how 
+                            <m>A</m> can be framed as "similar" to the diagonal matrix <m>D</m>: the matrix <m>A</m> acts on vectors
+                            in the coordinates of the eigenvector basis in the same way as <m>D</m> acts acts on that vector written 
+                            in standard coordinates.
+                        </p>
+                        <p>
+                            We say that <m>A</m> is <term>diagonalizable</term> if there is a diagonal matrix <m>D</m> and invertible 
+                            matrix <m>P</m> such that <m>A = PDP^{-1}</m>.
+                        </p>
+                    </solution>
                     
                 </exercise>
             </page>
@@ -149,7 +199,11 @@ P = \begin{bmatrix}
                             An <m>n \times n </m> matrix <m>A</m> is diagonalizable exactly when 
                         </p>
                     </statement>
-                    
+                    <solution>
+                        <p>
+                            there is a basis of <m>\R^n</m> consisting of eigenvectors of <m>A</m>.
+                        </p>
+                    </solution>
                     
                 </exercise>
 
@@ -174,6 +228,11 @@ P =
 
                         </p>
                     </statement>
+                    <solution>
+                        <p>
+                            See <url href="https://understandinglinearalgebra.org/sec-eigen-diag.html#sec-eigen-diag-3-13">Example 4.3.8 </url>.
+                        </p>
+                    </solution>
                     
                 </exercise>
 
@@ -188,7 +247,11 @@ P =
 \end{array}\right]</me>.
                         </p>
                     </statement>
-                    
+                    <solution>
+                        <p>
+                            See <url href="https://understandinglinearalgebra.org/sec-eigen-diag.html#sec-eigen-diag-3-10">Example 4.3.6</url>.
+                        </p>
+                    </solution>
                     
                 </exercise>
             </page>
