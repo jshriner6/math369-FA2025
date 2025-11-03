@@ -3151,6 +3151,69 @@ var ptx_lunr_docs = [
   "body": " Making Connections       "
 },
 {
+  "id": "sec-4-1-sols",
+  "level": "1",
+  "url": "sec-4-1-sols.html",
+  "type": "Worksheet",
+  "number": "",
+  "title": "<span class=\"process-math\">\\(\\S 4.1\\text{:}\\)<\/span> Introduction to Eigenvectors and Eigenvalues (Solutions)",
+  "body": " : Introduction to Eigenvectors and Eigenvalues (Solutions)    Motivation: Eigenvectors and Eigenvalues        Preview Activity 4.1.1   Before we introduce the definition of eigenvectors and eigenvalues, it will be helpful to remember some ideas we have seen previously.      Suppose that is the vector shown in the figure. Sketch the vector and the vector .   The vector (1,2) in 2 dimensional space.      The vectors are as shown.   The vector (1,2) in 2 dimensional space, along with the scaled vector by a factor of 2, and the vector rotated 180 degrees.         State the geometric effect that scalar multiplication has on the vector . Then sketch all the vectors of the form where is a scalar.    Scalar multiplication has the effect of stretching and possibly flipping along the line defined by .      State the geometric effect of the matrix transformation defined by .    This matrix transformation stretches vectors by a factor of in the horizontal direction and flips vectors vertically.      Suppose that is a matrix and that and are vectors such that . Use the linearity of matrix multiplication to express the following vectors in terms of and .   .   .   .   .   .   .     Applying linearity, we see that   .   .   .   .   .   .          Definition: Eigenvector and Eigenvalue   Given a square matrix , a non-zero vector is an eigenvector if there is a scalar such that     . The scalar is called the eigenvalue associated to .     Example: Eigenvector and Eigenvalue   Let and .    See Example 4.1.2 .       Activity: Geometric Interpretation of Eigenvectors   This definition has an important geometric interpretation that we will investigate here.  Suppose that is a nonzero vector and that is a scalar. What is the geometric relationship between and ?  Let's now consider the eigenvector condition: . Here we have two vectors, and . If , what is the geometric relationship between and ?   Use the interactive diagram that accompanies this activity.  Choose the matrix . Move the vector so that the eigenvector condition holds. What is the eigenvector and what is the associated eigenvalue?  By algebraically computing , verify that the eigenvector condition holds for the vector that you found.  If you multiply the eigenvector that you found by , do you still have an eigenvector? If so, what is the associated eigenvalue?  Are you able to find another eigenvector that is not a scalar multiple of the first one that you found? If so, what is the eigenvector and what is the associated eigenvalue?  Now consider the matrix . Use the diagram to describe any eigenvectors and associated eigenvalues.  Finally, consider the matrix . Use the diagram to describe any eigenvectors and associated eigenvalues. What geometric transformation does this matrix perform on vectors? How does this explain the presence of any eigenvectors?       The vectors and lie on the same line.  The vectors and lie on the same line.  There are many possibilities, but we see that is an eigenvector with associated eigenvalue .  If we perform the matrix multiplication, we see that .  Yes, is still an eigenvector with associated eigenvalue .  We see that is an eigenvector with associated eigenvalue .  The only eigenvectors that appear are scalar multiples of with associated eigenvalue .  There are no eigenvectors. The matrix transformation rotates vectors by so it is not possible for and to lie on the same line.        Making Connections        The general idea is that recognizing eigenvectors of a matrix can turn a difficult computation ( ) into an easy one ( ). There will be a couple of important contexts that we will explore involving eigenvectors:   Determining if we can form a basis consisting of eigenvectors of a matrix.    Analyzing Dynamical Systems (such as in Lab 2).   See the discussion and examples in Subsection 4.1.2 .     "
+},
+{
+  "id": "sec-4-1-sols-2-1",
+  "level": "2",
+  "url": "sec-4-1-sols.html#sec-4-1-sols-2-1",
+  "type": "Worksheet Exercise",
+  "number": "1",
+  "title": "Motivation: Eigenvectors and Eigenvalues.",
+  "body": " Motivation: Eigenvectors and Eigenvalues      "
+},
+{
+  "id": "sec-4-1-sols-2-2",
+  "level": "2",
+  "url": "sec-4-1-sols.html#sec-4-1-sols-2-2",
+  "type": "Worksheet Exercise",
+  "number": "2",
+  "title": "Preview Activity 4.1.1.",
+  "body": " Preview Activity 4.1.1   Before we introduce the definition of eigenvectors and eigenvalues, it will be helpful to remember some ideas we have seen previously.      Suppose that is the vector shown in the figure. Sketch the vector and the vector .   The vector (1,2) in 2 dimensional space.      The vectors are as shown.   The vector (1,2) in 2 dimensional space, along with the scaled vector by a factor of 2, and the vector rotated 180 degrees.         State the geometric effect that scalar multiplication has on the vector . Then sketch all the vectors of the form where is a scalar.    Scalar multiplication has the effect of stretching and possibly flipping along the line defined by .      State the geometric effect of the matrix transformation defined by .    This matrix transformation stretches vectors by a factor of in the horizontal direction and flips vectors vertically.      Suppose that is a matrix and that and are vectors such that . Use the linearity of matrix multiplication to express the following vectors in terms of and .   .   .   .   .   .   .     Applying linearity, we see that   .   .   .   .   .   .      "
+},
+{
+  "id": "sec-4-1-sols-3-1",
+  "level": "2",
+  "url": "sec-4-1-sols.html#sec-4-1-sols-3-1",
+  "type": "Worksheet Exercise",
+  "number": "3",
+  "title": "Definition: Eigenvector and Eigenvalue.",
+  "body": " Definition: Eigenvector and Eigenvalue   Given a square matrix , a non-zero vector is an eigenvector if there is a scalar such that     . The scalar is called the eigenvalue associated to .   "
+},
+{
+  "id": "sec-4-1-sols-3-2",
+  "level": "2",
+  "url": "sec-4-1-sols.html#sec-4-1-sols-3-2",
+  "type": "Worksheet Exercise",
+  "number": "4",
+  "title": "Example: Eigenvector and Eigenvalue.",
+  "body": " Example: Eigenvector and Eigenvalue   Let and .    See Example 4.1.2 .   "
+},
+{
+  "id": "sec-4-1-sols-4-1",
+  "level": "2",
+  "url": "sec-4-1-sols.html#sec-4-1-sols-4-1",
+  "type": "Worksheet Exercise",
+  "number": "5",
+  "title": "Activity: Geometric Interpretation of Eigenvectors.",
+  "body": " Activity: Geometric Interpretation of Eigenvectors   This definition has an important geometric interpretation that we will investigate here.  Suppose that is a nonzero vector and that is a scalar. What is the geometric relationship between and ?  Let's now consider the eigenvector condition: . Here we have two vectors, and . If , what is the geometric relationship between and ?   Use the interactive diagram that accompanies this activity.  Choose the matrix . Move the vector so that the eigenvector condition holds. What is the eigenvector and what is the associated eigenvalue?  By algebraically computing , verify that the eigenvector condition holds for the vector that you found.  If you multiply the eigenvector that you found by , do you still have an eigenvector? If so, what is the associated eigenvalue?  Are you able to find another eigenvector that is not a scalar multiple of the first one that you found? If so, what is the eigenvector and what is the associated eigenvalue?  Now consider the matrix . Use the diagram to describe any eigenvectors and associated eigenvalues.  Finally, consider the matrix . Use the diagram to describe any eigenvectors and associated eigenvalues. What geometric transformation does this matrix perform on vectors? How does this explain the presence of any eigenvectors?       The vectors and lie on the same line.  The vectors and lie on the same line.  There are many possibilities, but we see that is an eigenvector with associated eigenvalue .  If we perform the matrix multiplication, we see that .  Yes, is still an eigenvector with associated eigenvalue .  We see that is an eigenvector with associated eigenvalue .  The only eigenvectors that appear are scalar multiples of with associated eigenvalue .  There are no eigenvectors. The matrix transformation rotates vectors by so it is not possible for and to lie on the same line.    "
+},
+{
+  "id": "sec-4-1-sols-5-1",
+  "level": "2",
+  "url": "sec-4-1-sols.html#sec-4-1-sols-5-1",
+  "type": "Worksheet Exercise",
+  "number": "6",
+  "title": "Making Connections.",
+  "body": " Making Connections        The general idea is that recognizing eigenvectors of a matrix can turn a difficult computation ( ) into an easy one ( ). There will be a couple of important contexts that we will explore involving eigenvectors:   Determining if we can form a basis consisting of eigenvectors of a matrix.    Analyzing Dynamical Systems (such as in Lab 2).   See the discussion and examples in Subsection 4.1.2 .   "
+},
+{
   "id": "sec-4-2",
   "level": "1",
   "url": "sec-4-2.html",
