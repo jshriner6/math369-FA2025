@@ -178,9 +178,9 @@ P = \begin{bmatrix}
                     <solution>
                         <p>
                             <m>AP = PD</m>. Since <m>A</m> is invertible, <m>A = PDP^{-1}</m>. This shows us precisely how 
-                            <m>A</m> can be framed as "similar" to the diagonal matrix <m>D</m>: the matrix <m>A</m> acts on vectors
-                            in the coordinates of the eigenvector basis in the same way as <m>D</m> acts acts on that vector written 
-                            in standard coordinates.
+                            <m>A</m> can be framed as "similar" to the diagonal matrix <m>D</m>: the matrix <m>A</m> acts on a vector
+                            in standard coordinates in the same way as <m>D</m> acts acts on that vector written 
+                            in the coordinates of the columns of <m>P</m>.
                         </p>
                         <p>
                             We say that <m>A</m> is <term>diagonalizable</term> if there is a diagonal matrix <m>D</m> and invertible 
