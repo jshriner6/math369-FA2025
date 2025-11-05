@@ -3313,6 +3313,105 @@ var ptx_lunr_docs = [
   "body": " Eigenvectors and Sage   Review Activity 4.2.5 to see how to compute eigenvectors and eigenvalues using Sage. Be careful when using decimals!   "
 },
 {
+  "id": "sec-4-2-sols",
+  "level": "1",
+  "url": "sec-4-2-sols.html",
+  "type": "Worksheet",
+  "number": "",
+  "title": "<span class=\"process-math\">\\(\\S 4.2\\text{:}\\)<\/span> Finding Eigenvectors and Eigenvalues (Solutions)",
+  "body": " : Finding Eigenvectors and Eigenvalues (Solutions)    Motivation: Finding Eigenvectors and Eigenvalues       We've gained some intuition for what eigenvectors are and why they matter. How do we find them?     Preview Activity 4.2.1   Let's begin by reviewing some important ideas that we have seen previously.     Suppose that is a square matrix and that the nonzero vector is a solution to the homogeneous equation . What can we conclude about the invertibility of ?    The matrix cannot have a pivot position in every column so it is not invertible.      How does the determinant tell us if there is a nonzero solution to the homogeneous equation ?    If there is a nonzero solution to the homogeneous equation , then is not invertible so .      Suppose that . Find the determinant . What does this tell us about the solution space to the homogeneous equation ?    We find that so there is a nonzero solution to the homogeneous equation.      Find a basis for .    The reduced row echelon form of is so the solution space to the homogeneous equation may be described parametrically as . A basis for is therefore .      What is the relationship between the rank of a matrix and the dimension of its null space?    If is an matrix, then .        Finding Eigenvalues   If is an eigenvector, then there is a scalar such that     . We can rearrange this equation to see that this implies Since we know is not invertible (since is a non-zero solution), we know . This gives us a relationship in which to solve for .     Example: Finding Eigenvalues   Let     For , the characteristic polynomial is so we find eigenvalues and .   so there are complex eigenvalues, and .  Because the determinant of a triangular matrix equals the product of its diagonal entries, the eigenvalues of are equal to the entries on the diagonal.       Finding Eigenvectors   Eigenvectors are solutions to     . That is, the Eigenspace of A associated to is      Example: Finding Eigenvectors   If , then .    We have The null space is one-dimensional with basis .  We have The null space is one-dimensional with basis .       Dimensions of Eigenspaces    vs.     See Example 4.2.5 and Example 4.2.6 .       The Characteristic Polynomial and Dimensions of Eigenspaces   If is an matrix, then the characteristic polynomial is degree , and we can write     See the discussion in Subsection 4.2.3 .       Activity: Eigenvalues and Multiplicities     Identify the eigenvalues, and their multiplicities, of an matrix whose characteristic polynomial is . What can you conclude about the dimensions of the eigenspaces? What is the shape of the matrix? Do you have enough information to guarantee that there is a basis of consisting of eigenvectors?  Find the eigenvalues of and state their multiplicities. Can you find a basis of consisting of eigenvectors of this matrix?  Consider the matrix whose characteristic equation is .  Identify the eigenvalues and their multiplicities.  For each eigenvalue , find a basis of the eigenspace and state its dimension.  Is there a basis of consisting of eigenvectors of ?   Now consider the matrix whose characteristic equation is also .  Identify the eigenvalues and their multiplicities.  For each eigenvalue , find a basis of the eigenspace and state its dimension.  Is there a basis of consisting of eigenvectors of ?   Consider the matrix whose characteristic equation is .  Identify the eigenvalues and their multiplicities.  For each eigenvalue , find a basis of the eigenspace and state its dimension.  Is there a basis of consisting of eigenvectors of ?        There are three eigenvalues, has multiplicity , has multiplicity , and has multiplicity . We know that We can guarantee that , but we can say nothing further about the other two eigenspaces.  The dimension of the matrix is since the degree of the characteristic polynomial is . We cannot guarantee that we can form a basis for consisting of eigenvectors, however.  There is one eigenvalue having multiplicity two. Because the eigenspace is one-dimensional, however, we cannot find a basis for consisting of eigenvectors of .  For the matrix ,  We have eigenvalues with multiplicity and with multiplicity .  The eigenspace is two-dimensional with basis . The eigenspace is one-dimensional with basis vector .  We are able to form a basis for consisting of eigenvectors of .    For the matrix ,  We have eigenvalues with multiplicity and with multiplicity .  The eigenspace is one-dimensional with basis vector . The eigenspace is also one-dimensional with basis vector .  It is not possible to form a basis for consisting of eigenvectors of .    For this matrix,  There are three eigenvalues , , and , each having multiplicity .  A basis vector for the eigenspace is . A basis vector for the eigenspace is . A basis vector for the eigenspace is .  We can form a basis for consisting of eigenvectors of .          Eigenvectors and Sage   Review Activity 4.2.5 to see how to compute eigenvectors and eigenvalues using Sage. Be careful when using decimals!     The fcp command will return the factored characteristic polynomial lambda^2 - 2*lambda - 3 .  The eigenvalues command returns a list of eigenvalues [-3, -3] .  The eigenvectors_right command returns [(-3, [(1, 0)], 2)] .  If we begin with the matrix , we find  The eigenvalues are and .  The reduced row echelon form is , which shows that is not invertible, as expected.  Sage returns , which is not correct because cannot be invertible if is an eigenvalue of .  Here we find the correct eigenvalues, with basis vector for and with basis vector for .        "
+},
+{
+  "id": "sec-4-2-sols-2-1",
+  "level": "2",
+  "url": "sec-4-2-sols.html#sec-4-2-sols-2-1",
+  "type": "Worksheet Exercise",
+  "number": "1",
+  "title": "Motivation: Finding Eigenvectors and Eigenvalues.",
+  "body": " Motivation: Finding Eigenvectors and Eigenvalues       We've gained some intuition for what eigenvectors are and why they matter. How do we find them?   "
+},
+{
+  "id": "sec-4-2-sols-2-2",
+  "level": "2",
+  "url": "sec-4-2-sols.html#sec-4-2-sols-2-2",
+  "type": "Worksheet Exercise",
+  "number": "2",
+  "title": "Preview Activity 4.2.1.",
+  "body": " Preview Activity 4.2.1   Let's begin by reviewing some important ideas that we have seen previously.     Suppose that is a square matrix and that the nonzero vector is a solution to the homogeneous equation . What can we conclude about the invertibility of ?    The matrix cannot have a pivot position in every column so it is not invertible.      How does the determinant tell us if there is a nonzero solution to the homogeneous equation ?    If there is a nonzero solution to the homogeneous equation , then is not invertible so .      Suppose that . Find the determinant . What does this tell us about the solution space to the homogeneous equation ?    We find that so there is a nonzero solution to the homogeneous equation.      Find a basis for .    The reduced row echelon form of is so the solution space to the homogeneous equation may be described parametrically as . A basis for is therefore .      What is the relationship between the rank of a matrix and the dimension of its null space?    If is an matrix, then .    "
+},
+{
+  "id": "sec-4-2-sols-3-1",
+  "level": "2",
+  "url": "sec-4-2-sols.html#sec-4-2-sols-3-1",
+  "type": "Worksheet Exercise",
+  "number": "3",
+  "title": "Finding Eigenvalues.",
+  "body": " Finding Eigenvalues   If is an eigenvector, then there is a scalar such that     . We can rearrange this equation to see that this implies Since we know is not invertible (since is a non-zero solution), we know . This gives us a relationship in which to solve for .   "
+},
+{
+  "id": "sec-4-2-sols-3-2",
+  "level": "2",
+  "url": "sec-4-2-sols.html#sec-4-2-sols-3-2",
+  "type": "Worksheet Exercise",
+  "number": "4",
+  "title": "Example: Finding Eigenvalues.",
+  "body": " Example: Finding Eigenvalues   Let     For , the characteristic polynomial is so we find eigenvalues and .   so there are complex eigenvalues, and .  Because the determinant of a triangular matrix equals the product of its diagonal entries, the eigenvalues of are equal to the entries on the diagonal.   "
+},
+{
+  "id": "sec-4-2-sols-4-1",
+  "level": "2",
+  "url": "sec-4-2-sols.html#sec-4-2-sols-4-1",
+  "type": "Worksheet Exercise",
+  "number": "5",
+  "title": "Finding Eigenvectors.",
+  "body": " Finding Eigenvectors   Eigenvectors are solutions to     . That is, the Eigenspace of A associated to is    "
+},
+{
+  "id": "sec-4-2-sols-4-2",
+  "level": "2",
+  "url": "sec-4-2-sols.html#sec-4-2-sols-4-2",
+  "type": "Worksheet Exercise",
+  "number": "6",
+  "title": "Example: Finding Eigenvectors.",
+  "body": " Example: Finding Eigenvectors   If , then .    We have The null space is one-dimensional with basis .  We have The null space is one-dimensional with basis .   "
+},
+{
+  "id": "sec-4-2-sols-5-1",
+  "level": "2",
+  "url": "sec-4-2-sols.html#sec-4-2-sols-5-1",
+  "type": "Worksheet Exercise",
+  "number": "7",
+  "title": "Dimensions of Eigenspaces.",
+  "body": " Dimensions of Eigenspaces    vs.     See Example 4.2.5 and Example 4.2.6 .   "
+},
+{
+  "id": "sec-4-2-sols-6-1",
+  "level": "2",
+  "url": "sec-4-2-sols.html#sec-4-2-sols-6-1",
+  "type": "Worksheet Exercise",
+  "number": "8",
+  "title": "The Characteristic Polynomial and Dimensions of Eigenspaces.",
+  "body": " The Characteristic Polynomial and Dimensions of Eigenspaces   If is an matrix, then the characteristic polynomial is degree , and we can write     See the discussion in Subsection 4.2.3 .   "
+},
+{
+  "id": "sec-4-2-sols-7-1",
+  "level": "2",
+  "url": "sec-4-2-sols.html#sec-4-2-sols-7-1",
+  "type": "Worksheet Exercise",
+  "number": "9",
+  "title": "Activity: Eigenvalues and Multiplicities.",
+  "body": " Activity: Eigenvalues and Multiplicities     Identify the eigenvalues, and their multiplicities, of an matrix whose characteristic polynomial is . What can you conclude about the dimensions of the eigenspaces? What is the shape of the matrix? Do you have enough information to guarantee that there is a basis of consisting of eigenvectors?  Find the eigenvalues of and state their multiplicities. Can you find a basis of consisting of eigenvectors of this matrix?  Consider the matrix whose characteristic equation is .  Identify the eigenvalues and their multiplicities.  For each eigenvalue , find a basis of the eigenspace and state its dimension.  Is there a basis of consisting of eigenvectors of ?   Now consider the matrix whose characteristic equation is also .  Identify the eigenvalues and their multiplicities.  For each eigenvalue , find a basis of the eigenspace and state its dimension.  Is there a basis of consisting of eigenvectors of ?   Consider the matrix whose characteristic equation is .  Identify the eigenvalues and their multiplicities.  For each eigenvalue , find a basis of the eigenspace and state its dimension.  Is there a basis of consisting of eigenvectors of ?        There are three eigenvalues, has multiplicity , has multiplicity , and has multiplicity . We know that We can guarantee that , but we can say nothing further about the other two eigenspaces.  The dimension of the matrix is since the degree of the characteristic polynomial is . We cannot guarantee that we can form a basis for consisting of eigenvectors, however.  There is one eigenvalue having multiplicity two. Because the eigenspace is one-dimensional, however, we cannot find a basis for consisting of eigenvectors of .  For the matrix ,  We have eigenvalues with multiplicity and with multiplicity .  The eigenspace is two-dimensional with basis . The eigenspace is one-dimensional with basis vector .  We are able to form a basis for consisting of eigenvectors of .    For the matrix ,  We have eigenvalues with multiplicity and with multiplicity .  The eigenspace is one-dimensional with basis vector . The eigenspace is also one-dimensional with basis vector .  It is not possible to form a basis for consisting of eigenvectors of .    For this matrix,  There are three eigenvalues , , and , each having multiplicity .  A basis vector for the eigenspace is . A basis vector for the eigenspace is . A basis vector for the eigenspace is .  We can form a basis for consisting of eigenvectors of .      "
+},
+{
+  "id": "sec-4-2-sols-8-1",
+  "level": "2",
+  "url": "sec-4-2-sols.html#sec-4-2-sols-8-1",
+  "type": "Worksheet Exercise",
+  "number": "10",
+  "title": "Eigenvectors and Sage.",
+  "body": " Eigenvectors and Sage   Review Activity 4.2.5 to see how to compute eigenvectors and eigenvalues using Sage. Be careful when using decimals!     The fcp command will return the factored characteristic polynomial lambda^2 - 2*lambda - 3 .  The eigenvalues command returns a list of eigenvalues [-3, -3] .  The eigenvectors_right command returns [(-3, [(1, 0)], 2)] .  If we begin with the matrix , we find  The eigenvalues are and .  The reduced row echelon form is , which shows that is not invertible, as expected.  Sage returns , which is not correct because cannot be invertible if is an eigenvalue of .  Here we find the correct eigenvalues, with basis vector for and with basis vector for .      "
+},
+{
   "id": "sec-4-3-1",
   "level": "1",
   "url": "sec-4-3-1.html",
