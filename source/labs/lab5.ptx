@@ -19,7 +19,7 @@
                 <exercise>
                     <introduction>
       <p> In this first exercise we will look at several examples of dynamical
-      systems.  If
+      systems and their behavior over time.  If
       <m>P = \left[\begin{array}{rr}
       1 \amp -1 \\
       1 \amp 1 \\
@@ -33,7 +33,13 @@
 		<li>
 			<p>
 				state the eigenvalues of
-      			<m>A</m> and sketch a phase portrait for the matrix <m>A</m>, and
+      			<m>A</m>, and describe what the matrix <m>E</m> tells us about how the matrix <m>A</m> acts on
+				vectors written in the basis <m>\bcal</m>,
+			</p>
+		</li>
+		<li>
+			<p>
+				sketch at least <m>4</m> different trajectories of the phase portrait for the matrix <m>A</m>, and
 			</p>
 		</li>
 		
