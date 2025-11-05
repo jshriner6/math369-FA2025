@@ -2,7 +2,7 @@
     <article xml:id="worksheet">
         <worksheet xmlns:xi="http://www.w3.org/2001/XInclude" margin="1in" bottom="1.25cm" xml:id="lab-5">
             <title>Lab 5: Dynamical Systems</title>
-            <page>
+        
             <introduction>
                 <p>
                     Complete the following exercises in
@@ -17,8 +17,8 @@
             
             
                 <exercise>
-                    <statement>
-      <p> We will now look at several more examples of dynamical
+                    <introduction>
+      <p> In this first exercise we will look at several examples of dynamical
       systems.  If
       <m>P = \left[\begin{array}{rr}
       1 \amp -1 \\
@@ -28,16 +28,29 @@
       that the columns of <m>P</m> form a basis
       <m>\bcal</m> of <m>\real^2</m>.  Given below are several
       matrices <m>A</m> written in the form <m>A=PEP^{-1}</m> for some
-      matrix <m>E</m>.  For each matrix, state the eigenvalues of
-      <m>A</m> and sketch a phase portrait for the matrix <m>E</m> on
-      the left and a phase portrait for <m>A</m> on the right.
-      Describe the behavior of <m>A^k\xvec_0</m> as
-      <m>k</m> becomes very large for a typical initial vector
-      <m>\xvec_0</m>.
+      matrix <m>E</m>.  For each matrix, 
+	  <ul>
+		<li>
+			<p>
+				state the eigenvalues of
+      			<m>A</m> and sketch a phase portrait for the matrix <m>A</m>, and
+			</p>
+		</li>
+		
+		<li>
+			<p>
+				answer the question provided regarding the system's behavior over time.
+			</p>
+		</li>
+	  </ul>
+      
+	</p>
+	</introduction>		
 
-      <ol marker="a.">
-	<li>
-	  <p> <m>A=PEP^{-1}</m> where
+      <task workspace="0.05in">
+		<statement>
+			<p>
+				<p> <m>A=PEP^{-1}</m> where
 	  <m>
 	    E = \left[\begin{array}{rr}
 	    1.3 \amp 0 \\
@@ -49,10 +62,20 @@
 	  <sidebyside width="45%">
 	    <image source="images/eigen-phase-activity.png" />
 	  </sidebyside>
-	  </li>
+			</p>
+			<p>
+				When <m>|\lambda_1|, |\lambda_2| \gt 1</m>, we say the origin is a <term>repellor</term>. Verify that 
+				your eigenvalues satisfy this criteria, and use your phase portrait to describe why this is an appropriate
+				term for the origin in this case.
+			</p>
+		</statement>
 
-	<li>
-	    <p> <m>A=PEP^{-1}</m> where
+	  </task>
+	  
+	 <task workspace="0.05in">
+		<statement>
+			<p>
+				<p> <m>A=PEP^{-1}</m> where
 	    <m>
 	      E = \left[\begin{array}{rr}
 	      0 \amp -1 \\
@@ -64,10 +87,20 @@
 	  <sidebyside width="45%">
 	    <image source="images/eigen-phase-activity.png" />
 	  </sidebyside>
-	  </li>
-
-	<li>
-	  <p>  <m>A=PEP^{-1}</m> where
+			</p>
+			<p>
+				When <m>\lambda = a \pm bi</m> and <m>a^2+b^2 =1</m>, we say the origin is a <term>center</term>. Verify that 
+				your eigenvalues satisfy this criteria, and use your phase portrait to describe why this is an appropriate
+				term for the origin in this case.
+			</p>
+		</statement>
+		
+	 </task>
+	    
+	 <task workspace="0.05in">
+		<statement>
+			<p>
+				 <p>  <m>A=PEP^{-1}</m> where
 	  <m>	      
 	    E = \left[\begin{array}{rr}
 	    0.7 \amp 0 \\
@@ -79,10 +112,20 @@
 	  <sidebyside width="45%">
 	    <image source="images/eigen-phase-activity.png" />
 	  </sidebyside>
-	  </li>
+			</p>
 
-	<li>
-	  <p> <m>A=PEP^{-1}</m> where
+			<p>
+				When <m>|\lambda_1| \gt 1 \gt |\lambda_2| \gt 0</m>, we say the origin is a <term>saddle</term>. Verify that 
+				your eigenvalues satisfy this criteria, and use your phase portrait to describe why this is an appropriate
+				term for the origin in this case.
+			</p>
+		</statement>
+	 </task>
+	 
+	 <task workspace="0.05in">
+		<statement>
+			<p>
+				 <p> <m>A=PEP^{-1}</m> where
 	  <m>	      
 	    E = \left[\begin{array}{rr}
 	    0.3 \amp 0 \\
@@ -94,10 +137,20 @@
 	  <sidebyside width="45%">
 	    <image source="images/eigen-phase-activity.png" />
 	  </sidebyside>
-	  </li>
+			</p>
 
-	<li>
-	  <p> <m>A=PEP^{-1}</m> where
+			<p>
+				When <m>0 \lt |\lambda_1|, |\lambda_2| \lt 1</m>, we say the origin is an <term>attractor</term>. Verify that 
+				your eigenvalues satisfy this criteria, and use your phase portrait to describe why this is an appropriate
+				term for the origin in this case.
+			</p>
+		</statement>
+	 </task>
+	 
+	 <task workspace="0.05in">
+		<statement>
+			<p>
+				<p> <m>A=PEP^{-1}</m> where
 	  <m>	      
 	    E = \left[\begin{array}{rr}
 	    1 \amp -0.9 \\
@@ -109,10 +162,20 @@
 	  <sidebyside width="45%">
 	    <image source="images/eigen-phase-activity.png" />
 	  </sidebyside>
-	  </li>
+			</p>
 
-	<li>
-	  <p> <m>A=PEP^{-1}</m> where
+			<p>
+				When <m>\lambda = a \pm bi</m> and <m>a^2+b^2 \gt 1</m>, we say the origin is a <term>spiral repellor</term>. Verify that 
+				your eigenvalues satisfy this criteria, and use your phase portrait to describe why this is an appropriate
+				term for the origin in this case.
+			</p>
+		</statement>
+	 </task>
+	  
+	  <task workspace="0.05in">
+		<statement>
+			<p>
+				<p> <m>A=PEP^{-1}</m> where
 	  <m>	      
 	    E = \left[\begin{array}{rr}
 	    0.6 \amp -0.2 \\
@@ -124,18 +187,21 @@
 	  <sidebyside width="45%">
 	    <image source="images/eigen-phase-activity.png" />
 	  </sidebyside>
-	  </li>
+			</p>
 
-      </ol></p>
-      </statement>
-                </exercise>
+			<p>
+				When <m>\lambda = a \pm bi</m> and <m>0 \gt a^2+b^2 \lt 1</m>, we say the origin is a <term>spiral repellor</term>. Verify that 
+				your eigenvalues satisfy this criteria, and use your phase portrait to describe why this is an appropriate
+				term for the origin in this case.
+			</p>
+		</statement>
+	  </task>
+</exercise>
 
-        </page>
-
-        <page>
+        
             <exercise>
-                <statement>
-      <p> In this activity, we will consider several ways in which two
+                <introduction>
+      <p> In this exercise, we will consider several ways in which two
       species might interact with one another.  Throughout, we will
       consider two species <m>R</m> and <m>S</m> whose populations in
       year <m>k</m> form a vector <m>\xvec_k=\twovec{R_k}{S_k}</m> and
@@ -143,37 +209,47 @@
       <me>
 	\xvec_{k+1}=A\xvec_k
       </me>.
-      <ol marker="a.">
-	<li>
-	  <p> Suppose that
+	</p>
+	</introduction>
+     <task workspace="1in">
+		<statement>
+			<p> Suppose that
 	  <m> A = \left[\begin{array}{rr}
 	  0.7 \amp 0 \\
 	  0 \amp 1.6 \\
 	  \end{array}\right]
 	  </m>.
 	  </p>
-
 	  <p> Explain why the species do not interact with one
-	  another.  Which of the six types of dynamical systems do we
+	  another.  Which of the six types of dynamical systems from the first exercise do we
 	  have?  What happens to both species after a long time?</p>
-	</li>
+		</statement>
+	 </task>
+	  
 
-	<li>
-	  <p> Suppose now that
+	  
+	<task workspace="1in">
+		<statement>
+			<p>
+				<p> Suppose now that
 	  <m> A = \left[\begin{array}{rr}
 	  0.7 \amp 0.3 \\
 	  0 \amp 1.6 \\
 	  \end{array}\right]
 	  </m>.
 	  </p>
-
-	  <p> Explain why <m>S</m> is a beneficial species for <m>R</m>.
+			</p>
+			<p> Explain why <m>S</m> is a beneficial species for <m>R</m>.
 	  Which of the six types of dynamical systems do we
 	  have?  What happens to both species after a long time?</p>
-	</li>
+		</statement>
+	</task>
+	  
 
-	<li>
-	  <p> If
+	  
+	<task workspace="1in">
+		<statement>
+			<p> If
 	  <m> A = \left[\begin{array}{rr}
 	  0.7 \amp 0.5 \\
 	  -0.4 \amp 1.6 \\
@@ -183,10 +259,12 @@
 	  Which of the species is the predator and which is the prey?
 	  Which of the six types of dynamical systems do we
 	  have?  What happens to both species after a long time?</p>
-	</li>
-
-	<li>
-	  <p> Suppose that
+		</statement>
+	</task>
+	  
+	<task workspace="1in">
+		<statement>
+			 <p> Suppose that
 	  <m> A = \left[\begin{array}{rr}
 	  0.5 \amp 0.2 \\
 	  -0.4 \amp 1.1 \\
@@ -196,17 +274,19 @@
 	  previous part.  Which of the six types of dynamical systems
 	  do we have?  What happens to both species after a long
 	  time?</p>
-	</li>
-
-      </ol>
-      </p>
-      </statement>
+		</statement>
+	</task>
+	 
+	
+      
             </exercise>
-        </page>
-
-        <page>
+      
             <exercise>
-                <statement>
+                <introduction>
+		<p>
+			This exercise will illustrate how we can use similar techniques as in the <m>2 \times 2</m> case to analyze
+			systems of higher dimension.
+		</p>
       <p> The following type of analysis has been used to study the
       population of a bison herd.  We will divide the population of
       female bison into three groups: juveniles who are less than one
@@ -236,18 +316,31 @@
       <me>
 	J_{k+1} = 0.4 A_k
       </me>.
-      <ol marker="a.">
-	<li><p> Find similar expressions for <m>Y_{k+1}</m> and
+	</p>
+	</introduction>
+	<task workspace="1in">
+		<statement>
+			<p> Find similar expressions for <m>Y_{k+1}</m> and
 	<m>A_{k+1}</m> in terms of <m>J_k</m>, <m>Y_k</m>, and
-	<m>A_k</m>.  </p></li>
-
-	<li><p> As is usual, we write the matrix
+	<m>A_k</m>.  </p>
+		</statement>
+	</task>
+    
+	<task workspace="1in">
+		<statement>
+			<p>
+				<p> As is usual, we write the matrix
 	<m>\xvec_k=\threevec{J_k}{Y_k}{A_k}</m>.  Write the matrix
 	<m>A</m> such that
 	<m>\xvec_{k+1} = A\xvec_k</m> and find its eigenvalues.
-	</p></li>
+	</p>
+			</p>
+		</statement>
+	</task>
 
-	<li><p> We can write <m>A = PEP^{-1}</m> where the matrices
+	<task workspace="1in">
+		<statement>
+			<p> We can write <m>A = PEP^{-1}</m> where the matrices
 	<m>E</m> and <m>P</m> are approximately:
 	<me>
 	  \begin{aligned}
@@ -266,33 +359,47 @@
 	Make a prediction about the long-term behavior of
 	<m>\xvec_k</m>.  For instance, at what rate does it grow?  For
 	every 100 adults, how many juveniles, and yearlings are there?
-	</p></li>
+	</p>
+		</statement>
+	</task>
 
-	<li><p> Suppose that the birth rate decreases so that only 30%
+	<task workspace="1in">
+		<statement>
+			<p> Suppose that the birth rate decreases so that only 30%
 	of adults give birth to a juvenile.  How does this affect the
 	long-term growth rate of the herd?
 	<sage>
 	  <input>
 	  </input>
 	</sage>
-	</p></li>
+	</p>
+		</statement>
+	</task>
 
-	<li><p> Suppose that the birth rate decreases further so that
+	
+
+	<task workspace="1in">
+		<statement>
+			<p> Suppose that the birth rate decreases further so that
 	only 20% of adults give birth to a juvenile.  How does this affect the
 	long-term growth rate of the herd?
 	<sage>
 	  <input>
 	  </input>
 	</sage>
-	</p></li>
+	</p>
+		</statement>
+	</task>
 
-	<li><p> Find the smallest birth rate that supports a stable
-	population. </p></li>
+	<task workspace="1in">
+		<statement>
+			<p> Find the smallest birth rate that supports a stable
+	population. </p>
+		</statement>
+	</task>
 
-      </ol></p>
-      </statement>
             </exercise>
-        </page>
+ 
    
         </worksheet>
     </article>
