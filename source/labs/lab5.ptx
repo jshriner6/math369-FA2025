@@ -39,7 +39,7 @@
 		</li>
 		<li>
 			<p>
-				sketch at least <m>4</m> different trajectories of the phase portrait for the matrix <m>A</m>, and
+				sketch trajectories (with arrows) on the phase portrait for the matrix <m>A</m> for each of the initial values indicated by dots, and
 			</p>
 		</li>
 		
@@ -66,7 +66,7 @@
 	  </p>
 
 	  <sidebyside width="45%">
-	    <image source="images/eigen-phase-activity.png" />
+	    <image source="images/eigen-phase-activity_real.png" />
 	  </sidebyside>
 			</p>
 			<p>
@@ -91,7 +91,7 @@
 	    </p>
 
 	  <sidebyside width="45%">
-	    <image source="images/eigen-phase-activity.png" />
+	    <image source="images/eigen-phase-activity_im1.png" />
 	  </sidebyside>
 			</p>
 			<p>
@@ -116,7 +116,7 @@
 	  </p>
 
 	  <sidebyside width="45%">
-	    <image source="images/eigen-phase-activity.png" />
+	    <image source="images/eigen-phase-activity_real.png" />
 	  </sidebyside>
 			</p>
 
@@ -141,7 +141,7 @@
 	  </p>
 
 	  <sidebyside width="45%">
-	    <image source="images/eigen-phase-activity.png" />
+	    <image source="images/eigen-phase-activity_real.png" />
 	  </sidebyside>
 			</p>
 
@@ -166,7 +166,7 @@
 	  </p>
 
 	  <sidebyside width="45%">
-	    <image source="images/eigen-phase-activity.png" />
+	    <image source="images/eigen-phase-activity_im2.png" />
 	  </sidebyside>
 			</p>
 
@@ -191,12 +191,12 @@
 	    </p>
 
 	  <sidebyside width="45%">
-	    <image source="images/eigen-phase-activity.png" />
+	    <image source="images/eigen-phase-activity_im3.png" />
 	  </sidebyside>
 			</p>
 
 			<p>
-				When <m>\lambda = a \pm bi</m> and <m>0 \gt a^2+b^2 \lt 1</m>, we say the origin is a <term>spiral repellor</term>. Verify that 
+				When <m>\lambda = a \pm bi</m> and <m>0 \lt a^2+b^2 \lt 1</m>, we say the origin is a <term>spiral attractor</term>. Verify that 
 				your eigenvalues satisfy this criteria, and use your phase portrait to describe why this is an appropriate
 				term for the origin in this case.
 			</p>
@@ -216,6 +216,10 @@
 	\xvec_{k+1}=A\xvec_k
       </me>.
 	</p>
+	<p>
+		To answer the questions, you will need to refer to eigenvalues and eigenvectors of the given matrix.
+		<em>Use <url href="https://sagecell.sagemath.org/">Sage</url> to compute eigenvalues and eigenvectors for each matrix, and paste a screenshot of your result.</em>
+	</p>
 	</introduction>
      <task workspace="1in">
 		<statement>
@@ -228,13 +232,13 @@
 	  </p>
 	  <p> Explain why the species do not interact with one
 	  another.  Which of the six types of dynamical systems from the first exercise do we
-	  have?  What happens to both species after a long time?</p>
+	  have?  What happens to both species after a long time? Be as specific as you are able with the information that you have.</p>
 		</statement>
 	 </task>
 	  
 
 	  
-	<task workspace="1in">
+	<task workspace="5in">
 		<statement>
 			<p>
 				<p> Suppose now that
@@ -247,13 +251,13 @@
 			</p>
 			<p> Explain why <m>S</m> is a beneficial species for <m>R</m>.
 	  Which of the six types of dynamical systems do we
-	  have?  What happens to both species after a long time?</p>
+	  have?  What happens to both species after a long time? Be as specific as you are able with the information that you have.</p>
 		</statement>
 	</task>
 	  
 
 	  
-	<task workspace="1in">
+	<task workspace="5in">
 		<statement>
 			<p> If
 	  <m> A = \left[\begin{array}{rr}
@@ -264,11 +268,11 @@
 	  explain why this describes a predator-prey system.
 	  Which of the species is the predator and which is the prey?
 	  Which of the six types of dynamical systems do we
-	  have?  What happens to both species after a long time?</p>
+	  have?  What happens to both species after a long time? Be as specific as you are able with the information that you have.</p>
 		</statement>
 	</task>
 	  
-	<task workspace="1in">
+	<task workspace="5in">
 		<statement>
 			 <p> Suppose that
 	  <m> A = \left[\begin{array}{rr}
@@ -279,13 +283,15 @@
 	  Compare this predator-prey system to the one in the
 	  previous part.  Which of the six types of dynamical systems
 	  do we have?  What happens to both species after a long
-	  time?</p>
+	  time? Be as specific as you are able with the information that you have.</p>
 		</statement>
 	</task>
 	 
 	
       
             </exercise>
+
+<!--
       
             <exercise>
                 <introduction>
@@ -406,7 +412,7 @@
 
             </exercise>
  
-   
+    -->
         </worksheet>
     </article>
 </pretext>
