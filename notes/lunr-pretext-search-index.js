@@ -3475,6 +3475,69 @@ var ptx_lunr_docs = [
   "body": " Example: Not Diagonalizable   Let .   "
 },
 {
+  "id": "sec-4-3-1-sols",
+  "level": "1",
+  "url": "sec-4-3-1-sols.html",
+  "type": "Worksheet",
+  "number": "",
+  "title": "<span class=\"process-math\">\\(\\S 4.3\\text{:}\\)<\/span> Diagonalization (Solutions)",
+  "body": " : Diagonalization (Solutions)    Motivation: Diagonalization   Recall that has eigenvectors and and associated eigenvalues and .  Eigenvectors of A on the left, and the transformation of the eigenvectors after multiplications by A.      We see that scales vectors in the coordinates of by scaling the first coordinate by a factor of , and the second coordinate by a factor of . In what way is related to the matrix that does the same thing to standard coordinates, ?     Preview Activity 4.3.1   In this preview activity, we will review some familiar properties about matrix multiplication that appear in this section.     Remember that matrix-vector multiplication constructs linear combinations of the columns of the matrix. For instance, if , express the product in terms of and .     .      What is the product in terms of and ?     .      Next, remember how matrix-matrix multiplication is defined. Suppose that we have matrices and and that . How can we express the matrix product in terms of the columns of ?     .      Suppose that is a matrix having eigenvectors and with associated eigenvalues and . Express the product in terms of and .     .      Suppose that is the matrix from the previous part and that . What is the matrix product      .        Diagonalization   Suppose is and is a basis consisting of eigenvectors of with associated eigenvalues . If , then     . Since is invertible, . This shows us precisely how can be framed as \"similar\" to the diagonal matrix : the matrix acts on a vector in standard coordinates in the same way as acts acts on that vector written in the coordinates of the columns of .  We say that is diagonalizable if there is a diagonal matrix and invertible matrix such that .       Fact: Diagonalization   An matrix is diagonalizable exactly when    there is a basis of consisting of eigenvectors of .     Diagonalizable   Suppose , where     See Example 4.3.8 .     Example: Not Diagonalizable   Let .    See Example 4.3.6 .     "
+},
+{
+  "id": "sec-4-3-1-sols-2-1",
+  "level": "2",
+  "url": "sec-4-3-1-sols.html#sec-4-3-1-sols-2-1",
+  "type": "Worksheet Exercise",
+  "number": "1",
+  "title": "Motivation: Diagonalization.",
+  "body": " Motivation: Diagonalization   Recall that has eigenvectors and and associated eigenvalues and .  Eigenvectors of A on the left, and the transformation of the eigenvectors after multiplications by A.      We see that scales vectors in the coordinates of by scaling the first coordinate by a factor of , and the second coordinate by a factor of . In what way is related to the matrix that does the same thing to standard coordinates, ?   "
+},
+{
+  "id": "sec-4-3-1-sols-2-2",
+  "level": "2",
+  "url": "sec-4-3-1-sols.html#sec-4-3-1-sols-2-2",
+  "type": "Worksheet Exercise",
+  "number": "2",
+  "title": "Preview Activity 4.3.1.",
+  "body": " Preview Activity 4.3.1   In this preview activity, we will review some familiar properties about matrix multiplication that appear in this section.     Remember that matrix-vector multiplication constructs linear combinations of the columns of the matrix. For instance, if , express the product in terms of and .     .      What is the product in terms of and ?     .      Next, remember how matrix-matrix multiplication is defined. Suppose that we have matrices and and that . How can we express the matrix product in terms of the columns of ?     .      Suppose that is a matrix having eigenvectors and with associated eigenvalues and . Express the product in terms of and .     .      Suppose that is the matrix from the previous part and that . What is the matrix product      .    "
+},
+{
+  "id": "sec-4-3-1-sols-3-1",
+  "level": "2",
+  "url": "sec-4-3-1-sols.html#sec-4-3-1-sols-3-1",
+  "type": "Worksheet Exercise",
+  "number": "3",
+  "title": "Diagonalization.",
+  "body": " Diagonalization   Suppose is and is a basis consisting of eigenvectors of with associated eigenvalues . If , then     . Since is invertible, . This shows us precisely how can be framed as \"similar\" to the diagonal matrix : the matrix acts on a vector in standard coordinates in the same way as acts acts on that vector written in the coordinates of the columns of .  We say that is diagonalizable if there is a diagonal matrix and invertible matrix such that .   "
+},
+{
+  "id": "sec-4-3-1-sols-4-1",
+  "level": "2",
+  "url": "sec-4-3-1-sols.html#sec-4-3-1-sols-4-1",
+  "type": "Worksheet Exercise",
+  "number": "4",
+  "title": "Fact: Diagonalization.",
+  "body": " Fact: Diagonalization   An matrix is diagonalizable exactly when    there is a basis of consisting of eigenvectors of .   "
+},
+{
+  "id": "sec-4-3-1-sols-4-2",
+  "level": "2",
+  "url": "sec-4-3-1-sols.html#sec-4-3-1-sols-4-2",
+  "type": "Worksheet Exercise",
+  "number": "5",
+  "title": "Diagonalizable.",
+  "body": " Diagonalizable   Suppose , where     See Example 4.3.8 .   "
+},
+{
+  "id": "sec-4-3-1-sols-4-3",
+  "level": "2",
+  "url": "sec-4-3-1-sols.html#sec-4-3-1-sols-4-3",
+  "type": "Worksheet Exercise",
+  "number": "6",
+  "title": "Example: Not Diagonalizable.",
+  "body": " Example: Not Diagonalizable   Let .    See Example 4.3.6 .   "
+},
+{
   "id": "sec-4-3-2",
   "level": "1",
   "url": "sec-4-3-2.html",
