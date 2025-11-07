@@ -1,7 +1,7 @@
 <pretext>
     <article xml:id="notes">
-        <worksheet xml:id="sec-4-3-2">
-        <title><m>\S 4.3</m>: Matrix Powers and Similarity</title>
+        <worksheet xml:id="sec-4-3-2-sols">
+        <title><m>\S 4.3</m>: Matrix Powers and Similarity (Solutions)</title>
             <page>
                 <exercise workspace="2in">
                     <title>Motivation: Matrix Powers and Similarity</title>
@@ -10,6 +10,14 @@
                             
                         </p>
                     </statement>
+
+                    <solution>
+                        <p>
+                            We've defined what it means for <m>A</m> to be diagonalizable. We'll see examples of when 
+                            this can be useful computationally, and also generalize the concept for matrices that are not
+                            diagonalizable.
+                        </p>
+                    </solution>
                 </exercise>
 
                 <exercise workspace="0.5in">
@@ -91,6 +99,73 @@
 	</ol>
       </p>
       </statement>
+
+      <solution>
+	<p><ol marker="a.">
+	  <li><p> We find that <m>A</m> has eigenvectors
+	  <m>\vvec_1=\twovec11</m> with associated eigenvalue
+	  <m>\lambda_1=1</m> and <m>\vvec_2=\twovec{1}{3}</m> with
+	  associated eigenvalue <m>\lambda_2=-3</m>.  We then have
+	  <m>P=\mattwo1113</m> and <m>D=\mattwo100{-3}</m>. </p></li>
+
+	  <li><p> Yes.  We know that the eigenvectors are
+	  <m>\vvec_1=\twovec10</m> with associated eigenvalue
+	  <m>\lambda_1=2</m> and <m>\vvec_2=\twovec01</m> with
+	  associated eigenvalue <m>\lambda_2=-5</m>.  Therefore, <m>P
+	  = \left[\begin{array}{rr}\vvec_1 \amp \vvec_2
+	  \end{array}\right] = \mattwo1001=I</m> and
+	  <m>D=\mattwo200{-5}=A</m>.  This shows that the
+	  diagonalization is <m>A=IAI^{-1}</m>; that is, since
+	  <m>A</m> is already diagonal, it is diagonalized by the
+	  identity matrix. </p></li>
+
+	  <li><p> We find eigenvectors <m>\vvec_1=\threevec112</m>,
+	  <m>\vvec_2=\threevec010</m>, and <m>\vvec_3=\threevec001</m> 
+	  with associated eigenvalues <m>\lambda_1=-2</m>,
+	  <m>\lambda_2=-3</m>, and <m>\lambda_3=-3</m>.  Therefore,
+	  <m>A = PDP^{-1}</m> where
+	  <me>
+	    P = \left[\begin{array}{rrr}
+	    1 \amp 0 \amp 0 \\
+	    1 \amp 1 \amp 0 \\
+	    2 \amp 0 \amp 1 \\
+	    \end{array}\right], 
+	    D = \left[\begin{array}{rrr}
+	    -2 \amp 0 \amp 0 \\
+	    0 \amp -3 \amp 0 \\
+	    0 \amp 0 \amp -3 \\
+	    \end{array}\right]\text{.}
+	  </me>
+	  </p></li>
+
+	  <li><p> Once again, we see that <m>\lambda=-2</m> is an
+	  eigenvalue with multiplicity one and <m>\lambda=-3</m> is an
+	  eigenvalue with multiplicity two.  However, <m>\dim E_{-3} =
+	  1</m> so we are not able to find a basis for <m>\real^3</m>
+	  consisting of eigenvalues of <m>A</m>.  Therefore, <m>A</m>
+	  is not diagonalizable. </p></li>
+
+	  <li><p> If <m>A=PDP^{-1}</m>,
+	  <ol marker="1..">
+	    <li><p> <m>A</m> is invertible since <m>\det A = \det D =
+	    -3</m>. </p></li>
+
+	    <li><p> We know that <m>\vvec_1</m> and <m>\vvec_2</m> are
+	    eigenvectors of <m>A</m> with associated eigenvalues
+	    <m>\lambda_1=3</m> and <m>\lambda_2=-1</m>.  If
+	    <m>\vvec</m> is an eigenvector of <m>A</m> with associated
+	    eigenvalue <m>\lambda</m>, then <m>\vvec</m> is an
+	    eigenvector of <m>A^{-1}</m> with associated eigenvalue
+	    <m>\frac1{\lambda}</m>.  Therefore, <m>A^{-1} =
+	    PEP^{-1}</m> where <m>E =
+	    \mattwo{\frac13}00{-1}</m>. </p></li>
+
+	    <li><p> We have <m>A^3=PFP^{-1}</m> where
+	    <m>F=\mattwo{27}00{-1}</m>. </p></li>
+	  </ol>
+	  </p></li>
+	</ol></p>
+      </solution>
                     
                     
                 </exercise>
@@ -105,7 +180,22 @@
                             If <m>A = PDP^{-1}</m>, then
                         </p>
                     </statement>
-                    
+                    <solution>
+                        <p>
+                            <ol>
+                                <li>
+                                    <p>
+                                        <m>A^k = PD^k P^{-1}</m>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <m>A^{-1} = PD^{-1} P^{-1}</m>
+                                    </p>
+                                </li>
+                            </ol>
+                        </p>
+                    </solution>
                     
                 </exercise>
 
@@ -120,7 +210,12 @@
                             
                         </p>
                     </statement>
-                    
+                    <solution>
+                        <p>
+                            Then the eigenvalues of <m>A</m> will help determine how the system will behave.
+                            See <url href="https://understandinglinearalgebra.org/sec-eigen-diag.html#sec-eigen-diag-4-6">Example 4.3.10</url>.
+                        </p>
+                    </solution>
                     
                 </exercise>
             </page>
@@ -137,7 +232,11 @@
                             invertible matrix <m>P</m> such that
                         </p>
                     </statement>
-                    
+                    <solution>
+                        <p>
+                            <m>A = PBP^{-1}</m>.
+                        </p>
+                    </solution>
                     
                 </exercise>
 
@@ -150,7 +249,16 @@
                             Let <m>A = \begin{bmatrix} 0 \amp 1 \\ -1 \amp 0 \end{bmatrix}</m>.
                         </p>
                     </statement>
-                    
+                    <solution>
+                        <p>
+                            Then the eigenvalues are when <m>\text{det}(A - \lambda I) = \lambda^2 + 1 = 0</m>, which is 
+                            <m>\lambda = \pm i</m>.
+                        </p>
+                        <p>
+                            See this <url href="https://understandinglinearalgebra.org/sec-eigen-diag.html#sec-eigen-diag-5-5">short discussion in the textbook</url> for a review of how we can represent 
+                            complex numbers in polar coordinates, which will be important for analyzing these matrices.
+                        </p>
+                    </solution>
                 </exercise>
             </page>
 
@@ -240,6 +348,39 @@ P*C*P.inverse()
 	</ol></p>
       </statement>
                     
+      <solution>
+	<p><ol marker="a.">
+	  <li><p> The matrix <m>S=\mattwo r00r</m> has the geometric
+	  effect of scaling vectors uniformly by a factor of
+	  <m>r</m> while the matrix
+	  <m>R=\mattwo{\cos\theta}{-\sin\theta}{\sin\theta}{\cos\theta}</m>
+	  rotates vectors by <m>\theta</m>. </p></li>
+
+	  <li><p> We have <m>a=b=1</m> so we form the matrix
+	  <m>C=\mattwo1{-1}11 =
+	  \mattwo{\sqrt{2}}00{\sqrt{2}}
+	  \mattwo{\cos(45^\circ)}{-\sin(45^\circ)}
+	  {\sin(45^\circ)}{\cos(45^\circ)}</m>.  This shows that
+	  <m>C</m> will scale vectors by a factor of <m>\sqrt2</m>
+	  while rotating them by <m>45^\circ</m>. </p></li>
+
+	  <li><p> Sage will verify this relationship.
+	  </p></li>
+
+	  <li><p> As we saw earlier, we have <m>A^2 =
+	  (PCP^{-1})(PCP^{-1}) = PC^2P^{-1}</m> and hence <m>A^k =
+	  PC^kP^{-1}</m>. </p></li>
+
+	  <li><p> We have <m>a=1</m> and <m>b=-1</m> so we form the
+	  matrix 
+	  <m>C'=\mattwo1{1}{-1}1 =
+	  \mattwo{\sqrt{2}}00{\sqrt{2}}
+	  \mattwo{\cos(-45^\circ)}{-\sin(-45^\circ)}
+	  {\sin(-45^\circ)}{\cos(-45^\circ)}</m>.  This shows that
+	  <m>C</m> will scale vectors by a factor of <m>\sqrt2</m>
+	  while rotating them by <m>-45^\circ</m>. </p></li>
+	</ol></p>
+      </solution>
                 </exercise>
             </page>
 
@@ -252,6 +393,11 @@ P*C*P.inverse()
                         </p>
                     </statement>
                     
+                    <solution>
+                        <p>
+                            See <url href="https://understandinglinearalgebra.org/sec-eigen-diag.html#sec-eigen-diag-5-10">Proposition 4.3.12</url>.
+                        </p>
+                    </solution>
                 </exercise>
             </page>
 

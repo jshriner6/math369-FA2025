@@ -1,0 +1,111 @@
+<pretext>
+    <article xml:id="notes">
+        <worksheet xml:id="sec-4-4">
+        <title><m>\S 4.4</m>: Dynamical Systems</title>
+            <page>
+                <exercise workspace="2in">
+                    <title>Motivation: Dynamical Systems</title>
+                    <statement>
+                        <p>
+                            
+                        </p>
+                    </statement>
+                </exercise>
+
+                <exercise workspace="1in">
+                    <title>Preview Activity 4.4.1</title>
+                    <introduction>
+        <p> Suppose that we have a diagonalizable matrix
+        <m>A=PDP^{-1}</m> where
+        <me>
+	  P = \left[\begin{array}{rr}
+	  1 \amp -1 \\
+	  1 \amp 2 \\
+	  \end{array}\right],\qquad
+	  D = \left[\begin{array}{rr}
+	  2 \amp 0 \\
+	  0 \amp -3 \\
+	  \end{array}\right]
+        </me>.
+        </p>
+      </introduction>
+
+      <task >
+        <statement>
+	  <p> Find the eigenvalues of <m>A</m> and find a basis for
+	  the associated eigenspaces. </p>
+        </statement>
+        
+       
+      </task>
+
+      <task>
+        <statement>
+	  <p> Form a basis of <m>\real^2</m> consisting
+	  of eigenvectors
+	  of <m>A</m> and write the vector <m>\xvec = \twovec{1}{4}</m>
+	  as a linear combination of basis vectors. </p>
+        </statement>
+       
+        
+      </task>
+
+      <task >
+        <statement>
+	  <p> Write <m>A\xvec</m> as a linear combination of basis
+	  vectors. </p>
+        </statement>
+        
+      </task>
+
+      <task >
+        <statement>
+	  <p> For some power <m>k</m>, write <m>A^k\xvec</m> as a
+	  linear combination of basis vectors.</p>
+        </statement>
+        
+      </task>
+
+      <task >
+        <statement>
+	  <p> Find the vector <m>A^5\xvec</m>. </p>
+        </statement>
+        
+        
+      </task>
+                    
+                    
+                </exercise>
+
+            </page>
+
+            <page>
+                <exercise>
+                    <title>A First Example</title>
+                    <statement>
+                        <p>
+                            <image source="act4-4-2.png" width="80%">
+                                <shortdescription>Introductory text from activity 4.4.2 in the textbook.</shortdescription>
+                            </image>
+                        </p>
+                    </statement>
+                    
+                </exercise>
+            </page>
+            <page>
+                <exercise>
+                    <title>Visualizing System Behavior: Phase Portraits</title>
+                    <statement>
+                        <p>
+                            <image source="phase-port.png" width="60%">
+                                <shortdescription>A sample trajectory on a phase portrait.</shortdescription>
+                            </image>
+                        </p>
+                    </statement>
+                    
+                </exercise>
+            </page>
+
+        </worksheet>
+    </article>
+</pretext>
