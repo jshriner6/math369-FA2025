@@ -19,7 +19,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
 <link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
 <script>
 var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
@@ -47,24 +46,7 @@ window.MathJax = {
   },
   "options": {
     "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
-    "processHtmlClass": "process-math",
-    "renderActions": {
-      "findScript": [
-        10,
-        function (doc) {
-            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
-                var display = !!node.type.match(/; *mode=display/);
-                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-                var text = document.createTextNode('');
-                node.parentNode.replaceChild(text, node);
-                math.start = {node: text, delim: '', n: 0};
-                math.end = {node: text, delim: '', n: 0};
-                doc.math.push(math);
-            });
-        },
-        ""
-      ]
-    }
+    "processHtmlClass": "process-math"
   },
   "chtml": {
     "scale": 0.98,
@@ -126,19 +108,7 @@ eBookConfig.enable_chatcodes =  false;
 <!--*** Runestone Services ***-->
 <script src="_static/prefix-runtime.3ea59cc2563cc8e9.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.29d986501a531379.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
 <link rel="stylesheet" type="text/css" href="_static/prefix-runestone.557d81b04b3ec0e4.css">
-<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
-</script><script>// Make *any* div with class 'sagecell-sage' an executable Sage cell
-// Their results will be linked, only within language type
-sagecell.makeSagecell({
-  "inputLocation": "div.sagecell-sage",
-  "linked": true,
-  "linkKey": "linked-sage",
-  "autoeval": false,
-  "languages": [
-    "sage"
-  ],
-  "evalButtonText": "Evaluate (Sage)"
-});
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
 <body class="pretext article ignore-math">
@@ -237,233 +207,163 @@ sagecell.makeSagecell({
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="worksheet" id="lab-5" data-margins="1in 1in 1.25cm 1in"><h2 class="heading hide-type">
 <span class="type">Worksheet</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Lab 5: Dynamical Systems</span><div class="print-links"><a href="lab-5-printable.html" class="print-link" title="Print preview"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8ad;</span></a></div>
 </h2>
-<section class="onepage" id="lab-5-2"><div class="introduction" id="lab-5-2-1"><div class="para" id="lab-5-2-1-1">Complete the following exercises in groups of 2 or 3 students including complete explanations of your work.  You should write directly on this handout (if additional pages are necessary, please make sure they are well-organized), and you only need to submit one report to Gradescope.  Make sure you indicate everyone in your group in your submission to Gradescope.<div class="autopermalink" data-description="Paragraph"><a href="#lab-5-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></div>
-<article class="exercise exercise-like" id="lab-5-2-2"><h3 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
-<div class="para logical" id="lab-5-2-2-1-1">
-<div class="para">We will now look at several more examples of dynamical systems.  If <span class="process-math">\(P = \left[\begin{array}{rr}
+<section class="introduction" id="lab-5-2"><div class="para" id="lab-5-2-1">Complete the following exercises in groups of 2 or 3 students including complete explanations of your work.  You should write directly on this handout (if additional pages are necessary, please make sure they are well-organized), and you only need to submit one report to Gradescope.  Make sure you indicate everyone in your group in your submission to Gradescope.<div class="autopermalink" data-description="Paragraph"><a href="#lab-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><article class="exercise exercise-like" id="lab-5-3"><h3 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
+<div class="introduction" id="lab-5-3-1"><div class="para logical" id="lab-5-3-1-1">
+<div class="para">In this first exercise we will look at several examples of dynamical systems and their behavior over time.  If <span class="process-math">\(P = \left[\begin{array}{rr}
 1 \amp -1 \\
 1 \amp 1 \\
 \end{array}\right]
-\text{,}\)</span> we note that the columns of <span class="process-math">\(P\)</span> form a basis <span class="process-math">\(\bcal\)</span> of <span class="process-math">\(\real^2\text{.}\)</span>  Given below are several matrices <span class="process-math">\(A\)</span> written in the form <span class="process-math">\(A=PEP^{-1}\)</span> for some matrix <span class="process-math">\(E\text{.}\)</span>  For each matrix, state the eigenvalues of <span class="process-math">\(A\)</span> and sketch a phase portrait for the matrix <span class="process-math">\(E\)</span> on the left and a phase portrait for <span class="process-math">\(A\)</span> on the right. Describe the behavior of <span class="process-math">\(A^k\xvec_0\)</span> as <span class="process-math">\(k\)</span> becomes very large for a typical initial vector <span class="process-math">\(\xvec_0\text{.}\)</span>
+\text{,}\)</span> we note that the columns of <span class="process-math">\(P\)</span> form a basis <span class="process-math">\(\bcal\)</span> of <span class="process-math">\(\real^2\text{.}\)</span>  Given below are several matrices <span class="process-math">\(A\)</span> written in the form <span class="process-math">\(A=PEP^{-1}\)</span> for some matrix <span class="process-math">\(E\text{.}\)</span>  For each matrix,</div>
+<ul class="disc" id="lab-5-3-1-1-8">
+<li id="lab-5-3-1-1-8-1">
+<div class="para" id="lab-5-3-1-1-8-1-1">state the eigenvalues of <span class="process-math">\(A\text{,}\)</span> and describe what the matrix <span class="process-math">\(E\)</span> tells us about how the matrix <span class="process-math">\(A\)</span> acts on vectors written in the basis <span class="process-math">\(\bcal\text{,}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#lab-5-3-1-1-8-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<ol class="lower-alpha ol-marker-1" id="lab-5-2-2-1-1-14">
-<li id="lab-5-2-2-1-1-14-1">
-<div class="para" id="lab-5-2-2-1-1-14-1-1">
+<div class="autopermalink" data-description="Item"><a href="#lab-5-3-1-1-8-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="lab-5-3-1-1-8-2">
+<div class="para" id="lab-5-3-1-1-8-2-1">sketch trajectories (with arrows) on the phase portrait for the matrix <span class="process-math">\(A\)</span> for each of the initial values indicated by dots, and<div class="autopermalink" data-description="Paragraph"><a href="#lab-5-3-1-1-8-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#lab-5-3-1-1-8-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="lab-5-3-1-1-8-3">
+<div class="para" id="lab-5-3-1-1-8-3-1">answer the question provided regarding the system’s behavior over time.<div class="autopermalink" data-description="Paragraph"><a href="#lab-5-3-1-1-8-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#lab-5-3-1-1-8-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#lab-5-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<article class="task exercise-like" id="lab-5-3-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="lab-5-3-2-1-1">
+<div class="para" id="lab-5-3-2-1-1-1">
 <span class="process-math">\(A=PEP^{-1}\)</span> where <span class="process-math">\(E = \left[\begin{array}{rr}
 1.3 \amp 0 \\
 0 \amp 1.5 \\
 \end{array}\right]
-\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#lab-5-2-2-1-1-14-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#lab-5-3-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="sidebyside"><div class="sbsrow" style="margin-left:27.5%;margin-right:27.5%;grid-template-columns:100%;column-gap:0%;"><div class="sbspanel sbspanel--top top" style=""><img src="external/images/eigen-phase-activity_real.png" class="contained"></div></div></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#lab-5-3-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="lab-5-3-2-1-2">When <span class="process-math">\(|\lambda_1|, |\lambda_2| \gt 1\text{,}\)</span> we say the origin is a <dfn class="terminology">repellor</dfn>. Verify that your eigenvalues satisfy this criteria, and use your phase portrait to describe why this is an appropriate term for the origin in this case.<div class="autopermalink" data-description="Paragraph"><a href="#lab-5-3-2-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:27.5%;margin-right:27.5%;grid-template-columns:100%;column-gap:0%;"><div class="sbspanel sbspanel--top top" style=""><img src="external/images/eigen-phase-activity.png" class="contained"></div></div></div>
-<div class="autopermalink" data-description="Item 1.a"><a href="#lab-5-2-2-1-1-14-1" title="Copy heading and permalink for Item 1.a" aria-label="Copy heading and permalink for Item 1.a">🔗</a></div>
-</li>
-<li id="lab-5-2-2-1-1-14-2">
-<div class="para" id="lab-5-2-2-1-1-14-2-1">
+<div class="workspace" data-space="0.05in"></div>
+<div class="autopermalink" data-description="Task 1.a"><a href="#lab-5-3-2" title="Copy heading and permalink for Task 1.a" aria-label="Copy heading and permalink for Task 1.a">🔗</a></div></article><article class="task exercise-like" id="lab-5-3-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="lab-5-3-3-1-1">
+<div class="para" id="lab-5-3-3-1-1-1">
 <span class="process-math">\(A=PEP^{-1}\)</span> where <span class="process-math">\(E = \left[\begin{array}{rr}
 0 \amp -1 \\
 1 \amp 0 \\
 \end{array}\right]
-\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#lab-5-2-2-1-1-14-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#lab-5-3-3-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="sidebyside"><div class="sbsrow" style="margin-left:27.5%;margin-right:27.5%;grid-template-columns:100%;column-gap:0%;"><div class="sbspanel sbspanel--top top" style=""><img src="external/images/eigen-phase-activity_im1.png" class="contained"></div></div></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#lab-5-3-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="lab-5-3-3-1-2">When <span class="process-math">\(\lambda = a \pm bi\)</span> and <span class="process-math">\(a^2+b^2 =1\text{,}\)</span> we say the origin is a <dfn class="terminology">center</dfn>. Verify that your eigenvalues satisfy this criteria, and use your phase portrait to describe why this is an appropriate term for the origin in this case.<div class="autopermalink" data-description="Paragraph"><a href="#lab-5-3-3-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:27.5%;margin-right:27.5%;grid-template-columns:100%;column-gap:0%;"><div class="sbspanel sbspanel--top top" style=""><img src="external/images/eigen-phase-activity.png" class="contained"></div></div></div>
-<div class="autopermalink" data-description="Item 1.b"><a href="#lab-5-2-2-1-1-14-2" title="Copy heading and permalink for Item 1.b" aria-label="Copy heading and permalink for Item 1.b">🔗</a></div>
-</li>
-<li id="lab-5-2-2-1-1-14-3">
-<div class="para" id="lab-5-2-2-1-1-14-3-1">
+<div class="workspace" data-space="0.05in"></div>
+<div class="autopermalink" data-description="Task 1.b"><a href="#lab-5-3-3" title="Copy heading and permalink for Task 1.b" aria-label="Copy heading and permalink for Task 1.b">🔗</a></div></article><article class="task exercise-like" id="lab-5-3-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="lab-5-3-4-1-1">
+<div class="para" id="lab-5-3-4-1-1-1">
 <span class="process-math">\(A=PEP^{-1}\)</span> where <span class="process-math">\(E = \left[\begin{array}{rr}
 0.7 \amp 0 \\
 0 \amp 1.5 \\
 \end{array}\right]
-\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#lab-5-2-2-1-1-14-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#lab-5-3-4-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="sidebyside"><div class="sbsrow" style="margin-left:27.5%;margin-right:27.5%;grid-template-columns:100%;column-gap:0%;"><div class="sbspanel sbspanel--top top" style=""><img src="external/images/eigen-phase-activity_real.png" class="contained"></div></div></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#lab-5-3-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="lab-5-3-4-1-2">When <span class="process-math">\(|\lambda_1| \gt 1 \gt |\lambda_2| \gt 0\text{,}\)</span> we say the origin is a <dfn class="terminology">saddle</dfn>. Verify that your eigenvalues satisfy this criteria, and use your phase portrait to describe why this is an appropriate term for the origin in this case.<div class="autopermalink" data-description="Paragraph"><a href="#lab-5-3-4-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:27.5%;margin-right:27.5%;grid-template-columns:100%;column-gap:0%;"><div class="sbspanel sbspanel--top top" style=""><img src="external/images/eigen-phase-activity.png" class="contained"></div></div></div>
-<div class="autopermalink" data-description="Item 1.c"><a href="#lab-5-2-2-1-1-14-3" title="Copy heading and permalink for Item 1.c" aria-label="Copy heading and permalink for Item 1.c">🔗</a></div>
-</li>
-<li id="lab-5-2-2-1-1-14-4">
-<div class="para" id="lab-5-2-2-1-1-14-4-1">
+<div class="workspace" data-space="0.05in"></div>
+<div class="autopermalink" data-description="Task 1.c"><a href="#lab-5-3-4" title="Copy heading and permalink for Task 1.c" aria-label="Copy heading and permalink for Task 1.c">🔗</a></div></article><article class="task exercise-like" id="lab-5-3-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para" id="lab-5-3-5-1-1">
+<div class="para" id="lab-5-3-5-1-1-1">
 <span class="process-math">\(A=PEP^{-1}\)</span> where <span class="process-math">\(E = \left[\begin{array}{rr}
 0.3 \amp 0 \\
 0 \amp 0.7 \\
 \end{array}\right]
-\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#lab-5-2-2-1-1-14-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#lab-5-3-5-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="sidebyside"><div class="sbsrow" style="margin-left:27.5%;margin-right:27.5%;grid-template-columns:100%;column-gap:0%;"><div class="sbspanel sbspanel--top top" style=""><img src="external/images/eigen-phase-activity_real.png" class="contained"></div></div></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#lab-5-3-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="lab-5-3-5-1-2">When <span class="process-math">\(0 \lt |\lambda_1|, |\lambda_2| \lt 1\text{,}\)</span> we say the origin is an <dfn class="terminology">attractor</dfn>. Verify that your eigenvalues satisfy this criteria, and use your phase portrait to describe why this is an appropriate term for the origin in this case.<div class="autopermalink" data-description="Paragraph"><a href="#lab-5-3-5-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:27.5%;margin-right:27.5%;grid-template-columns:100%;column-gap:0%;"><div class="sbspanel sbspanel--top top" style=""><img src="external/images/eigen-phase-activity.png" class="contained"></div></div></div>
-<div class="autopermalink" data-description="Item 1.d"><a href="#lab-5-2-2-1-1-14-4" title="Copy heading and permalink for Item 1.d" aria-label="Copy heading and permalink for Item 1.d">🔗</a></div>
-</li>
-<li id="lab-5-2-2-1-1-14-5">
-<div class="para" id="lab-5-2-2-1-1-14-5-1">
+<div class="workspace" data-space="0.05in"></div>
+<div class="autopermalink" data-description="Task 1.d"><a href="#lab-5-3-5" title="Copy heading and permalink for Task 1.d" aria-label="Copy heading and permalink for Task 1.d">🔗</a></div></article><article class="task exercise-like" id="lab-5-3-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
+<div class="para" id="lab-5-3-6-1-1">
+<div class="para" id="lab-5-3-6-1-1-1">
 <span class="process-math">\(A=PEP^{-1}\)</span> where <span class="process-math">\(E = \left[\begin{array}{rr}
 1 \amp -0.9 \\
 0.9 \amp 1 \\
 \end{array}\right]
-\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#lab-5-2-2-1-1-14-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#lab-5-3-6-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="sidebyside"><div class="sbsrow" style="margin-left:27.5%;margin-right:27.5%;grid-template-columns:100%;column-gap:0%;"><div class="sbspanel sbspanel--top top" style=""><img src="external/images/eigen-phase-activity_im2.png" class="contained"></div></div></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#lab-5-3-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="lab-5-3-6-1-2">When <span class="process-math">\(\lambda = a \pm bi\)</span> and <span class="process-math">\(a^2+b^2 \gt 1\text{,}\)</span> we say the origin is a <dfn class="terminology">spiral repellor</dfn>. Verify that your eigenvalues satisfy this criteria, and use your phase portrait to describe why this is an appropriate term for the origin in this case.<div class="autopermalink" data-description="Paragraph"><a href="#lab-5-3-6-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:27.5%;margin-right:27.5%;grid-template-columns:100%;column-gap:0%;"><div class="sbspanel sbspanel--top top" style=""><img src="external/images/eigen-phase-activity.png" class="contained"></div></div></div>
-<div class="autopermalink" data-description="Item 1.e"><a href="#lab-5-2-2-1-1-14-5" title="Copy heading and permalink for Item 1.e" aria-label="Copy heading and permalink for Item 1.e">🔗</a></div>
-</li>
-<li id="lab-5-2-2-1-1-14-6">
-<div class="para" id="lab-5-2-2-1-1-14-6-1">
+<div class="workspace" data-space="0.05in"></div>
+<div class="autopermalink" data-description="Task 1.e"><a href="#lab-5-3-6" title="Copy heading and permalink for Task 1.e" aria-label="Copy heading and permalink for Task 1.e">🔗</a></div></article><article class="task exercise-like" id="lab-5-3-7"><h4 class="heading"><span class="codenumber">(f)</span></h4>
+<div class="para" id="lab-5-3-7-1-1">
+<div class="para" id="lab-5-3-7-1-1-1">
 <span class="process-math">\(A=PEP^{-1}\)</span> where <span class="process-math">\(E = \left[\begin{array}{rr}
 0.6 \amp -0.2 \\
 0.2 \amp 0.6 \\
 \end{array}\right]
-\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#lab-5-2-2-1-1-14-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#lab-5-3-7-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="sidebyside"><div class="sbsrow" style="margin-left:27.5%;margin-right:27.5%;grid-template-columns:100%;column-gap:0%;"><div class="sbspanel sbspanel--top top" style=""><img src="external/images/eigen-phase-activity_im3.png" class="contained"></div></div></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#lab-5-3-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="lab-5-3-7-1-2">When <span class="process-math">\(\lambda = a \pm bi\)</span> and <span class="process-math">\(0 \lt a^2+b^2 \lt 1\text{,}\)</span> we say the origin is a <dfn class="terminology">spiral attractor</dfn>. Verify that your eigenvalues satisfy this criteria, and use your phase portrait to describe why this is an appropriate term for the origin in this case.<div class="autopermalink" data-description="Paragraph"><a href="#lab-5-3-7-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:27.5%;margin-right:27.5%;grid-template-columns:100%;column-gap:0%;"><div class="sbspanel sbspanel--top top" style=""><img src="external/images/eigen-phase-activity.png" class="contained"></div></div></div>
-<div class="autopermalink" data-description="Item 1.f"><a href="#lab-5-2-2-1-1-14-6" title="Copy heading and permalink for Item 1.f" aria-label="Copy heading and permalink for Item 1.f">🔗</a></div>
-</li>
-</ol>
-<div class="autopermalink" data-description="Paragraph"><a href="#lab-5-2-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Worksheet Exercise 1"><a href="#lab-5-2-2" title="Copy heading and permalink for Worksheet Exercise 1" aria-label="Copy heading and permalink for Worksheet Exercise 1">🔗</a></div></article></section><section class="onepage" id="lab-5-3"><article class="exercise exercise-like" id="lab-5-3-1"><h3 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
-<div class="para logical" id="lab-5-3-1-1-1">
-<div class="para">In this activity, we will consider several ways in which two species might interact with one another.  Throughout, we will consider two species <span class="process-math">\(R\)</span> and <span class="process-math">\(S\)</span> whose populations in year <span class="process-math">\(k\)</span> form a vector <span class="process-math">\(\xvec_k=\twovec{R_k}{S_k}\)</span> and which evolve according to the rule</div>
+<div class="workspace" data-space="0.05in"></div>
+<div class="autopermalink" data-description="Task 1.f"><a href="#lab-5-3-7" title="Copy heading and permalink for Task 1.f" aria-label="Copy heading and permalink for Task 1.f">🔗</a></div></article><div class="autopermalink" data-description="Worksheet Exercise 1"><a href="#lab-5-3" title="Copy heading and permalink for Worksheet Exercise 1" aria-label="Copy heading and permalink for Worksheet Exercise 1">🔗</a></div></article><article class="exercise exercise-like" id="lab-5-4"><h3 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
+<div class="introduction" id="lab-5-4-1">
+<div class="para logical" id="lab-5-4-1-1">
+<div class="para">In this exercise, we will consider several ways in which two species might interact with one another.  Throughout, we will consider two species <span class="process-math">\(R\)</span> and <span class="process-math">\(S\)</span> whose populations in year <span class="process-math">\(k\)</span> form a vector <span class="process-math">\(\xvec_k=\twovec{R_k}{S_k}\)</span> and which evolve according to the rule</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \xvec_{k+1}=A\xvec_k\text{.}
 \end{equation*}
 </div>
-<ol class="lower-alpha ol-marker-1" id="lab-5-3-1-1-1-6">
-<li id="lab-5-3-1-1-1-6-1">
-<div class="para" id="lab-5-3-1-1-1-6-1-1">Suppose that <span class="process-math">\(A = \left[\begin{array}{rr}
+<div class="autopermalink" data-description="Paragraph"><a href="#lab-5-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="lab-5-4-1-2">To answer the questions, you will need to refer to eigenvalues and eigenvectors of the given matrix. <em class="emphasis">Use <a class="external" href="https://sagecell.sagemath.org/" target="_blank">Sage</a> to compute eigenvalues and eigenvectors for each matrix, and paste a screenshot of your result.</em><div class="autopermalink" data-description="Paragraph"><a href="#lab-5-4-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<article class="task exercise-like" id="lab-5-4-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="lab-5-4-2-1-1">Suppose that <span class="process-math">\(A = \left[\begin{array}{rr}
 0.7 \amp 0 \\
 0 \amp 1.6 \\
 \end{array}\right]
-\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#lab-5-3-1-1-1-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#lab-5-4-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="lab-5-4-2-1-2">Explain why the species do not interact with one another.  Which of the six types of dynamical systems from the first exercise do we have?  What happens to both species after a long time? Be as specific as you are able with the information that you have.<div class="autopermalink" data-description="Paragraph"><a href="#lab-5-4-2-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="lab-5-3-1-1-1-6-1-2">Explain why the species do not interact with one another.  Which of the six types of dynamical systems do we have?  What happens to both species after a long time?<div class="autopermalink" data-description="Paragraph"><a href="#lab-5-3-1-1-1-6-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Item 2.a"><a href="#lab-5-3-1-1-1-6-1" title="Copy heading and permalink for Item 2.a" aria-label="Copy heading and permalink for Item 2.a">🔗</a></div>
-</li>
-<li id="lab-5-3-1-1-1-6-2">
-<div class="para" id="lab-5-3-1-1-1-6-2-1">Suppose now that <span class="process-math">\(A = \left[\begin{array}{rr}
+<div class="workspace" data-space="1in"></div>
+<div class="autopermalink" data-description="Task 2.a"><a href="#lab-5-4-2" title="Copy heading and permalink for Task 2.a" aria-label="Copy heading and permalink for Task 2.a">🔗</a></div></article><article class="task exercise-like" id="lab-5-4-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="lab-5-4-3-1-1">
+<div class="para" id="lab-5-4-3-1-1-1">Suppose now that <span class="process-math">\(A = \left[\begin{array}{rr}
 0.7 \amp 0.3 \\
 0 \amp 1.6 \\
 \end{array}\right]
-\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#lab-5-3-1-1-1-6-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#lab-5-4-3-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="lab-5-3-1-1-1-6-2-2">Explain why <span class="process-math">\(S\)</span> is a beneficial species for <span class="process-math">\(R\text{.}\)</span> Which of the six types of dynamical systems do we have?  What happens to both species after a long time?<div class="autopermalink" data-description="Paragraph"><a href="#lab-5-3-1-1-1-6-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#lab-5-4-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="lab-5-4-3-1-2">Explain why <span class="process-math">\(S\)</span> is a beneficial species for <span class="process-math">\(R\text{.}\)</span> Which of the six types of dynamical systems do we have?  What happens to both species after a long time? Be as specific as you are able with the information that you have.<div class="autopermalink" data-description="Paragraph"><a href="#lab-5-4-3-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item 2.b"><a href="#lab-5-3-1-1-1-6-2" title="Copy heading and permalink for Item 2.b" aria-label="Copy heading and permalink for Item 2.b">🔗</a></div>
-</li>
-<li id="lab-5-3-1-1-1-6-3">
-<div class="para" id="lab-5-3-1-1-1-6-3-1">If <span class="process-math">\(A = \left[\begin{array}{rr}
+<div class="workspace" data-space="5in"></div>
+<div class="autopermalink" data-description="Task 2.b"><a href="#lab-5-4-3" title="Copy heading and permalink for Task 2.b" aria-label="Copy heading and permalink for Task 2.b">🔗</a></div></article><article class="task exercise-like" id="lab-5-4-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="lab-5-4-4-1-1">If <span class="process-math">\(A = \left[\begin{array}{rr}
 0.7 \amp 0.5 \\
 -0.4 \amp 1.6 \\
 \end{array}\right]
-\text{,}\)</span> explain why this describes a predator-prey system. Which of the species is the predator and which is the prey? Which of the six types of dynamical systems do we have?  What happens to both species after a long time?<div class="autopermalink" data-description="Paragraph"><a href="#lab-5-3-1-1-1-6-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+\text{,}\)</span> explain why this describes a predator-prey system. Which of the species is the predator and which is the prey? Which of the six types of dynamical systems do we have?  What happens to both species after a long time? Be as specific as you are able with the information that you have.<div class="autopermalink" data-description="Paragraph"><a href="#lab-5-4-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item 2.c"><a href="#lab-5-3-1-1-1-6-3" title="Copy heading and permalink for Item 2.c" aria-label="Copy heading and permalink for Item 2.c">🔗</a></div>
-</li>
-<li id="lab-5-3-1-1-1-6-4">
-<div class="para" id="lab-5-3-1-1-1-6-4-1">Suppose that <span class="process-math">\(A = \left[\begin{array}{rr}
+<div class="workspace" data-space="5in"></div>
+<div class="autopermalink" data-description="Task 2.c"><a href="#lab-5-4-4" title="Copy heading and permalink for Task 2.c" aria-label="Copy heading and permalink for Task 2.c">🔗</a></div></article><article class="task exercise-like" id="lab-5-4-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para" id="lab-5-4-5-1-1">Suppose that <span class="process-math">\(A = \left[\begin{array}{rr}
 0.5 \amp 0.2 \\
 -0.4 \amp 1.1 \\
 \end{array}\right]
-\text{.}\)</span> Compare this predator-prey system to the one in the previous part.  Which of the six types of dynamical systems do we have?  What happens to both species after a long time?<div class="autopermalink" data-description="Paragraph"><a href="#lab-5-3-1-1-1-6-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+\text{.}\)</span> Compare this predator-prey system to the one in the previous part.  Which of the six types of dynamical systems do we have?  What happens to both species after a long time? Be as specific as you are able with the information that you have.<div class="autopermalink" data-description="Paragraph"><a href="#lab-5-4-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item 2.d"><a href="#lab-5-3-1-1-1-6-4" title="Copy heading and permalink for Item 2.d" aria-label="Copy heading and permalink for Item 2.d">🔗</a></div>
-</li>
-</ol>
-<div class="autopermalink" data-description="Paragraph"><a href="#lab-5-3-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Worksheet Exercise 2"><a href="#lab-5-3-1" title="Copy heading and permalink for Worksheet Exercise 2" aria-label="Copy heading and permalink for Worksheet Exercise 2">🔗</a></div></article></section><section class="onepage" id="lab-5-4"><article class="exercise exercise-like" id="lab-5-4-1"><h3 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
-<div class="para" id="lab-5-4-1-1-1">The following type of analysis has been used to study the population of a bison herd.  We will divide the population of female bison into three groups: juveniles who are less than one year old; yearlings between one and two years old; and adults who are older than two years.<div class="autopermalink" data-description="Paragraph"><a href="#lab-5-4-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <div class="sidebyside"><div class="sbsrow" style="margin-left:1.25%;margin-right:1.25%;grid-template-columns:51.2820512820513% 46.1538461538462%;column-gap:2.5%;">
-<div class="sbspanel sbspanel--top top" style=""><div class="para logical" id="lab-5-4-1-1-2-1">
-<div class="para">Each year,</div>
-<ul class="disc" id="lab-5-4-1-1-2-1-1">
-<li id="lab-5-4-1-1-2-1-1-1">
-<div class="para" id="lab-5-4-1-1-2-1-1-1-1">80% of the juveniles survive to become yearlings.<div class="autopermalink" data-description="Paragraph"><a href="#lab-5-4-1-1-2-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Item"><a href="#lab-5-4-1-1-2-1-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
-</li>
-<li id="lab-5-4-1-1-2-1-1-2">
-<div class="para" id="lab-5-4-1-1-2-1-1-2-1">90% of the yearlings survive to become adults.<div class="autopermalink" data-description="Paragraph"><a href="#lab-5-4-1-1-2-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Item"><a href="#lab-5-4-1-1-2-1-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
-</li>
-<li id="lab-5-4-1-1-2-1-1-3">
-<div class="para" id="lab-5-4-1-1-2-1-1-3-1">80% of the adults survive.<div class="autopermalink" data-description="Paragraph"><a href="#lab-5-4-1-1-2-1-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Item"><a href="#lab-5-4-1-1-2-1-1-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
-</li>
-<li id="lab-5-4-1-1-2-1-1-4">
-<div class="para" id="lab-5-4-1-1-2-1-1-4-1">40% of the adults give birth to a juvenile.<div class="autopermalink" data-description="Paragraph"><a href="#lab-5-4-1-1-2-1-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Item"><a href="#lab-5-4-1-1-2-1-1-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
-</li>
-</ul>
-<div class="autopermalink" data-description="Paragraph"><a href="#lab-5-4-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></div>
-<div class="sbspanel sbspanel--top top" style=""><img src="external/images/eigen-3d-species.svg" role="img" class="contained"></div>
-</div></div> <div class="para logical" id="lab-5-4-1-1-3">
-<div class="para">By <span class="process-math">\(J_k\text{,}\)</span> <span class="process-math">\(Y_k\text{,}\)</span> and <span class="process-math">\(A_k\text{,}\)</span> we denote the number of juveniles, yearlings, and adults in year <span class="process-math">\(k\text{.}\)</span>  We have</div>
-<div class="displaymath process-math">
-\begin{equation*}
-J_{k+1} = 0.4 A_k\text{.}
-\end{equation*}
-</div>
-<ol class="lower-alpha ol-marker-1" id="lab-5-4-1-1-3-6">
-<li id="lab-5-4-1-1-3-6-1">
-<div class="para" id="lab-5-4-1-1-3-6-1-1">Find similar expressions for <span class="process-math">\(Y_{k+1}\)</span> and <span class="process-math">\(A_{k+1}\)</span> in terms of <span class="process-math">\(J_k\text{,}\)</span> <span class="process-math">\(Y_k\text{,}\)</span> and <span class="process-math">\(A_k\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#lab-5-4-1-1-3-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Item 3.a"><a href="#lab-5-4-1-1-3-6-1" title="Copy heading and permalink for Item 3.a" aria-label="Copy heading and permalink for Item 3.a">🔗</a></div>
-</li>
-<li id="lab-5-4-1-1-3-6-2">
-<div class="para" id="lab-5-4-1-1-3-6-2-1">As is usual, we write the matrix <span class="process-math">\(\xvec_k=\threevec{J_k}{Y_k}{A_k}\text{.}\)</span>  Write the matrix <span class="process-math">\(A\)</span> such that <span class="process-math">\(\xvec_{k+1} = A\xvec_k\)</span> and find its eigenvalues.<div class="autopermalink" data-description="Paragraph"><a href="#lab-5-4-1-1-3-6-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Item 3.b"><a href="#lab-5-4-1-1-3-6-2" title="Copy heading and permalink for Item 3.b" aria-label="Copy heading and permalink for Item 3.b">🔗</a></div>
-</li>
-<li id="lab-5-4-1-1-3-6-3">
-<div class="para logical" id="lab-5-4-1-1-3-6-3-1">
-<div class="para">We can write <span class="process-math">\(A = PEP^{-1}\)</span> where the matrices <span class="process-math">\(E\)</span> and <span class="process-math">\(P\)</span> are approximately:</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\begin{aligned}
-E \amp {}={} \left[\begin{array}{rrr}
-1.058 \amp  0 \amp  0 \\
-0 \amp -0.128 \amp -0.506 \\
-0 \amp  0.506 \amp -0.128 \\
-\end{array}\right], \\ \\
-P \amp {}={} \left[\begin{array}{rrr}
-1 \amp  1 \amp  0 \\
-0.756 \amp -0.378 \amp   1.486 \\
-2.644 \amp -0.322 \amp  -1.264 \\
-\end{array}\right]\text{.}
-\end{aligned}
-\end{equation*}
-</div>
-<div class="para">Make a prediction about the long-term behavior of <span class="process-math">\(\xvec_k\text{.}\)</span>  For instance, at what rate does it grow?  For every 100 adults, how many juveniles, and yearlings are there?</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#lab-5-4-1-1-3-6-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Item 3.c"><a href="#lab-5-4-1-1-3-6-3" title="Copy heading and permalink for Item 3.c" aria-label="Copy heading and permalink for Item 3.c">🔗</a></div>
-</li>
-<li id="lab-5-4-1-1-3-6-4">
-<div class="para" id="lab-5-4-1-1-3-6-4-1">Suppose that the birth rate decreases so that only 30% of adults give birth to a juvenile.  How does this affect the long-term growth rate of the herd? <div id="lab-5-4-1-1-3-6-4-1-1" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">
-</script></div>
-<div class="autopermalink" data-description="Paragraph"><a href="#lab-5-4-1-1-3-6-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Item 3.d"><a href="#lab-5-4-1-1-3-6-4" title="Copy heading and permalink for Item 3.d" aria-label="Copy heading and permalink for Item 3.d">🔗</a></div>
-</li>
-<li id="lab-5-4-1-1-3-6-5">
-<div class="para" id="lab-5-4-1-1-3-6-5-1">Suppose that the birth rate decreases further so that only 20% of adults give birth to a juvenile.  How does this affect the long-term growth rate of the herd? <div id="lab-5-4-1-1-3-6-5-1-1" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">
-</script></div>
-<div class="autopermalink" data-description="Paragraph"><a href="#lab-5-4-1-1-3-6-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Item 3.e"><a href="#lab-5-4-1-1-3-6-5" title="Copy heading and permalink for Item 3.e" aria-label="Copy heading and permalink for Item 3.e">🔗</a></div>
-</li>
-<li id="lab-5-4-1-1-3-6-6">
-<div class="para" id="lab-5-4-1-1-3-6-6-1">Find the smallest birth rate that supports a stable population.<div class="autopermalink" data-description="Paragraph"><a href="#lab-5-4-1-1-3-6-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Item 3.f"><a href="#lab-5-4-1-1-3-6-6" title="Copy heading and permalink for Item 3.f" aria-label="Copy heading and permalink for Item 3.f">🔗</a></div>
-</li>
-</ol>
-<div class="autopermalink" data-description="Paragraph"><a href="#lab-5-4-1-1-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Worksheet Exercise 3"><a href="#lab-5-4-1" title="Copy heading and permalink for Worksheet Exercise 3" aria-label="Copy heading and permalink for Worksheet Exercise 3">🔗</a></div></article></section><div class="autopermalink" data-description="Worksheet: Lab 5: Dynamical Systems"><a href="#lab-5" title="Copy heading and permalink for Worksheet: Lab 5: Dynamical Systems" aria-label="Copy heading and permalink for Worksheet: Lab 5: Dynamical Systems">🔗</a></div></section></div>
+<div class="workspace" data-space="5in"></div>
+<div class="autopermalink" data-description="Task 2.d"><a href="#lab-5-4-5" title="Copy heading and permalink for Task 2.d" aria-label="Copy heading and permalink for Task 2.d">🔗</a></div></article><div class="autopermalink" data-description="Worksheet Exercise 2"><a href="#lab-5-4" title="Copy heading and permalink for Worksheet Exercise 2" aria-label="Copy heading and permalink for Worksheet Exercise 2">🔗</a></div></article><div class="autopermalink" data-description="Worksheet: Lab 5: Dynamical Systems"><a href="#lab-5" title="Copy heading and permalink for Worksheet: Lab 5: Dynamical Systems" aria-label="Copy heading and permalink for Worksheet: Lab 5: Dynamical Systems">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="lab-4.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span>
 </div></main>

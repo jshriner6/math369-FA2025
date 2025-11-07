@@ -3473,6 +3473,132 @@ var ptx_lunr_docs = [
   "number": "6",
   "title": "Example: Not Diagonalizable.",
   "body": " Example: Not Diagonalizable   Let .   "
+},
+{
+  "id": "sec-4-3-2",
+  "level": "1",
+  "url": "sec-4-3-2.html",
+  "type": "Worksheet",
+  "number": "",
+  "title": "<span class=\"process-math\">\\(\\S 4.3\\text{:}\\)<\/span> Matrix Powers and Similarity",
+  "body": " : Matrix Powers and Similarity    Motivation: Matrix Powers and Similarity        Activity: Diagonalization     Find a diagonalization of , if one exists, when .  Can the diagonal matrix be diagonalized? If so, explain how to find the matrices and .  Find a diagonalization of , if one exists, when .    Find a diagonalization of , if one exists, when .    Suppose that where .  Explain why is invertible.  Find a diagonalization of .  Find a diagonalization of .          Fact: Powers and Inverses   If , then     Example: Dynamical Systems   Suppose is a transition matrix for some system. That is, .       Non-diagonalizable Matrices   There is a related definition that is useful when matrices are not diagonalizable.  We say a matrix is similar to a matrix if there exists an invertible matrix such that     Matrices with Complex Eigenvalues   Let .       Activity: Matrices with Complex Eigenvalues   We begin by rewriting in terms of and and noting that   Explain why has the geometric effect of rotating vectors by and scaling them by a factor of .  Let's now consider the matrix whose eigenvalues are and . We will choose to focus on one of the eigenvalues   Form the matrix using these values of and . Then rewrite the point in polar coordinates by identifying the values of and . Explain the geometric effect of multiplying vectors by .   Suppose that . Verify that .    Explain why .  We formed the matrix by choosing the eigenvalue . Suppose we had instead chosen . Form the matrix and use polar coordinates to describe the geometric effect of .  Using the matrix , show that .        Summary: Matrices with Complex Eigenvalues   If has eigenvalues , then     "
+},
+{
+  "id": "sec-4-3-2-2-1",
+  "level": "2",
+  "url": "sec-4-3-2.html#sec-4-3-2-2-1",
+  "type": "Worksheet Exercise",
+  "number": "1",
+  "title": "Motivation: Matrix Powers and Similarity.",
+  "body": " Motivation: Matrix Powers and Similarity      "
+},
+{
+  "id": "sec-4-3-2-2-2",
+  "level": "2",
+  "url": "sec-4-3-2.html#sec-4-3-2-2-2",
+  "type": "Worksheet Exercise",
+  "number": "2",
+  "title": "Activity: Diagonalization.",
+  "body": " Activity: Diagonalization     Find a diagonalization of , if one exists, when .  Can the diagonal matrix be diagonalized? If so, explain how to find the matrices and .  Find a diagonalization of , if one exists, when .    Find a diagonalization of , if one exists, when .    Suppose that where .  Explain why is invertible.  Find a diagonalization of .  Find a diagonalization of .      "
+},
+{
+  "id": "sec-4-3-2-3-1",
+  "level": "2",
+  "url": "sec-4-3-2.html#sec-4-3-2-3-1",
+  "type": "Worksheet Exercise",
+  "number": "3",
+  "title": "Fact: Powers and Inverses.",
+  "body": " Fact: Powers and Inverses   If , then   "
+},
+{
+  "id": "sec-4-3-2-3-2",
+  "level": "2",
+  "url": "sec-4-3-2.html#sec-4-3-2-3-2",
+  "type": "Worksheet Exercise",
+  "number": "4",
+  "title": "Example: Dynamical Systems.",
+  "body": " Example: Dynamical Systems   Suppose is a transition matrix for some system. That is, .   "
+},
+{
+  "id": "sec-4-3-2-4-1",
+  "level": "2",
+  "url": "sec-4-3-2.html#sec-4-3-2-4-1",
+  "type": "Worksheet Exercise",
+  "number": "5",
+  "title": "Non-diagonalizable Matrices.",
+  "body": " Non-diagonalizable Matrices   There is a related definition that is useful when matrices are not diagonalizable.  We say a matrix is similar to a matrix if there exists an invertible matrix such that   "
+},
+{
+  "id": "sec-4-3-2-4-2",
+  "level": "2",
+  "url": "sec-4-3-2.html#sec-4-3-2-4-2",
+  "type": "Worksheet Exercise",
+  "number": "6",
+  "title": "<span class=\"process-math\">\\(2 \\times 2\\)<\/span> Matrices with Complex Eigenvalues.",
+  "body": " Matrices with Complex Eigenvalues   Let .   "
+},
+{
+  "id": "sec-4-3-2-5-1",
+  "level": "2",
+  "url": "sec-4-3-2.html#sec-4-3-2-5-1",
+  "type": "Worksheet Exercise",
+  "number": "7",
+  "title": "Activity: <span class=\"process-math\">\\(2 \\times 2\\)<\/span> Matrices with Complex Eigenvalues.",
+  "body": " Activity: Matrices with Complex Eigenvalues   We begin by rewriting in terms of and and noting that   Explain why has the geometric effect of rotating vectors by and scaling them by a factor of .  Let's now consider the matrix whose eigenvalues are and . We will choose to focus on one of the eigenvalues   Form the matrix using these values of and . Then rewrite the point in polar coordinates by identifying the values of and . Explain the geometric effect of multiplying vectors by .   Suppose that . Verify that .    Explain why .  We formed the matrix by choosing the eigenvalue . Suppose we had instead chosen . Form the matrix and use polar coordinates to describe the geometric effect of .  Using the matrix , show that .    "
+},
+{
+  "id": "sec-4-3-2-6-1",
+  "level": "2",
+  "url": "sec-4-3-2.html#sec-4-3-2-6-1",
+  "type": "Worksheet Exercise",
+  "number": "8",
+  "title": "Summary: <span class=\"process-math\">\\(2 \\times 2\\)<\/span> Matrices with Complex Eigenvalues.",
+  "body": " Summary: Matrices with Complex Eigenvalues   If has eigenvalues , then   "
+},
+{
+  "id": "sec-4-4",
+  "level": "1",
+  "url": "sec-4-4.html",
+  "type": "Worksheet",
+  "number": "",
+  "title": "<span class=\"process-math\">\\(\\S 4.4\\text{:}\\)<\/span> Dynamical Systems",
+  "body": " : Dynamical Systems    Motivation: Dynamical Systems        Preview Activity 4.4.1   Suppose that we have a diagonalizable matrix where .     Find the eigenvalues of and find a basis for the associated eigenspaces.      Form a basis of consisting of eigenvectors of and write the vector as a linear combination of basis vectors.      Write as a linear combination of basis vectors.      For some power , write as a linear combination of basis vectors.      Find the vector .        A First Example     Introductory text from activity 4.4.2 in the textbook.         Visualizing System Behavior: Phase Portraits     A sample trajectory on a phase portrait.       "
+},
+{
+  "id": "sec-4-4-2-1",
+  "level": "2",
+  "url": "sec-4-4.html#sec-4-4-2-1",
+  "type": "Worksheet Exercise",
+  "number": "1",
+  "title": "Motivation: Dynamical Systems.",
+  "body": " Motivation: Dynamical Systems      "
+},
+{
+  "id": "sec-4-4-2-2",
+  "level": "2",
+  "url": "sec-4-4.html#sec-4-4-2-2",
+  "type": "Worksheet Exercise",
+  "number": "2",
+  "title": "Preview Activity 4.4.1.",
+  "body": " Preview Activity 4.4.1   Suppose that we have a diagonalizable matrix where .     Find the eigenvalues of and find a basis for the associated eigenspaces.      Form a basis of consisting of eigenvectors of and write the vector as a linear combination of basis vectors.      Write as a linear combination of basis vectors.      For some power , write as a linear combination of basis vectors.      Find the vector .    "
+},
+{
+  "id": "sec-4-4-3-1",
+  "level": "2",
+  "url": "sec-4-4.html#sec-4-4-3-1",
+  "type": "Worksheet Exercise",
+  "number": "3",
+  "title": "A First Example.",
+  "body": " A First Example     Introductory text from activity 4.4.2 in the textbook.     "
+},
+{
+  "id": "sec-4-4-4-1",
+  "level": "2",
+  "url": "sec-4-4.html#sec-4-4-4-1",
+  "type": "Worksheet Exercise",
+  "number": "4",
+  "title": "Visualizing System Behavior: Phase Portraits.",
+  "body": " Visualizing System Behavior: Phase Portraits     A sample trajectory on a phase portrait.     "
 }
 ]
 
