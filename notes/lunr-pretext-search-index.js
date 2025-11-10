@@ -3619,6 +3619,87 @@ var ptx_lunr_docs = [
   "body": " Summary: Matrices with Complex Eigenvalues   If has eigenvalues , then   "
 },
 {
+  "id": "sec-4-3-2-sols",
+  "level": "1",
+  "url": "sec-4-3-2-sols.html",
+  "type": "Worksheet",
+  "number": "",
+  "title": "<span class=\"process-math\">\\(\\S 4.3\\text{:}\\)<\/span> Matrix Powers and Similarity (Solutions)",
+  "body": " : Matrix Powers and Similarity (Solutions)    Motivation: Matrix Powers and Similarity       We've defined what it means for to be diagonalizable. We'll see examples of when this can be useful computationally, and also generalize the concept for matrices that are not diagonalizable.     Activity: Diagonalization     Find a diagonalization of , if one exists, when .  Can the diagonal matrix be diagonalized? If so, explain how to find the matrices and .  Find a diagonalization of , if one exists, when .    Find a diagonalization of , if one exists, when .    Suppose that where .  Explain why is invertible.  Find a diagonalization of .  Find a diagonalization of .        We find that has eigenvectors with associated eigenvalue and with associated eigenvalue . We then have and .  Yes. We know that the eigenvectors are with associated eigenvalue and with associated eigenvalue . Therefore, and . This shows that the diagonalization is ; that is, since is already diagonal, it is diagonalized by the identity matrix.  We find eigenvectors , , and with associated eigenvalues , , and . Therefore, where   Once again, we see that is an eigenvalue with multiplicity one and is an eigenvalue with multiplicity two. However, so we are not able to find a basis for consisting of eigenvalues of . Therefore, is not diagonalizable.  If ,   is invertible since .  We know that and are eigenvectors of with associated eigenvalues and . If is an eigenvector of with associated eigenvalue , then is an eigenvector of with associated eigenvalue . Therefore, where .  We have where .          Fact: Powers and Inverses   If , then                     Example: Dynamical Systems   Suppose is a transition matrix for some system. That is, .    Then the eigenvalues of will help determine how the system will behave. See Example 4.3.10 .       Non-diagonalizable Matrices   There is a related definition that is useful when matrices are not diagonalizable.  We say a matrix is similar to a matrix if there exists an invertible matrix such that     .     Matrices with Complex Eigenvalues   Let .    Then the eigenvalues are when , which is .  See this short discussion in the textbook for a review of how we can represent complex numbers in polar coordinates, which will be important for analyzing these matrices.       Activity: Matrices with Complex Eigenvalues   We begin by rewriting in terms of and and noting that   Explain why has the geometric effect of rotating vectors by and scaling them by a factor of .  Let's now consider the matrix whose eigenvalues are and . We will choose to focus on one of the eigenvalues   Form the matrix using these values of and . Then rewrite the point in polar coordinates by identifying the values of and . Explain the geometric effect of multiplying vectors by .   Suppose that . Verify that .    Explain why .  We formed the matrix by choosing the eigenvalue . Suppose we had instead chosen . Form the matrix and use polar coordinates to describe the geometric effect of .  Using the matrix , show that .      The matrix has the geometric effect of scaling vectors uniformly by a factor of while the matrix rotates vectors by .  We have so we form the matrix . This shows that will scale vectors by a factor of while rotating them by .  Sage will verify this relationship.  As we saw earlier, we have and hence .  We have and so we form the matrix . This shows that will scale vectors by a factor of while rotating them by .        Summary: Matrices with Complex Eigenvalues   If has eigenvalues , then    See Proposition 4.3.12 .     "
+},
+{
+  "id": "sec-4-3-2-sols-2-1",
+  "level": "2",
+  "url": "sec-4-3-2-sols.html#sec-4-3-2-sols-2-1",
+  "type": "Worksheet Exercise",
+  "number": "1",
+  "title": "Motivation: Matrix Powers and Similarity.",
+  "body": " Motivation: Matrix Powers and Similarity       We've defined what it means for to be diagonalizable. We'll see examples of when this can be useful computationally, and also generalize the concept for matrices that are not diagonalizable.   "
+},
+{
+  "id": "sec-4-3-2-sols-2-2",
+  "level": "2",
+  "url": "sec-4-3-2-sols.html#sec-4-3-2-sols-2-2",
+  "type": "Worksheet Exercise",
+  "number": "2",
+  "title": "Activity: Diagonalization.",
+  "body": " Activity: Diagonalization     Find a diagonalization of , if one exists, when .  Can the diagonal matrix be diagonalized? If so, explain how to find the matrices and .  Find a diagonalization of , if one exists, when .    Find a diagonalization of , if one exists, when .    Suppose that where .  Explain why is invertible.  Find a diagonalization of .  Find a diagonalization of .        We find that has eigenvectors with associated eigenvalue and with associated eigenvalue . We then have and .  Yes. We know that the eigenvectors are with associated eigenvalue and with associated eigenvalue . Therefore, and . This shows that the diagonalization is ; that is, since is already diagonal, it is diagonalized by the identity matrix.  We find eigenvectors , , and with associated eigenvalues , , and . Therefore, where   Once again, we see that is an eigenvalue with multiplicity one and is an eigenvalue with multiplicity two. However, so we are not able to find a basis for consisting of eigenvalues of . Therefore, is not diagonalizable.  If ,   is invertible since .  We know that and are eigenvectors of with associated eigenvalues and . If is an eigenvector of with associated eigenvalue , then is an eigenvector of with associated eigenvalue . Therefore, where .  We have where .      "
+},
+{
+  "id": "sec-4-3-2-sols-3-1",
+  "level": "2",
+  "url": "sec-4-3-2-sols.html#sec-4-3-2-sols-3-1",
+  "type": "Worksheet Exercise",
+  "number": "3",
+  "title": "Fact: Powers and Inverses.",
+  "body": " Fact: Powers and Inverses   If , then                   "
+},
+{
+  "id": "sec-4-3-2-sols-3-2",
+  "level": "2",
+  "url": "sec-4-3-2-sols.html#sec-4-3-2-sols-3-2",
+  "type": "Worksheet Exercise",
+  "number": "4",
+  "title": "Example: Dynamical Systems.",
+  "body": " Example: Dynamical Systems   Suppose is a transition matrix for some system. That is, .    Then the eigenvalues of will help determine how the system will behave. See Example 4.3.10 .   "
+},
+{
+  "id": "sec-4-3-2-sols-4-1",
+  "level": "2",
+  "url": "sec-4-3-2-sols.html#sec-4-3-2-sols-4-1",
+  "type": "Worksheet Exercise",
+  "number": "5",
+  "title": "Non-diagonalizable Matrices.",
+  "body": " Non-diagonalizable Matrices   There is a related definition that is useful when matrices are not diagonalizable.  We say a matrix is similar to a matrix if there exists an invertible matrix such that     .   "
+},
+{
+  "id": "sec-4-3-2-sols-4-2",
+  "level": "2",
+  "url": "sec-4-3-2-sols.html#sec-4-3-2-sols-4-2",
+  "type": "Worksheet Exercise",
+  "number": "6",
+  "title": "<span class=\"process-math\">\\(2 \\times 2\\)<\/span> Matrices with Complex Eigenvalues.",
+  "body": " Matrices with Complex Eigenvalues   Let .    Then the eigenvalues are when , which is .  See this short discussion in the textbook for a review of how we can represent complex numbers in polar coordinates, which will be important for analyzing these matrices.   "
+},
+{
+  "id": "sec-4-3-2-sols-5-1",
+  "level": "2",
+  "url": "sec-4-3-2-sols.html#sec-4-3-2-sols-5-1",
+  "type": "Worksheet Exercise",
+  "number": "7",
+  "title": "Activity: <span class=\"process-math\">\\(2 \\times 2\\)<\/span> Matrices with Complex Eigenvalues.",
+  "body": " Activity: Matrices with Complex Eigenvalues   We begin by rewriting in terms of and and noting that   Explain why has the geometric effect of rotating vectors by and scaling them by a factor of .  Let's now consider the matrix whose eigenvalues are and . We will choose to focus on one of the eigenvalues   Form the matrix using these values of and . Then rewrite the point in polar coordinates by identifying the values of and . Explain the geometric effect of multiplying vectors by .   Suppose that . Verify that .    Explain why .  We formed the matrix by choosing the eigenvalue . Suppose we had instead chosen . Form the matrix and use polar coordinates to describe the geometric effect of .  Using the matrix , show that .      The matrix has the geometric effect of scaling vectors uniformly by a factor of while the matrix rotates vectors by .  We have so we form the matrix . This shows that will scale vectors by a factor of while rotating them by .  Sage will verify this relationship.  As we saw earlier, we have and hence .  We have and so we form the matrix . This shows that will scale vectors by a factor of while rotating them by .    "
+},
+{
+  "id": "sec-4-3-2-sols-6-1",
+  "level": "2",
+  "url": "sec-4-3-2-sols.html#sec-4-3-2-sols-6-1",
+  "type": "Worksheet Exercise",
+  "number": "8",
+  "title": "Summary: <span class=\"process-math\">\\(2 \\times 2\\)<\/span> Matrices with Complex Eigenvalues.",
+  "body": " Summary: Matrices with Complex Eigenvalues   If has eigenvalues , then    See Proposition 4.3.12 .   "
+},
+{
   "id": "sec-4-4",
   "level": "1",
   "url": "sec-4-4.html",
