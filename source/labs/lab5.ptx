@@ -33,7 +33,7 @@
 		<li>
 			<p>
 				state the eigenvalues of
-      			<m>A</m>, and describe what the matrix <m>E</m> tells us about how the matrix <m>A</m> acts on
+      			<m>A</m>, and describe how the matrix <m>E</m> acts on
 				vectors written in the basis <m>\bcal</m>,
 			</p>
 		</li>
