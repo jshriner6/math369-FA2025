@@ -3743,6 +3743,51 @@ var ptx_lunr_docs = [
   "number": "4",
   "title": "Visualizing System Behavior: Phase Portraits.",
   "body": " Visualizing System Behavior: Phase Portraits     A sample trajectory on a phase portrait.     "
+},
+{
+  "id": "sec-4-4-sols",
+  "level": "1",
+  "url": "sec-4-4-sols.html",
+  "type": "Worksheet",
+  "number": "",
+  "title": "<span class=\"process-math\">\\(\\S 4.4\\text{:}\\)<\/span> Dynamical Systems (Solutions)",
+  "body": " : Dynamical Systems (Solutions)    Motivation: Dynamical Systems       We've found a way to relate certain matrices to other \"nicer\" matrices using eignevalues and eigenvectors. We'll apply these ideas to studying dynamical systems.     Preview Activity 4.4.1   Suppose that we have a diagonalizable matrix where .     Find the eigenvalues of and find a basis for the associated eigenspaces.    Since has been diagonalized as , the eigenvalues of are the diagonal entries of and the eigenvectors are the columns of . Therefore, we know the eigenvalues are with associated eigenvector and with associated eigenvector .      Form a basis of consisting of eigenvectors of and write the vector as a linear combination of basis vectors.    The columns of , and , form a basis for . We find that .      Write as a linear combination of basis vectors.    Then .      For some power , write as a linear combination of basis vectors.    We have .      Find the vector .     .        A First Example     Introductory text from activity 4.4.2 in the textbook.      See the discussion following Activity 4.4.2 .       Visualizing System Behavior: Phase Portraits     A sample trajectory on a phase portrait.      See Figure 4.4.1 .     "
+},
+{
+  "id": "sec-4-4-sols-2-1",
+  "level": "2",
+  "url": "sec-4-4-sols.html#sec-4-4-sols-2-1",
+  "type": "Worksheet Exercise",
+  "number": "1",
+  "title": "Motivation: Dynamical Systems.",
+  "body": " Motivation: Dynamical Systems       We've found a way to relate certain matrices to other \"nicer\" matrices using eignevalues and eigenvectors. We'll apply these ideas to studying dynamical systems.   "
+},
+{
+  "id": "sec-4-4-sols-2-2",
+  "level": "2",
+  "url": "sec-4-4-sols.html#sec-4-4-sols-2-2",
+  "type": "Worksheet Exercise",
+  "number": "2",
+  "title": "Preview Activity 4.4.1.",
+  "body": " Preview Activity 4.4.1   Suppose that we have a diagonalizable matrix where .     Find the eigenvalues of and find a basis for the associated eigenspaces.    Since has been diagonalized as , the eigenvalues of are the diagonal entries of and the eigenvectors are the columns of . Therefore, we know the eigenvalues are with associated eigenvector and with associated eigenvector .      Form a basis of consisting of eigenvectors of and write the vector as a linear combination of basis vectors.    The columns of , and , form a basis for . We find that .      Write as a linear combination of basis vectors.    Then .      For some power , write as a linear combination of basis vectors.    We have .      Find the vector .     .    "
+},
+{
+  "id": "sec-4-4-sols-3-1",
+  "level": "2",
+  "url": "sec-4-4-sols.html#sec-4-4-sols-3-1",
+  "type": "Worksheet Exercise",
+  "number": "3",
+  "title": "A First Example.",
+  "body": " A First Example     Introductory text from activity 4.4.2 in the textbook.      See the discussion following Activity 4.4.2 .   "
+},
+{
+  "id": "sec-4-4-sols-4-1",
+  "level": "2",
+  "url": "sec-4-4-sols.html#sec-4-4-sols-4-1",
+  "type": "Worksheet Exercise",
+  "number": "4",
+  "title": "Visualizing System Behavior: Phase Portraits.",
+  "body": " Visualizing System Behavior: Phase Portraits     A sample trajectory on a phase portrait.      See Figure 4.4.1 .   "
 }
 ]
 
