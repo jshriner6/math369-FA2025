@@ -1,0 +1,212 @@
+<pretext>
+    <article xml:id="notes">
+        <worksheet xml:id="sec-4-5-1-sols">
+        <title><m>\S 4.5</m>: Stochastic Matrices and Markov Chains (Solutions)</title>
+            <page>
+                <exercise workspace="2in">
+                    <title>Motivation: Markov Chains</title>
+                    <statement>
+                        <p>
+                            
+                        </p>
+                    </statement>
+                    <solution>
+                        <p>
+                            Markov chains are a specific type of dynamical system in the context of probability. 
+                            We'll see how the specific restrictions of these systems impact system behavior.
+                        </p>
+                    </solution>
+                </exercise>
+
+                <exercise workspace=".5in">
+                    <title>Preview Activity 4.5.1</title>
+                    <introduction>
+        <p> Suppose that our rental car company rents from two locations
+        <m>P</m> and <m>Q</m>.  We find that 80% of the cars rented from
+        location <m>P</m> are returned to <m>P</m> while the other 20% are
+        returned to <m>Q</m>.  For cars rented from location <m>Q</m>,
+        60% are returned to <m>Q</m> and 40% to <m>P</m>. </p>
+
+        <p> We will use <m>P_k</m> and <m>Q_k</m> to denote the number
+        of cars at the two locations on day <m>k</m>.  The following
+        day, the number of cars at <m>P</m> equals 80% of <m>P_k</m> and
+        40% of <m>Q_k</m>.  This shows that
+        <me>
+	  \begin{aligned}
+	  P_{k+1} \amp {}={} 0.8 P_k + 0.4Q_k \\
+	  Q_{k+1} \amp {}={} 0.2 P_k + 0.6Q_k\text{.} \\
+	  \end{aligned}
+        </me>
+        </p>
+      </introduction>
+
+      <task >
+        <statement>
+	  <p> If we use the vector <m>\xvec_k =
+	  \twovec{P_k}{Q_k}</m> to represent the distribution of cars on
+	  day <m>k</m>, find a matrix <m>A</m> such that
+	  <m>\xvec_{k+1} = A\xvec_k</m>. </p>
+        </statement>
+        
+        <solution>
+	  <p> Expressing the set of equations in matrix form, we
+	  see that
+	  <m>A = \mattwo{0.8}{0.4}{0.2}{0.6}</m>.
+	  </p>
+        </solution>
+      </task>
+
+      <task >
+        <statement>
+	  <p> Find the eigenvalues and associated eigenvectors of
+	  <m>A</m>.  </p>
+        </statement>
+       
+        <solution>
+	  <p> We have eigenvalues <m>\lambda_1 = 1</m> and
+	  <m>\lambda_2 = 0.4</m> with associated eigenvectors
+	  <m>\vvec_1 = \twovec21</m> and
+	  <m>\vvec_2=\twovec{-1}{1}</m>. </p>
+        </solution>
+      </task>
+
+      <task >
+        <statement>
+	  <p> Suppose that there are initially 1500 cars, all of
+	  which are at location <m>P</m>.  Write the vector
+	  <m>\xvec_0</m> as a linear combination of eigenvectors of
+	  <m>A</m>. </p>
+        </statement>
+        
+        <solution>
+	  <p> We find that
+	  <m>\xvec_0=\twovec{1500}{0} = 500\vvec_1-500\vvec_2</m>.
+	  </p>
+        </solution>
+      </task>
+
+      <task>
+        <statement>
+	  <p> Write the vectors <m>\xvec_k</m> as a linear
+	  combination of eigenvectors of <m>A</m>. </p>
+        </statement>
+       
+        <solution>
+	  <p> Multiplying by the matrix <m>A</m> has the effect of
+	  multiplying the eigenvectors by their associated
+	  eigenvalues.  Therefore,
+	  <m>\xvec_k=500\vvec_1-500(0.4)^k\vvec_2</m>.
+	  </p>
+        </solution>
+      </task>
+
+      <task >
+        <statement>
+	  <p> What happens to the distribution of cars after a long
+	  time? </p>
+        </statement>
+        
+        <solution>
+	  <p> As <m>k</m> becomes large, <m>0.4^k</m> becomes very
+	  close to zero.  Therefore <m>\xvec_k\approx500\vvec_1 =
+	  \twovec{1000}{500}</m>.  This tells us that <m>1000</m> cars
+	  are at location <m>P</m> and <m>500</m> are at <m>Q</m>.
+	  </p>
+        </solution>
+      </task>
+                    
+                    
+                </exercise>
+
+            </page>
+
+            <page>
+                <exercise workspace="2in">
+                    <title>Definition: Probability Vectors and Stochastic Matrices</title>
+                    <statement>
+                        <p>
+                            
+                        </p>
+                    </statement>
+                    <solution>
+                        <p>
+                            A vector with non-negative entries that sum to <m>1</m> is a <term>probability vector</term>.
+                        </p>
+                        <p>
+                            A square matrix whose columns are probability vectors is a <term>stochastic matrix</term>.
+                        </p>
+                    </solution>
+                    
+                </exercise>
+
+                <exercise workspace="1in">
+                    <title>A First Example: Stochasic Matrices</title>
+                    <statement>
+      <p> Suppose you live in a country with three political parties
+      <m>P</m>, <m>Q</m>, and <m>R</m>.  We use <m>P_k</m>,
+      <m>Q_k</m>, and <m>R_k</m> to denote the percentage of voters
+      voting for that party in election <m>k</m>.  </p>
+
+      <sidebyside widths="55% 45%">
+	<p> Voters will change parties from one election to the next as
+	shown in the figure.  We see that 60% of voters stay with the
+	same party.  However, 40% of those who vote for party <m>P</m>
+	will vote for party <m>Q</m> in the next election. </p>
+
+	<image source="images/stoch-parties">
+        <shortdescription>A directed graph showing illustrating the system of equations in this example.</shortdescription>
+    </image>
+      </sidebyside>
+      <me>
+      \begin{alignedat}{6}
+      P_{k+1} \amp {}={} 0.6P_k \amp \amp \amp + 0.2 R_k \\
+      Q_{k+1} \amp {}={} 0.4P_k \amp {}+{} \amp 0.6Q_k \amp {}+{}
+      0.2R_k \\
+      R_{k+1} \amp {}={} \amp {}{} \amp 0.4Q_k \amp {}+{}
+      0.6R_k\\
+      \end{alignedat}
+    </me>
+    </statement>
+    <solution>
+        <p>
+            See the discussion in <url href="https://understandinglinearalgebra.org/sec-stochastic.html#sec-stochastic-3">Subsection 4.5.1</url>.
+        </p>
+    </solution>
+                    
+                    
+                </exercise>
+            </page>
+
+            <page>
+                <exercise>
+                    <title>Definition: Markov Chain and Stationary Vector</title>
+                    <statement>
+                        <p>
+                            
+                        </p>
+                    </statement>
+                    <solution>
+                        <p>
+                            If <m>A</m> is a stochastic matrix and <m>\xvec_0</m> a probability vector, the sequence
+                            <me>
+                                \xvec_0, \quad \xvec_1 = A \xvec_0, \quad \xvec_2 = A \xvec_1 , \quad \dots
+                            </me>
+                            is a <term>Markov chain</term>.
+                            
+                        </p>
+                        <p>
+                            A probability vector <m>\qvec</m> is a <term>stationary vector</term> (or a <term>steady-state vector</term>)
+                            if 
+                            <me>
+                                A\qvec = \qvec
+                            </me>.
+                            
+                        </p>
+                    </solution>
+                    
+                </exercise>
+            </page>
+
+        </worksheet>
+    </article>
+</pretext>

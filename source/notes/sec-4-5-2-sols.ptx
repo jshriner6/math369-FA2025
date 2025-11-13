@@ -1,0 +1,355 @@
+<pretext>
+    <article xml:id="notes">
+        <worksheet xml:id="sec-4-5-2-sols">
+        <title><m>\S 4.5</m>: Perron-Frobenius Theorem (Solutions)</title>
+            <page>
+                <exercise workspace="2in">
+                    <title>Motivation: Perron-Frobenius Theorem</title>
+                    <statement>
+                        <p>
+                            
+                        </p>
+                    </statement>
+                    <solution>
+                        <p>
+                            If <m>A</m> is a stochastic matrix and <m>\xvec_k</m> an associated Markov chain, 
+                            is there a way to determine if <m>\xvec_k</m> converges to a stationary vector?
+                        </p>
+                    </solution>
+                </exercise>
+
+                <exercise>
+                    <title>Activity: Stochastic Matrices and Eigenvalues</title>
+                    <statement>
+      <p> Consider the matrices
+      <me>
+	A=\left[\begin{array}{rr}
+	0 \amp 1 \\
+	1 \amp 0 \\
+	\end{array}\right],\qquad
+	B=\left[\begin{array}{rr}
+	0.4 \amp 0.3 \\
+	0.6 \amp 0.7 \\
+	\end{array}\right]
+      </me>.
+      <ol marker="a.">
+	<li><p> Verify that both <m>A</m> and <m>B</m> are stochastic
+	matrices. </p></li>
+
+	<li><p> Find the eigenvalues of <m>A</m> and then find a
+	steady-state vector for <m>A</m>.  </p></li>
+
+	<li><p> We will form the Markov chain beginning with the
+	vector <m>\xvec_0 = \twovec{1}{0}</m> and defining
+	<m>\xvec_{k+1} = A\xvec_k</m>.  The Sage cell below 
+	constructs the first <m>N</m> terms of the Markov chain with
+	the command <c>markov_chain(A, x0, N)</c>.  Define the matrix
+	<c>A</c> and vector <c>x0</c> and evaluate the cell to find
+	the first 10 terms of the Markov chain.
+	<sage>
+	  <input>
+def markov_chain(A, x0, N):
+    for i in range(N):
+        x0 = A*x0
+        print (x0)
+## define the matrix A and x0
+A =
+x0 =
+markov_chain(A, x0, 10)
+	  </input>
+	</sage>
+	What do you notice about the Markov chain?  Does it converge
+	to the steady-state vector for <m>A</m>? </p></li>
+
+	<li><p> Now find the eigenvalues of <m>B</m> along with a
+	steady-state vector for <m>B</m>. </p></li>
+
+	<li><p> As before, find the first 10 terms in the Markov chain
+	beginning with <m>\xvec_0 = \twovec{1}{0}</m> and
+	<m>\xvec_{k+1} = B\xvec_k</m>.  What do you notice about the
+	Markov chain?  Does it converge to the steady-state vector for
+	<m>B</m>? </p></li>
+
+	<li><p> What condition on the eigenvalues of a stochastic
+	matrix will guarantee that a Markov chain will converge to a
+	steady-state vector? </p></li>
+      </ol></p>
+      </statement>
+
+                    <solution>
+	<p><ol marker="a.">
+	  <li><p> If we add the entries in each column of <m>A</m>
+	  and each column of <m>B</m>, we obtain <m>1</m>.  Also, all
+	  the entries in both matrices are nonnegative.
+	  </p></li>
+
+	  <li><p> The matrix <m>A</m> has the eigenvalues <m>\lambda_1
+	  = 1</m> and <m>\lambda_2=-1</m> with associated eigenvectors
+	  <m>\vvec_1=\twovec11</m> and
+	  <m>\vvec_2=\twovec{-1}{1}</m>.  The steady-state vector is
+	  <m>\qvec=\twovec{\frac12}{\frac12}</m> as this is the unique
+	  probability vector in <m>E_1</m>. 
+	  </p></li>
+
+	  <li><p> The terms in the Markov chain are
+	  <me>
+	    \xvec_0 = \twovec10,
+	    \xvec_1 = \twovec01,
+	    \xvec_2 = \twovec10,
+	    \xvec_3 = \twovec01,\ldots
+	  </me>
+	  so the chain does not converge to any vector, much less the
+	  steady-state vector.
+	  </p></li>
+
+	  <li><p> The matrix <m>B</m> has eigenvalues
+	  <m>\lambda_1=1</m> and <m>\lambda_2=0.1</m> with associated
+	  eigenvectors <m>\vvec_1=\twovec12</m> and
+	  <m>\vvec_2=\twovec{-1}{1}</m>.  The unique steady-state
+	  vector is <m>\qvec=\twovec{\frac13}{\frac23}</m> since this
+	  is the only probability vector in <m>E_1</m>. </p></li>
+
+	  <li><p> Here we find
+	  <me>
+	    \begin{array}{rrrr}
+	    \xvec_0 = \twovec10, \amp
+	    \xvec_1 = \twovec{0.4}{0.6}, \amp
+	    \xvec_2 = \twovec{0.34}{0.66}, \\
+	    \xvec_3 = \twovec{0.334}{0.666}, \amp
+	    \xvec_4 = \twovec{0.3334}{0.6666}, \amp
+	    \xvec_5 = \twovec{0.33334}{0.66666},\amp\ldots
+	    \end{array}
+	  </me>
+	  which appears to be converging to the steady-state vector
+	  <m>\qvec=\twovec{\frac13}{\frac23}</m>.
+	  </p></li>
+
+	  <li><p> If there is one eigenvalue <m>\lambda_1=1</m> having
+	  multiplicity one with the other eigenvalues satisfying
+	  <m>|\lambda_j|\lt 1</m>, we can guarantee that any Markov
+	  chain will converge to a unique steady-state vector.
+	  </p></li>
+	</ol></p>
+      </solution>
+
+                </exercise>
+
+            </page>
+
+            <page>
+                <exercise workspace="2in">
+                    <title>Facts: Stochastic Matrices and Eigenvalues</title>
+                    <statement>
+                        <p>
+                            
+                        </p>
+                    </statement>
+                    
+                    <solution>
+                        <p>
+                            <ol>
+                                <li>
+                                    <p>
+                                        <m>\lambda_1 =1 </m> is an eigenvalue of all stochastic matrices.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <m>|\lambda_j| \leq 1</m> for all other eigenvalues, and if the inequality is 
+                                        strict, this implies any Markov chain will converge to a steady-state vector.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        All stochastic matrices have at least one steady state vector <m>\qvec</m>, but 
+                                        may not converge to it.
+                                    </p>
+                                </li>
+                            </ol>
+                        </p>
+                    </solution>
+                </exercise>
+
+                <exercise workspace="2in">
+                    <title>Definition: Positive Matrix</title>
+                    <statement>
+                        <p>
+                            
+                        </p>
+                    </statement>
+                    <solution>
+                        <p>
+                            The matrix <m>A</m> is <term>positive</term> if either <m>A</m> or some power 
+                            <m>A^k</m> has all positive entries.
+                        </p>
+                    </solution>
+                    
+                    
+                </exercise>
+                <exercise workspace="2in">
+                    <title>Examples: Positive Matrix</title>
+                    <statement>
+                        <p>
+                            Let <m>A = \left[\begin{array}{rr}
+	0 \amp 1 \\
+	1 \amp 0 \\
+	\end{array}\right]
+	</m>, <m>B = \left[\begin{array}{rr}
+	0.4 \amp 0.3 \\
+	0.6 \amp 0.7 \\
+	\end{array}\right]
+	</m> , <m>C = \left[\begin{array}{rr}
+	0 \amp 0.5 \\
+	1 \amp 0.5 \\
+	\end{array}\right]
+	</m>.
+                        </p>
+                    </statement>
+                    <solution>
+                        <p>
+                            See <url href="https://understandinglinearalgebra.org/sec-stochastic.html#sec-stochastic-4-13">Example 4.5.5 </url>.
+                        </p>
+                    </solution>
+                    
+                </exercise>
+
+                <exercise workspace="2in">
+                    <title>Fact: Perron-Frobenius</title>
+                    <statement>
+                        <p>
+                            If <m>A</m> is a positive stochastic matrix, then
+                        </p>
+                    </statement>
+                    <solution>
+                        <p>
+                            the eigenvalue satisfy <m>\lambda_1 = 1</m> and <m>|\lambda_j| \lt 1</m> for all other 
+                            eigenvalues. In particular, this means that <m>A</m> has a unique positive steady-state 
+                            vector <m>\qvec</m> and that every Markov chain defined by <m>A</m> converges to <m>\qvec</m>.
+                        </p>
+                    </solution>
+                    
+                </exercise>
+            </page>
+
+            <page>
+                <exercise >
+                    <title>Activity: Perron-Frobenius Theorem</title>
+                    <statement>  <p> We will explore the meaning of the
+      Perron-Frobenius theorem in this activity. 
+      <ol marker="a.">
+	<li><p> Consider the matrix
+	<m>C = \left[\begin{array}{rr}
+	0 \amp 0.5 \\
+	1 \amp 0.5 \\
+	\end{array}\right]
+	</m>.
+	This is a positive matrix, as we saw in the
+	previous example.  Find the eigenvectors of <m>C</m> and
+	verify there is a unique
+	steady-state vector.</p></li>
+
+	<li><p> Using the Sage cell below, construct the Markov chain
+	with initial vector <m>\xvec_0= \twovec{1}{0}</m> and describe
+	what happens to <m>\xvec_k</m> as <m>k</m> becomes large.
+	<sage>
+	  <input>
+def markov_chain(A, x0, N):
+    for i in range(N):
+        x0 = A*x0
+        print (x0)
+## define the matrix C and x0
+C =
+x0 =
+markov_chain(C, x0, 10)
+	  </input>
+	</sage>
+	</p></li>
+
+	<li><p> Construct another Markov chain with initial vector
+	<m>\xvec_0=\twovec{0.2}{0.8}</m> and describe what happens to
+	<m>\xvec_k</m> as <m>k</m> becomes large. </p></li>
+
+	<li><p> Consider the matrix
+	<m>D = \left[\begin{array}{rrr}
+	0 \amp 0.5 \amp 0 \\
+	1 \amp 0.5 \amp 0 \\
+	0 \amp 0 \amp 1 \\
+	\end{array}\right]
+	</m> and compute several powers of <m>D</m> below.
+	<sage>
+	  <input>
+	  </input>
+	</sage>
+	Determine whether <m>D</m> is a positive matrix. </p></li>
+
+	<li><p> Find the eigenvalues of <m>D</m> and then find the
+	steady-state vectors.  Is there a unique steady-state
+	vector? </p></li>
+
+	<li><p> What happens to the Markov chain defined by <m>D</m>
+	with initial vector 
+	<m>\xvec_0 =\threevec{1}{0}{0}</m>?  What happens to the
+	Markov chain with initial vector
+	<m>\xvec_0=\threevec{0}{0}{1}</m>.  </p></li>
+
+	<li><p> Explain how the matrices <m>C</m> and <m>D</m>, which
+	we have considered in this activity, relate to the
+	Perron-Frobenius theorem. </p></li>
+      </ol></p>
+      </statement>
+                    <solution>
+	<p><ol marker="a.">
+	  <li><p> We find that <m>C</m> has eigenvalues
+	  <m>\lambda_1=1</m> and <m>\lambda_2 = -\frac12</m> with
+	  eigenvectors <m>\vvec_1=\twovec12</m> and <m>\vvec_2 =
+	  \twovec{-1}{1}</m>.  Therefore, the unique steady-state
+	  vector is <m>\qvec=\twovec{\frac13}{\frac23}</m> for this is
+	  the only probability vector in the eigenspace
+	  <m>E_1</m>. </p></li>
+
+	  <li><p> We see that the Markov chain converges to the
+	  steady-state vector <m>\qvec=\twovec{\frac13}{\frac23}</m>
+	  as the Perron-Frobenius theorem tells us to
+	  expect. </p></li> 
+
+	  <li><p> Another Markov chain converges to the unique
+	  steady-state vector <m>\qvec=\twovec{\frac13}{\frac23}</m>
+	  as the Perron-Frobenius theorem tells us to
+	  expect. </p></li>
+
+	  <li><p> The matrix <m>D</m> is not positive because the
+	  first two entries in the bottom row of any
+	  power <m>D^k</m> are zero. </p></li>
+
+	  <li><p> The eigenvalues are <m>\lambda_1=1</m>, which has
+	  multiplicity two, and <m>\lambda_2=-1</m>.  The eigenspace
+	  <m>E_1</m> is two-dimensional and spanned by the probability
+	  vectors <m>\qvec_1=\threevec{\frac13}{\frac23}0</m> and
+	  <m>\qvec_2=\threevec001</m>.  Both of these vectors are
+	  steady-state vectors so there is not a unique steady-state
+	  vector. </p></li>
+
+	  <li><p> If <m>\xvec_0=\threevec100</m>, then the Markov
+	  chain converges to
+	  <m>\qvec_1=\threevec{\frac13}{\frac23}0</m>.  If
+	  <m>\xvec_0=\threevec001</m>, then the Markov 
+	  chain converges to
+	  <m>\qvec_1=\threevec001</m>.  </p></li>
+
+	  <li><p> Because <m>C</m> is a positive matrix, the
+	  Perron-Frobenius theorem tells us that there is a unique
+	  steady-state vector to which any Markov chain will
+	  converge.  Because <m>D</m> is not a positive matrix, the
+	  Perron-Frobenius theorem does not tell us anything, and,
+	  indeed, we see that there is not a unique steady-state
+	  vector and different Markov chains can converge to different
+	  vectors. </p></li>
+	</ol></p>
+      </solution>
+                    
+                </exercise>
+            </page>
+
+        </worksheet>
+    </article>
+</pretext>

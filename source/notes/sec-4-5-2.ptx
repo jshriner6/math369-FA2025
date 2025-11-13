@@ -1,0 +1,208 @@
+<pretext>
+    <article xml:id="notes">
+        <worksheet xml:id="sec-4-5-2">
+        <title><m>\S 4.5</m>: Perron-Frobenius Theorem</title>
+            <page>
+                <exercise workspace="2in">
+                    <title>Motivation: Perron-Frobenius Theorem</title>
+                    <statement>
+                        <p>
+                            
+                        </p>
+                    </statement>
+                </exercise>
+
+                <exercise>
+                    <title>Activity: Stochastic Matrices and Eigenvalues</title>
+                    <statement>
+      <p> Consider the matrices
+      <me>
+	A=\left[\begin{array}{rr}
+	0 \amp 1 \\
+	1 \amp 0 \\
+	\end{array}\right],\qquad
+	B=\left[\begin{array}{rr}
+	0.4 \amp 0.3 \\
+	0.6 \amp 0.7 \\
+	\end{array}\right]
+      </me>.
+      <ol marker="a.">
+	<li><p> Verify that both <m>A</m> and <m>B</m> are stochastic
+	matrices. </p></li>
+
+	<li><p> Find the eigenvalues of <m>A</m> and then find a
+	steady-state vector for <m>A</m>.  </p></li>
+
+	<li><p> We will form the Markov chain beginning with the
+	vector <m>\xvec_0 = \twovec{1}{0}</m> and defining
+	<m>\xvec_{k+1} = A\xvec_k</m>.  The Sage cell below 
+	constructs the first <m>N</m> terms of the Markov chain with
+	the command <c>markov_chain(A, x0, N)</c>.  Define the matrix
+	<c>A</c> and vector <c>x0</c> and evaluate the cell to find
+	the first 10 terms of the Markov chain.
+	<sage>
+	  <input>
+def markov_chain(A, x0, N):
+    for i in range(N):
+        x0 = A*x0
+        print (x0)
+## define the matrix A and x0
+A =
+x0 =
+markov_chain(A, x0, 10)
+	  </input>
+	</sage>
+	What do you notice about the Markov chain?  Does it converge
+	to the steady-state vector for <m>A</m>? </p></li>
+
+	<li><p> Now find the eigenvalues of <m>B</m> along with a
+	steady-state vector for <m>B</m>. </p></li>
+
+	<li><p> As before, find the first 10 terms in the Markov chain
+	beginning with <m>\xvec_0 = \twovec{1}{0}</m> and
+	<m>\xvec_{k+1} = B\xvec_k</m>.  What do you notice about the
+	Markov chain?  Does it converge to the steady-state vector for
+	<m>B</m>? </p></li>
+
+	<li><p> What condition on the eigenvalues of a stochastic
+	matrix will guarantee that a Markov chain will converge to a
+	steady-state vector? </p></li>
+      </ol></p>
+      </statement>
+
+                    
+                </exercise>
+
+            </page>
+
+            <page>
+                <exercise workspace="2in">
+                    <title>Facts: Stochastic Matrices and Eigenvalues</title>
+                    <statement>
+                        <p>
+                            
+                        </p>
+                    </statement>
+                    
+                    
+                </exercise>
+
+                <exercise workspace="2in">
+                    <title>Definition: Positive Matrix</title>
+                    <statement>
+                        <p>
+                            
+                        </p>
+                    </statement>
+                    
+                    
+                </exercise>
+                <exercise workspace="2in">
+                    <title>Examples: Positive Matrix</title>
+                    <statement>
+                        <p>
+                            Let <m>A = \left[\begin{array}{rr}
+	0 \amp 1 \\
+	1 \amp 0 \\
+	\end{array}\right]
+	</m>, <m>B = \left[\begin{array}{rr}
+	0.4 \amp 0.3 \\
+	0.6 \amp 0.7 \\
+	\end{array}\right]
+	</m> , <m>C = \left[\begin{array}{rr}
+	0 \amp 0.5 \\
+	1 \amp 0.5 \\
+	\end{array}\right]
+	</m>.
+                        </p>
+                    </statement>
+                    
+                    
+                </exercise>
+
+                <exercise workspace="2in">
+                    <title>Fact: Perron-Frobenius</title>
+                    <statement>
+                        <p>
+                            If <m>A</m> is a positive stochastic matrix, then
+                        </p>
+                    </statement>
+                    
+                    
+                </exercise>
+            </page>
+
+            <page>
+                <exercise >
+                    <title>Activity: Perron-Frobenius Theorem</title>
+                    <statement>  <p> We will explore the meaning of the
+      Perron-Frobenius theorem in this activity. 
+      <ol marker="a.">
+	<li><p> Consider the matrix
+	<m>C = \left[\begin{array}{rr}
+	0 \amp 0.5 \\
+	1 \amp 0.5 \\
+	\end{array}\right]
+	</m>.
+	This is a positive matrix, as we saw in the
+	previous example.  Find the eigenvectors of <m>C</m> and
+	verify there is a unique
+	steady-state vector.</p></li>
+
+	<li><p> Using the Sage cell below, construct the Markov chain
+	with initial vector <m>\xvec_0= \twovec{1}{0}</m> and describe
+	what happens to <m>\xvec_k</m> as <m>k</m> becomes large.
+	<sage>
+	  <input>
+def markov_chain(A, x0, N):
+    for i in range(N):
+        x0 = A*x0
+        print (x0)
+## define the matrix C and x0
+C =
+x0 =
+markov_chain(C, x0, 10)
+	  </input>
+	</sage>
+	</p></li>
+
+	<li><p> Construct another Markov chain with initial vector
+	<m>\xvec_0=\twovec{0.2}{0.8}</m> and describe what happens to
+	<m>\xvec_k</m> as <m>k</m> becomes large. </p></li>
+
+	<li><p> Consider the matrix
+	<m>D = \left[\begin{array}{rrr}
+	0 \amp 0.5 \amp 0 \\
+	1 \amp 0.5 \amp 0 \\
+	0 \amp 0 \amp 1 \\
+	\end{array}\right]
+	</m> and compute several powers of <m>D</m> below.
+	<sage>
+	  <input>
+	  </input>
+	</sage>
+	Determine whether <m>D</m> is a positive matrix. </p></li>
+
+	<li><p> Find the eigenvalues of <m>D</m> and then find the
+	steady-state vectors.  Is there a unique steady-state
+	vector? </p></li>
+
+	<li><p> What happens to the Markov chain defined by <m>D</m>
+	with initial vector 
+	<m>\xvec_0 =\threevec{1}{0}{0}</m>?  What happens to the
+	Markov chain with initial vector
+	<m>\xvec_0=\threevec{0}{0}{1}</m>.  </p></li>
+
+	<li><p> Explain how the matrices <m>C</m> and <m>D</m>, which
+	we have considered in this activity, relate to the
+	Perron-Frobenius theorem. </p></li>
+      </ol></p>
+      </statement>
+                    
+                    
+                </exercise>
+            </page>
+
+        </worksheet>
+    </article>
+</pretext>

@@ -1,0 +1,280 @@
+<pretext>
+    <article xml:id="worksheet">
+        <worksheet xmlns:xi="http://www.w3.org/2001/XInclude" margin="1in" bottom="1.25cm" xml:id="lab-6">
+            <title>Lab 6: Google's PageRank Algorithm</title>
+        
+            <introduction>
+                <p>
+                    Complete the following exercises in
+                    groups of 2 or 3 students including complete explanations of your
+                    work.  You should write directly on this handout (if additional pages are necessary, please
+                    make sure they are well-organized), and you
+                    only need to submit one report to Gradescope.  Make sure you indicate everyone in your group
+                    in your submission to Gradescope.
+                </p>
+                <p>
+                    When I recently googled the phrase “linear algebra”, Google told me there were about
+78.5 million results, which took less than half a second to produce. It also told me that the Wikipedia page was the one most likely to be useful to
+me. How does Google decide to recommend that page above all the others? Well, Google
+computes a quantity called <term>PageRank</term> for each page on the internet. Pages with a higher
+PageRank are deemed to be more valuable. The key to computing PageRank lies in an
+algorithm that we'll study in this lab.
+                </p>
+                <p>
+One could determine the importance of a web page by allowing people to vote for
+their favorite web pages. However, Google wants their rankings to be free of any human
+bias, so it examines the structure of the internet itself to rank pages. Here is the basic idea: if
+my home page is valuable, many other pages will link to it. Of course, I could try to sway
+the rankings by creating lots of pages that link to my home page. So Google views a
+page as being more valuable when valuable pages link to it. For instance, if three of my
+friends link to my home page, that means three people think I have a valuable page. But if
+nytimes.com, amazon.com, and beyonce.com link to my page, that probably means more
+people will find my page to be valuable, so I should have a higher PageRank.
+                </p>
+                <p>
+                We'll describe here how to compute PageRank, then work through several examples.
+                Each webpage has a certain value of PageRank that we denote by <m>x_i</m>.
+            Each page divides its PageRank value into equal portions, one for each
+outgoing link. Each page then gives one portion of its PageRank to each page it links to.
+A page's PageRank is then the sum of all the PageRank it receives from pages that link to
+it.
+            </p>
+            <p>
+                 Let's look at some examples to make this more concrete.
+If you visit this <url href="http://gvsu.edu/s/0To">Sage page</url>, you will find some Sage code that
+will be helpful for this lab. Be sure to evaluate the first cell to gain access to useful commands, and then don't use that cell
+again. Whenever you use Sage to compute something to answer a question, you should paste a screenshot of your code and result.
+                </p>
+            </introduction>
+       
+    
+                <exercise>
+                    <introduction>
+                        <p>
+                            Suppose that our Internet only has three pages with links as shown below. Page
+2 only links to page 1 so it gives all of its PageRank <m>x_2</m> to Page 1. Page 3 has two
+outgoing links so it divides its PageRank <m>x_3</m> into two equal pieces and gives half its
+PageRank <m>\frac{x_3}{2}</m> to Page 1. The PageRank <m>x_1</m> is therefore
+                            <me>
+                                x_1 = x_2 + \frac{x_3}{2}
+                            </me>.
+                        
+                            
+                        </p>
+                        <image source="internet1.png" width="25%">
+                            <shortdescription>Directed graph showing pages 1 and 2 and 1 and 3 are connected in both directions,
+                                while page 3 is connected to page 2, but page 2 is not connected to page 3.  </shortdescription>
+                        </image>
+                    </introduction>
+
+                    <task workspace="1in">
+                        <statement>
+                            <p>
+                                Find similar expressions for <m>x_2</m> and <m>x_3</m>.
+                            </p>
+                        </statement>
+                    </task>
+
+                    <task workspace="1in">
+                        <statement>
+                            <p>
+                                If we write <m>\xvec = \threevec{x_1}{x_2}{x_3}</m>, 
+                                find the “Google matrix” <m>G</m> such that <m>\xvec = G \xvec</m>.
+                            </p>
+                        </statement>
+                    </task>
+
+                    <task workspace="0.5in">
+                        <statement>
+                            <p>
+                               Notice that the equation <m>\xvec = G \xvec</m> is the condition that <m>\xvec</m> be an eigenvector of <m>G</m>. What
+is the associated eigenvalue? 
+                            </p>
+                        </statement>
+                    </task>
+                    <task workspace="1in">
+                        <statement>
+                            <p>
+                                Find the vectors <m>\xvec</m> that satisfy <m>\xvec = G \xvec</m>.
+                            </p>
+                        </statement>
+                    </task>
+
+                    <task workspace="1in">
+                        <statement>
+                            <p>
+                                You should notice that the solutions from the previous part form a 1-dimensional subspace. Since we're just interested
+in the relative size of the entries, we can choose any one of them as the <term>PageRank
+vector</term>, but only one is a probability vector. Identify the probability vector, and use it to identify which of the three web pages has the highest PageRank and which has the
+smallest.
+                            </p>
+                        </statement>
+                    </task>
+
+                    <task workspace="1in">
+                        <statement>
+                            <p>
+                                Explain why <m>G</m> is a stochastic matrix. Why will this always be the case for any
+internet, assuming that each page has outgoing links?
+                            </p>
+                        </statement>
+                    </task>
+
+                    <task workspace="1in">
+                        <statement>
+                            <p>
+                                Does <m>G</m> satisfy the hypothesis of the Perron-Frobenius theorem? Explain why or
+why not. What does this tell us about the behavior of a Markov chain constructed
+using <m>G</m>?
+                            </p>
+                        </statement>
+                    </task>
+
+                    <task workspace="1in">
+                        <statement>
+                            <p>
+                                The first cell on the page of Sage cells loaded a function <c>markov(A, x0, n)</c> that
+prints <m>n</m> vectors in the Markov chain defined by a stochastic matrix <m>A</m> and initial
+state vector <m>x_0</m>. Starting with the initial state vector <m>x_0 = \threevec{1}{0}{0}</m>,
+generate a Markov
+chain with <m>20</m> vectors <m>x_1, \dots, x_{20}</m>. What do you notice about the vectors <m>x_k</m>? How
+does this demonstrate the Perron-Frobenius theorem?
+                            </p>
+                        </statement>
+                    </task>
+                    
+                </exercise>
+         
+            <p>
+                <em>Note</em>: Google is estimated to know about 400 billion (<m>4 \times 10^{11}</m> pages), so the real Google matrix
+
+is 400 billion <m>\times</m> 400 billion. That's big, but real applications of linear algebra frequently use huge matrices. Finding the PageRank vector by finding a basis for
+
+the eigenspace <m>E_1</m> and using row reduction is not computationally feasible. However,
+the Perron-Frobenius theorem tells us that any Markov chain will converge to the
+PageRank vector!
+            </p>
+
+         
+            <exercise workspace="6in">
+                <introduction>
+                    <p>
+                        Consider the Internet shown below.
+                    </p>
+                    <image source="internet2.png" width="40%">
+                        <shortdescription>A directed graph with 8 nodes showing the connections between each.</shortdescription>
+                    </image>
+                    <p>
+                        The Google matrix for this internet was defined to be <c>G8</c> when you evaluated the
+first cell. Create a Markov chain with a sufficient number of terms to converge.
+What do you find for the PageRank vector? Which page is most valuable? Which
+page is least valuable?
+                    </p>
+                </introduction>
+                
+            </exercise>
+
+            <exercise>
+                <introduction>
+                    <p>
+                        Now consider the new Internet shown below.
+                    </p>
+                    <image source="internet3.png" width="40%">
+                        <shortdescription>A directed graph show 1 is connected to 2 is connected to 3 is connected to 4 is connected to 5 is connected to 1.</shortdescription>
+                    </image>
+                </introduction>
+                <task workspace="2in">
+                    <statement>
+                        <p>
+                            Find the Google matrix <m>G</m> of this internet.
+                        </p>
+                    </statement>
+                </task>
+                <task workspace="1in">
+                    <statement>
+                        <p>
+                            What happens in a Markov chain that begins with <m>\xvec_0 = \fivevec10000</m>?
+                        </p>
+                    </statement>
+                </task>
+                <task workspace="2in">
+                    <statement>
+                        <p>
+                            By inspecting this internet, state what you feel the PageRank vector should be. Is
+any page more important than the others? Explain.
+                        </p>
+                    </statement>
+                </task>
+
+                
+            </exercise>
+            <exercise>
+                <introduction>
+                    <p>
+                        As the last example shows, the Perron-Frobenius theorem may not always apply
+given the structure of the internet. This means that a Markov chain may not converge or it may converge to a vector with zero entries. For this reason, Google
+modifies the Google matrix so that the Perron-Frobenius theorem always applies. Let's describe
+what happens.
+                    </p>
+                    <p>
+If there are <m>n</m> web pages, define the matrix
+<me>
+
+H_n = \left[\begin{array}{rrrr}
+\frac1n \amp \frac1n \amp \ldots \amp \frac1n \\
+\frac1n \amp \frac1n \amp \ldots \amp \frac1n \\
+\vdots \amp \vdots \amp \ddots \amp \vdots \\
+\frac1n \amp \frac1n \amp \ldots \amp \frac1n \\
+\end{array}\right]
+
+</me>
+
+This would correspond to an Internet in which every page is linked to every other
+page, including itself. We now define a modified Google matrix <m>G'</m> by choosing a
+parameter <m>\alpha</m>, which is a trade secret but is suspected to be close to <m>\alpha = 0.85</m>, and
+defining
+<me>
+    G' = \alpha G + (1-\alpha)H_n
+</me>,
+which when we take <m>\alpha = 0.85</m> becomes
+<me>
+    G' = 0.85 G + 0.15 H_n
+</me>.
+In other words, <m>G'</m> is obtained by mixing <m>85 \%</m> of <m>G</m> with <m>15 \%</m> of <m>H_n</m>. You may use the
+
+Sage command <c>modified_google_matrix(G)</c> to produce <m>G'</m>.
+
+
+                    </p>
+                </introduction>
+
+                <task workspace="2in">
+                    <statement>
+                        <p>
+                            Go back and revisit the Internet having five pages linked together in a cycle. Construct the modified Google matrix <m>G'</m> and explain why the Perron-Frobenius theorem now applies.
+                        </p>
+                    </statement>
+                </task>
+                <task workspace="2in">
+                    <statement>
+                        <p>
+                            What do you now find for the PageRank vector using G'? Does this agree with what you think the PageRank vector should be?
+                        </p>
+                    </statement>
+                </task>
+
+                <task workspace="2in">
+                    <statement>
+                        <p>
+                            Revisit the second Internet whose Google matrix is <c>G8</c> and construct its modified Google
+matrix, then its PageRank vector. Which page is most important and which is least
+important? Do the results using the modified Google matrix differ significantly from
+the original results obtained just using <c>G8</c>?
+                        </p>
+                    </statement>
+                </task>
+            </exercise>
+           
+        </worksheet>
+    </article>
+</pretext>

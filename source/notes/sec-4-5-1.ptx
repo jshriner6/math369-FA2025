@@ -1,0 +1,151 @@
+<pretext>
+    <article xml:id="notes">
+        <worksheet xml:id="sec-4-5-1">
+        <title><m>\S 4.5</m>: Stochastic Matrices and Markov Chains</title>
+            <page>
+                <exercise workspace="2in">
+                    <title>Motivation: Markov Chains</title>
+                    <statement>
+                        <p>
+                            
+                        </p>
+                    </statement>
+                </exercise>
+
+                <exercise workspace=".5in">
+                    <title>Preview Activity 4.5.1</title>
+                    <introduction>
+        <p> Suppose that our rental car company rents from two locations
+        <m>P</m> and <m>Q</m>.  We find that 80% of the cars rented from
+        location <m>P</m> are returned to <m>P</m> while the other 20% are
+        returned to <m>Q</m>.  For cars rented from location <m>Q</m>,
+        60% are returned to <m>Q</m> and 40% to <m>P</m>. </p>
+
+        <p> We will use <m>P_k</m> and <m>Q_k</m> to denote the number
+        of cars at the two locations on day <m>k</m>.  The following
+        day, the number of cars at <m>P</m> equals 80% of <m>P_k</m> and
+        40% of <m>Q_k</m>.  This shows that
+        <me>
+	  \begin{aligned}
+	  P_{k+1} \amp {}={} 0.8 P_k + 0.4Q_k \\
+	  Q_{k+1} \amp {}={} 0.2 P_k + 0.6Q_k\text{.} \\
+	  \end{aligned}
+        </me>
+        </p>
+      </introduction>
+
+      <task >
+        <statement>
+	  <p> If we use the vector <m>\xvec_k =
+	  \twovec{P_k}{Q_k}</m> to represent the distribution of cars on
+	  day <m>k</m>, find a matrix <m>A</m> such that
+	  <m>\xvec_{k+1} = A\xvec_k</m>. </p>
+        </statement>
+        
+        
+      </task>
+
+      <task >
+        <statement>
+	  <p> Find the eigenvalues and associated eigenvectors of
+	  <m>A</m>.  </p>
+        </statement>
+       
+        
+      </task>
+
+      <task >
+        <statement>
+	  <p> Suppose that there are initially 1500 cars, all of
+	  which are at location <m>P</m>.  Write the vector
+	  <m>\xvec_0</m> as a linear combination of eigenvectors of
+	  <m>A</m>. </p>
+        </statement>
+        
+        
+      </task>
+
+      <task>
+        <statement>
+	  <p> Write the vectors <m>\xvec_k</m> as a linear
+	  combination of eigenvectors of <m>A</m>. </p>
+        </statement>
+       
+        
+      </task>
+
+      <task >
+        <statement>
+	  <p> What happens to the distribution of cars after a long
+	  time? </p>
+        </statement>
+        
+        
+      </task>
+                    
+                    
+                </exercise>
+
+            </page>
+
+            <page>
+                <exercise workspace="2in">
+                    <title>Definition: Probability Vectors and Stochastic Matrices</title>
+                    <statement>
+                        <p>
+                            
+                        </p>
+                    </statement>
+                    
+                    
+                </exercise>
+
+                <exercise workspace="1in">
+                    <title>A First Example: Stochasic Matrices</title>
+                    <statement>
+      <p> Suppose you live in a country with three political parties
+      <m>P</m>, <m>Q</m>, and <m>R</m>.  We use <m>P_k</m>,
+      <m>Q_k</m>, and <m>R_k</m> to denote the percentage of voters
+      voting for that party in election <m>k</m>.  </p>
+
+      <sidebyside widths="55% 45%">
+	<p> Voters will change parties from one election to the next as
+	shown in the figure.  We see that 60% of voters stay with the
+	same party.  However, 40% of those who vote for party <m>P</m>
+	will vote for party <m>Q</m> in the next election. </p>
+
+	<image source="images/stoch-parties">
+        <shortdescription>A directed graph showing illustrating the system of equations in this example.</shortdescription>
+    </image>
+      </sidebyside>
+      <me>
+      \begin{alignedat}{6}
+      P_{k+1} \amp {}={} 0.6P_k \amp \amp \amp + 0.2 R_k \\
+      Q_{k+1} \amp {}={} 0.4P_k \amp {}+{} \amp 0.6Q_k \amp {}+{}
+      0.2R_k \\
+      R_{k+1} \amp {}={} \amp {}{} \amp 0.4Q_k \amp {}+{}
+      0.6R_k\\
+      \end{alignedat}
+    </me>
+    </statement>
+                    
+                    
+                </exercise>
+            </page>
+
+            <page>
+                <exercise>
+                    <title>Definition: Markov Chain and Stationary Vector</title>
+                    <statement>
+                        <p>
+                            
+                        </p>
+                    </statement>
+                    
+                    
+                </exercise>
+            </page>
+
+        </worksheet>
+    </article>
+</pretext>
