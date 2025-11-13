@@ -3788,6 +3788,132 @@ var ptx_lunr_docs = [
   "number": "4",
   "title": "Visualizing System Behavior: Phase Portraits.",
   "body": " Visualizing System Behavior: Phase Portraits     A sample trajectory on a phase portrait.      See Figure 4.4.1 .   "
+},
+{
+  "id": "sec-4-5-1",
+  "level": "1",
+  "url": "sec-4-5-1.html",
+  "type": "Worksheet",
+  "number": "",
+  "title": "<span class=\"process-math\">\\(\\S 4.5\\text{:}\\)<\/span> Stochastic Matrices and Markov Chains",
+  "body": " : Stochastic Matrices and Markov Chains    Motivation: Markov Chains        Preview Activity 4.5.1   Suppose that our rental car company rents from two locations and . We find that 80% of the cars rented from location are returned to while the other 20% are returned to . For cars rented from location , 60% are returned to and 40% to .  We will use and to denote the number of cars at the two locations on day . The following day, the number of cars at equals 80% of and 40% of . This shows that      If we use the vector to represent the distribution of cars on day , find a matrix such that .      Find the eigenvalues and associated eigenvectors of .      Suppose that there are initially 1500 cars, all of which are at location . Write the vector as a linear combination of eigenvectors of .      Write the vectors as a linear combination of eigenvectors of .      What happens to the distribution of cars after a long time?        Definition: Probability Vectors and Stochastic Matrices        A First Example: Stochasic Matrices   Suppose you live in a country with three political parties , , and . We use , , and to denote the percentage of voters voting for that party in election .   Voters will change parties from one election to the next as shown in the figure. We see that 60% of voters stay with the same party. However, 40% of those who vote for party will vote for party in the next election.   A directed graph showing illustrating the system of equations in this example.          Definition: Markov Chain and Stationary Vector        "
+},
+{
+  "id": "sec-4-5-1-2-1",
+  "level": "2",
+  "url": "sec-4-5-1.html#sec-4-5-1-2-1",
+  "type": "Worksheet Exercise",
+  "number": "1",
+  "title": "Motivation: Markov Chains.",
+  "body": " Motivation: Markov Chains      "
+},
+{
+  "id": "sec-4-5-1-2-2",
+  "level": "2",
+  "url": "sec-4-5-1.html#sec-4-5-1-2-2",
+  "type": "Worksheet Exercise",
+  "number": "2",
+  "title": "Preview Activity 4.5.1.",
+  "body": " Preview Activity 4.5.1   Suppose that our rental car company rents from two locations and . We find that 80% of the cars rented from location are returned to while the other 20% are returned to . For cars rented from location , 60% are returned to and 40% to .  We will use and to denote the number of cars at the two locations on day . The following day, the number of cars at equals 80% of and 40% of . This shows that      If we use the vector to represent the distribution of cars on day , find a matrix such that .      Find the eigenvalues and associated eigenvectors of .      Suppose that there are initially 1500 cars, all of which are at location . Write the vector as a linear combination of eigenvectors of .      Write the vectors as a linear combination of eigenvectors of .      What happens to the distribution of cars after a long time?    "
+},
+{
+  "id": "sec-4-5-1-3-1",
+  "level": "2",
+  "url": "sec-4-5-1.html#sec-4-5-1-3-1",
+  "type": "Worksheet Exercise",
+  "number": "3",
+  "title": "Definition: Probability Vectors and Stochastic Matrices.",
+  "body": " Definition: Probability Vectors and Stochastic Matrices      "
+},
+{
+  "id": "sec-4-5-1-3-2",
+  "level": "2",
+  "url": "sec-4-5-1.html#sec-4-5-1-3-2",
+  "type": "Worksheet Exercise",
+  "number": "4",
+  "title": "A First Example: Stochasic Matrices.",
+  "body": " A First Example: Stochasic Matrices   Suppose you live in a country with three political parties , , and . We use , , and to denote the percentage of voters voting for that party in election .   Voters will change parties from one election to the next as shown in the figure. We see that 60% of voters stay with the same party. However, 40% of those who vote for party will vote for party in the next election.   A directed graph showing illustrating the system of equations in this example.      "
+},
+{
+  "id": "sec-4-5-1-4-1",
+  "level": "2",
+  "url": "sec-4-5-1.html#sec-4-5-1-4-1",
+  "type": "Worksheet Exercise",
+  "number": "5",
+  "title": "Definition: Markov Chain and Stationary Vector.",
+  "body": " Definition: Markov Chain and Stationary Vector      "
+},
+{
+  "id": "sec-4-5-2",
+  "level": "1",
+  "url": "sec-4-5-2.html",
+  "type": "Worksheet",
+  "number": "",
+  "title": "<span class=\"process-math\">\\(\\S 4.5\\text{:}\\)<\/span> Perron-Frobenius Theorem",
+  "body": " : Perron-Frobenius Theorem    Motivation: Perron-Frobenius Theorem        Activity: Stochastic Matrices and Eigenvalues   Consider the matrices .  Verify that both and are stochastic matrices.  Find the eigenvalues of and then find a steady-state vector for .  We will form the Markov chain beginning with the vector and defining . The Sage cell below constructs the first terms of the Markov chain with the command markov_chain(A, x0, N) . Define the matrix A and vector x0 and evaluate the cell to find the first 10 terms of the Markov chain. What do you notice about the Markov chain? Does it converge to the steady-state vector for ?  Now find the eigenvalues of along with a steady-state vector for .  As before, find the first 10 terms in the Markov chain beginning with and . What do you notice about the Markov chain? Does it converge to the steady-state vector for ?  What condition on the eigenvalues of a stochastic matrix will guarantee that a Markov chain will converge to a steady-state vector?        Facts: Stochastic Matrices and Eigenvalues        Definition: Positive Matrix        Examples: Positive Matrix   Let , , .     Fact: Perron-Frobenius   If is a positive stochastic matrix, then       Activity: Perron-Frobenius Theorem   We will explore the meaning of the Perron-Frobenius theorem in this activity.  Consider the matrix . This is a positive matrix, as we saw in the previous example. Find the eigenvectors of and verify there is a unique steady-state vector.  Using the Sage cell below, construct the Markov chain with initial vector and describe what happens to as becomes large.   Construct another Markov chain with initial vector and describe what happens to as becomes large.  Consider the matrix and compute several powers of below. Determine whether is a positive matrix.  Find the eigenvalues of and then find the steady-state vectors. Is there a unique steady-state vector?  What happens to the Markov chain defined by with initial vector ? What happens to the Markov chain with initial vector .  Explain how the matrices and , which we have considered in this activity, relate to the Perron-Frobenius theorem.      "
+},
+{
+  "id": "sec-4-5-2-2-1",
+  "level": "2",
+  "url": "sec-4-5-2.html#sec-4-5-2-2-1",
+  "type": "Worksheet Exercise",
+  "number": "1",
+  "title": "Motivation: Perron-Frobenius Theorem.",
+  "body": " Motivation: Perron-Frobenius Theorem      "
+},
+{
+  "id": "sec-4-5-2-2-2",
+  "level": "2",
+  "url": "sec-4-5-2.html#sec-4-5-2-2-2",
+  "type": "Worksheet Exercise",
+  "number": "2",
+  "title": "Activity: Stochastic Matrices and Eigenvalues.",
+  "body": " Activity: Stochastic Matrices and Eigenvalues   Consider the matrices .  Verify that both and are stochastic matrices.  Find the eigenvalues of and then find a steady-state vector for .  We will form the Markov chain beginning with the vector and defining . The Sage cell below constructs the first terms of the Markov chain with the command markov_chain(A, x0, N) . Define the matrix A and vector x0 and evaluate the cell to find the first 10 terms of the Markov chain. What do you notice about the Markov chain? Does it converge to the steady-state vector for ?  Now find the eigenvalues of along with a steady-state vector for .  As before, find the first 10 terms in the Markov chain beginning with and . What do you notice about the Markov chain? Does it converge to the steady-state vector for ?  What condition on the eigenvalues of a stochastic matrix will guarantee that a Markov chain will converge to a steady-state vector?    "
+},
+{
+  "id": "sec-4-5-2-3-1",
+  "level": "2",
+  "url": "sec-4-5-2.html#sec-4-5-2-3-1",
+  "type": "Worksheet Exercise",
+  "number": "3",
+  "title": "Facts: Stochastic Matrices and Eigenvalues.",
+  "body": " Facts: Stochastic Matrices and Eigenvalues      "
+},
+{
+  "id": "sec-4-5-2-3-2",
+  "level": "2",
+  "url": "sec-4-5-2.html#sec-4-5-2-3-2",
+  "type": "Worksheet Exercise",
+  "number": "4",
+  "title": "Definition: Positive Matrix.",
+  "body": " Definition: Positive Matrix      "
+},
+{
+  "id": "sec-4-5-2-3-3",
+  "level": "2",
+  "url": "sec-4-5-2.html#sec-4-5-2-3-3",
+  "type": "Worksheet Exercise",
+  "number": "5",
+  "title": "Examples: Positive Matrix.",
+  "body": " Examples: Positive Matrix   Let , , .   "
+},
+{
+  "id": "sec-4-5-2-3-4",
+  "level": "2",
+  "url": "sec-4-5-2.html#sec-4-5-2-3-4",
+  "type": "Worksheet Exercise",
+  "number": "6",
+  "title": "Fact: Perron-Frobenius.",
+  "body": " Fact: Perron-Frobenius   If is a positive stochastic matrix, then   "
+},
+{
+  "id": "sec-4-5-2-4-1",
+  "level": "2",
+  "url": "sec-4-5-2.html#sec-4-5-2-4-1",
+  "type": "Worksheet Exercise",
+  "number": "7",
+  "title": "Activity: Perron-Frobenius Theorem.",
+  "body": " Activity: Perron-Frobenius Theorem   We will explore the meaning of the Perron-Frobenius theorem in this activity.  Consider the matrix . This is a positive matrix, as we saw in the previous example. Find the eigenvectors of and verify there is a unique steady-state vector.  Using the Sage cell below, construct the Markov chain with initial vector and describe what happens to as becomes large.   Construct another Markov chain with initial vector and describe what happens to as becomes large.  Consider the matrix and compute several powers of below. Determine whether is a positive matrix.  Find the eigenvalues of and then find the steady-state vectors. Is there a unique steady-state vector?  What happens to the Markov chain defined by with initial vector ? What happens to the Markov chain with initial vector .  Explain how the matrices and , which we have considered in this activity, relate to the Perron-Frobenius theorem.    "
 }
 ]
 
