@@ -3968,6 +3968,78 @@ var ptx_lunr_docs = [
   "number": "7",
   "title": "Activity: Perron-Frobenius Theorem.",
   "body": " Activity: Perron-Frobenius Theorem   We will explore the meaning of the Perron-Frobenius theorem in this activity.  Consider the matrix . This is a positive matrix, as we saw in the previous example. Find the eigenvectors of and verify there is a unique steady-state vector.  Using the Sage cell below, construct the Markov chain with initial vector and describe what happens to as becomes large.   Construct another Markov chain with initial vector and describe what happens to as becomes large.  Consider the matrix and compute several powers of below. Determine whether is a positive matrix.  Find the eigenvalues of and then find the steady-state vectors. Is there a unique steady-state vector?  What happens to the Markov chain defined by with initial vector ? What happens to the Markov chain with initial vector .  Explain how the matrices and , which we have considered in this activity, relate to the Perron-Frobenius theorem.    "
+},
+{
+  "id": "sec-4-5-2-sols",
+  "level": "1",
+  "url": "sec-4-5-2-sols.html",
+  "type": "Worksheet",
+  "number": "",
+  "title": "<span class=\"process-math\">\\(\\S 4.5\\text{:}\\)<\/span> Perron-Frobenius Theorem (Solutions)",
+  "body": " : Perron-Frobenius Theorem (Solutions)    Motivation: Perron-Frobenius Theorem       If is a stochastic matrix and an associated Markov chain, is there a way to determine if converges to a stationary vector?     Activity: Stochastic Matrices and Eigenvalues   Consider the matrices .  Verify that both and are stochastic matrices.  Find the eigenvalues of and then find a steady-state vector for .  We will form the Markov chain beginning with the vector and defining . The Sage cell below constructs the first terms of the Markov chain with the command markov_chain(A, x0, N) . Define the matrix A and vector x0 and evaluate the cell to find the first 10 terms of the Markov chain. What do you notice about the Markov chain? Does it converge to the steady-state vector for ?  Now find the eigenvalues of along with a steady-state vector for .  As before, find the first 10 terms in the Markov chain beginning with and . What do you notice about the Markov chain? Does it converge to the steady-state vector for ?  What condition on the eigenvalues of a stochastic matrix will guarantee that a Markov chain will converge to a steady-state vector?      If we add the entries in each column of and each column of , we obtain . Also, all the entries in both matrices are nonnegative.  The matrix has the eigenvalues and with associated eigenvectors and . The steady-state vector is as this is the unique probability vector in .  The terms in the Markov chain are so the chain does not converge to any vector, much less the steady-state vector.  The matrix has eigenvalues and with associated eigenvectors and . The unique steady-state vector is since this is the only probability vector in .  Here we find which appears to be converging to the steady-state vector .  If there is one eigenvalue having multiplicity one with the other eigenvalues satisfying , we can guarantee that any Markov chain will converge to a unique steady-state vector.        Facts: Stochastic Matrices and Eigenvalues           is an eigenvalue of all stochastic matrices.     for all other eigenvalues, and if the inequality is strict, this implies any Markov chain will converge to a steady-state vector.    All stochastic matrices have at least one steady state vector , but may not converge to it.        Definition: Positive Matrix       The matrix is positive if either or some power has all positive entries.     Examples: Positive Matrix   Let , , .    See Example 4.5.5 .     Fact: Perron-Frobenius   If is a positive stochastic matrix, then    the eigenvalue satisfy and for all other eigenvalues. In particular, this means that has a unique positive steady-state vector and that every Markov chain defined by converges to .       Activity: Perron-Frobenius Theorem   We will explore the meaning of the Perron-Frobenius theorem in this activity.  Consider the matrix . This is a positive matrix, as we saw in the previous example. Find the eigenvectors of and verify there is a unique steady-state vector.  Using the Sage cell below, construct the Markov chain with initial vector and describe what happens to as becomes large.   Construct another Markov chain with initial vector and describe what happens to as becomes large.  Consider the matrix and compute several powers of below. Determine whether is a positive matrix.  Find the eigenvalues of and then find the steady-state vectors. Is there a unique steady-state vector?  What happens to the Markov chain defined by with initial vector ? What happens to the Markov chain with initial vector .  Explain how the matrices and , which we have considered in this activity, relate to the Perron-Frobenius theorem.      We find that has eigenvalues and with eigenvectors and . Therefore, the unique steady-state vector is for this is the only probability vector in the eigenspace .  We see that the Markov chain converges to the steady-state vector as the Perron-Frobenius theorem tells us to expect.  Another Markov chain converges to the unique steady-state vector as the Perron-Frobenius theorem tells us to expect.  The matrix is not positive because the first two entries in the bottom row of any power are zero.  The eigenvalues are , which has multiplicity two, and . The eigenspace is two-dimensional and spanned by the probability vectors and . Both of these vectors are steady-state vectors so there is not a unique steady-state vector.  If , then the Markov chain converges to . If , then the Markov chain converges to .  Because is a positive matrix, the Perron-Frobenius theorem tells us that there is a unique steady-state vector to which any Markov chain will converge. Because is not a positive matrix, the Perron-Frobenius theorem does not tell us anything, and, indeed, we see that there is not a unique steady-state vector and different Markov chains can converge to different vectors.      "
+},
+{
+  "id": "sec-4-5-2-sols-2-1",
+  "level": "2",
+  "url": "sec-4-5-2-sols.html#sec-4-5-2-sols-2-1",
+  "type": "Worksheet Exercise",
+  "number": "1",
+  "title": "Motivation: Perron-Frobenius Theorem.",
+  "body": " Motivation: Perron-Frobenius Theorem       If is a stochastic matrix and an associated Markov chain, is there a way to determine if converges to a stationary vector?   "
+},
+{
+  "id": "sec-4-5-2-sols-2-2",
+  "level": "2",
+  "url": "sec-4-5-2-sols.html#sec-4-5-2-sols-2-2",
+  "type": "Worksheet Exercise",
+  "number": "2",
+  "title": "Activity: Stochastic Matrices and Eigenvalues.",
+  "body": " Activity: Stochastic Matrices and Eigenvalues   Consider the matrices .  Verify that both and are stochastic matrices.  Find the eigenvalues of and then find a steady-state vector for .  We will form the Markov chain beginning with the vector and defining . The Sage cell below constructs the first terms of the Markov chain with the command markov_chain(A, x0, N) . Define the matrix A and vector x0 and evaluate the cell to find the first 10 terms of the Markov chain. What do you notice about the Markov chain? Does it converge to the steady-state vector for ?  Now find the eigenvalues of along with a steady-state vector for .  As before, find the first 10 terms in the Markov chain beginning with and . What do you notice about the Markov chain? Does it converge to the steady-state vector for ?  What condition on the eigenvalues of a stochastic matrix will guarantee that a Markov chain will converge to a steady-state vector?      If we add the entries in each column of and each column of , we obtain . Also, all the entries in both matrices are nonnegative.  The matrix has the eigenvalues and with associated eigenvectors and . The steady-state vector is as this is the unique probability vector in .  The terms in the Markov chain are so the chain does not converge to any vector, much less the steady-state vector.  The matrix has eigenvalues and with associated eigenvectors and . The unique steady-state vector is since this is the only probability vector in .  Here we find which appears to be converging to the steady-state vector .  If there is one eigenvalue having multiplicity one with the other eigenvalues satisfying , we can guarantee that any Markov chain will converge to a unique steady-state vector.    "
+},
+{
+  "id": "sec-4-5-2-sols-3-1",
+  "level": "2",
+  "url": "sec-4-5-2-sols.html#sec-4-5-2-sols-3-1",
+  "type": "Worksheet Exercise",
+  "number": "3",
+  "title": "Facts: Stochastic Matrices and Eigenvalues.",
+  "body": " Facts: Stochastic Matrices and Eigenvalues           is an eigenvalue of all stochastic matrices.     for all other eigenvalues, and if the inequality is strict, this implies any Markov chain will converge to a steady-state vector.    All stochastic matrices have at least one steady state vector , but may not converge to it.      "
+},
+{
+  "id": "sec-4-5-2-sols-3-2",
+  "level": "2",
+  "url": "sec-4-5-2-sols.html#sec-4-5-2-sols-3-2",
+  "type": "Worksheet Exercise",
+  "number": "4",
+  "title": "Definition: Positive Matrix.",
+  "body": " Definition: Positive Matrix       The matrix is positive if either or some power has all positive entries.   "
+},
+{
+  "id": "sec-4-5-2-sols-3-3",
+  "level": "2",
+  "url": "sec-4-5-2-sols.html#sec-4-5-2-sols-3-3",
+  "type": "Worksheet Exercise",
+  "number": "5",
+  "title": "Examples: Positive Matrix.",
+  "body": " Examples: Positive Matrix   Let , , .    See Example 4.5.5 .   "
+},
+{
+  "id": "sec-4-5-2-sols-3-4",
+  "level": "2",
+  "url": "sec-4-5-2-sols.html#sec-4-5-2-sols-3-4",
+  "type": "Worksheet Exercise",
+  "number": "6",
+  "title": "Fact: Perron-Frobenius.",
+  "body": " Fact: Perron-Frobenius   If is a positive stochastic matrix, then    the eigenvalue satisfy and for all other eigenvalues. In particular, this means that has a unique positive steady-state vector and that every Markov chain defined by converges to .   "
+},
+{
+  "id": "sec-4-5-2-sols-4-1",
+  "level": "2",
+  "url": "sec-4-5-2-sols.html#sec-4-5-2-sols-4-1",
+  "type": "Worksheet Exercise",
+  "number": "7",
+  "title": "Activity: Perron-Frobenius Theorem.",
+  "body": " Activity: Perron-Frobenius Theorem   We will explore the meaning of the Perron-Frobenius theorem in this activity.  Consider the matrix . This is a positive matrix, as we saw in the previous example. Find the eigenvectors of and verify there is a unique steady-state vector.  Using the Sage cell below, construct the Markov chain with initial vector and describe what happens to as becomes large.   Construct another Markov chain with initial vector and describe what happens to as becomes large.  Consider the matrix and compute several powers of below. Determine whether is a positive matrix.  Find the eigenvalues of and then find the steady-state vectors. Is there a unique steady-state vector?  What happens to the Markov chain defined by with initial vector ? What happens to the Markov chain with initial vector .  Explain how the matrices and , which we have considered in this activity, relate to the Perron-Frobenius theorem.      We find that has eigenvalues and with eigenvectors and . Therefore, the unique steady-state vector is for this is the only probability vector in the eigenspace .  We see that the Markov chain converges to the steady-state vector as the Perron-Frobenius theorem tells us to expect.  Another Markov chain converges to the unique steady-state vector as the Perron-Frobenius theorem tells us to expect.  The matrix is not positive because the first two entries in the bottom row of any power are zero.  The eigenvalues are , which has multiplicity two, and . The eigenspace is two-dimensional and spanned by the probability vectors and . Both of these vectors are steady-state vectors so there is not a unique steady-state vector.  If , then the Markov chain converges to . If , then the Markov chain converges to .  Because is a positive matrix, the Perron-Frobenius theorem tells us that there is a unique steady-state vector to which any Markov chain will converge. Because is not a positive matrix, the Perron-Frobenius theorem does not tell us anything, and, indeed, we see that there is not a unique steady-state vector and different Markov chains can converge to different vectors.    "
 }
 ]
 
