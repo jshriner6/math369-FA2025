@@ -3844,6 +3844,60 @@ var ptx_lunr_docs = [
   "body": " Definition: Markov Chain and Stationary Vector      "
 },
 {
+  "id": "sec-4-5-1-sols",
+  "level": "1",
+  "url": "sec-4-5-1-sols.html",
+  "type": "Worksheet",
+  "number": "",
+  "title": "<span class=\"process-math\">\\(\\S 4.5\\text{:}\\)<\/span> Stochastic Matrices and Markov Chains (Solutions)",
+  "body": " : Stochastic Matrices and Markov Chains (Solutions)    Motivation: Markov Chains       Markov chains are a specific type of dynamical system in the context of probability. We'll see how the specific restrictions of these systems impact system behavior.     Preview Activity 4.5.1   Suppose that our rental car company rents from two locations and . We find that 80% of the cars rented from location are returned to while the other 20% are returned to . For cars rented from location , 60% are returned to and 40% to .  We will use and to denote the number of cars at the two locations on day . The following day, the number of cars at equals 80% of and 40% of . This shows that      If we use the vector to represent the distribution of cars on day , find a matrix such that .    Expressing the set of equations in matrix form, we see that .      Find the eigenvalues and associated eigenvectors of .    We have eigenvalues and with associated eigenvectors and .      Suppose that there are initially 1500 cars, all of which are at location . Write the vector as a linear combination of eigenvectors of .    We find that .      Write the vectors as a linear combination of eigenvectors of .    Multiplying by the matrix has the effect of multiplying the eigenvectors by their associated eigenvalues. Therefore, .      What happens to the distribution of cars after a long time?    As becomes large, becomes very close to zero. Therefore . This tells us that cars are at location and are at .        Definition: Probability Vectors and Stochastic Matrices       A vector with non-negative entries that sum to is a probability vector .  A square matrix whose columns are probability vectors is a stochastic matrix .     A First Example: Stochasic Matrices   Suppose you live in a country with three political parties , , and . We use , , and to denote the percentage of voters voting for that party in election .   Voters will change parties from one election to the next as shown in the figure. We see that 60% of voters stay with the same party. However, 40% of those who vote for party will vote for party in the next election.   A directed graph showing illustrating the system of equations in this example.       See the discussion in Subsection 4.5.1 .       Definition: Markov Chain and Stationary Vector       If is a stochastic matrix and a probability vector, the sequence is a Markov chain .  A probability vector is a stationary vector (or a steady-state vector ) if .     "
+},
+{
+  "id": "sec-4-5-1-sols-2-1",
+  "level": "2",
+  "url": "sec-4-5-1-sols.html#sec-4-5-1-sols-2-1",
+  "type": "Worksheet Exercise",
+  "number": "1",
+  "title": "Motivation: Markov Chains.",
+  "body": " Motivation: Markov Chains       Markov chains are a specific type of dynamical system in the context of probability. We'll see how the specific restrictions of these systems impact system behavior.   "
+},
+{
+  "id": "sec-4-5-1-sols-2-2",
+  "level": "2",
+  "url": "sec-4-5-1-sols.html#sec-4-5-1-sols-2-2",
+  "type": "Worksheet Exercise",
+  "number": "2",
+  "title": "Preview Activity 4.5.1.",
+  "body": " Preview Activity 4.5.1   Suppose that our rental car company rents from two locations and . We find that 80% of the cars rented from location are returned to while the other 20% are returned to . For cars rented from location , 60% are returned to and 40% to .  We will use and to denote the number of cars at the two locations on day . The following day, the number of cars at equals 80% of and 40% of . This shows that      If we use the vector to represent the distribution of cars on day , find a matrix such that .    Expressing the set of equations in matrix form, we see that .      Find the eigenvalues and associated eigenvectors of .    We have eigenvalues and with associated eigenvectors and .      Suppose that there are initially 1500 cars, all of which are at location . Write the vector as a linear combination of eigenvectors of .    We find that .      Write the vectors as a linear combination of eigenvectors of .    Multiplying by the matrix has the effect of multiplying the eigenvectors by their associated eigenvalues. Therefore, .      What happens to the distribution of cars after a long time?    As becomes large, becomes very close to zero. Therefore . This tells us that cars are at location and are at .    "
+},
+{
+  "id": "sec-4-5-1-sols-3-1",
+  "level": "2",
+  "url": "sec-4-5-1-sols.html#sec-4-5-1-sols-3-1",
+  "type": "Worksheet Exercise",
+  "number": "3",
+  "title": "Definition: Probability Vectors and Stochastic Matrices.",
+  "body": " Definition: Probability Vectors and Stochastic Matrices       A vector with non-negative entries that sum to is a probability vector .  A square matrix whose columns are probability vectors is a stochastic matrix .   "
+},
+{
+  "id": "sec-4-5-1-sols-3-2",
+  "level": "2",
+  "url": "sec-4-5-1-sols.html#sec-4-5-1-sols-3-2",
+  "type": "Worksheet Exercise",
+  "number": "4",
+  "title": "A First Example: Stochasic Matrices.",
+  "body": " A First Example: Stochasic Matrices   Suppose you live in a country with three political parties , , and . We use , , and to denote the percentage of voters voting for that party in election .   Voters will change parties from one election to the next as shown in the figure. We see that 60% of voters stay with the same party. However, 40% of those who vote for party will vote for party in the next election.   A directed graph showing illustrating the system of equations in this example.       See the discussion in Subsection 4.5.1 .   "
+},
+{
+  "id": "sec-4-5-1-sols-4-1",
+  "level": "2",
+  "url": "sec-4-5-1-sols.html#sec-4-5-1-sols-4-1",
+  "type": "Worksheet Exercise",
+  "number": "5",
+  "title": "Definition: Markov Chain and Stationary Vector.",
+  "body": " Definition: Markov Chain and Stationary Vector       If is a stochastic matrix and a probability vector, the sequence is a Markov chain .  A probability vector is a stationary vector (or a steady-state vector ) if .   "
+},
+{
   "id": "sec-4-5-2",
   "level": "1",
   "url": "sec-4-5-2.html",
