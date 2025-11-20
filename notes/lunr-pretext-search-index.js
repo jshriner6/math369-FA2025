@@ -4040,6 +4040,123 @@ var ptx_lunr_docs = [
   "number": "7",
   "title": "Activity: Perron-Frobenius Theorem.",
   "body": " Activity: Perron-Frobenius Theorem   We will explore the meaning of the Perron-Frobenius theorem in this activity.  Consider the matrix . This is a positive matrix, as we saw in the previous example. Find the eigenvectors of and verify there is a unique steady-state vector.  Using the Sage cell below, construct the Markov chain with initial vector and describe what happens to as becomes large.   Construct another Markov chain with initial vector and describe what happens to as becomes large.  Consider the matrix and compute several powers of below. Determine whether is a positive matrix.  Find the eigenvalues of and then find the steady-state vectors. Is there a unique steady-state vector?  What happens to the Markov chain defined by with initial vector ? What happens to the Markov chain with initial vector .  Explain how the matrices and , which we have considered in this activity, relate to the Perron-Frobenius theorem.      We find that has eigenvalues and with eigenvectors and . Therefore, the unique steady-state vector is for this is the only probability vector in the eigenspace .  We see that the Markov chain converges to the steady-state vector as the Perron-Frobenius theorem tells us to expect.  Another Markov chain converges to the unique steady-state vector as the Perron-Frobenius theorem tells us to expect.  The matrix is not positive because the first two entries in the bottom row of any power are zero.  The eigenvalues are , which has multiplicity two, and . The eigenspace is two-dimensional and spanned by the probability vectors and . Both of these vectors are steady-state vectors so there is not a unique steady-state vector.  If , then the Markov chain converges to . If , then the Markov chain converges to .  Because is a positive matrix, the Perron-Frobenius theorem tells us that there is a unique steady-state vector to which any Markov chain will converge. Because is not a positive matrix, the Perron-Frobenius theorem does not tell us anything, and, indeed, we see that there is not a unique steady-state vector and different Markov chains can converge to different vectors.    "
+},
+{
+  "id": "sec-5-1",
+  "level": "1",
+  "url": "sec-5-1.html",
+  "type": "Worksheet",
+  "number": "",
+  "title": "<span class=\"process-math\">\\(\\S 5.1\\text{:}\\)<\/span> LU Factorization",
+  "body": " : LU Factorization    Motivation: LU Factorization        Example: LU Factorization   Let .       Using LU Factorization to Solve Systems   Use the LU Factorization of to solve when .       Practice: LU Factorization and Solving Systems   Find an LU Factorization for . Use it to solve when                   Remark        "
+},
+{
+  "id": "sec-5-1-2-1",
+  "level": "2",
+  "url": "sec-5-1.html#sec-5-1-2-1",
+  "type": "Worksheet Exercise",
+  "number": "1",
+  "title": "Motivation: LU Factorization.",
+  "body": " Motivation: LU Factorization      "
+},
+{
+  "id": "sec-5-1-2-2",
+  "level": "2",
+  "url": "sec-5-1.html#sec-5-1-2-2",
+  "type": "Worksheet Exercise",
+  "number": "2",
+  "title": "Example: LU Factorization.",
+  "body": " Example: LU Factorization   Let .   "
+},
+{
+  "id": "sec-5-1-3-1",
+  "level": "2",
+  "url": "sec-5-1.html#sec-5-1-3-1",
+  "type": "Worksheet Exercise",
+  "number": "3",
+  "title": "Using LU Factorization to Solve Systems.",
+  "body": " Using LU Factorization to Solve Systems   Use the LU Factorization of to solve when .   "
+},
+{
+  "id": "sec-5-1-4-1",
+  "level": "2",
+  "url": "sec-5-1.html#sec-5-1-4-1",
+  "type": "Worksheet Exercise",
+  "number": "4",
+  "title": "Practice: LU Factorization and Solving Systems.",
+  "body": " Practice: LU Factorization and Solving Systems   Find an LU Factorization for . Use it to solve when               "
+},
+{
+  "id": "sec-5-1-5-1",
+  "level": "2",
+  "url": "sec-5-1.html#sec-5-1-5-1",
+  "type": "Worksheet Exercise",
+  "number": "5",
+  "title": "Remark.",
+  "body": " Remark      "
+},
+{
+  "id": "sec-5-2",
+  "level": "1",
+  "url": "sec-5-2.html",
+  "type": "Worksheet",
+  "number": "",
+  "title": "<span class=\"process-math\">\\(\\S 5.2\\text{:}\\)<\/span> The Power Method",
+  "body": " : The Power Method    Motivation: The Power Method        Example: Markov Chains   Let .       Dominant Eigenvalue and Power Method   The dominant eigenvalue of a matrix is       Example: Power Method   Let , and suppose .       Practice: Power Method   Use Sage to find the dominant eigenvalue and associated eigenvector of .       Remark        "
+},
+{
+  "id": "sec-5-2-2-1",
+  "level": "2",
+  "url": "sec-5-2.html#sec-5-2-2-1",
+  "type": "Worksheet Exercise",
+  "number": "1",
+  "title": "Motivation: The Power Method.",
+  "body": " Motivation: The Power Method      "
+},
+{
+  "id": "sec-5-2-2-2",
+  "level": "2",
+  "url": "sec-5-2.html#sec-5-2-2-2",
+  "type": "Worksheet Exercise",
+  "number": "2",
+  "title": "Example: Markov Chains.",
+  "body": " Example: Markov Chains   Let .   "
+},
+{
+  "id": "sec-5-2-3-1",
+  "level": "2",
+  "url": "sec-5-2.html#sec-5-2-3-1",
+  "type": "Worksheet Exercise",
+  "number": "3",
+  "title": "Dominant Eigenvalue and Power Method.",
+  "body": " Dominant Eigenvalue and Power Method   The dominant eigenvalue of a matrix is   "
+},
+{
+  "id": "sec-5-2-4-1",
+  "level": "2",
+  "url": "sec-5-2.html#sec-5-2-4-1",
+  "type": "Worksheet Exercise",
+  "number": "4",
+  "title": "Example: Power Method.",
+  "body": " Example: Power Method   Let , and suppose .   "
+},
+{
+  "id": "sec-5-2-5-1",
+  "level": "2",
+  "url": "sec-5-2.html#sec-5-2-5-1",
+  "type": "Worksheet Exercise",
+  "number": "5",
+  "title": "Practice: Power Method.",
+  "body": " Practice: Power Method   Use Sage to find the dominant eigenvalue and associated eigenvector of .   "
+},
+{
+  "id": "sec-5-2-6-1",
+  "level": "2",
+  "url": "sec-5-2.html#sec-5-2-6-1",
+  "type": "Worksheet Exercise",
+  "number": "6",
+  "title": "Remark.",
+  "body": " Remark      "
 }
 ]
 
