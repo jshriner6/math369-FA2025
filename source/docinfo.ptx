@@ -23,6 +23,7 @@
     \newcommand{\Q}{\mathbb Q}
     \newcommand{\R}{\mathbb R}
     \newcommand{\bvec}{{\mathbf b}}
+    \newcommand{\cvec}{{\mathbf c}}
     \newcommand{\evec}{{\mathbf e}}
     \newcommand{\fvec}{{\mathbf f}}
     \newcommand{\nvec}{{\mathbf n}}

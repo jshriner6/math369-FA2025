@@ -1,0 +1,86 @@
+<pretext>
+    <article xml:id="notes">
+        <worksheet xml:id="sec-5-1">
+        <title><m>\S 5.1</m>: LU Factorization</title>
+            <page>
+                <exercise workspace="2in">
+                    <title>Motivation: LU Factorization</title>
+                    <statement>
+                        <p>
+                            
+                        </p>
+                    </statement>
+                </exercise>
+
+            
+            
+                <exercise workspace="4in">
+                    <title>Example: LU Factorization</title>
+                    <statement>
+                        <p>
+                            Let <m>A = \left[\begin{array}{rrr}
+1 \amp 2 \amp 1 \\
+-2 \amp -3 \amp -2 \\
+3 \amp 7 \amp 4 \\
+\end{array}\right]</m>.
+
+                        </p>
+                    </statement>
+                    
+                    
+                </exercise>
+     </page>
+            <page>
+                <exercise>
+                    <title>Using LU Factorization to Solve Systems</title>
+                    <statement>
+                        <p>
+                            Use the LU Factorization of <m>A</m> to solve <m>A\xvec=\bvec</m> when 
+                            <m>\bvec = \threevec123</m>.
+                        </p>
+                    </statement>
+                    
+                </exercise>
+            </page>
+            <page>
+                <exercise>
+                    <title>Practice: LU Factorization and Solving Systems</title>
+                    <statement>
+                        <p>
+                            Find an LU Factorization for <m>A = \left[\begin{array}{rrr}
+2 \amp -3 \amp 1 \\
+-4 \amp 5 \amp 0 \\
+2 \amp -2 \amp 2 \\
+\end{array}\right]</m>. Use it to solve <m>A\xvec = \bvec</m> when
+                                <ol>
+                                    <li>
+                                        <p>
+                                            <m>\bvec = \threevec8{-13}8</m>
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            <m>\bvec = \threevec{-1}{0}3</m>
+                                        </p>
+                                    </li>
+                                </ol>
+                        </p>
+                    </statement>
+                    
+                </exercise>
+            </page>
+            <page>
+                <exercise>
+                    <title>Remark</title>
+                    <statement>
+                        <p>
+                            
+                        </p>
+                    </statement>
+                    
+                </exercise>
+            </page>
+
+        </worksheet>
+    </article>
+</pretext>

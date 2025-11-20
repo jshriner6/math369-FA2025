@@ -1,0 +1,140 @@
+<pretext>
+    <article xml:id="notes">
+        <worksheet xml:id="sec-5-2-sols">
+        <title><m>\S 5.2</m>: The Power Method (Solutions)</title>
+            <page>
+                <exercise workspace="2in">
+                    <title>Motivation: The Power Method</title>
+                    <statement>
+                        <p>
+                            
+                        </p>
+                    </statement>
+                    <solution>
+                        <p>
+                            Finding eigenvalues requires computing a characteristic polynomial and finding its zeros. For 
+                            very large matrices, this may not be practical.
+                        </p>
+                    </solution>
+                </exercise>
+                <exercise workspace="5in">
+                    <title>Example: Markov Chains</title>
+                    <statement>
+                        <p>
+                            Let <m>A=\left[\begin{array}{rr}
+0.7 \amp 0.6 \\
+0.3 \amp 0.4 \\
+\end{array}\right]</m>.
+                        </p>
+                    </statement>
+                    <solution>
+                        <p>
+                            See <url href="https://understandinglinearalgebra.org/sec-power-method.html#sec-power-method-3-3">Example 5.2.1</url>.
+                        </p>
+                    </solution>
+                    
+                </exercise>
+
+            </page>
+
+            <page>
+                <exercise>
+                    <title>Dominant Eigenvalue and Power Method</title>
+                    <statement>
+                        <p>
+                            The <term>dominant eigenvalue</term> of a matrix <m>A</m> is
+                        </p>
+                    </statement>
+                    <solution>
+                        <p>
+                            the eigenvalue with largest absolute value.
+                        </p>
+                        <p>
+                            The <term>power method</term> generalizes the idea of what we do with Markov chains, and numerically searches
+                            for the dominant eigenvalue of a matrix.
+                        </p>
+                    </solution>
+                    
+                </exercise>
+            </page>
+            <page>
+                <exercise>
+                    <title>Example: Power Method</title>
+                    <statement>
+                        <p>
+                            Let <m>A = \left[\begin{array}{rr}
+2 \amp 1 \\ 1 \amp 2 \\ \end{array}\right]</m>, and suppose <m>\lambda_1 \gt \lambda_2</m>.
+                        </p>
+                    </statement>
+                    <solution>
+                        <p>
+                            See <url href="https://understandinglinearalgebra.org/sec-power-method.html#sec-power-method-3-4">Example 5.2.2 </url>.
+                        </p>
+                        <p>
+                            The power method is the following algorithm:
+                            <ol>
+                                <li>
+                                    <p>
+                                        Pick an initial vector <m>\xvec_0</m>.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        Given <m>\xvec_k</m>, to compute <m>\xvec_{k+1}</m> you identify the component 
+                                        in <m>\xvec_k</m> with largest absolute value (call it <m>m_k</m>), and compute
+                                        <me>
+                                            \xvec_{k+1} = A \cdot \frac{1}{m_k}\xvec_k
+                                        </me>.
+                                        
+                                    </p>
+                                </li>
+                            </ol>
+                            The vectors <m>\xvec_k</m> are approaching an eigenvector, and <m>m_k</m> is approaching the 
+                            associated eigenvalue.
+                        </p>
+                    </solution>
+                    
+                </exercise>
+            </page>
+            <page>
+                <exercise>
+                    <title>Practice: Power Method</title>
+                    <statement>
+                        <p>
+                            Use Sage to find the dominant eigenvalue and associated eigenvector of 
+                            <m>A = \left[\begin{array}{rr}
+0.5 \amp 0.2 \\
+0.4 \amp 0.7 \\
+\end{array}\right]</m>.
+                        </p>
+                    </statement>
+                    <solution>
+                        <p>
+                            We see that the dominant eigenvalue is <m>\lambda = 0.9</m> with eigenvector <m>\twovec{0.5}{1}</m>.
+                        </p>
+                    </solution>
+                    
+                </exercise>
+            </page>
+            <page>
+                <exercise>
+                    <title>Remark</title>
+                    <statement>
+                        <p>
+                            
+                        </p>
+                    </statement>
+                    <solution>
+                        <p>
+                            This method helps us numerically compute the dominant eigenvalue and associated eigenvector. With
+                            adjustments, the same idea can help numerically compute other eigenvalues (see 
+                            <url href="https://understandinglinearalgebra.org/sec-power-method.html#sec-power-method-4">Subsection 5.2.2</url>).
+                        </p>
+                    </solution>
+                    
+                </exercise>
+            </page>
+
+        </worksheet>
+    </article>
+</pretext>

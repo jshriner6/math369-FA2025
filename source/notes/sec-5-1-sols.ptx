@@ -1,0 +1,133 @@
+<pretext>
+    <article xml:id="notes">
+        <worksheet xml:id="sec-5-1-sols">
+        <title><m>\S 5.1</m>: LU Factorization (Solutions)</title>
+            <page>
+                <exercise workspace="2in">
+                    <title>Motivation: LU Factorization</title>
+                    <statement>
+                        <p>
+                            
+                        </p>
+                    </statement>
+                    <solution>
+                        <p>
+                            Recall that applications of linear algebra typically involve computation with very large 
+                            matrices. In these final sections, we'll re-visit two old concepts to illustrate creative methods
+                            for how these computations can be done practically.
+                        </p>
+                    </solution>
+                </exercise>
+
+            
+            
+                <exercise workspace="4in">
+                    <title>Example: LU Factorization</title>
+                    <statement>
+                        <p>
+                            Let <m>A = \left[\begin{array}{rrr}
+1 \amp 2 \amp 1 \\
+-2 \amp -3 \amp -2 \\
+3 \amp 7 \amp 4 \\
+\end{array}\right]</m>.
+
+                        </p>
+                    </statement>
+                    <solution>
+                        <p>
+                            This is revisiting <url href="https://jshriner6.github.io/math369-FA2025/notes/sec-3-1-2-sols.html#sec-3-1-2-sols-3-1">the Gaussian Elimination and Matrix Multiplication activity</url>
+                            from section 3.1.
+                        </p>
+                    </solution>
+                    
+                </exercise>
+     </page>
+            <page>
+                <exercise>
+                    <title>Using LU Factorization to Solve Systems</title>
+                    <statement>
+                        <p>
+                            Use the LU Factorization of <m>A</m> to solve <m>A\xvec=\bvec</m> when 
+                            <m>\bvec = \threevec123</m>.
+                        </p>
+                    </statement>
+                    <solution>
+                        <p>
+                            We can solve <m>A\xvec=\bvec</m> by solving two simpler equations:
+                            <ol>
+                                <li>
+                                    <p>
+                                        <m>L\cvec = \bvec</m>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <m>U\xvec = \cvec</m>
+                                    </p>
+                                </li>
+                            </ol>
+                        </p>
+                        <p>
+                            The first requires forward substitution, in which we find <m>\cvec = \threevec104</m>.
+                            The second requires backward substitution, in which we find <m>\xvec= \threevec01{-1}</m>, 
+                            which gives us our final answer.
+                        </p>
+                        <p>
+                            Note that once we have the LU factorization, we can solve <m>A\xvec=\bvec</m> for any <m>\bvec</m>
+                            quickly just by using substitution.
+                        </p>
+                    </solution>
+                    
+                </exercise>
+            </page>
+            <page>
+                <exercise>
+                    <title>Practice: LU Factorization and Solving Systems</title>
+                    <statement>
+                        <p>
+                            Find an LU Factorization for <m>A = \left[\begin{array}{rrr}
+2 \amp -3 \amp 1 \\
+-4 \amp 5 \amp 0 \\
+2 \amp -2 \amp 2 \\
+\end{array}\right]</m>. Use it to solve <m>A\xvec = \bvec</m> when
+                                <ol>
+                                    <li>
+                                        <p>
+                                            <m>\bvec = \threevec8{-13}8</m>
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            <m>\bvec = \threevec{-1}{0}3</m>
+                                        </p>
+                                    </li>
+                                </ol>
+                        </p>
+                    </statement>
+                    <solution>
+                        <p>
+                            The LU factorization for <m>A</m> is given in <url href="https://understandinglinearalgebra.org/sec-gaussian-revisited.html#example-LU">Example 5.1.1</url>,
+                            as is the solution to the first system. For the second system, we should compute that 
+                            <m>\cvec = \threevec{-1}{-2}2</m> and <m>\xvec=\threevec{25/6}{10/3}{2/3}</m>.
+                        </p>
+                    </solution>
+                    
+                </exercise>
+            </page>
+            <page>
+                <exercise>
+                    <title>Remark</title>
+                    <statement>
+                        <p>
+                            We only get <m>A=LU</m> when we don't permute rows as part of Gaussian elimination. In 
+                            general, we can write <m>PA = LU</m>, where <m>P</m> is a <term>permutation matrix</term> which
+                            has information regarding row permutations, and use this to solve systems similarly.
+                        </p>
+                    </statement>
+                    
+                </exercise>
+            </page>
+
+        </worksheet>
+    </article>
+</pretext>
