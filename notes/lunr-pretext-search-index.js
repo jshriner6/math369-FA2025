@@ -4096,6 +4096,60 @@ var ptx_lunr_docs = [
   "body": " Remark      "
 },
 {
+  "id": "sec-5-1-sols",
+  "level": "1",
+  "url": "sec-5-1-sols.html",
+  "type": "Worksheet",
+  "number": "",
+  "title": "<span class=\"process-math\">\\(\\S 5.1\\text{:}\\)<\/span> LU Factorization (Solutions)",
+  "body": " : LU Factorization (Solutions)    Motivation: LU Factorization       Recall that applications of linear algebra typically involve computation with very large matrices. In these final sections, we'll re-visit two old concepts to illustrate creative methods for how these computations can be done practically.     Example: LU Factorization   Let .    This is revisiting the Gaussian Elimination and Matrix Multiplication activity from section 3.1.       Using LU Factorization to Solve Systems   Use the LU Factorization of to solve when .    We can solve by solving two simpler equations:              The first requires forward substitution, in which we find . The second requires backward substitution, in which we find , which gives us our final answer.  Note that once we have the LU factorization, we can solve for any quickly just by using substitution.       Practice: LU Factorization and Solving Systems   Find an LU Factorization for . Use it to solve when                The LU factorization for is given in Example 5.1.1 , as is the solution to the first system. For the second system, we should compute that and .       Remark   We only get when we don't permute rows as part of Gaussian elimination. In general, we can write , where is a permutation matrix which has information regarding row permutations, and use this to solve systems similarly.     "
+},
+{
+  "id": "sec-5-1-sols-2-1",
+  "level": "2",
+  "url": "sec-5-1-sols.html#sec-5-1-sols-2-1",
+  "type": "Worksheet Exercise",
+  "number": "1",
+  "title": "Motivation: LU Factorization.",
+  "body": " Motivation: LU Factorization       Recall that applications of linear algebra typically involve computation with very large matrices. In these final sections, we'll re-visit two old concepts to illustrate creative methods for how these computations can be done practically.   "
+},
+{
+  "id": "sec-5-1-sols-2-2",
+  "level": "2",
+  "url": "sec-5-1-sols.html#sec-5-1-sols-2-2",
+  "type": "Worksheet Exercise",
+  "number": "2",
+  "title": "Example: LU Factorization.",
+  "body": " Example: LU Factorization   Let .    This is revisiting the Gaussian Elimination and Matrix Multiplication activity from section 3.1.   "
+},
+{
+  "id": "sec-5-1-sols-3-1",
+  "level": "2",
+  "url": "sec-5-1-sols.html#sec-5-1-sols-3-1",
+  "type": "Worksheet Exercise",
+  "number": "3",
+  "title": "Using LU Factorization to Solve Systems.",
+  "body": " Using LU Factorization to Solve Systems   Use the LU Factorization of to solve when .    We can solve by solving two simpler equations:              The first requires forward substitution, in which we find . The second requires backward substitution, in which we find , which gives us our final answer.  Note that once we have the LU factorization, we can solve for any quickly just by using substitution.   "
+},
+{
+  "id": "sec-5-1-sols-4-1",
+  "level": "2",
+  "url": "sec-5-1-sols.html#sec-5-1-sols-4-1",
+  "type": "Worksheet Exercise",
+  "number": "4",
+  "title": "Practice: LU Factorization and Solving Systems.",
+  "body": " Practice: LU Factorization and Solving Systems   Find an LU Factorization for . Use it to solve when                The LU factorization for is given in Example 5.1.1 , as is the solution to the first system. For the second system, we should compute that and .   "
+},
+{
+  "id": "sec-5-1-sols-5-1",
+  "level": "2",
+  "url": "sec-5-1-sols.html#sec-5-1-sols-5-1",
+  "type": "Worksheet Exercise",
+  "number": "5",
+  "title": "Remark.",
+  "body": " Remark   We only get when we don't permute rows as part of Gaussian elimination. In general, we can write , where is a permutation matrix which has information regarding row permutations, and use this to solve systems similarly.   "
+},
+{
   "id": "sec-5-2",
   "level": "1",
   "url": "sec-5-2.html",
