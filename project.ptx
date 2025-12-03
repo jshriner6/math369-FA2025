@@ -20,8 +20,7 @@
     <target name="notes-print" format="pdf" source="notes.ptx"
             publication="publication.ptx" output-filename="notes.pdf"/>
 
-    <target name="ebook" format="epub" source="notes.ptx"
-            publication="publication.ptx" output-dir="epub"/>
+    <target name="ebook" format="epub"/>
       
 
   <!-- The following targets are used to create stand-alone documents, -->
