@@ -4211,6 +4211,69 @@ var ptx_lunr_docs = [
   "number": "6",
   "title": "Remark.",
   "body": " Remark      "
+},
+{
+  "id": "sec-5-2-sols",
+  "level": "1",
+  "url": "sec-5-2-sols.html",
+  "type": "Worksheet",
+  "number": "",
+  "title": "<span class=\"process-math\">\\(\\S 5.2\\text{:}\\)<\/span> The Power Method (Solutions)",
+  "body": " : The Power Method (Solutions)    Motivation: The Power Method       Finding eigenvalues requires computing a characteristic polynomial and finding its zeros. For very large matrices, this may not be practical.     Example: Markov Chains   Let .    See Example 5.2.1 .       Dominant Eigenvalue and Power Method   The dominant eigenvalue of a matrix is    the eigenvalue with largest absolute value.  The power method generalizes the idea of what we do with Markov chains, and numerically searches for the dominant eigenvalue of a matrix.       Example: Power Method   Let , and suppose .    See Example 5.2.2 .  The power method is the following algorithm:   Pick an initial vector .    Given , to compute you identify the component in with largest absolute value (call it ), and compute .   The vectors are approaching an eigenvector, and is approaching the associated eigenvalue.       Practice: Power Method   Use Sage to find the dominant eigenvalue and associated eigenvector of .    We see that the dominant eigenvalue is with eigenvector .       Remark       This method helps us numerically compute the dominant eigenvalue and associated eigenvector. With adjustments, the same idea can help numerically compute other eigenvalues (see Subsection 5.2.2 ).     "
+},
+{
+  "id": "sec-5-2-sols-2-1",
+  "level": "2",
+  "url": "sec-5-2-sols.html#sec-5-2-sols-2-1",
+  "type": "Worksheet Exercise",
+  "number": "1",
+  "title": "Motivation: The Power Method.",
+  "body": " Motivation: The Power Method       Finding eigenvalues requires computing a characteristic polynomial and finding its zeros. For very large matrices, this may not be practical.   "
+},
+{
+  "id": "sec-5-2-sols-2-2",
+  "level": "2",
+  "url": "sec-5-2-sols.html#sec-5-2-sols-2-2",
+  "type": "Worksheet Exercise",
+  "number": "2",
+  "title": "Example: Markov Chains.",
+  "body": " Example: Markov Chains   Let .    See Example 5.2.1 .   "
+},
+{
+  "id": "sec-5-2-sols-3-1",
+  "level": "2",
+  "url": "sec-5-2-sols.html#sec-5-2-sols-3-1",
+  "type": "Worksheet Exercise",
+  "number": "3",
+  "title": "Dominant Eigenvalue and Power Method.",
+  "body": " Dominant Eigenvalue and Power Method   The dominant eigenvalue of a matrix is    the eigenvalue with largest absolute value.  The power method generalizes the idea of what we do with Markov chains, and numerically searches for the dominant eigenvalue of a matrix.   "
+},
+{
+  "id": "sec-5-2-sols-4-1",
+  "level": "2",
+  "url": "sec-5-2-sols.html#sec-5-2-sols-4-1",
+  "type": "Worksheet Exercise",
+  "number": "4",
+  "title": "Example: Power Method.",
+  "body": " Example: Power Method   Let , and suppose .    See Example 5.2.2 .  The power method is the following algorithm:   Pick an initial vector .    Given , to compute you identify the component in with largest absolute value (call it ), and compute .   The vectors are approaching an eigenvector, and is approaching the associated eigenvalue.   "
+},
+{
+  "id": "sec-5-2-sols-5-1",
+  "level": "2",
+  "url": "sec-5-2-sols.html#sec-5-2-sols-5-1",
+  "type": "Worksheet Exercise",
+  "number": "5",
+  "title": "Practice: Power Method.",
+  "body": " Practice: Power Method   Use Sage to find the dominant eigenvalue and associated eigenvector of .    We see that the dominant eigenvalue is with eigenvector .   "
+},
+{
+  "id": "sec-5-2-sols-6-1",
+  "level": "2",
+  "url": "sec-5-2-sols.html#sec-5-2-sols-6-1",
+  "type": "Worksheet Exercise",
+  "number": "6",
+  "title": "Remark.",
+  "body": " Remark       This method helps us numerically compute the dominant eigenvalue and associated eigenvector. With adjustments, the same idea can help numerically compute other eigenvalues (see Subsection 5.2.2 ).   "
 }
 ]
 
